@@ -108,7 +108,7 @@ const html_header = `
                 <img class="icon_menu me-1" src="${pages.feedback.icon}" alt="">
                 ${pages.feedback.name_title}
               </a></li>
-            <li><a class="dropdown-item" href="..${pages.about.href}">
+            <li><a class="dropdown-item" href="${pages.about.href}">
                 <img class="icon_menu me-1" src="..${pages.about.icon}" alt="">
                 ${pages.about.name_title}
               </a></li>
