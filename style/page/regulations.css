@@ -1,0 +1,87 @@
+
+
+/* 法條清單排版 */
+.col-list{
+    width: auto;
+}
+#list_article::-webkit-scrollbar{
+    display: none;
+}
+.list-article-no{
+    width: 6em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    text-align: left;
+    font-size: 14px;
+}
+.list-article-title{
+    width: 15em;
+    font-size: 13px;
+}
+.div_icon_page{
+    width: 120px;
+}
+
+/* 法規標題排版 */
+.article-title h4{
+    color: rgb(50, 120, 250);
+    font-weight: 600;
+}
+.btn-img{
+    width: 20px;
+}
+/* 法條內文排版 */
+    /* #article_text::-webkit-scrollbar{
+    display: none;
+    } */
+.law-article{
+    padding-left: 1.25em;
+    padding-right: 0.5em;
+    counter-reset: num 0;
+    position: relative;
+}
+/* .line-0000{
+    margin-left: 2em;
+} */
+.line-0004{
+    margin-left: 2em;
+    text-indent: -2em;
+}
+.line-0006{
+    margin-left: 3em;
+    text-indent: -3em;
+}
+.line-0008{
+    margin-left: 3em;
+    text-indent: -4em;
+}
+.line-0602{
+    margin-left: 3em;
+    text-indent: -1em;
+}
+.line-0505{
+    margin-left: 5em;
+    text-indent: -2.5em;
+}
+.line-0400{
+    margin-left: 2em;
+}
+.law-article div.show-number::before{
+    content: counter(num) '';
+    counter-increment: num 1; 
+    display: inline-block;
+    position: absolute;
+    left: -2.5em;
+    text-align: right;
+    width: 3em;
+    font-size: 1em;
+    color: rgb(50, 120, 250);
+    font-style: italic;
+    font-weight: 600    ;
+}
+
+
+/* #label_switch:hover{
+    cursor: pointer; 
+    filter: brightness(0.8);
+} */

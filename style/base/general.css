@@ -1,0 +1,15 @@
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    -ms-overflow-style: none;
+    display: flex;
+    flex-direction: column; 
+    overscroll-behavior-y: contain;
+}
+main{
+    height: calc(100% - 60px);
+}
+.icon_menu{
+    height: 25px;
+}

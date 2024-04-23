@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="h-100" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>牌照違規</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link href="../style/base/bootstrap.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../style/base/general.css" />
+  <link rel="stylesheet" href="../style/page/license.css" />
+  <script type='module' src='../script/page/cl.js'></script>
+  <script type='module' src='../script/base/header.js'></script>
+  <script type='module' src='../script/base/searchArea.js'></script>
+</head>
+
+<body class="h-100">
+  <nav id="pageHeader" class="navbar navbar-expand-md bg-body-tertiary"></nav>
+  <main class="container-xl">
+    <div id="mainContent" class="h-100 overflow-auto px-3 py-3">
+      <div id="bk_left" class="container px-0">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <img src="../icons/icon_CL.png" alt="" width="50" class="me-3">
+            <h3 class="d-inline my-auto">牌照違規速查</h3>
+          </div>
+        </div>
+        <div class="row align-items-center g-3 m-0">
+          <div class="col">
+            <p class="my-auto fw-semibold">◎ 號牌（A）狀態：</p>
+          </div>
+          <div class="col">
+            <select class="form-select" name="a_type" id="a_type">
+              <option value="0">請選擇</option>
+              <option value="1">掛 正常 號牌</option>
+              <option value="2">掛 吊/註銷 號牌</option>
+              <option value="3">掛 偽造 號牌</option>
+              <option value="4">掛 變造 號牌</option>
+              <option value="5">掛 報廢/回收 號牌</option>
+              <option value="6">掛 遺失竊 號牌</option>
+              <option value="7">無掛牌</option>
+              <!-- <option value="8">掛 第二類試車牌</option> -->
+            </select>
+          </div>
+        </div>
+        <div class="row align-items-center g-3 m-0">
+          <div class="col">
+            <p class="my-auto fw-semibold">◎ 車體（B）狀態：</p>
+          </div>
+          <div class="col">
+            <select class="form-select" name="b_type" id="b_type">
+              <option value="0">請選擇</option>
+              <option value="1">車籍正常</option>
+              <option value="2">吊扣期間</option>
+              <option value="3">吊/註/繳銷、報停</option>
+              <option value="4">報廢、環保回收</option>
+              <option value="5">號牌報遺失竊</option>
+              <option value="6">失竊車輛</option>
+              <option value="7">未領牌</option>
+              <option value="8">拼裝車</option>
+            </select>
+          </div>
+        </div>
+        <div class="row align-items-center g-3 m-0">
+          <div class="col">
+            <p class="my-auto fw-semibold">◎ A/B車籍是否相符：</p>
+          </div>
+          <div class="col">
+            <select class="form-select" name="is_same" id="is_same">
+              <option value="0">相符</option>
+              <option value="1" selected="selected">不相符</option>
+            </select>
+          </div>
+        </div>
+        <div class="row align-items-center g-3 m-0">
+          <div class="col">
+            <p class="my-auto fw-semibold">◎ 行駛 / 停車狀態：</p>
+          </div>
+          <div class="col">
+            <select class="form-select" name="is_stop" id="is_stop">
+              <option value="0">行駛</option>
+              <option value="1">停車</option>
+            </select>
+          </div>
+        </div>
+        <div class="row g-3 m-0">
+          <div class="col-12">
+            <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+          </div>
+        </div>
+      </div>
+      <div id="bk_right" class="container-fluid overflow-auto rounded-3 m-0 p-3 border border-3">
+        <div class="row">
+          <div class="col-12 col-xl-5">
+            <div>
+              <h5 class="text-primary fw-semibold mb-3">◎ 號牌（A）違規項目：</h5>
+              <p id="cl_ot_a1" class="fs-5 text text-danger fw-bolder">　</p>
+              <p id="cl_ot_a2" class="fs-6 text text-danger-emphasis fw-semibold">　</p>
+            </div>
+            <div>
+              <h5 class="text-primary fw-semibold mb-3">◎ 車體（B）違規項目一：</h5>
+              <p id="cl_ot_b1" class="fs-5 text text-danger fw-bolder">　</p>
+              <p id="cl_ot_b2" class="fs-6 text text-danger-emphasis fw-semibold">　</p>
+            </div>
+            <div>
+              <h5 class="text-primary fw-semibold mb-3">◎ 車體（B）違規項目二 :</h5>
+              <p id="cl_ot_c1" class="fs-5 text text-danger fw-bolder">　</p>
+              <p id="cl_ot_c2" class="fs-6 text text-danger-emphasis fw-semibold">　</p>
+            </div>
+          </div>
+          <div class="col-12 col-xl-7">
+            <h5 class="text-primary fw-semibold mb-3">※ 註釋：</h5>
+            <p class="comment_text text-body-secondary">
+              ◎ 一、處罰對象<br>
+              (1) 12條原則處罰所有人。<br>
+              (2) 車主死亡、主體不存在、死亡逕註、無車籍等，歸責駕駛人/繼承人/實際所有人。<br>
+              (3) 拒不過戶註銷，函詢監理站查應歸責人。
+            </p>
+            <p class="comment_text text-body-secondary">◎ 二、有關「停車」狀態，車體除舉發12.4外，是否一併舉發12.1各款尚有疑義，請徑洽該管監理/裁決單位。</p>
+            <p class="comment_text text-body-secondary">◎ 三、若發現懸掛「吊扣期間」之號牌，請詳查是否為偽/變造。</p>
+            <p class="comment_text text-body-secondary">◎
+              四、懸掛偽造、變造之牌照，偵辦刑法212條（偽變造特種文書罪，非現行犯）、216條（行使偽變造文書，現行犯），牌照需先以刑事證物扣押，舉發單上仍填寫「代保管號牌O面」，並依處理細則28條3項，以移送書副本或其他適當方式通知處罰機關（記明「牌照先行扣押」、「移送書之日期文號」）。
+            </p>
+            <p class="comment_text text-body-secondary">
+              ◎ 五、拼裝車及未審驗合格認定<br>
+              (1) 臺灣高等法院 95 年度交抗字第 180 號刑事裁定：任何非由合格正式車廠所設計、製造出廠之車輛或在原廠車上任意改裝非屬原廠設計規範或容許代換之零件，均屬拼裝車。<br>
+              (2) 交通部 107.01.10交路字第1060416992號函：「拆除原廠車輛、以零組件等方式進口後再組裝」、「整車進口」或「國內產製」之車輛，凡未領用牌照且未取得安全審驗合格」，均有第2項之適用。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

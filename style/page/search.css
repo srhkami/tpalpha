@@ -1,0 +1,23 @@
+/* 法條清單排版 */
+@media (min-width:992px) {
+    .col-list{
+        width: 20em;
+    }
+}
+.list-article-no{
+    width: 100%;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    text-align: left;
+    font-size: 14px;
+}
+.list-article-title{
+    width: 100%;
+    font-size: 13px;
+    padding-left: 2em;
+}
+.highlight{
+    color: rgb(80, 80, 80);
+    background-color: yellow;
+    font-style: normal;
+}
