@@ -163,8 +163,12 @@ function switch_mode() {
   });
 }
 
-
-$('#pageHeader').html(html_header);
+if ($('title').html() == '首頁'){
+  $('#pageHeader').html(html_header.replaceAll('..','.'));
+}
+else{
+  $('#pageHeader').html(html_header);
+}
 load_mode();
 switch_mode();
 // 阻止下拉重整
