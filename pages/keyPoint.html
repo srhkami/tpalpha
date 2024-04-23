@@ -2,6 +2,7 @@
 <html class="h-100" data-bs-theme="light">
 
 <head>
+  <script src='../script/base/theme.js'></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>違規舉發要點</title>
@@ -13,11 +14,12 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- 設定檔 -->
+  <link rel="stylesheet" href="../style/base/general.css" />
+  <link rel="stylesheet" href="../style/page/keyPoint.css">
   <script type='module' src="../script/base/header.js"></script>
   <script type='module' src="../script/base/searchArea.js"></script>
   <script type='module' src="../script/page/keyPoint.js"></script>
-  <link rel="stylesheet" href="../style/base/general.css" />
-  <link rel="stylesheet" href="../style/page/keyPoint.css">
 </head>
 
 <body class="h-100">
@@ -27,15 +29,23 @@
       <div class="row h-100">
         <!-- 項目清單 -->
         <div class="col-list h-100 d-none d-lg-block overflow-hidden px-0 me-3 rounded-3 border">
-          <div class="list-group">
+          <div class="list-group rounded-0">
             <button type="button" class="list-group-item list-group-item-action active"
-              data-item="bikeMirror">機車後照鏡之違規</button>
-            <button type="button" class="list-group-item list-group-item-action" data-item="bikePlate">機車蹺牌取締</button>
-            <button type="button" class="list-group-item list-group-item-action"
-              data-item="fakeLicense">偽/變造號牌取締</button>
-            <button type="button" class="list-group-item list-group-item-action"
-              data-item="visionSystem">大型車視野輔助系統</button>
-            <button type="button" class="list-group-item list-group-item-action" data-item="taxi">計程車違規</button>
+              data-item="bikeMirror">
+              機車照後鏡之違規
+            </button>
+            <button type="button" class="list-group-item list-group-item-action" data-item="bikePlate">
+              機車蹺牌取締
+            </button>
+            <button type="button" class="list-group-item list-group-item-action"data-item="fakeLicense">
+              偽/變造號牌取締
+            </button>
+            <button type="button" class="list-group-item list-group-item-action"ata-item="visionSystem">
+              行車視野輔助系統裝設規定
+            </button>
+            <button type="button" class="list-group-item list-group-item-action" data-item="taxi">
+              計程車違規
+            </button>
           </div>
         </div>
         <!-- 項目內文 -->
@@ -97,7 +107,7 @@
                 <div class="col p-0">
                   <div class="card-body">
                     <h2 class="card-title placeholder-glow">
-                      機車後照鏡取締
+                      機車照後鏡之違規
                     </h2>
                     <p class="card-text placeholder-glow">
                       資料整理：<span class="text-info mx-1 fw-semibold">無奈</span>學長
@@ -120,13 +130,16 @@
               </p>
               <h5 class="my-3">「照後鏡太小算不算違規？」</h5>
               <p >依據車輛型式安全審驗管理辦法附件27，照後鏡屬間接視野裝置，其目得在提供駕駛人後面、側邊之清晰視線，故有規定機車照後鏡「圓形鏡之直徑不得小於94公釐」、「非圓形鏡其尺寸需允許直徑78公釐的圓能鑲入反射面」。</p>
-              <p >換言之，如果照後鏡鏡面過小不符合車審辦法附件之規定，自無法提供充足之後面、側邊視線，當可認定其違反<a  href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16"">處罰條例16條1項2款</a>「擅自變更原有規格致影響行車安全」，責令改正、「限於○月○日○時前辦理」(依<a href="../pages/regulations.html?rg=DR#article-13">處理細則13條2項</a>所訂，期間得酌定於四日以內)。</p>
+              <p >換言之，如果照後鏡鏡面過小不符合車審辦法附件之規定，自無法提供充足之後面、側邊視線，當可認定其違反<a  href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16"">處罰條例16條1項2款</a>：「照後鏡擅自變更原有規格致影響行車安全」。
                 
               <h5>小結</h5>
-              <p >以上個人整理分享，也有實際就改裝之鏡面太小予以製單舉發。 </p>
-              <p >取締時需備尺測量，違反條款係16.1.2，變更原有設備(致影響行車安全)，並加註以下其一：</p>
-              <p>①「量測圓形鏡僅直徑xx公釐，影響行車安全」</p>
-              <p>②「非圓形鏡無法鑲入78公釐圓，影響行車安全」。</p>
+              <p >以上個人整理分享，也有實際就改裝之鏡面太小予以製單舉發。取締時需備尺測量，舉發處罰條例16條1項2款，加註以下其一：<br>（一）「量測圓形鏡僅直徑xx公釐，影響行車安全」<br>（二）「非圓形鏡無法鑲入78公釐圓，影響行車安全」<br>並責令改正、「限於○月○日○時前辦理」(依<a href="../pages/regulations.html?rg=DR#article-13">處理細則13條2項</a>所訂，期間得酌定於四日以內)。</p></p>
+              <p>
+                #後照鏡<br>
+                #後視鏡<br>
+                #手把鏡<br>
+                #端子鏡
+              </p>
             </div>
             <!-- 法規彈出視窗 -->
             <div class="modal fade" id="tipArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -140,8 +153,7 @@
                     ...
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
                   </div>
                 </div>
               </div>

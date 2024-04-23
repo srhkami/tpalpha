@@ -105,7 +105,7 @@ const html_header = `
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="..${pages.feedback.href}">
-                <img class="icon_menu me-1" src="..${pages.feedback.icon}" alt="">
+                <img class="icon_menu me-1" src="${pages.feedback.icon}" alt="">
                 ${pages.feedback.name_title}
               </a></li>
             <li><a class="dropdown-item" href="..${pages.about.href}">
@@ -140,14 +140,7 @@ const html_header = `
   </div>
 `;
 
-//載入時切換主題
-function load_mode() {
-  let mode = 'light';
-  if (localStorage.getItem('colorMode')) {
-    mode = localStorage.getItem('colorMode');
-  }
-  $('html').attr('data-bs-theme', mode)
-}
+
 //按鈕切換主題
 function switch_mode() {
   $('#btn-modeSwitch').click(() => {
@@ -156,10 +149,10 @@ function switch_mode() {
       mode = 'light';
     }
     else {
-      mode = 'dark'
+      mode = 'dark';
     }
     $('html').attr('data-bs-theme', mode)
-    localStorage.setItem('colorMode', mode);
+    localStorage.setItem('theme', mode);
   });
 }
 
@@ -169,13 +162,6 @@ if ($('title').html() == '首頁'){
 else{
   $('#pageHeader').html(html_header);
 }
-load_mode();
 switch_mode();
-// 阻止下拉重整
-// document.querySelector('body').addEventListener('touchmove',(e)=>{
-//     e.preventDefault();
-//     // document.querySelector("#article_text").scrollTop = true;
-//     // return false;
-// }, {passive: false});
 
 

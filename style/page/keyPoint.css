@@ -2,7 +2,7 @@
 
 /* 法條清單排版 */
 .col-list{
-  width: auto;
+  width: 320px;
 }
 #list_article::-webkit-scrollbar{
   display: none;
@@ -11,20 +11,23 @@
   width: 120px;
 }
 
+/* 主文排版 */
+/* #item_text p{
+  text-indent: 2em;
+} */
+
+
+
+/* 法條內文排版 */
 .modal-body{
   padding-left: 1.75em;
   padding-right: 0.5em;
   counter-reset: num 0;
   position: relative;
 }
-/* 法條內文排版 */
-  /* #article_text::-webkit-scrollbar{
-  display: none;
-  } */
 /* .line-0000{
   margin-left: 2em;
 } */
-
 .line-0004{
   margin-left: 2em;
   text-indent: -2em;
