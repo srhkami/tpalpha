@@ -6,10 +6,21 @@ body{
     display: flex;
     flex-direction: column; 
     overscroll-behavior-y: contain;
+    line-height: initial !important;
 }
 main{
     height: calc(100% - 60px);
 }
 .icon_menu{
     height: 25px;
+}
+nav{
+    position: fixed;
+}
+#picArea{
+    background-color: aqua;
+    position: absolute;
+    height: 300px;
+    z-index: 10;
+    
 }

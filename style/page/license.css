@@ -10,9 +10,9 @@ a,a:link, a:visited,a:hover{
 #bk_left{
     max-width: 400px;
 }
-#bk_right::-webkit-scrollbar{
+/* #bk_right::-webkit-scrollbar{
     display: none;
-}
+} */
 @media (min-width:992px){
     #mainContent{
         display: grid;

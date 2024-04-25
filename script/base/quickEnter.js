@@ -1,6 +1,6 @@
 import { pages } from '../base/pages.js'
 
-//快速導航設定視窗預設HTML
+// 快速導航設定視窗預設HTML
 const html_quickArea = [`
   <div class="modal-dialog">
     <div class="modal-content">

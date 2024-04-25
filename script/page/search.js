@@ -84,7 +84,7 @@ function refresh_text(r_list, key_word) {
         </div>
         <div class="col p-0">
           <div class="card-body">
-            <h2 class="card-title" id="article-0">
+            <h2 class="card-title">
               「${key_word}」的搜尋結果</h2>
             <p class="card-text text-secondary-emphasis">
               ${searchResult}
@@ -97,13 +97,9 @@ function refresh_text(r_list, key_word) {
     `;
   r_list.forEach((value, index) => {
       html +=`
-      <div class="article">
+      <div id="article-${value.rg}-${value.article}" class="article">
         <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
-            <h4 id="article-${value.rg}-${value.article}" class="d-inline me-auto" data-rg="${value.rg}">${value.index}</h4>
-            <button type="button" class="btn btn-primary btn-sm me-2 h-75" disabled>
-                函釋 <span class="badge text-bg-info">0</span>
-            </button>
-            <button type="button" class="btn btn-primary btn-sm me-2 h-75" disabled>書籤</button>
+            <h4 class="d-inline me-auto" data-rg="${value.rg}">${value.index}</h4>
             <button type="button" class="btn btn-primary btn-sm me-2 h-75" disabled>分享</button>
         </div>
         <div class="col-data">
@@ -132,18 +128,8 @@ $('#article_text').html(refresh_text(list_output, key_word));
 $(document).ready(()=>{
   //偵測側邊欄點擊
   $("#sidebar a,.btn-close").click(()=>{
-      setTimeout(()=>$('.offcanvas-lg').offcanvas('hide'), 50)
+    setTimeout(()=>$('.offcanvas-lg').offcanvas('hide'), 50)
   });
-  $('#side_switch').click(()=>{
-      if ($('.offcanvas-lg').hasClass('offcanvas-start')){
-          $('.offcanvas-lg').removeClass('offcanvas-start');
-          $('.offcanvas-lg').addClass('offcanvas-end');
-      }
-      else{
-          $('.offcanvas-lg').removeClass('offcanvas-end');
-          $('.offcanvas-lg').addClass('offcanvas-start');
-      }
-  })
 })
 
 

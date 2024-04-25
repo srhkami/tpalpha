@@ -1,16 +1,51 @@
 import { pages } from '../base/pages.js';
+import { list_kp } from '../list/kp_list.js'
 
-$(".showArticle").click((e) => {
-	console.log(e.target.dataset.rg);
-	let rg_name = e.target.dataset.rg.substr(0,2);
-	let article = e.target.dataset.rg.substr(3);
-	console.log(rg_name+';'+article)
-	$('.modal-title').html(`《${pages[rg_name].name_title}》第 ${article} 條`);
-	let text;
-	pages[rg_name].list.forEach(value => {
-		if (value.article == article){
-			text = value.text;
+// 刷新頁面
+function refresh_page(){
+	let search = new URLSearchParams(location.search);
+	let item_code = search.get('item');
+	let html = '';
+	list_kp.forEach((value)=>{
+		if (value.code == item_code){
+			$('.card-title').html(value.title);
+			$('.card-text').html(`資料整理/撰文者：<span class="text-info mx-1 fw-semibold">${value.author} </span><br>更新日期：${value.update}`);
+			$('#item_text').html(value.text);
+			html += `
+				<a href="../pages/keyPoint.html?item=${value.code}" type="button" class="list-group-item list-group-item-action active" data-item="${value.code}">
+					${value.title}
+				</a>
+			`
 		}
+		else{
+			html += `
+				<a href="../pages/keyPoint.html?item=${value.code}" type="button" class="list-group-item list-group-item-action" data-item="${value.code}">
+					${value.title}
+			</a>
+			`
+		}
+	})
+	$('.list-group').html(html);
+}
+
+
+// 連結法規條文
+function showArticle(){
+	$(".showArticle").click((e) => {
+		let rg_name = e.target.dataset.rg.substr(0,2);
+		let article = e.target.dataset.rg.substr(3);
+		$('.modal-title').html(`《${pages[rg_name].name_title}》第 ${article} 條`);
+		let text;
+		pages[rg_name].list.forEach(value => {
+			if (value.article == article){
+				text = value.text;
+			}
+		});
+		$('.modal-body').html(text);
 	});
-	$('.modal-body').html(text);
+}
+
+refresh_page();
+$(document).ready(() => {
+	showArticle();
 });

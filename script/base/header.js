@@ -1,7 +1,7 @@
 import { pages } from "./pages.js";
 
-//導航列預設HTML
-const html_header = `
+// 導航列預設HTML
+export const html_header = `
   <div class="container-fluid">
     <a class="navbar-brand d-flex fw-bolder" href="../index.html">
       <img src="../icons/icon_trafficpigeon_2.png" alt="Logo" width="30" height="30" class="my-auto me-2">
@@ -104,11 +104,11 @@ const html_header = `
             更多
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="..${pages.feedback.href}">
-                <img class="icon_menu me-1" src="${pages.feedback.icon}" alt="">
+            <li><a class="dropdown-item" href="${pages.feedback.href}">
+                <img class="icon_menu me-1" src="..${pages.feedback.icon}" alt="">
                 ${pages.feedback.name_title}
               </a></li>
-            <li><a class="dropdown-item" href="${pages.about.href}">
+            <li><a class="dropdown-item" href="..${pages.about.href}">
                 <img class="icon_menu me-1" src="..${pages.about.icon}" alt="">
                 ${pages.about.name_title}
               </a></li>
@@ -122,17 +122,27 @@ const html_header = `
             </li>--!>
         </ul>
         <!-- 模式切換按鈕 -->
-        <button id="btn-modeSwitch" class="btn btn-outline-secondary ms-auto me-2">
-          <img class="btn_header btn_search" src="../icons/icon_moon.png" width="24px" walt="">
-          <p class="d-inline d-md-none">切換主題</p>
+        <div class="dropdown">
+        <button id="btn-modeSwitch" class="btn btn-outline-secondary ms-auto me-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          <img class="btn_header btn_search" src="../icons/icon_moon.png" width="24px" alt="">
+          <p class="d-inline">主題</p>
         </button>
+        <ul class="dropdown-menu" style="width:50px">
+          <li><a class="dropdown-item themeSwitch" href="#" data-theme="auto">系統自動</a></li>
+          <li><a class="dropdown-item themeSwitch" href="#" data-theme="light">亮色模式</a></li>
+          <li><a class="dropdown-item themeSwitch" href="#" data-theme="dark">暗色模式</a></li>
+        </ul>
+        </div>
     </div>
     <!-- 搜尋按鈕 -->
     <button class="btn btn-outline-secondary ms-auto me-2" data-bs-toggle="modal" data-bs-target="#searchArea">
-      <img class="btn_header btn_search" src="../icons/icon_search.png" width="24px" walt="搜尋">
+      <img class="btn_header btn_search" src="../icons/icon_search.png" width="24px" walt="">
+      <p class="d-none d-lg-inline">搜尋</p>
     </button>
     <!-- 搜尋之彈出視窗 -->
-    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    </div>
+    <!-- 展開頂端欄按鈕 -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -140,28 +150,11 @@ const html_header = `
   </div>
 `;
 
-
-//按鈕切換主題
-function switch_mode() {
-  $('#btn-modeSwitch').click(() => {
-    let mode = '';
-    if ($('html').attr('data-bs-theme') == 'dark') {
-      mode = 'light';
-    }
-    else {
-      mode = 'dark';
-    }
-    $('html').attr('data-bs-theme', mode)
-    localStorage.setItem('theme', mode);
-  });
-}
-
-if ($('title').html() == '首頁'){
+// 主程式
+if ($('title').html() == '首頁 - 交通鴿手'){
   $('#pageHeader').html(html_header.replaceAll('..','.'));
 }
 else{
   $('#pageHeader').html(html_header);
 }
-switch_mode();
-
 

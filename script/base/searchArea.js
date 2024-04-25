@@ -69,7 +69,7 @@ const html_searchArea =`
 
   //讀取瀏覽器設定，刷新搜尋區域
 function load_searchBar(html_searchArea) {
-  if ($('title').html() == '首頁'){
+  if ($('title').html() == '首頁 - 交通鴿手'){
     $('#searchArea').html(html_searchArea.replaceAll('..','.'));
   }
   else{

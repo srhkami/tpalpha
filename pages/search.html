@@ -2,9 +2,11 @@
 <html class="h-100" data-bs-theme="light">
 
 <head>
+  <script src="../script/base/jquery-3.7.1.min.js"></script>
+  <script src='../script/base/theme.js'></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>搜尋結果</title>
+  <title>搜尋結果 - 交通鴿手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
@@ -12,56 +14,36 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script type='module' src="../script/base/header.js"></script>
-  <script type='module' src="../script/base/searchArea.js"></script>
-  <script type='module' src='../script/page/search.js'> </script>
+  <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css"/>
   <link rel="stylesheet" href="../style/page/regulations.css"/>
   <link rel="stylesheet" href="../style/page/search.css"/>
+  <script type='module' src="../script/base/header.js"></script>
+  <script type='module' src="../script/base/searchArea.js"></script>
+  <script type='module' src='../script/page/search.js'> </script>
 </head>
 
-<body class="h-100 overflow-hidden">
+<body class="h-100">
   <nav id="pageHeader" class="navbar navbar-expand-md bg-body-tertiary"></nav>
-  <main">
+  <main>
     <div id="mainContent" class="container-xl py-3 h-100 position-relative">
       <div class="row h-100">
         <!-- 法規條目清單 -->
         <!-- 側邊攔 -->
-        <div class="col-list h-100 overflow-hidden px-0 me-3 offcanvas-lg offcanvas-start rounded-3 border" tabindex="-1" id="sidebar"
-          aria-labelledby="offcanvasExampleLabel">
+        <div class="col-list h-100 overflow-hidden px-0 me-3 offcanvas-lg offcanvas-start rounded-3 border" tabindex="-1" id="sidebar" aria-labelledby="offcanvasExampleLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">所有搜尋結果</h5>
-            <!-- <button type="button" id="side_switch" class="btn btn-primary ms-auto" aria-label="關閉">切換位置</button> -->
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">所有項目</h5>
             <button type="button" class="btn-close" aria-label="關閉"></button>
           </div>
           <!-- 主清單 -->
           <div>
-            <h5 class="d-none d-lg-block my-3 mx-3">所有搜尋結果</h5>
+            <h5 class="d-none d-lg-block my-3 mx-3">所有項目</h5>
           </div>
-          <div id="list_article" class="list-group h-100 overflow-auto px-0 rounded-0">
+          <div id="list_article" class="list-group h-100 overflow-auto px-0 rounded-0 ">
             <a class="list-group-item list-group-item-action" href="#article-1">
-              <label for="check_right" class="w-100">
-                <div class="list-article-no">《處罰條例》第 1 條</div>
-                <div class="list-article-title text-secondary-emphasis">立法目的</div>
-              </label>
-            </a>
-            <a class="list-group-item list-group-item-action" href="#article-2">
-              <label for="check_right" class="w-100">
-                <div class="list-article-no">《處罰條例》第 2 條</div>
-                <div class="list-article-title text-secondary-emphasis">適用範圍</div>
-              </label>
-            </a>
-            <a class="list-group-item list-group-item-action" href="#article-3">
-              <label for="check_right" class="w-100">
-                <div class="list-article-no">《處罰條例》第 3 條</div>
-                <div class="list-article-title text-secondary-emphasis">用詞定義</div>
-              </label>
-            </a>
-            <a class="list-group-item list-group-item-action" href="#article-4">
-              <label for="check_right" class="w-100">
-                <div class="list-article-no">《處罰條例》第 4 條</div>
-                <div class="list-article-title text-secondary-emphasis">遵守、管理、刑責</div>
+              <label class="d-flex" for="check_right">
+                <div class="list-article-no">第 0 條</div>
+                <div class="list-article-ttitle">　　　　　　　　</div>
               </label>
             </a>
           </div>
@@ -70,7 +52,7 @@
         <div class="col h-100 px-3">
           <div id="article_text" data-bs-spy="scroll" data-bs-target="#list_article" data-bs-smooth-scroll="true"
             class="scrollspy-example overflow-auto h-100 pb-5" tabindex="0">
-            <!-- 佔位符 -->
+            <!-- 標題卡片(佔位符)-->
             <div class="card rounded-3" aria-hidden="true">
               <div class="row mx-0">
                 <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
@@ -90,6 +72,7 @@
                 </div>
               </div>
             </div>
+            <!-- 內文(佔位符) -->
             <div class="article " id="article-1">
               <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
                 <h4 class="d-inline">第 0 條</h4>
@@ -112,33 +95,15 @@
         </div>
       </div>
       <!-- 手機板顯示底欄 -->
-      <div class="row d-lg-none position-absolute bottom-0 mb-3 px-4 w-100 ">
-        <label id="label_switch" for="switch-sidebar" class="d-flex bg-info rounded-3 align-items-center ">
-          <img class="icon_menu" src="../icons/icon_policeman.png" alt="">
-          <h5 class="d-inline text-primary mb-0 ms-3">瀏覽所有結果</h5>
-          <button id="switch-sidebar" class="btn ms-auto" type="button" data-bs-toggle="offcanvas"
+      <div class="row d-lg-none position-absolute bottom-0 mb-2 px-4 w-100">
+        <label id="label_switch" for="switch-sidebar" class="d-flex bg-contrast rounded-3 align-items-center ">
+          <button id="switch-sidebar" class="btn" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#sidebar" aria-controls="offcanvasExample">
-            <img src="../icons/icon_menu_2.png" alt="" width="30">
+            <img src="../icons/icon_menu_2.png" alt="" width="25">
           </button>
+          <h5 class="d-inline text-primary mb-0 ms-1">瀏覽所有項目</h5>
         </label>
       </div>
-       <!-- 舊的 -->
-      <!-- <div id="bk_left">
-        <aside id="searchBar"></aside>
-      </div>
-      <input type="checkbox" name="check_right" id="check_right" class="check_right" checked="checked">
-      <div id="bk_right">
-        <label class="bk_right_header" for="check_right">
-          <div class="bk_right_title">
-            <p class="title_article">第 1 條</p>
-          </div>
-          <div class="bk_toolbar"></div>
-          <img class="btn_right_open" src="../icons/icon_up_b.png" alt="縮放">
-        </label>
-        <div class="bk_right_text">
-          <p class="line-0000 show-number">這是測試這一行<i class="highlight">裡面夾了P標籤</i> 測試第一行</p>
-        </div>
-      </div> -->
     </div>
   </main>
 </body>
