@@ -65,7 +65,7 @@ export const list_kp = [
       <h4 class="mt-4 mb-3">查無引擎號碼或車身號碼</h4>
       <p>① 查無引擎號碼或車身號碼，逕以拼裝車論處，舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-12">舉罰條例12條</a>1項2款。暫代保管空車乙輛，通知合約廠商拖吊。</p>
       <p>→類案裁判書：
-      <br><a href="">臺灣新北地方法院 111 年度交字第 454 號判決</a>（車身號碼磨掉、引擎號碼無資料，自述拼裝）
+      <br><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDA,111%2c%e4%ba%a4%2c454%2c20221128%2c1">臺灣新北地方法院 111 年度交字第 454 號判決</a>（車身號碼磨掉、引擎號碼無資料，自述拼裝）
       <br><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHM,95%2c%e4%ba%a4%e6%8a%97%2c180%2c20060322%2c1">臺灣高等法院 95 年度交抗字第 180 號刑事裁定</a> ：任何非由合格正式車廠所設計、製造出廠之車輛或在原廠車上任意改裝非屬原廠設計規範或容許代換之零件，均屬拼裝車。
       <br
       ></p>
@@ -566,7 +566,7 @@ export const list_kp = [
       <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="DR-13">處理細則13條2項</a>：<br>「前項違反行為須責令定期改正、修復或補辦手續者，除依規定應請領臨時通行證外，依其實際所需時間記明「限於○月○日○時前辦理」等字樣，其期間得酌定於四日以內。 」  
       </p>
       <h4>張貼廣告規定</h4>
-      <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-13">安全規則42條3項</a>：<br>
+      <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">安全規則42條3項</a>：<br>
         「計程車應於兩側後門或後葉子板標示牌照號碼及公司行號、運輸合作社或個人名稱，後窗玻璃標示牌照號碼。但多元化計程車不在此限。計程車車身兩側及多元化計程車車身範圍(均不含車窗)於不影響辨識及視線安全下，得以平面漆繪或穩固黏貼方式張貼廣告，並應符合各目的事業主管機關及地方政府相關廣告物管理之法令規定辦理。」
       </p>
       <p>交通部公路總局98年公路監理車輛管理工作圈第5次會議討論提綱第3案：<br>

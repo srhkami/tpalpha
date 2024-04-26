@@ -129,7 +129,7 @@ function refresh_text(r_list, key_word) {
             <p class="card-text text-secondary-emphasis">
               ${searchResult}
             </p>
-            <button id="reSearch" href="#" class="btn btn-primary" disabled>重新搜尋</button>
+            <button id="reSearch" href="#" class="btn btn-primary" disabled>暫無功能</button>
           </div>
         </div>
       </div>
