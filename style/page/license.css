@@ -5,7 +5,6 @@ a,a:link, a:visited,a:hover{
 #mainContent{
     display: flex;
     flex-direction: column;
-
 }
 #bk_left{
     max-width: 400px;
@@ -21,109 +20,6 @@ a,a:link, a:visited,a:hover{
         grid-column-gap: 16px;
     }
 }
-/* #bk_left{
-    margin: 10px;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    height: auto;
-    background-color: rgb(26, 53, 84);
-    display: grid;
-    grid-template-rows: 60px 60px 60px 60px 1fr;
-} */
-
-/* .bk_input{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* .input_title{
-    flex: 1;
-    font-size: 15px;
-    color: whitesmoke;
-} */
-/* .input_select{
-    flex: 1;
-    background-color: rgb(209, 247, 255);
-    margin: 3% 0%;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 10px;
-    height: 30px;
-}
-#input_select:disabled{
-    background-color: rgb(0, 0, 0);
-} */
-
-/* #bt_ok{
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    border:1.5px whitesmoke solid;
-    color: white;
-    font-size: 24px;
-    font-weight: 600;
-    background-color: rgb(90, 150, 250);
-    margin: 10px 0px 5px 0px;
-} */
-/* #bt_ok:hover{
-    border:3px whitesmoke solid;
-}
-#bt_ok:active{
-    background-color: rgb(50, 125, 255);
-} */
-/* 
-.tip{
-    color: yellow;
-    text-align: center;
-    font-weight: 600;
-    font-size: 18px;
-    height: 30px;
-    flex: auto;
-    margin: 0;
-} */
-
-/* #bk_right{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    background-color: MintCream;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px; 
-    overflow: auto;
-} */
-
-/* .title_article{
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 800;
-    vertical-align: middle;
-    padding-left: 2em;
-    color: rgb(50, 120, 250);
-    margin: 10px 0;
-} */
-
-
-
-/* .output_title{
-    font-size: 20px;
-    color: red;
-}
-
-.output_text_big{
-    font-size: 18px;
-    font-weight: 600;
-    color: red;
-}
-
-.output_text_small{
-    font-size: 14px;
-    font-weight: 600;
-    color: firebrick;
-} */
 
 .comment_text{
     font-size: 12px;
@@ -137,15 +33,5 @@ a,a:link, a:visited,a:hover{
     width: 24px;
     vertical-align: middle;
 }
-
-/* @media (max-width:991px){
-    #mainContent{
-        display: flex;
-        flex-direction: column;
-    }
-    #bk_left{
-        max-height: 320px;
-    }
-} */
 
 

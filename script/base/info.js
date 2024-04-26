@@ -1,7 +1,7 @@
 import {pages} from './pages.js';
 
 // 版本號(大版本.小版本.日+時)
-const app_ver =`1.10.2614 (Beta)`;
+const app_ver =`1.10.2621 (Beta)`;
 
 // 公告
 const notice =`

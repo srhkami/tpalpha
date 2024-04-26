@@ -9,25 +9,28 @@ class KeyPoint {
 }
 
 export const list_kp = [
-  new KeyPoint(
-    'bikeMirror',
-    '機車照後鏡大小之取締',
+    new KeyPoint(
+    'licenseState',
+    '駕照、牌照異常狀態一覽',
     '無奈 學長',
-    '113 年 04 月 25 日',
+    '112 年 07 月 24 日',
     `
-    <h4 class="mt-4 mb-3">「手把鏡(端子鏡)算不算違規？」</h4>
-    <p>
-      裝在手把兩端之照後鏡（法定用語，或稱後照鏡、後視鏡），算不算違規？從安規附件十五來看，照後鏡只要與車身主結構連接、不影響駕駛人視角即可。而安裝手把鏡後，只要車身寬度不超過
-      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-38">
-        安全規則38條</a>所訂尺度即可。而手把鏡是安裝而非裝載，故與<a  href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-88">安全規則88條
-      </a>無涉。
-    </p>
-    <h4 class="mt-4 mb-3">「照後鏡太小算不算違規？」</h4>
-    <p >依據<a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=K0040065">車輛型式安全審驗管理辦法</a>附件二十七，照後鏡屬間接視野裝置，其目得在提供駕駛人後面、側邊之清晰視線，故有規定機車照後鏡「圓形鏡之直徑不得小於94公釐」、「非圓形鏡其尺寸需允許直徑78公釐的圓能鑲入反射面」。</p>
-    <p >換言之，如果照後鏡鏡面過小不符合車審辦法附件之規定，自無法提供充足之後面、側邊視線，當可認定其違反<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">處罰條例16條1項2款</a>「照後鏡擅自變更原有規格致影響行車安全」。
-      
-    <h4 class="mt-4 mb-3">小結</h4>
-    <p >以上個人整理分享，也有實際就改裝之鏡面太小予以製單舉發。取締時需備尺測量，舉發處罰條例16條1項2款：變更原有設備(致影響行車安全)，加註①「量測圓形鏡僅直徑xx公釐，影響行車安全」或②「非圓形鏡無法鑲入78公釐圓，影響行車安全」，責令改正、「限於○月○日○時前辦理」(依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="DR-13">處理細則13條2項</a>所訂，期間得酌定於四日以內)。</p></p>
+      <h4 class="mt-4 mb-3">吊扣</h4>
+      <p>因有違反規定之駕駛、行駛行為，或不配合規定之行為，故「暫時收回有效之牌照、駕照」，期滿或達成條件時發還。牌照、駕照自始至終為有效，惟吊扣期間不得使用。</p>
+      <h4 class="mt-4 mb-3">吊銷</h4>
+      <p>因有違反規定之駕駛、行駛行為，或重複違反違規、或不配合規定之行為，故「收回並銷毀有效之牌照、駕照」。吊銷處分，明文於處罰條款之主文。</p>
+      <h4 class="mt-4 mb-3">註銷</h4>
+      <p>汽車逾相當期限不參加檢驗之處罰，或汽車非正式牌照(臨時牌、試車牌)之無效，或微電車牌照之無效，註之註銷，即「註記銷毀有效之牌照、駕照」</p>
+      <h4 class="mt-4 mb-3">逕行註銷</h4>
+      <p>逕行註銷：即「該來不來」，如：應受吊(註)註處分而不到案、逾期不參加審驗、車輛所有人異動而未依法辦理異動登記……等等，由監理機關「逕行註記銷毀應屬無效牌照、駕照」。</p>
+      <h4 class="mt-4 mb-3">繳銷</h4>
+      <p>有效之牌照、駕照，因已無需要，故自行繳回監理機關辦理註銷。</p>
+      <h4 class="mt-4 mb-3">小結</h4>
+      <p>以上是小弟自處罰條例、安全規則、處理細則中，整理出來這些名詞的"定義"。因為官方沒有整合說明，所以只能自己推敲，幫助理解記憶，大家卓參。</p>
+      <h4 class="mt-4 mb-3">懶人包</h4>
+      <p>顯示為【吊銷、繳銷】，是有把牌照、駕照到案繳回的。因為是"銷"，所以繳回後即無效。</p>
+      <p>顯示為【○○註銷】、【○○逕註】，就是未依法定時限到案、或未將應依法無效之牌照、駕照繳回的。</p>
+      <p>顯示為【吊扣】，就是有效之牌照、駕照於一定期間不得使用。駕籍會顯示吊扣期間之起迄日期，車籍則只會顯示「執行條例處分吊扣」(有顯示即為吊扣狀態)。</p>
     `
   ),
   new KeyPoint(
@@ -54,14 +57,18 @@ export const list_kp = [
     `
   ),
   new KeyPoint(
-    'NoCarLicense',
+    'noCarLicense',
     '未懸掛號牌之舉發',
     '無奈 學長',
     '112 年 05 月 16 日',
     `
       <h4 class="mt-4 mb-3">查無引擎號碼或車身號碼</h4>
       <p>① 查無引擎號碼或車身號碼，逕以拼裝車論處，舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-12">舉罰條例12條</a>1項2款。暫代保管空車乙輛，通知合約廠商拖吊。</p>
-      <p>→類案裁判書：<a href="">臺灣新北地方法院 111 年度交字第 454 號判決</a> <br>（車身號碼磨掉、引擎號碼無資料，自述拼裝）</p>
+      <p>→類案裁判書：
+      <br><a href="">臺灣新北地方法院 111 年度交字第 454 號判決</a>（車身號碼磨掉、引擎號碼無資料，自述拼裝）
+      <br><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHM,95%2c%e4%ba%a4%e6%8a%97%2c180%2c20060322%2c1">臺灣高等法院 95 年度交抗字第 180 號刑事裁定</a> ：任何非由合格正式車廠所設計、製造出廠之車輛或在原廠車上任意改裝非屬原廠設計規範或容許代換之零件，均屬拼裝車。
+      <br
+      ></p>
       <p>② 查得引擎號碼或車身號碼，惟該號碼查無車籍資料，而該車係市面已有販售之車款，屬12.1.1前段違規（不用沒入！不用沒入！不用沒入！），亦無移置保管之規定。舉發後禁止其行駛。</p>
       <p>③ 查得引擎號碼或車身號碼，惟該號碼查無車籍資料，且查詢非市售車款。先依12.1.1後段舉發、暫代保管空車乙輛。再將該車採證照片及相關資料，依據<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-17">安全規則17條</a>，函文：</p>
       <p>　❶ 車審中心進口車審驗部(查車審紀錄)
@@ -71,6 +78,9 @@ export const list_kp = [
       </p>
       <p>（一）確無車審合格證明者，違反12.1.1後段無誤，處罰機關可依查證情形將該車沒入。暫代保管之車輛，通知合約廠商前來拖吊。</p>
       <p>（二）如有車審合格證明者，則更正舉發為12.1.1前段，車輛發還所有人。</p>
+      <p>→相關函釋：
+      <br><a href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SOID=15930">交通部 107.01.10 交路字第1060416992號函</a>：「拆除原廠車輛、以零組件等方式進口後再組裝」、「整車進口」或「國內產製」之車輛，凡未領用牌照且未取得安全審驗合格」，於違反規定時，沒入車輛。。
+      </p>
       <h4 class="mt-4 mb-3">查有引擎或車身號碼</h4>
       <p>① 查得引擎號碼或車身號碼，且有車籍、車籍正常，屬12.1.7違規，舉發並禁止其行駛。</p>
       <p>② 查得引擎號碼或車身號碼，而車籍為吊銷、註銷、吊扣、報停…等情，分依12條1項之6、8款舉發，移置保管車輛。如車主在場表示自行拖離，依<a href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SOID=16244">交通部107.11.19交路字第1070029957號函</a>，得當場發還車輛。</p>
@@ -84,7 +94,6 @@ export const list_kp = [
       <p>※ 亦歡迎使用「<a href="../pages/carLicense.html" >牌照違規速查</a>」功能一鍵查詢違反法條 ※</p>
     `
   ),
-
   new KeyPoint(
     'otherCarLicense',
     '懸掛他車號牌之舉發',
@@ -92,7 +101,7 @@ export const list_kp = [
     '112 年 05 月 16 日',
     `
     <h4 class="mt-4 mb-3">行駛狀態</h4>
-    <p>①	車體部分，比照「<a href="../pages/keypoint.html?item=NoCarLicense">未懸掛號牌之舉發</a>」一文程序辦理，另舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-12">舉罰條例12條</a>1項5款「使用他車牌照」。</p>
+    <p>①	車體部分，比照「<a href="../pages/keypoint.html?item=noCarLicense">未懸掛號牌之舉發</a>」一文程序辦理，另舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-12">舉罰條例12條</a>1項5款「使用他車牌照」。</p>
     <p>②	他車牌不論車籍如何，舉發「牌照借供他車使用」、暫代保管汽牌○面(機牌1面)。惟他車牌如為失竊狀態，原則上不舉發他車牌之所有人。但經查明報案時間比對懸掛時間，而有積極事證得證明他車牌之所有人將車牌借供他人使用，仍應舉發12.1.5「牌照借供他車使用」。</p>
     <p>③	他車牌如為偽造車牌，舉發車體所有人12.1.3，違反刑法部分請參閱「<a href="../pages/keypoint.html?item=fakeCarLicense">偽造號牌之舉發及偵辦</a>」一文第二段</a>。</p>
     <p>④	他車牌如為變造車牌：</p>
@@ -114,6 +123,27 @@ export const list_kp = [
     </p>
     <br>
     <p>※ 亦歡迎使用「<a href="../pages/carLicense.html" >牌照違規速查</a>」功能一鍵查詢違反法條 ※</p>
+    `
+  ),
+  new KeyPoint(
+    'bikeMirror',
+    '機車照後鏡大小之取締',
+    '無奈 學長',
+    '113 年 04 月 25 日',
+    `
+    <h4 class="mt-4 mb-3">「手把鏡(端子鏡)算不算違規？」</h4>
+    <p>
+      裝在手把兩端之照後鏡（法定用語，或稱後照鏡、後視鏡），算不算違規？從安規附件十五來看，照後鏡只要與車身主結構連接、不影響駕駛人視角即可。而安裝手把鏡後，只要車身寬度不超過
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-38">
+        安全規則38條</a>所訂尺度即可。而手把鏡是安裝而非裝載，故與<a  href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-88">安全規則88條
+      </a>無涉。
+    </p>
+    <h4 class="mt-4 mb-3">「照後鏡太小算不算違規？」</h4>
+    <p >依據<a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=K0040065">車輛型式安全審驗管理辦法</a>附件二十七，照後鏡屬間接視野裝置，其目得在提供駕駛人後面、側邊之清晰視線，故有規定機車照後鏡「圓形鏡之直徑不得小於94公釐」、「非圓形鏡其尺寸需允許直徑78公釐的圓能鑲入反射面」。</p>
+    <p >換言之，如果照後鏡鏡面過小不符合車審辦法附件之規定，自無法提供充足之後面、側邊視線，當可認定其違反<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">處罰條例16條1項2款</a>「照後鏡擅自變更原有規格致影響行車安全」。
+      
+    <h4 class="mt-4 mb-3">小結</h4>
+    <p >以上個人整理分享，也有實際就改裝之鏡面太小予以製單舉發。取締時需備尺測量，舉發處罰條例16條1項2款：變更原有設備(致影響行車安全)，加註①「量測圓形鏡僅直徑xx公釐，影響行車安全」或②「非圓形鏡無法鑲入78公釐圓，影響行車安全」，責令改正、「限於○月○日○時前辦理」(依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="DR-13">處理細則13條2項</a>所訂，期間得酌定於四日以內)。</p></p>
     `
   ),
   new KeyPoint(
@@ -146,32 +176,405 @@ export const list_kp = [
     '計程車常見違規項目',
     '黃家進 學長',
     '112 年 04 月 22 日',
-    '更新中……敬請期待！'
+    `
+      <div class="container-fuild">
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          違反條目
+        </div>
+        <div class="col-7 border d-flex justify-content-center align-items-center">
+          違反內容
+        </div>
+        <div class="col-3 border d-flex justify-content-center align-items-center">
+          備註
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+            16.1.4
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          未於兩側後門或後葉子板標示牌照號碼及車主名稱。<br>
+        (多元化計程車不在此限)<br>
+        (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+          安全規則42.1.3
+          </a>)
+          </div>
+        <div class="col-3 border d-flex align-items-center">
+          處所有人<br>
+          得郵繳<br>
+          責令改正
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+            16.1.4
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          未於後窗玻璃標示牌照號碼。 <br>
+        (多元化計程車不在此限)<br> 
+        (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+          安全規則42.1.3
+          </a>) 
+          </div>
+        <div class="col-3 border d-flex align-items-center">
+          處所有人<br>
+          得郵繳<br>
+          責令改正
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+            16.1.4
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          未於右前座椅背標示牌照號碼。 <br> 
+          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+            安全規則42.2
+            </a>) 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處所有人<br>
+          得郵繳<br>
+          責令改正
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+            16.1.5
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          未依規定裝置自動計費器。 <br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處所有人<br>
+          應到案<br>
+          責令改正
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+            16.1.5
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          未依規定裝置車頂燈。<br> 
+          (應固定於車頂前半部適當位置，不得以磁鐵吸住方式安裝) <br> 
+          (盞數應為一盞，燈色不得為紅色)<br> 
+          (安全規則附件七) 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處所有人<br>
+          應到案<br>
+          責令改正
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+            16.1.5
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          未依規定裝置執業登記證插座 <br> 
+          (應於儀錶板上右側與右前座椅背設置執登證插座) <br> 
+          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+            安全規則42.2
+            </a>) 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處所有人<br>
+          應到案<br>
+          責令改正
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+            16.1.5
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          前、後兩邊玻璃門上，黏貼不透明反光紙  <br> 
+          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-39-1">
+            安全規則39-1.8
+            </a>) 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處所有人<br>
+          應到案<br>
+          責令改正、反光紙並應撤除
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-22">
+            22.1.1
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          領有普通駕駛執照，駕駛營業汽車營業 。<br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳<br>
+          禁止其駕駛
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.1
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          未向警察機關辦理、領取執業登記證，即行執業者。<br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.1
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          持已失效(註銷、吊扣、廢止)之執業登記證執業者。<br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳<br>
+          當場暫代保管執登證
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.1
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          使用偽(變)造執業登記證。<br> 
+          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+            安全規則42.2
+            </a>) 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          <p class="my-auto">處駕駛人<br>
+            得郵繳<br>
+            扣押(<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="CC-216">
+              刑法216
+              </a>)
+          </p> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.1
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          冒用他人執業登記證。 <br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          <p class="my-auto">處駕駛人<br>
+            得郵繳<br>
+            沒入(<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SO-66">
+              社維法66.2
+              </a>) 
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.3
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          不依規定辦理執業登記事項之異動申報，未逾六個月。<br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          應到案
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.3
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          不依規定辦理執業登記事項之異動申報，已逾六個月。<br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          應到案<br>
+          當場暫代保管執登證
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.3
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          不依規定參加執業登記證年度查驗者，未逾六個月。<br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          應到案
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.3
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          不依規定參加執業登記證年度查驗者，已逾六個月。<br> 
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          應到案<br>
+          當場暫代保管執登證
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.5
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          執業登記證未依規定安置車內指定之插座(含未帶)。<br> 
+          (計程車駕駛人執業登記管理辦法14.1：執登證置於儀錶板上右側，副證置於右前座椅背)  
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.5
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          執業登記證(含副證)以他物遮蔽者。
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+            36.5
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          使用影印之執業登記證。
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-38">
+            38.1
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          於鐵路、公路車站或其他交通頻繁處所，違規攬客營運，妨害交通秩序者。
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-38">
+            38.1
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          任意拒載乘客或故意繞道行駛者。
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-60">
+            60.2.4
+          </a>
+        </div>
+        <div class="col-7 border py-2">
+          計程車之停車上客，不遵守主管機關之規定。
+        </div>
+        <div class="col-3 border d-flex align-items-center">
+          處駕駛人<br>
+          得郵繳
+        </div>
+      </div>
+      <div class="row my-3 px-auto">
+        <h3 class="text-info d-inline-block">※備註</h3>
+      </div>
+    </div>
+    <h4>不論是否載客均不影響營業事實</h4>
+      <p><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=SLDA,111%2c%e4%ba%a4%2c358%2c20230131%2c1">臺灣士林地方法院 111 年度交字第 358 號判決</a>：<br>
+        「處罰條例第36條第1項之立法規範，係基於強化計程車管理、犯罪預防、方便乘客辨識等多項目的，不論是否載
+        客，如無營業登記而駕駛職業小客車於道路上行駛，即構成處罰條例第36條第1項之要件，而原告於上揭時間既未領有有效之執業登記證，即駕駛職業小客車行駛於道路，無論其有無載客，或是否亦欲載客，揆諸上開規定，自屬違反處罰條例第36條第1項之行為，事屬明確，洵可認定」 
+      </p>
+      <h4>單純冒用他人執登屬社維法</h4>
+      <p><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=SLDM,89%2c%e6%98%93%2c493%2c20000529">臺灣士林地方法院 89 年度易字第 493 號刑事判決</a>：<br>
+        「檢視扣案之執業登記證影本，其上並無偽造製作權人臺北市政府警察局之公印，顯係單純影印原本，而無偽造他人名義。是本件被告二人彩色影印他人執業登記證以行使之事實縱或屬實，既無偽造他人名義或更改原本之內容，核與刑法偽造特種文書之構成要件不符，不足遽論該等罪責。」
+      </p>
+      <h4>使用偽造執業登記證屬刑法</h4>
+      <p><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=KSDM,112%2c%e7%b0%a1%2c1921%2c20230807%2c1">臺灣高雄地方法院 112 年度簡字第 1921 號刑事判決</a>：<br>
+        「按汽車駕駛人以從事計程車駕駛為業者，應於執業前向執業地直轄市、縣(市)警察局申請辦理執業登記，領有計程車駕駛人執業登記證及其副證，始得執業；汽車駕駛人須領有職業駕駛執照，且無道路交通管理處罰條例第36條第4 項或第37條第1項情事者，始得申請辦理執業登記，計程車駕駛人執業登記管理辦法第2條、第3條分別定有明文，是本案執業登記證自屬刑法第212條規定之特許證，而屬特種文書。（略）……是核被告所為，係犯刑法第216條、第212條之行使變造特種文書罪。其變造上開執業登記證後復持以行使，該變造之低度行為應為行使之高度行為所吸收，不另論罪。」 
+      </p>
+      <h4>車內所置之執登證必須是正本，不可用影本</h4>
+      <p><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDA,101%2c%e4%ba%a4%2c61%2c20121228%2c1">臺灣臺北地方法院 101 年度交字第 61 號判決</a>：<br>
+        「其立法目的在於使乘客知悉其所搭乘或擬搭乘之計程車是否合法、登記駕駛人與實際駕駛人是否同一，並於產生消費糾紛時，有追索之可能，以提升公眾對計程車行業之信賴，是計程車駕駛人於其執業過程中，無論有無搭載乘客，均應確實妥適放置執業登記證。而影本極易偽造、變造，乘客無法辨識、查證影本之真實性，自不得以影本取代主管機關核發之職業登記證。再者，原告以駕駛計程車為業，當可知悉其申領取得之職業登記證應依規定放置在指定之插座內，倘認其得以影本取代職業登記證放置在指定插座內，主管機關即無核發職業登記證之必要，道路交通管理處罰條例第36 條第5 項之立法目的亦將難以達成。」  
+      </p>
+      <h4>責令改正期限</h4>
+      <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="DR-13">處理細則13條2項</a>：<br>「前項違反行為須責令定期改正、修復或補辦手續者，除依規定應請領臨時通行證外，依其實際所需時間記明「限於○月○日○時前辦理」等字樣，其期間得酌定於四日以內。 」  
+      </p>
+      <h4>張貼廣告規定</h4>
+      <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-13">安全規則42條3項</a>：<br>
+        「計程車應於兩側後門或後葉子板標示牌照號碼及公司行號、運輸合作社或個人名稱，後窗玻璃標示牌照號碼。但多元化計程車不在此限。計程車車身兩側及多元化計程車車身範圍(均不含車窗)於不影響辨識及視線安全下，得以平面漆繪或穩固黏貼方式張貼廣告，並應符合各目的事業主管機關及地方政府相關廣告物管理之法令規定辦理。」
+      </p>
+      <p>交通部公路總局98年公路監理車輛管理工作圈第5次會議討論提綱第3案：<br>
+        除後保險桿得以張貼非商業性廣告及道路交通安全規則第42條規定之位置(含玻璃)外，其餘位置不得廣告。(非商業性廣告，如自家公司(車隊)之叫車電話號碼) 
+      </p>
+    `
   ),
-  new KeyPoint(
-    'licenseState',
-    '駕照、牌照異常狀態一覽',
-    '無奈 學長',
-    '112 年 07 月 24 日',
-    `
-      <h4 class="mt-4 mb-3">吊扣</h4>
-      <p>因有違反規定之駕駛、行駛行為，或不配合規定之行為，故「暫時收回有效之牌照、駕照」，期滿或達成條件時發還。牌照、駕照自始至終為有效，惟吊扣期間不得使用。</p>
-      <h4 class="mt-4 mb-3">吊銷</h4>
-      <p>因有違反規定之駕駛、行駛行為，或重複違反違規、或不配合規定之行為，故「收回並銷毀有效之牌照、駕照」。吊銷處分，明文於處罰條款之主文。</p>
-      <h4 class="mt-4 mb-3">註銷</h4>
-      <p>汽車逾相當期限不參加檢驗之處罰，或汽車非正式牌照(臨時牌、試車牌)之無效，或微電車牌照之無效，註之註銷，即「註記銷毀有效之牌照、駕照」</p>
-      <h4 class="mt-4 mb-3">逕行註銷</h4>
-      <p>逕行註銷：即「該來不來」，如：應受吊(註)註處分而不到案、逾期不參加審驗、車輛所有人異動而未依法辦理異動登記……等等，由監理機關「逕行註記銷毀應屬無效牌照、駕照」。</p>
-      <h4 class="mt-4 mb-3">繳銷</h4>
-      <p>有效之牌照、駕照，因已無需要，故自行繳回監理機關辦理註銷。</p>
-      <h4 class="mt-4 mb-3">小結</h4>
-      <p>以上是小弟自處罰條例、安全規則、處理細則中，整理出來這些名詞的"定義"。因為官方沒有整合說明，所以只能自己推敲，幫助理解記憶，大家卓參。</p>
-      <h4 class="mt-4 mb-3">懶人包</h4>
-      <p>顯示為【吊銷、繳銷】，是有把牌照、駕照到案繳回的。因為是"銷"，所以繳回後即無效。</p>
-      <p>顯示為【○○註銷】、【○○逕註】，就是未依法定時限到案、或未將應依法無效之牌照、駕照繳回的。</p>
-      <p>顯示為【吊扣】，就是有效之牌照、駕照於一定期間不得使用。駕籍會顯示吊扣期間之起迄日期，車籍則只會顯示「執行條例處分吊扣」(有顯示即為吊扣狀態)。</p>
-    `
-  )
+
 
 
 ]
