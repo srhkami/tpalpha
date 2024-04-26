@@ -104,7 +104,7 @@ export const pages = {
     ''
   ),
   keyPoint: new Page(
-    'keypoint',
+    'keyPoint',
     '違規舉發要點',
     '違規舉發要點',
     '',

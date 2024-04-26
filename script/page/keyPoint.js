@@ -9,7 +9,7 @@ function refresh_page(){
 	list_kp.forEach((value)=>{
 		if (value.code == item_code){
 			$('.card-title').html(value.title);
-			$('.card-text').html(`資料整理/撰文者：<span class="text-info mx-1 fw-semibold">${value.author} </span><br>更新日期：${value.update}`);
+			$('.card-text').html(`作者：<span class="text-info mx-1 fw-semibold">${value.author} </span><br>更新日期：${value.update}`);
 			$('#item_text').html(value.text);
 			html += `
 				<a href="../pages/keypoint.html?item=${value.code}" type="button" class="list-group-item list-group-item-action active">

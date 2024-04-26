@@ -1,4 +1,5 @@
 import { pages } from '../base/pages.js';
+import { list_kp } from '../list/kp_list.js';
 
 // 函式：開始搜尋
 function search_start(key_word, options) {
@@ -32,20 +33,59 @@ function search_start(key_word, options) {
     let new_list = search_every(key_word, pages.PW)
     list_output = list_output.concat(new_list);
   }
-  // console.log(list_output);
+  if (options['CC']) {
+    let new_list = search_every(key_word, pages.CC)
+    list_output = list_output.concat(new_list);
+  }
+  if (options['CP']) {
+    let new_list = search_every(key_word, pages.CP)
+    list_output = list_output.concat(new_list);
+  }
+  if (options['SO']) {
+    let new_list = search_every(key_word, pages.SO)
+    list_output = list_output.concat(new_list);
+  }
+  if (options['keyPoint']) {
+    let new_list = search_keyPoint(key_word)
+    list_output = list_output.concat(new_list);
+  }
   return list_output;
 }
 
 // 函式：依關鍵字搜尋符合條文，並修改關鍵字及標題
 function search_every(key_word, r_object) {
-  let new_list = r_object.list.filter((value) => {
+  let new_list = [];
+  r_object.list.forEach((value) => {
     if (value.text.includes(key_word)) {
-      value.text = value.text.replaceAll(key_word, `<i class="highlight">${key_word}</i>`);
-      value.rg = r_object.name_simple;
-      value.index = `《${r_object.name_title}》第 ${value.article} 條`;
-      return value;
+      let netItem = {
+      code : r_object.name_simple,
+      article : value.article,
+      index :`《${r_object.name_title}》第 ${value.article} 條`,
+      title : value.title, 
+      text : value.text.replaceAll(key_word, `<i class="highlight">${key_word}</i>`),
+      };
+      new_list.push(netItem);
     }
   });
+  console.log(new_list)
+  return new_list;
+}
+
+function search_keyPoint(key_word){
+  let new_list = [];
+  list_kp.forEach((value) => {
+    if (value.text.includes(key_word)) {
+      let netItem = {
+      code : 'keyPoint',
+      article : value.code,
+      index : value.title,
+      title : value.title, 
+      text : value.text.replaceAll(key_word, `<i class="highlight">${key_word}</i>`),
+      };
+      new_list.push(netItem);
+    }
+  });
+  console.log(new_list)
   return new_list;
 }
 
@@ -54,7 +94,7 @@ function refresh_list(r_list){
   let html = '';
   r_list.forEach((value, index) => {
     html +=`
-    <a class="list-group-item list-group-item-action" href="#article-${value.rg}-${value.article}">
+    <a class="list-group-item list-group-item-action" href="#article-${value.code}-${value.article}">
       <div class="list-article-no">
         ${value.index}
       </div>

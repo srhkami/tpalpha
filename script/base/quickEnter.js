@@ -10,8 +10,8 @@ const html_quickArea = [`
       </div>
       <div class="modal-body">
         <div class="container">
-          <div class="row row-cols-2">
-            <div class="col">
+          <div class="row">
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.PH.name_simple}" value="${pages.PH.name_simple}">
@@ -19,6 +19,8 @@ const html_quickArea = [`
                   ${pages.PH.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.SR.name_simple}" value="${pages.SR.name_simple}">
@@ -26,6 +28,8 @@ const html_quickArea = [`
                   ${pages.SR.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.DR.name_simple}" value="${pages.DR.name_simple}">
@@ -33,6 +37,8 @@ const html_quickArea = [`
                   ${pages.DR.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.ML.name_simple}" value="${pages.ML.name_simple}">
@@ -40,6 +46,8 @@ const html_quickArea = [`
                   ${pages.ML.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.TA.name_simple}" value="${pages.TA.name_simple}">
@@ -47,6 +55,11 @@ const html_quickArea = [`
                   ${pages.TA.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-12">
+              <hr>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.DL.name_simple}" value="${pages.DL.name_simple}">
@@ -54,6 +67,8 @@ const html_quickArea = [`
                   ${pages.DL.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.CL.name_simple}" value="${pages.CL.name_simple}">
@@ -62,7 +77,19 @@ const html_quickArea = [`
                 </label>
               </div>
             </div>
-            <div class="col">
+            <div class="col-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
+                  id="quickSwitch_${pages.keyPoint.name_simple}" value="${pages.keyPoint.name_simple}">
+                <label class="form-check-label" for="quickSwitch_${pages.keyPoint.name_simple}">
+                  ${pages.keyPoint.name_title}
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <hr>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.PA.name_simple}" value="${pages.PA.name_simple}">
@@ -70,6 +97,8 @@ const html_quickArea = [`
                   ${pages.PA.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.PW.name_simple}" value="${pages.PW.name_simple}">
@@ -77,6 +106,8 @@ const html_quickArea = [`
                   ${pages.PW.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.CC.name_simple}" value="${pages.CC.name_simple}">
@@ -84,6 +115,8 @@ const html_quickArea = [`
                   ${pages.CC.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.CP.name_simple}" value="${pages.CP.name_simple}">
@@ -91,6 +124,8 @@ const html_quickArea = [`
                   ${pages.CP.name_title}
                 </label>
               </div>
+            </div>
+            <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
                   id="quickSwitch_${pages.SO.name_simple}" value="${pages.SO.name_simple}">
