@@ -104,12 +104,12 @@ export const pages = {
     ''
   ),
   keyPoint: new Page(
-    'keyPoint',
+    'keypoint',
     '違規舉發要點',
     '違規舉發要點',
     '',
     '/icons/icon_policeFine.png',
-    '/pages/keyPoint.html',
+    '/pages/keypoint.html',
     ''
   ),
   about: new Page(
