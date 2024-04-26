@@ -59,7 +59,7 @@ export const html_header = `
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="${pages.keyPoint.href}">
+            <li><a class="dropdown-item" href="..${pages.keyPoint.href}">
                 <img class="icon_menu me-1" src="..${pages.keyPoint.icon}" alt="">
                 ${pages.keyPoint.name_title}
               </a></li>
