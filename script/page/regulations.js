@@ -39,10 +39,10 @@ function refresh_text(r_list, r_object) {
       <div id="article-${value.article}" class="article">
         <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
           <h4  class="d-inline me-auto" >第 ${value.article} 條</h4>
-          <!--<button type="button" class="btn btn-primary btn-sm me-2 h-75" disabled>函釋<span class="badge text-bg-info">0</span></button>--!>
+          <!--<button type="button" class="btn btn-primary btn-sm me-2 h-75" disabled>函釋<span class="badge text-bg-info">0</span></button>
           <button type="button" class="bth_share btn btn-outline-primary btn-sm me-2 h-75" data-article="${value.article}">
             <img class="btn-img" src="../icons/icon_share.png" alt="分享" data-article="${value.article}">
-          </button>
+          </button>--!>
         </div>
         <div class="col-data">
           <div class="law-article">
@@ -76,13 +76,13 @@ function refresh_text(r_list, r_object) {
 // })
 // }
 
-function shareLink(){
-  $('.bth_share').click((e)=>{
-    url = location.href;
-    article = e.target.dataset.article; 
+// function shareLink(){
+//   $('.bth_share').click((e)=>{
+//     url = location.href;
+//     article = e.target.dataset.article; 
 
-  })
-}
+//   })
+// }
 
 
 
@@ -101,5 +101,4 @@ $(document).ready(() => {
   $("#sidebar a,.btn-close").click(()=>{
     setTimeout(()=>$('.offcanvas-lg').offcanvas('hide'), 50)
   });
-  sharePic();
 })

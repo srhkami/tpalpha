@@ -1,11 +1,11 @@
 import {pages} from './pages.js';
 
 // 版本號(大版本.小版本.日+時)
-const app_ver =`1.10.2621 (Beta)`;
+const app_ver =`1.10.2623 (Beta)`;
 
 // 公告
 const notice =`
-    113/04/26更新內容： 
+    113 / 04 / 27 更新內容： 
     <br>◎ 全新介面與亮/暗主題
     <br>◎ 加入「舉發違規要點」頁面
     <br>
