@@ -12,14 +12,14 @@ function refresh_page(){
 			$('.card-text').html(`資料整理/撰文者：<span class="text-info mx-1 fw-semibold">${value.author} </span><br>更新日期：${value.update}`);
 			$('#item_text').html(value.text);
 			html += `
-				<a href="../pages/keyPoint.html?item=${value.code}" type="button" class="list-group-item list-group-item-action active" data-item="${value.code}">
+				<a href="../pages/keypoint.html?item=${value.code}" type="button" class="list-group-item list-group-item-action active">
 					${value.title}
 				</a>
 			`
 		}
 		else{
 			html += `
-				<a href="../pages/keyPoint.html?item=${value.code}" type="button" class="list-group-item list-group-item-action" data-item="${value.code}">
+				<a href="../pages/keypoint.html?item=${value.code}" type="button" class="list-group-item list-group-item-action">
 					${value.title}
 			</a>
 			`
