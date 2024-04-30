@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100" data-bs-theme="light">
+<html data-bs-theme="light">
 
 <head>
   <script src="./script/base/jquery-3.7.1.min.js"></script>
@@ -24,22 +24,28 @@
   <script type='module' src="./script/base/info.js"></script>
 </head>
 
-<body class="h-100">
-  <nav id="pageHeader" class="navbar navbar-expand-md bg-body-tertiary"></nav>
+<body>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <!-- 彈出視窗 -->
+  <div id="popUp">
+    <!-- 搜尋 -->
+    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <!-- 快速導航設定 -->
+    <div id="quickSetting" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+  </div>
   <main class="container">
     <div id="mainContent" class="col-12 h-100 overflow-auto px-3 py-3">
       <div id="about_1" class="border border-3 mx-3 my-2 pb-3 rounded-3">
         <h4 class="text-center my-2 text-primary fw-bolder">快速導航</h4>
-        <!-- 快速導航之按鈕 -->
+        <!-- 快速導航之設定按鈕 -->
         <button type="button" id="btn_quick_setting" class="bg-transparent border-0" data-bs-toggle="modal"
           data-bs-target="#quickSetting">
           <img id="icon_quick" src="./icons/icon_setting.png" alt="">
         </button>
-        <!-- 快速設定之彈出視窗 -->
-        <div id="quickSetting" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        </div>
+        
         <hr class="border-2">
         <div class="container">
+          <!-- 快速導航區域 -->
           <div id="quickArea" class="row justify-content-around px-0"></div>
         </div>
       </div>
@@ -66,6 +72,7 @@
         <p class="text-body fs-6 fw-semibold mx-4" id="future"></p>
       </div>
     </div>
+
   </main>
 </body>
 

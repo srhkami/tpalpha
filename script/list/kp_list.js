@@ -133,7 +133,7 @@ export const list_kp = [
     `
     <h4 class="mt-4 mb-3">「手把鏡(端子鏡)算不算違規？」</h4>
     <p>
-      裝在手把兩端之照後鏡（法定用語，或稱後照鏡、後視鏡），算不算違規？從安規附件十五來看，照後鏡只要與車身主結構連接、不影響駕駛人視角即可。而安裝手把鏡後，只要車身寬度不超過
+      機車裝在手把兩端之照後鏡（法定用語，或稱後照鏡、後視鏡），算不算違規？從安規附件十五來看，照後鏡只要與車身主結構連接、不影響駕駛人視角即可。而安裝手把鏡後，只要車身寬度不超過
       <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-38">
         安全規則38條</a>所訂尺度即可。而手把鏡是安裝而非裝載，故與<a  href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-88">安全規則88條
       </a>無涉。

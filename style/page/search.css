@@ -1,9 +1,9 @@
 /* 法條清單排版 */
-@media (min-width:992px) {
+/* @media (min-width:992px) {
     .col-list{
         width: 20em;
     }
-}
+} */
 .list-article-no{
     width: 100%;
     padding-left: 0.25em;

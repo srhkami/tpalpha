@@ -88,8 +88,8 @@ function refresh_text(r_list, r_object) {
 
 // 主程式開始
 // 取得網址夾帶的值，判斷是哪種法規
-let r_name = new URLSearchParams(location.search);
-r_name = r_name.get('rg');
+const getData = new URLSearchParams(location.search);
+let r_name = getData.get('rg');
 let r_object = pages[r_name];
 let r_list = r_object.list;
 // 刷新主頁面

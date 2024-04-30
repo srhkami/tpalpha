@@ -150,7 +150,6 @@ function load_quick() {
   let quick_options = ['PH', 'SR', 'DL', 'CL'];
   if (localStorage.getItem('qk_options')) {
     quick_options = JSON.parse(localStorage.getItem('qk_options'));
-    console.log('已從瀏覽器設定取得：' + quick_options);
   }
   else {
     localStorage.setItem('qk_options', JSON.stringify(quick_options));
@@ -174,7 +173,6 @@ function set_quick() {
     $('input:checkbox:checked[name="quickSwitch"]').each((index, value) => {
       quick_options[index] = $(value).val();
     })
-    console.log(quick_options);
     if (quick_options.length > 4) {
       alert('選項請勿超過四個！');
     }

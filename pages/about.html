@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100" data-bs-theme="dark">
+<html data-bs-theme="dark">
 
 <head>
   <script src="../script/base/jquery-3.7.1.min.js"></script>
@@ -22,10 +22,15 @@
   <script type='module' src="../script/base/info.js"></script>
 </head>
 
-<body class="h-100">
-  <nav id="pageHeader" class="navbar navbar-expand-md bg-body-tertiary"></nav>
+<body>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <!-- 彈出視窗 -->
+  <div id="popUp">
+    <!-- 搜尋 -->
+    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+  </div>
   <main class="container">
-    <div id="mainContent" class="h-100 overflow-auto px-3 py-3">
+    <div id="mainContent" class="px-3 py-3">
       <div id="bk_left">
         <div class="border border-3 mx-3 my-2 rounded-3">
           <h4 class="text-center my-2 text-primary fw-bolder">開發者</h4>
@@ -63,7 +68,6 @@
           <div id="collection" class="text-body fw-semibold">
             <p class="collection_text">空</p>
           </div>
-
         </div>
       </div>
     </div>

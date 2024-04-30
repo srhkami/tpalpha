@@ -19,26 +19,26 @@ export const html_header = `
             <li><a class="dropdown-item" href="..${pages.PH.href}">
                 <img class="icon_menu me-1" src="..${pages.PH.icon}" alt="">
                 ${pages.PH.name_title}
-              </a></li>
+            </a></li>
             <li><a class="dropdown-item" href="..${pages.SR.href}">
                 <img class="icon_menu me-1" src="..${pages.SR.icon}" alt="">
                 ${pages.SR.name_title}
-              </a></li>
+            </a></li>
             <li><a class="dropdown-item" href="..${pages.DR.href}">
                 <img class="icon_menu me-1" src="..${pages.DR.icon}" alt="">
                 ${pages.DR.name_title}
-              </a></li>
+            </a></li>
             <li><a class="dropdown-item" href="..${pages.ML.href}">
                 <img class="icon_menu me-1" src="..${pages.ML.icon}" alt="">
                 ${pages.ML.name_title}
-              </a></li>
+            </a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="..${pages.TA.href}">
                 <img class="icon_menu me-1" src="..${pages.TA.icon}" alt="">
                 ${pages.TA.name_title}
-              </a></li>
+            </a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -51,18 +51,18 @@ export const html_header = `
             <li><a class="dropdown-item" href="..${pages.DL.href}">
                 <img class="icon_menu me-1" src="..${pages.DL.icon}" alt="">
                 ${pages.DL.name_title}
-              </a></li>
+            </a></li>
             <li><a class="dropdown-item" href="..${pages.CL.href}">
                 <img class="icon_menu me-1" src="..${pages.CL.icon}" alt="">
                 ${pages.CL.name_title}
-              </a></li>
+            </a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="..${pages.keyPoint.href}">
                 <img class="icon_menu me-1" src="..${pages.keyPoint.icon}" alt="">
                 ${pages.keyPoint.name_title}
-              </a></li>
+            </a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -75,26 +75,26 @@ export const html_header = `
             <li><a class="dropdown-item" href="..${pages.PA.href}">
                 <img class="icon_menu me-1" src="..${pages.PA.icon}" alt="">
                 ${pages.PA.name_title}
-              </a></li>
+            </a></li>
             <li><a class="dropdown-item" href="..${pages.PW.href}">
                 <img class="icon_menu me-1" src="..${pages.PW.icon}" alt="">
                 ${pages.PW.name_title}
-              </a></li>
+            </a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="..${pages.CC.href}">
                 <img class="icon_menu me-1" src="..${pages.CC.icon}" alt="">
                 ${pages.CC.name_title}
-              </a></li>
+            </a></li>
             <li><a class="dropdown-item" href="..${pages.CP.href}">
                 <img class="icon_menu me-1" src="..${pages.CP.icon}" alt="">
                 ${pages.CP.name_title}
-              </a></li>
+            </a></li>
             <li><a class="dropdown-item" href="..${pages.SO.href}">
                 <img class="icon_menu me-1" src="..${pages.SO.icon}" alt="">
                 ${pages.SO.name_title}
-              </a></li>
+            </a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -107,11 +107,15 @@ export const html_header = `
             <li><a class="dropdown-item" href="${pages.feedback.href}">
                 <img class="icon_menu me-1" src="..${pages.feedback.icon}" alt="">
                 ${pages.feedback.name_title}
-              </a></li>
+            </a></li>
+            <li><a class="dropdown-item" href="#">
+              <img class="icon_menu me-1" src="..${pages.feedback.icon}" alt="">
+              意見蒐集
+            </a></li>
             <li><a class="dropdown-item" href="..${pages.about.href}">
                 <img class="icon_menu me-1" src="..${pages.about.icon}" alt="">
                 ${pages.about.name_title}
-              </a></li>
+            </a></li>
           </ul>
         </li>
         <!--<li class="nav-item">
@@ -140,8 +144,7 @@ export const html_header = `
       <p class="d-none d-lg-inline">搜尋</p>
     </button>
     <!-- 搜尋之彈出視窗 -->
-    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    </div>
+
     <!-- 展開頂端欄按鈕 -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

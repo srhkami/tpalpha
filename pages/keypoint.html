@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100" data-bs-theme="light">
+<html data-bs-theme="light">
 
 <head>
   <script src="../script/base/jquery-3.7.1.min.js"></script>
@@ -22,18 +22,40 @@
   <script type='module' src="../script/page/keyPoint.js"></script>
 </head>
 
-<body class="h-100">
-  <nav id="pageHeader" class="navbar navbar-expand-md bg-body-tertiary"></nav>
-  <main>
-    <div id="mainContent" class="container-md py-3 h-100 position-relative">
-      <div class="row h-100" >
-        <!-- 項目清單 -->
-        <div class="col-list h-100 d-none d-lg-block overflow-hidden px-0 me-3 rounded-3 border">
-          <div class="list-group rounded-0">
+<body>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <!-- 彈出視窗 -->
+  <div id="popUp">
+    <!-- 搜尋 -->
+    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <!-- 法規彈出視窗 -->
+    <div class="modal fade" id="tipArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title fs-5 text-primary fw-semibold" id="exampleModalLabel">條目</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            內文
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
           </div>
         </div>
-        <div class="col h-100 px-3">
-                <!-- 手機模式顯示之伸縮清單 -->
+      </div>
+    </div>  
+  </div>
+  <main>
+    <div id="mainContent" class="container-sm py-3">
+      <div id="layout" class="row" >
+        <!-- 項目清單 -->
+        <aside class="col-list d-none d-lg-block overflow-hidden px-0 me-3 rounded-3 border">
+          <div class="list-group rounded-0">
+          </div>
+        </aside>
+        <div class="col px-3">
+          <!-- 手機模式顯示之伸縮清單 -->
           <div class="accordion d-lg-none mb-3" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -53,7 +75,7 @@
           </div>
            <!-- 項目內文 -->
           <div id="item_output" data-bs-spy="scroll" data-bs-target="#list_article" data-bs-smooth-scroll="true"
-            class="scrollspy-example overflow-auto h-100 pb-5" tabindex="0">
+            class="scrollspy-example" tabindex="0">
             <!-- 標題卡片 -->
             <div class="card rounded-3" aria-hidden="true">
               <div class="row mx-0">
@@ -85,23 +107,7 @@
                 ※ 請點擊上(左)方清單瀏覽文章 ※
               </p>
             </div>
-            <!-- 法規彈出視窗 -->
-            <div class="modal fade" id="tipArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title fs-5 text-primary fw-semibold" id="exampleModalLabel">條目</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    內文
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                  </div>
-                </div>
-              </div>
-            </div>            
+       
           </div>
         </div>
       </div>

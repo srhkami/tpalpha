@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100" data-bs-theme="light">
+<html data-bs-theme="light">
 
 <head>
   <script src="../script/base/jquery-3.7.1.min.js"></script>
@@ -22,14 +22,19 @@
   <script type='module' src="../script/page/regulations.js"></script>
 </head>
 
-<body class="h-100">
-  <nav id="pageHeader" class="navbar navbar-expand-md bg-body-tertiary"></nav>
+<body>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <!-- 彈出視窗 -->
+  <div id="popUp">
+    <!-- 搜尋 -->
+    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+  </div>
   <main>
-    <div id="mainContent" class="container-xl py-3 h-100 position-relative">
-      <div class="row h-100">
+    <div id="mainContent" class="container-sm py-3">
+      <div id="layout" class="row">
         <!-- 法規條目清單 -->
         <!-- 側邊攔 -->
-        <div class="col-list h-100 overflow-hidden px-0 me-3 offcanvas-lg offcanvas-start rounded-3 border" tabindex="-1" id="sidebar" aria-labelledby="offcanvasExampleLabel">
+        <aside class="col-list overflow-hidden px-0 offcanvas-lg offcanvas-start rounded-3 border" tabindex="-1" id="sidebar">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">所有條目</h5>
             <button type="button" class="btn-close" aria-label="關閉"></button>
@@ -46,11 +51,11 @@
               </label>
             </a>
           </div>
-        </div>
+        </aside>
         <!-- 法條內文 -->
-        <div class="col h-100 px-3">
+        <div class="col px-3">
           <div id="article_text" data-bs-spy="scroll" data-bs-target="#list_article" data-bs-smooth-scroll="true"
-            class="scrollspy-example overflow-auto h-100 pb-5" tabindex="0">
+            class="scrollspy-example pb-5" tabindex="0">
             <!-- 標題卡片(佔位符)-->
             <div class="card rounded-3" aria-hidden="true">
               <div class="row mx-0">
@@ -93,18 +98,19 @@
           </div>
         </div>
       </div>
-      <!-- 手機板顯示底欄 -->
-      <div class="row d-lg-none position-absolute bottom-0 mb-2 px-4 w-100">
-        <label id="label_switch" for="switch-sidebar" class="d-flex bg-contrast rounded-3 align-items-center">
-          <button id="switch-sidebar" class="btn" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#sidebar" aria-controls="offcanvasExample">
-            <img src="../icons/icon_menu_2.png" alt="" width="25">
-          </button>
-          <h5 class="d-inline text-primary mb-0 ms-1">瀏覽所有項目</h5>
-        </label>
-      </div>
+    </div>
+    <!-- 手機板顯示底欄 -->
+    <div class="sticky-bottom row d-lg-none ps-4 w-100">
+      <label id="label_switch" for="switch-sidebar" class="d-flex bg-contrast rounded-3 align-items-center">
+        <button id="switch-sidebar" class="btn" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar" aria-controls="offcanvasExample">
+          <img src="../icons/icon_menu_2.png" alt="" width="25">
+        </button>
+        <h5 class="d-inline text-primary mb-0 ms-1">瀏覽所有條目</h5>
+      </label>
     </div>
   </main>
+
 </body>
 
 </html>

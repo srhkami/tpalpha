@@ -1,4 +1,25 @@
-
+@media (max-width:575px){
+  .container-fuild .row div{
+    font-size: 12px;
+  }
+}
+@media (max-width:767px){
+  .container-fuild .row div{
+    font-size: 12px;
+  }
+}
+@media (min-width:992px){
+  #layout{
+      display: grid;
+      grid-template-columns:320px 1fr;
+      gap: 1.5rem;
+  }
+  .col-list{
+      position: sticky;
+      height: calc(100vh - 6rem);
+      top: 5rem;
+  }
+}
 
 /* 法條清單排版 */
 .col-list{
@@ -68,13 +89,3 @@
   font-weight: 600    ;
 }
 
-@media (max-width:575px){
-  .container-fuild .row div{
-    font-size: 12px;
-  }
-}
-@media (max-width:767px){
-  .container-fuild .row div{
-    font-size: 12px;
-  }
-}
