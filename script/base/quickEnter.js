@@ -14,75 +14,45 @@ const html_quickArea = [`
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.PH.name_simple}" value="${pages.PH.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.PH.name_simple}">
-                  ${pages.PH.name_title}
+                  id="quickSwitch_${pages.PH.code}" value="${pages.PH.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.PH.code}">
+                  ${pages.PH.title}
                 </label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.SR.name_simple}" value="${pages.SR.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.SR.name_simple}">
-                  ${pages.SR.name_title}
+                  id="quickSwitch_${pages.SR.code}" value="${pages.SR.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.SR.code}">
+                  ${pages.SR.title}
                 </label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.DR.name_simple}" value="${pages.DR.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.DR.name_simple}">
-                  ${pages.DR.name_title}
+                  id="quickSwitch_${pages.DR.code}" value="${pages.DR.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.DR.code}">
+                  ${pages.DR.title}
                 </label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.ML.name_simple}" value="${pages.ML.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.ML.name_simple}">
-                  ${pages.ML.name_title}
+                  id="quickSwitch_${pages.ML.code}" value="${pages.ML.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.ML.code}">
+                  ${pages.ML.title}
                 </label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.TA.name_simple}" value="${pages.TA.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.TA.name_simple}">
-                  ${pages.TA.name_title}
-                </label>
-              </div>
-            </div>
-            <div class="col-12">
-              <hr>
-            </div>
-            <div class="col-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.DL.name_simple}" value="${pages.DL.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.DL.name_simple}">
-                  ${pages.DL.name_title}
-                </label>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.CL.name_simple}" value="${pages.CL.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.CL.name_simple}">
-                  ${pages.CL.name_title}
-                </label>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.keyPoint.name_simple}" value="${pages.keyPoint.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.keyPoint.name_simple}">
-                  ${pages.keyPoint.name_title}
+                  id="quickSwitch_${pages.TA.code}" value="${pages.TA.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.TA.code}">
+                  ${pages.TA.title}
                 </label>
               </div>
             </div>
@@ -92,45 +62,75 @@ const html_quickArea = [`
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.PA.name_simple}" value="${pages.PA.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.PA.name_simple}">
-                  ${pages.PA.name_title}
+                  id="quickSwitch_${pages.DL.code}" value="${pages.DL.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.DL.code}">
+                  ${pages.DL.title}
                 </label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.PW.name_simple}" value="${pages.PW.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.PW.name_simple}">
-                  ${pages.PW.name_title}
+                  id="quickSwitch_${pages.CL.code}" value="${pages.CL.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.CL.code}">
+                  ${pages.CL.title}
                 </label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.CC.name_simple}" value="${pages.CC.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.CC.name_simple}">
-                  ${pages.CC.name_title}
+                  id="quickSwitch_${pages.keyPoint.code}" value="${pages.keyPoint.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.keyPoint.code}">
+                  ${pages.keyPoint.title}
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <hr>
+            </div>
+            <div class="col-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
+                  id="quickSwitch_${pages.PA.code}" value="${pages.PA.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.PA.code}">
+                  ${pages.PA.title}
                 </label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.CP.name_simple}" value="${pages.CP.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.CP.name_simple}">
-                  ${pages.CP.name_title}
+                  id="quickSwitch_${pages.PW.code}" value="${pages.PW.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.PW.code}">
+                  ${pages.PW.title}
                 </label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
-                  id="quickSwitch_${pages.SO.name_simple}" value="${pages.SO.name_simple}">
-                <label class="form-check-label" for="quickSwitch_${pages.SO.name_simple}">
-                  ${pages.SO.name_title}
+                  id="quickSwitch_${pages.CC.code}" value="${pages.CC.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.CC.code}">
+                  ${pages.CC.title}
+                </label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
+                  id="quickSwitch_${pages.CP.code}" value="${pages.CP.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.CP.code}">
+                  ${pages.CP.title}
+                </label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
+                  id="quickSwitch_${pages.SO.code}" value="${pages.SO.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.SO.code}">
+                  ${pages.SO.title}
                 </label>
               </div>
             </div>
@@ -159,7 +159,7 @@ function load_quick() {
     html += `
       <div class="col-3 quick_col" data-name="PH">
         <a href=".${pages[name].href}" class="d-flex">
-            <img class="img-fluid mx-auto" src=".${pages[name].icon}" alt="${pages[name].name_short}" data-name="${pages[name].name_simple}">
+            <img class="img-fluid mx-auto" src=".${pages[name].icon}" alt="${pages[name].title}" data-name="${pages[name].code}">
         </a>
       </div>
       `;

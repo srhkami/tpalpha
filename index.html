@@ -29,9 +29,11 @@
   <!-- 彈出視窗 -->
   <div id="popUp">
     <!-- 搜尋 -->
-    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <div id="searchArea" class="modal fade" tabindex="-1"></div>
+    <!-- 通用彈出視窗 -->
+    <div id="popUpArea" class="modal fade" tabindex="-1"></div>
     <!-- 快速導航設定 -->
-    <div id="quickSetting" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <div id="quickSetting" class="modal fade" tabindex="-1"></div>
   </div>
   <main class="container">
     <div id="mainContent" class="col-12 h-100 overflow-auto px-3 py-3">
@@ -42,7 +44,6 @@
           data-bs-target="#quickSetting">
           <img id="icon_quick" src="./icons/icon_setting.png" alt="">
         </button>
-        
         <hr class="border-2">
         <div class="container">
           <!-- 快速導航區域 -->

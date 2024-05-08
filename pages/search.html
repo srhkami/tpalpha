@@ -54,16 +54,15 @@
   <main>
     <div id="mainContent" class="container-sm py-3">
       <div id="layout" class="row">
-        <!-- 法規條目清單 -->
-        <!-- 側邊攔 -->
-        <aside class="col-list overflow-hidden px-0 me-3 offcanvas-lg offcanvas-start rounded-3 border" tabindex="-1" id="sidebar">
+        <!-- 法規條目清單/側邊欄 -->
+        <aside class="col-list overflow-hidden px-0 offcanvas-lg offcanvas-start border" tabindex="-1" id="sidebar">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">所有項目</h5>
             <button type="button" class="btn-close" aria-label="關閉"></button>
           </div>
           <!-- 主清單 -->
           <div>
-            <h5 class="d-none d-lg-block my-3 mx-3">所有項目</h5>
+            <h5 class="d-none d-lg-block m-3">所有項目</h5>
           </div>
           <div id="list_article" class="list-group h-100 overflow-auto px-0 rounded-0 ">
             <a class="list-group-item list-group-item-action" href="#article-1">
@@ -120,10 +119,9 @@
           </div>
         </div>
       </div>
-
     </div>
     <!-- 手機板顯示底欄 -->
-    <div class="sticky-bottom row d-lg-none ps-4 w-100">
+    <div class="sticky-bottom row d-lg-none ps-4 w-100" style="bottom: 0.75rem;">
       <label id="label_switch" for="switch-sidebar" class="d-flex bg-contrast rounded-3 align-items-center ">
         <button id="switch-sidebar" class="btn" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#sidebar" aria-controls="offcanvasExample">

@@ -4,62 +4,30 @@ import { list_kp } from '../list/kp_list.js';
 // 函式：開始搜尋
 function search_start(keyWord, options) {
   let list_output = [];
-  if (options['PH']) {
-    let new_list = search_every(keyWord, pages.PH)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['SR']) {
-    let new_list = search_every(keyWord, pages.SR)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['DR']) {
-    let new_list = search_every(keyWord, pages.DR)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['ML']) {
-    let new_list = search_every(keyWord, pages.ML)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['TA']) {
-    let new_list = search_every(keyWord, pages.TA)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['PA']) {
-    let new_list = search_every(keyWord, pages.PA)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['PW']) {
-    let new_list = search_every(keyWord, pages.PW)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['CC']) {
-    let new_list = search_every(keyWord, pages.CC)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['CP']) {
-    let new_list = search_every(keyWord, pages.CP)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['SO']) {
-    let new_list = search_every(keyWord, pages.SO)
-    list_output = list_output.concat(new_list);
-  }
-  if (options['keyPoint']) {
-    let new_list = search_keyPoint(keyWord)
-    list_output = list_output.concat(new_list);
-  }
+  Object.values(pages).forEach((value)=>{
+    if(options[value.code]){
+      let new_list;
+      if(value.code == 'keyPoint'){
+        new_list = search_keyPoint(keyWord)
+      }
+      else{
+        new_list = search_every(keyWord, value);
+      }
+      list_output = list_output.concat(new_list);
+    }
+  });
   return list_output;
 }
 
-// 函式：依關鍵字搜尋符合條文，並修改關鍵字及標題
+// 函式：依關鍵字搜尋「法規」，並修改關鍵字及標題
 function search_every(keyWord, r_object) {
   let new_list = [];
   r_object.list.forEach((value) => {
     if (value.text.includes(keyWord)) {
       let netItem = {
-        code: r_object.name_simple,
+        code: r_object.code,
         article: value.article,
-        index: `《${r_object.name_title}》第 ${value.article} 條`,
+        index: `《${r_object.title}》第 ${value.article} 條`,
         title: value.title,
         text: value.text.replaceAll(keyWord, `<i class="highlight">${keyWord}</i>`)
       };
@@ -67,17 +35,6 @@ function search_every(keyWord, r_object) {
     }
   });
   return new_list;
-}
-
-// 函示：再檢索
-function search_again(keyWord, old_list) {
-  const new_list = old_list.filter((value, index) => {
-    if (value.text.includes(keyWord)) {
-      value.text = value.text.replaceAll(keyWord, `<i class="highlight">${keyWord}</i>`)
-      return value;
-    }
-  })
-  return new_list
 }
 
 // 函式：依關鍵字搜尋符合的「要點」
@@ -98,14 +55,25 @@ function search_keyPoint(keyWord) {
   return new_list;
 }
 
+// 函示：再檢索
+function search_again(keyWord, old_list) {
+  const new_list = old_list.filter((value) => {
+    if (value.text.includes(keyWord)) {
+      value.text = value.text.replaceAll(keyWord, `<i class="highlight">${keyWord}</i>`)
+      return value;
+    }
+  })
+  return new_list
+}
+
 // 函式：刷新條目清單
 function refresh_list(list_output) {
   let html = '';
-  list_output.forEach((value, index) => {
+  list_output.forEach((value) => {
     html += `
-    <a class="list-group-item list-group-item-action" href="#article-${value.code}-${value.article}">
+    <a class="list-group-item list-group-item-action border-start-0 border-end-0" href="#article-${value.code}-${value.article}">
       <div class="list-article-no">
-        ${value.index}
+        ${value.index} 
       </div>
       <div class="list-article-title text-secondary-emphasis">
         ${value.title}

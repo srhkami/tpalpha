@@ -35,7 +35,7 @@ function showArticle(){
 	$(".showArticle").click((e) => {
 		let rg_name = e.target.dataset.rg.substr(0,2);
 		let article = e.target.dataset.rg.substr(3);
-		$('.modal-title').html(`《${pages[rg_name].name_title}》第 ${article} 條`);
+		$('.modal-title').html(`《${pages[rg_name].title}》第 ${article} 條`);
 		let text;
 		pages[rg_name].list.forEach(value => {
 			if (value.article == article){

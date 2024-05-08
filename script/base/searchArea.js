@@ -16,7 +16,7 @@ const html_searchArea =`
                 <div class="input-group">
                     <input type="text" id="keyWord" class="form-control" name="keyword" placeholder="請輸入搜尋關鍵字" required="required">
                     <button class="btn btn-outline-secondary" id="btn_search_reset" type="reset" aria-label="Close">清除</button>
-                    <button id="btn_quickSearch" class="btn btn-primary" type="button">快速搜尋</button>
+                    <button class="btn btn-primary" type="submit">快速搜尋</button>
                 </div>
               </form>
               <p class="text-secondary">* 如果在法規頁面，預設會搜尋當前法規</p>
@@ -30,38 +30,38 @@ const html_searchArea =`
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.PH.name_simple}" value="${pages.PH.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.PH.name_simple}">${pages.PH.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.PH.code}" value="${pages.PH.code}">
+                  <label class="form-check-label" for="switch_${pages.PH.code}">${pages.PH.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.SR.name_simple}" value="${pages.SR.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.SR.name_simple}">${pages.SR.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.SR.code}" value="${pages.SR.code}">
+                  <label class="form-check-label" for="switch_${pages.SR.code}">${pages.SR.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.DR.name_simple}" value="${pages.DR.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.DR.name_simple}">${pages.DR.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.DR.code}" value="${pages.DR.code}">
+                  <label class="form-check-label" for="switch_${pages.DR.code}">${pages.DR.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.ML.name_simple}" value="${pages.ML.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.ML.name_simple}">${pages.ML.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.ML.code}" value="${pages.ML.code}">
+                  <label class="form-check-label" for="switch_${pages.ML.code}">${pages.ML.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.TA.name_simple}" value="${pages.TA.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.TA.name_simple}">${pages.TA.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.TA.code}" value="${pages.TA.code}">
+                  <label class="form-check-label" for="switch_${pages.TA.code}">${pages.TA.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.keyPoint.name_simple}" value="${pages.keyPoint.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.keyPoint.name_simple}">${pages.keyPoint.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.keyPoint.code}" value="${pages.keyPoint.code}">
+                  <label class="form-check-label" for="switch_${pages.keyPoint.code}">${pages.keyPoint.title}</label>
               </div>
             </div>
             <div class="col-12">
@@ -69,32 +69,32 @@ const html_searchArea =`
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.PA.name_simple}" value="${pages.PA.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.PA.name_simple}">${pages.PA.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.PA.code}" value="${pages.PA.code}">
+                  <label class="form-check-label" for="switch_${pages.PA.code}">${pages.PA.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.PW.name_simple}" value="${pages.PW.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.PW.name_simple}">${pages.PW.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.PW.code}" value="${pages.PW.code}">
+                  <label class="form-check-label" for="switch_${pages.PW.code}">${pages.PW.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.CC.name_simple}" value="${pages.CC.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.CC.name_simple}">${pages.CC.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.CC.code}" value="${pages.CC.code}">
+                  <label class="form-check-label" for="switch_${pages.CC.code}">${pages.CC.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.CP.name_simple}" value="${pages.CP.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.CP.name_simple}">${pages.CP.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.CP.code}" value="${pages.CP.code}">
+                  <label class="form-check-label" for="switch_${pages.CP.code}">${pages.CP.title}</label>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.SO.name_simple}" value="${pages.SO.name_simple}">
-                  <label class="form-check-label" for="switch_${pages.SO.name_simple}">${pages.SO.name_title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.SO.code}" value="${pages.SO.code}">
+                  <label class="form-check-label" for="switch_${pages.SO.code}">${pages.SO.title}</label>
               </div>
             </div>
 
@@ -156,12 +156,9 @@ function load_options(){
 
 // 函式：偵測搜尋按鈕
 function search_go(){
-  $('#btn_quickSearch').click(()=>{
+  $('form').on('submit',(e)=>{
+    e.preventDefault();
     const keyWord = $('#keyWord').val()
-    if (!keyWord){
-      alert('關鍵字請勿留空！')
-    }
-    else{
       let searchOptionGo = {};
       const getData = new URLSearchParams(location.search);
       let r_name = getData.get('rg');
@@ -178,8 +175,7 @@ function search_go(){
         }
       }
       localStorage.setItem('searchOptionGo', JSON.stringify(searchOptionGo));
-      location.href =`../pages/search.html?keyword=${keyWord}`;
-    }     
+      location.href =`../pages/search.html?keyword=${keyWord}`;    
   })
   $('#btn_advanceSearch').click(()=>{
     const keyWord = $('#keyWord').val()

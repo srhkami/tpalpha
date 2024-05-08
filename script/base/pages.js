@@ -3,17 +3,19 @@ import { list_PH, list_SR, list_DR, list_ML, list_PA, list_PW, list_TA, list_CC,
 //頁面預設類別
 class Page {
   constructor(
-    name_simple,
-    name_title,
-    name_all,
-    revision,
-    icon,
-    href,
-    list
+    type, //種類
+    code, //代稱
+    title, //標題用縮寫
+    name, //全稱
+    revision, //修訂日期
+    icon, //圖示路徑
+    href, //網址路徑
+    list //法規清單
   ) {
-    this.name_simple = name_simple;
-    this.name_title = name_title;
-    this.name_all = name_all;
+    this.type = type;
+    this.code = code;
+    this.title = title;
+    this.name = name;
     this.revision = revision;
     this.icon = icon;
     this.href = href;
@@ -23,6 +25,7 @@ class Page {
 
 export const pages = {
   PH: new Page(
+    'RG',
     'PH',
     '處罰條例',
     '道路交通管理處罰條例',
@@ -32,6 +35,7 @@ export const pages = {
     list_PH,
   ),
   SR: new Page(
+    'RG',
     'SR',
     '安全規則',
     '道路交通安全規則',
@@ -41,6 +45,7 @@ export const pages = {
     list_SR
   ),
   DR: new Page(
+    'RG',
     'DR',
     '處理細則',
     '違反道路交通管理事件統一裁罰基準及處理細則',
@@ -50,6 +55,7 @@ export const pages = {
     list_DR
   ),
   ML: new Page(
+    'RG',
     'ML',
     '設置規則',
     '道路交通標誌標線號誌設置規則',
@@ -59,6 +65,7 @@ export const pages = {
     list_ML
   ),
   PA: new Page(
+    'RG',
     'PA',
     '警職法',
     '警察職權行使法',
@@ -68,6 +75,7 @@ export const pages = {
     list_PA
   ),
   PW: new Page(
+    'RG',
     'PW',
     '警械使用條例',
     '《警械使用條例》',
@@ -77,6 +85,7 @@ export const pages = {
     list_PW
   ),
   TA: new Page(
+    'RG',
     'TA',
     '事故處理辦法',
     '道路交通事故處理辦法',
@@ -86,6 +95,7 @@ export const pages = {
     list_TA
   ),
   DL: new Page(
+    'RG',
     'DL',
     '駕照違規速查',
     '駕照違規速查',
@@ -95,6 +105,7 @@ export const pages = {
     ''
   ),
   CL: new Page(
+    'RG',
     'CL',
     '牌照違規速查',
     '牌照違規速查',
@@ -104,6 +115,7 @@ export const pages = {
     ''
   ),
   keyPoint: new Page(
+    'UNKNOW',
     'keyPoint',
     '違規舉發要點',
     '違規舉發要點',
@@ -113,6 +125,7 @@ export const pages = {
     ''
   ),
   about: new Page(
+    'PAGE',
     'about',
     '關於',
     '關於「交通鴿手」',
@@ -122,6 +135,7 @@ export const pages = {
     ''
   ),
   feedback: new Page(
+    'LINK',
     'feedback',
     '意見回饋',
     '意見回饋',
@@ -131,6 +145,7 @@ export const pages = {
     ''
   ),
   search: new Page(
+    'PAGE',
     'search',
     '搜尋',
     '搜尋',
@@ -140,6 +155,7 @@ export const pages = {
     ''
   ),
   index: new Page(
+    'PAGE',
     'index',
     '首頁',
     '首頁',
@@ -149,6 +165,7 @@ export const pages = {
     ''
   ),
   CC: new Page(
+    'RG',
     'CC',
     '刑法',
     '刑法',
@@ -158,6 +175,7 @@ export const pages = {
     list_CC
   ),
   CP: new Page(
+    'RG',
     'CP',
     '刑事訴訟法',
     '刑事訴訟法',
@@ -167,6 +185,7 @@ export const pages = {
     list_CP
   ),
   SO: new Page(
+    'RG',
     'SO',
     '社維法',
     '社會秩序維護法',
@@ -176,20 +195,3 @@ export const pages = {
     list_SO
   ),
 }
-
-// export const pages_list{
-
-// }
-// class Page{
-//     constructor(
-//         name_title,
-//         name_all,
-//         icon,
-//         href
-//     ){
-//         this.name_title = name_title;
-//         this.name_all = name_all;
-//         this.icon = icon;
-//         this.href = href;
-//     }
-// };

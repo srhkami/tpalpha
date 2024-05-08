@@ -18,26 +18,26 @@ export const html_header = `
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="..${pages.PH.href}">
                 <img class="icon_menu me-1" src="..${pages.PH.icon}" alt="">
-                ${pages.PH.name_title}
+                ${pages.PH.title}
             </a></li>
             <li><a class="dropdown-item" href="..${pages.SR.href}">
                 <img class="icon_menu me-1" src="..${pages.SR.icon}" alt="">
-                ${pages.SR.name_title}
+                ${pages.SR.title}
             </a></li>
             <li><a class="dropdown-item" href="..${pages.DR.href}">
                 <img class="icon_menu me-1" src="..${pages.DR.icon}" alt="">
-                ${pages.DR.name_title}
+                ${pages.DR.title}
             </a></li>
             <li><a class="dropdown-item" href="..${pages.ML.href}">
                 <img class="icon_menu me-1" src="..${pages.ML.icon}" alt="">
-                ${pages.ML.name_title}
+                ${pages.ML.title}
             </a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="..${pages.TA.href}">
                 <img class="icon_menu me-1" src="..${pages.TA.icon}" alt="">
-                ${pages.TA.name_title}
+                ${pages.TA.title}
             </a></li>
           </ul>
         </li>
@@ -50,18 +50,18 @@ export const html_header = `
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="..${pages.DL.href}">
                 <img class="icon_menu me-1" src="..${pages.DL.icon}" alt="">
-                ${pages.DL.name_title}
+                ${pages.DL.title}
             </a></li>
             <li><a class="dropdown-item" href="..${pages.CL.href}">
                 <img class="icon_menu me-1" src="..${pages.CL.icon}" alt="">
-                ${pages.CL.name_title}
+                ${pages.CL.title}
             </a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="..${pages.keyPoint.href}">
                 <img class="icon_menu me-1" src="..${pages.keyPoint.icon}" alt="">
-                ${pages.keyPoint.name_title}
+                ${pages.keyPoint.title}
             </a></li>
           </ul>
         </li>
@@ -74,26 +74,26 @@ export const html_header = `
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="..${pages.PA.href}">
                 <img class="icon_menu me-1" src="..${pages.PA.icon}" alt="">
-                ${pages.PA.name_title}
+                ${pages.PA.title}
             </a></li>
             <li><a class="dropdown-item" href="..${pages.PW.href}">
                 <img class="icon_menu me-1" src="..${pages.PW.icon}" alt="">
-                ${pages.PW.name_title}
+                ${pages.PW.title}
             </a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="..${pages.CC.href}">
                 <img class="icon_menu me-1" src="..${pages.CC.icon}" alt="">
-                ${pages.CC.name_title}
+                ${pages.CC.title}
             </a></li>
             <li><a class="dropdown-item" href="..${pages.CP.href}">
                 <img class="icon_menu me-1" src="..${pages.CP.icon}" alt="">
-                ${pages.CP.name_title}
+                ${pages.CP.title}
             </a></li>
             <li><a class="dropdown-item" href="..${pages.SO.href}">
                 <img class="icon_menu me-1" src="..${pages.SO.icon}" alt="">
-                ${pages.SO.name_title}
+                ${pages.SO.title}
             </a></li>
           </ul>
         </li>
@@ -106,15 +106,11 @@ export const html_header = `
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="${pages.feedback.href}">
                 <img class="icon_menu me-1" src="..${pages.feedback.icon}" alt="">
-                ${pages.feedback.name_title}
-            </a></li>
-            <li><a class="dropdown-item" href="#">
-              <img class="icon_menu me-1" src="..${pages.feedback.icon}" alt="">
-              意見蒐集
+                ${pages.feedback.title}
             </a></li>
             <li><a class="dropdown-item" href="..${pages.about.href}">
                 <img class="icon_menu me-1" src="..${pages.about.icon}" alt="">
-                ${pages.about.name_title}
+                ${pages.about.title}
             </a></li>
           </ul>
         </li>

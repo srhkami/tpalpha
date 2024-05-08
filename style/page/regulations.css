@@ -8,13 +8,11 @@
         position: sticky;
         height: calc(100vh - 6rem);
         top: 5rem;
+        border-radius: 10px;
     }
 }
 
 /* 法條清單排版 */
-/* .col-list{
-    width: auto;
-} */
 #list_article::-webkit-scrollbar{
     display: none;
 }
@@ -37,6 +35,7 @@
 .article-title h4{
     color: rgb(50, 120, 250);
     font-weight: 600;
+    
 }
 .btn-img{
     width: 20px;
@@ -76,6 +75,10 @@
 }
 .line-0400{
     margin-left: 2em;
+}
+.text-pre{
+    white-space: pre;
+    line-height: 180%;
 }
 .law-article div.show-number::before{
     content: counter(num) '';
