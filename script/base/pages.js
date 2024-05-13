@@ -1,4 +1,4 @@
-import { list_PH, list_SR, list_DR, list_ML, list_PA, list_PW, list_TA, list_CC, list_CP, list_SO } from '../list/rg_list.js';
+import { list_PH, list_SR, list_DR, list_ML, list_PA, list_PW, list_TA, list_CC, list_CP, list_SO, list_VS } from '../list/rg_list.js';
 
 //頁面預設類別
 class Page {
@@ -64,6 +64,26 @@ export const pages = {
     '/pages/regulations.html?rg=ML',
     list_ML
   ),
+  TA: new Page(
+    'RG',
+    'TA',
+    '事故處理辦法',
+    '道路交通事故處理辦法',
+    '民國 113 年 02 月 17 日 ',
+    '/icons/icon_accident.png',
+    '/pages/regulations.html?rg=TA',
+    list_TA
+  ),
+  VS: new Page(
+    'RG',
+    'VS',
+    '車輛審驗辦法',
+    '車輛型式安全審驗管理辦法',
+    '民國 113 年 01 月 05 日 ',
+    '/icons/icon_car.png',
+    '/pages/regulations.html?rg=VS',
+    list_VS
+  ),
   PA: new Page(
     'RG',
     'PA',
@@ -84,16 +104,7 @@ export const pages = {
     '/pages/regulations.html?rg=PW',
     list_PW
   ),
-  TA: new Page(
-    'RG',
-    'TA',
-    '事故處理辦法',
-    '道路交通事故處理辦法',
-    '民國 113 年 02 月 17 日 ',
-    '/icons/icon_accident.png',
-    '/pages/regulations.html?rg=TA',
-    list_TA
-  ),
+
   DL: new Page(
     'RG',
     'DL',

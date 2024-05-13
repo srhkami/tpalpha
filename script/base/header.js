@@ -39,6 +39,10 @@ export const html_header = `
                 <img class="icon_menu me-1" src="..${pages.TA.icon}" alt="">
                 ${pages.TA.title}
             </a></li>
+            <li><a class="dropdown-item" href="..${pages.VS.href}">
+              <img class="icon_menu me-1" src="..${pages.VS.icon}" alt="">
+              ${pages.VS.title}
+        </a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">

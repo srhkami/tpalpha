@@ -56,6 +56,15 @@ const html_quickArea = [`
                 </label>
               </div>
             </div>
+            <div class="col-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" role="switch" name="quickSwitch"
+                  id="quickSwitch_${pages.VS.code}" value="${pages.VS.code}">
+                <label class="form-check-label" for="quickSwitch_${pages.VS.code}">
+                  ${pages.VS.title}
+                </label>
+              </div>
+            </div>
             <div class="col-12">
               <hr>
             </div>
