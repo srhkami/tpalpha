@@ -182,10 +182,12 @@ function search_go(){
       }
       localStorage.setItem('searchOptionGo', JSON.stringify(searchOptionGo));
       if(location.pathname =='/index.html'){
-        location.href =`./pages/search.html?keyword=${keyWord}`;
+        console.log('這裡是首頁');
+        // location.href =`./pages/search.html?keyword=${keyWord}`;
       }
       else{
-        location.href =`../pages/search.html?keyword=${keyWord}`;   
+        console.log('這裡不是首頁');
+        // location.href =`../pages/search.html?keyword=${keyWord}`;   
       }
   })
   $('#btn_advanceSearch').click(()=>{
