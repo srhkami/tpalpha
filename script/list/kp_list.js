@@ -44,13 +44,13 @@ export const list_kp = [
       <p>因為處罰機關表示，原先因其他違規條款而有吊扣處罰之車輛，處罰機關會等到繳回牌照後、發予「汽車牌照吊扣執行單」後，始將其車籍登載為「吊扣」。</p>
       <p>基此，如果車牌資料顯示為「吊扣」，應已將車牌繳回，此時車上仍掛有車牌，相當高機率係自製假牌。</p>
       <h4 class="mt-4 mb-3">「違反刑法何罪？」</h4>
-      <p>如確認係偽造車牌，偽造之車號經查有車籍資料，足以生損害於他人(該車號之車主)，屬<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="CC-212">刑法212條</a>，偽造特證文書，惟非現行犯。因為偽造非當下，而是早已完成之犯罪行為。</p>
-      <p>如欲以現行犯處理，請以涉<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="CC-216">刑法216條</a>行使偽造文書之現行犯認定，再依現行犯程序處理。</p>
+      <p>如確認係偽造車牌，偽造之車號經查有車籍資料，足以生損害於他人(該車號之車主)，屬<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="CC-212">刑法212條</a>，偽造特證文書，惟非現行犯。因為偽造非當下，而是早已完成之犯罪行為。</p>
+      <p>如欲以現行犯處理，請以涉<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="CC-216">刑法216條</a>行使偽造文書之現行犯認定，再依現行犯程序處理。</p>
       <p>若偽造之車號為虛構、無車籍資料、或為車體本身之車號，部分法官仍認假車牌上路，已使民眾確信其真且影響監理機關之管理，有足以生損害於公眾之情，成立上記刑法之罪。</p>
       <h4 class="mt-4 mb-3">「違規部分如何舉發？」</h4>
       <p>如車籍為「牌照吊扣」而確實懸掛著偽造車牌，則：</p>
-      <p>①	因<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-12">處罰條例12條</a>1項6款並無扣繳牌照(即扣牌)之程序，因為這條成立的前提就是牌已繳回、沒有牌，所以舉發12.1.6時不用註記代保管物件。</p>
-      <p>②	舉發12.1.6後，另予舉發12.1.3。此時12.1.3才有代保管牌照之程序。惟如併辦刑案(不論是212條或216條)，基於刑事優先，該偽造之牌照需先以刑事證物扣押。12.1.3的舉發單上，建議仍點選或手寫「代保管牌照○面」，並依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="DR-28">處理細則28條3項</a>，在移送聯上註記「移送書文號、牌照先行扣押」。以免日後刑案發還證物時，處罰機關以移送書未寫扣牌而不收。</p>
+      <p>①	因<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-12">處罰條例12條</a>1項6款並無扣繳牌照(即扣牌)之程序，因為這條成立的前提就是牌已繳回、沒有牌，所以舉發12.1.6時不用註記代保管物件。</p>
+      <p>②	舉發12.1.6後，另予舉發12.1.3。此時12.1.3才有代保管牌照之程序。惟如併辦刑案(不論是212條或216條)，基於刑事優先，該偽造之牌照需先以刑事證物扣押。12.1.3的舉發單上，建議仍點選或手寫「代保管牌照○面」，並依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-28">處理細則28條3項</a>，在移送聯上註記「移送書文號、牌照先行扣押」。以免日後刑案發還證物時，處罰機關以移送書未寫扣牌而不收。</p>
       <p>③	 如為停車狀態，舉發12.4時，建議選擇或手寫「未領用有效號牌於道路停車」，較符合法理。同時另行舉發12.1.3。倘若因現場無行為人，而查證後該車並無失竊登記，即可以登記之車主作為處罰對象舉發、執行相關程序，並將車主列為嫌疑人，通知到案說明。</p>
       <br>
       <p>※ 亦歡迎使用「<a href="../pages/carLicense.html" >牌照違規速查</a>」功能一鍵查詢違反法條 ※</p>
@@ -63,14 +63,14 @@ export const list_kp = [
     '112 年 05 月 16 日',
     `
       <h4 class="mt-4 mb-3">查無引擎號碼或車身號碼</h4>
-      <p>① 查無引擎號碼或車身號碼，逕以拼裝車論處，舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-12">舉罰條例12條</a>1項2款。暫代保管空車乙輛，通知合約廠商拖吊。</p>
+      <p>① 查無引擎號碼或車身號碼，逕以拼裝車論處，舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-12">舉罰條例12條</a>1項2款。暫代保管空車乙輛，通知合約廠商拖吊。</p>
       <p>→類案裁判書：
       <br><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDA,111%2c%e4%ba%a4%2c454%2c20221128%2c1">臺灣新北地方法院 111 年度交字第 454 號判決</a>（車身號碼磨掉、引擎號碼無資料，自述拼裝）
       <br><a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHM,95%2c%e4%ba%a4%e6%8a%97%2c180%2c20060322%2c1">臺灣高等法院 95 年度交抗字第 180 號刑事裁定</a> ：任何非由合格正式車廠所設計、製造出廠之車輛或在原廠車上任意改裝非屬原廠設計規範或容許代換之零件，均屬拼裝車。
       <br
       ></p>
       <p>② 查得引擎號碼或車身號碼，惟該號碼查無車籍資料，而該車係市面已有販售之車款，屬12.1.1前段違規（不用沒入！不用沒入！不用沒入！），亦無移置保管之規定。舉發後禁止其行駛。</p>
-      <p>③ 查得引擎號碼或車身號碼，惟該號碼查無車籍資料，且查詢非市售車款。先依12.1.1後段舉發、暫代保管空車乙輛。再將該車採證照片及相關資料，依據<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-17">安全規則17條</a>，函文：</p>
+      <p>③ 查得引擎號碼或車身號碼，惟該號碼查無車籍資料，且查詢非市售車款。先依12.1.1後段舉發、暫代保管空車乙輛。再將該車採證照片及相關資料，依據<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-17">安全規則17條</a>，函文：</p>
       <p>　❶ 車審中心進口車審驗部(查車審紀錄)
       <br>　❷ 關務署關務資訊組(查進口證明)
       <br>　❸ 車主戶籍地監理所(查檢驗領牌)
@@ -89,7 +89,7 @@ export const list_kp = [
       <h4 class="mt-4 mb-3">停車狀態</h4>
       <p>① 依12.4處理，須查明車主始得舉發。</p>
       <p>② 不需特地查明是否有車審，因為12.4沒有沒入規定，只有移置保管。</p>
-      <p>③ 車籍如為報廢，不得舉發，應依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-82-1">處罰條例82-1條</a>規定處理。</p>
+      <p>③ 車籍如為報廢，不得舉發，應依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-82-1">處罰條例82-1條</a>規定處理。</p>
       <br>
       <p>※ 亦歡迎使用「<a href="../pages/carLicense.html" >牌照違規速查</a>」功能一鍵查詢違反法條 ※</p>
     `
@@ -101,14 +101,14 @@ export const list_kp = [
     '112 年 05 月 16 日',
     `
     <h4 class="mt-4 mb-3">行駛狀態</h4>
-    <p>①	車體部分，比照「<a href="../pages/keypoint.html?item=noCarLicense">未懸掛號牌之舉發</a>」一文程序辦理，另舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-12">舉罰條例12條</a>1項5款「使用他車牌照」。</p>
+    <p>①	車體部分，比照「<a href="../pages/keypoint.html?item=noCarLicense">未懸掛號牌之舉發</a>」一文程序辦理，另舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-12">舉罰條例12條</a>1項5款「使用他車牌照」。</p>
     <p>②	他車牌不論車籍如何，舉發「牌照借供他車使用」、暫代保管汽牌○面(機牌1面)。惟他車牌如為失竊狀態，原則上不舉發他車牌之所有人。但經查明報案時間比對懸掛時間，而有積極事證得證明他車牌之所有人將車牌借供他人使用，仍應舉發12.1.5「牌照借供他車使用」。</p>
     <p>③	他車牌如為偽造車牌，舉發車體所有人12.1.3，違反刑法部分請參閱「<a href="../pages/keypoint.html?item=fakeCarLicense">偽造號牌之舉發及偵辦</a>」一文第二段</a>。</p>
     <p>④	他車牌如為變造車牌：</p>
     <p>❶ 變造之車牌，如為他人所有，舉發車體所有人12.1.3。
     <br>→變造車牌還原後車號，如非失竊狀態，則舉發12.1.5「牌照借供他人使用」。
     <br>→變造車牌還原後車號，如為失竊狀態，依④之方式處理。
-    <br>→變造車牌涉嫌<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="CC-212">刑法212條</a>「變造特種文書罪」(變造行為已完成，非現行犯)、<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="CC-216">216條</a>「行使變造文書罪」(使用中，現行犯)。</p>
+    <br>→變造車牌涉嫌<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="CC-212">刑法212條</a>「變造特種文書罪」(變造行為已完成，非現行犯)、<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="CC-216">216條</a>「行使變造文書罪」(使用中，現行犯)。</p>
     <p>❷ 變造之車牌如為車體車主所有，惟非該車體之車牌，舉發車體所有人12.1.3，其變造之車牌舉發12.1.5「牌照借供他人使用」。刑事部分比照❶方式辦理。</p>
     <p>❸變造之車牌如為車體所有人所有，且即為該車之車牌，則車體及車牌均無12.1.5之適用，僅舉發12.1.3，刑事部分比照❶辦理。
     <br>→類案裁判書：<a href="https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=KSDM,104%2c%e7%b0%a1%2c1448%2c20150720%2c1">臺灣高雄地方法院 104 年度簡字第 1448 號刑事判決</a>（變造自己的車牌）。
@@ -116,7 +116,7 @@ export const list_kp = [
     <h4 class="mt-4 mb-3">停車狀態</h4>
     <p>① 車體依12.4、12.1.5舉發。</p>
     <p>② 車牌部分參考上述方式處理。</p>
-    <p>③車體之車籍如為報廢，不得舉發12.4，應依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-82-1">處罰條例82-1條</a>規定辦理。</p>   
+    <p>③車體之車籍如為報廢，不得舉發12.4，應依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-82-1">處罰條例82-1條</a>規定辦理。</p>   
     <p>※註：偽造車牌vs.變造車牌
       <br>　偽造，做一張假牌。
       <br>　變造，真牌上加工變號。.
@@ -134,16 +134,16 @@ export const list_kp = [
     <h4 class="mt-4 mb-3">「手把鏡(端子鏡)算不算違規？」</h4>
     <p>
       機車裝在手把兩端之照後鏡（法定用語，或稱後照鏡、後視鏡），算不算違規？從安規附件十五來看，照後鏡只要與車身主結構連接、不影響駕駛人視角即可。而安裝手把鏡後，只要車身寬度不超過
-      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-38">
-        安全規則38條</a>所訂尺度即可。而手把鏡是安裝而非裝載，故與<a  href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-88">安全規則88條
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-38">
+        安全規則38條</a>所訂尺度即可。而手把鏡是安裝而非裝載，故與<a  href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-88">安全規則88條
       </a>無涉。
     </p>
     <h4 class="mt-4 mb-3">「照後鏡太小算不算違規？」</h4>
     <p >依據<a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=K0040065">車輛型式安全審驗管理辦法</a>附件二十七，照後鏡屬間接視野裝置，其目得在提供駕駛人後面、側邊之清晰視線，故有規定機車照後鏡「圓形鏡之直徑不得小於94公釐」、「非圓形鏡其尺寸需允許直徑78公釐的圓能鑲入反射面」。</p>
-    <p >換言之，如果照後鏡鏡面過小不符合車審辦法附件之規定，自無法提供充足之後面、側邊視線，當可認定其違反<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">處罰條例16條1項2款</a>「照後鏡擅自變更原有規格致影響行車安全」。
+    <p >換言之，如果照後鏡鏡面過小不符合車審辦法附件之規定，自無法提供充足之後面、側邊視線，當可認定其違反<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-16">處罰條例16條1項2款</a>「照後鏡擅自變更原有規格致影響行車安全」。
       
     <h4 class="mt-4 mb-3">小結</h4>
-    <p >以上個人整理分享，也有實際就改裝之鏡面太小予以製單舉發。取締時需備尺測量，舉發處罰條例16條1項2款：變更原有設備(致影響行車安全)，加註①「量測圓形鏡僅直徑xx公釐，影響行車安全」或②「非圓形鏡無法鑲入78公釐圓，影響行車安全」，責令改正、「限於○月○日○時前辦理」(依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="DR-13">處理細則13條2項</a>所訂，期間得酌定於四日以內)。</p></p>
+    <p >以上個人整理分享，也有實際就改裝之鏡面太小予以製單舉發。取締時需備尺測量，舉發處罰條例16條1項2款：變更原有設備(致影響行車安全)，加註①「量測圓形鏡僅直徑xx公釐，影響行車安全」或②「非圓形鏡無法鑲入78公釐圓，影響行車安全」，責令改正、「限於○月○日○時前辦理」(依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-13">處理細則13條2項</a>所訂，期間得酌定於四日以內)。</p></p>
     `
   ),
   new KeyPoint(
@@ -191,14 +191,14 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-16">
             16.1.4
           </a>
         </div>
         <div class="col-7 border py-2">
           未於兩側後門或後葉子板標示牌照號碼及車主名稱。<br>
         (多元化計程車不在此限)<br>
-        (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+        (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-42">
           安全規則42.1.3
           </a>)
           </div>
@@ -210,14 +210,14 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-16">
             16.1.4
           </a>
         </div>
         <div class="col-7 border py-2">
           未於後窗玻璃標示牌照號碼。 <br>
         (多元化計程車不在此限)<br> 
-        (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+        (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-42">
           安全規則42.1.3
           </a>) 
           </div>
@@ -229,13 +229,13 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-16">
             16.1.4
           </a>
         </div>
         <div class="col-7 border py-2">
           未於右前座椅背標示牌照號碼。 <br> 
-          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-42">
             安全規則42.2
             </a>) 
         </div>
@@ -247,7 +247,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-16">
             16.1.5
           </a>
         </div>
@@ -262,7 +262,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-16">
             16.1.5
           </a>
         </div>
@@ -280,14 +280,14 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-16">
             16.1.5
           </a>
         </div>
         <div class="col-7 border py-2">
           未依規定裝置執業登記證插座 <br> 
           (應於儀錶板上右側與右前座椅背設置執登證插座) <br> 
-          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-42">
             安全規則42.2
             </a>) 
         </div>
@@ -299,13 +299,13 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-16">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-16">
             16.1.5
           </a>
         </div>
         <div class="col-7 border py-2">
           前、後兩邊玻璃門上，黏貼不透明反光紙  <br> 
-          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-39-1">
+          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-39-1">
             安全規則39-1.8
             </a>) 
         </div>
@@ -317,7 +317,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-22">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-22">
             22.1.1
           </a>
         </div>
@@ -332,7 +332,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.1
           </a>
         </div>
@@ -346,7 +346,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.1
           </a>
         </div>
@@ -361,20 +361,20 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.1
           </a>
         </div>
         <div class="col-7 border py-2">
           使用偽(變)造執業登記證。<br> 
-          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">
+          (<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-42">
             安全規則42.2
             </a>) 
         </div>
         <div class="col-3 border d-flex align-items-center">
           <p class="my-auto">處駕駛人<br>
             得郵繳<br>
-            扣押(<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="CC-216">
+            扣押(<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="CC-216">
               刑法216
               </a>)
           </p> 
@@ -382,7 +382,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.1
           </a>
         </div>
@@ -392,7 +392,7 @@ export const list_kp = [
         <div class="col-3 border d-flex align-items-center">
           <p class="my-auto">處駕駛人<br>
             得郵繳<br>
-            沒入(<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SO-66">
+            沒入(<a href="#" class="showArticle d-inline" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SO-66">
               社維法66.2
               </a>) 
           </p>
@@ -400,7 +400,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.3
           </a>
         </div>
@@ -414,7 +414,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.3
           </a>
         </div>
@@ -429,7 +429,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.3
           </a>
         </div>
@@ -443,7 +443,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.3
           </a>
         </div>
@@ -458,7 +458,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.5
           </a>
         </div>
@@ -473,7 +473,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.5
           </a>
         </div>
@@ -487,7 +487,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-36">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-36">
             36.5
           </a>
         </div>
@@ -501,7 +501,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-38">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-38">
             38.1
           </a>
         </div>
@@ -515,7 +515,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-38">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-38">
             38.1
           </a>
         </div>
@@ -529,7 +529,7 @@ export const list_kp = [
       </div>
       <div class="row">
         <div class="col-2 border d-flex justify-content-center align-items-center">
-          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="PH-60">
+          <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-60">
             60.2.4
           </a>
         </div>
@@ -563,10 +563,10 @@ export const list_kp = [
         「其立法目的在於使乘客知悉其所搭乘或擬搭乘之計程車是否合法、登記駕駛人與實際駕駛人是否同一，並於產生消費糾紛時，有追索之可能，以提升公眾對計程車行業之信賴，是計程車駕駛人於其執業過程中，無論有無搭載乘客，均應確實妥適放置執業登記證。而影本極易偽造、變造，乘客無法辨識、查證影本之真實性，自不得以影本取代主管機關核發之職業登記證。再者，原告以駕駛計程車為業，當可知悉其申領取得之職業登記證應依規定放置在指定之插座內，倘認其得以影本取代職業登記證放置在指定插座內，主管機關即無核發職業登記證之必要，道路交通管理處罰條例第36 條第5 項之立法目的亦將難以達成。」  
       </p>
       <h4>責令改正期限</h4>
-      <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="DR-13">處理細則13條2項</a>：<br>「前項違反行為須責令定期改正、修復或補辦手續者，除依規定應請領臨時通行證外，依其實際所需時間記明「限於○月○日○時前辦理」等字樣，其期間得酌定於四日以內。 」  
+      <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-13">處理細則13條2項</a>：<br>「前項違反行為須責令定期改正、修復或補辦手續者，除依規定應請領臨時通行證外，依其實際所需時間記明「限於○月○日○時前辦理」等字樣，其期間得酌定於四日以內。 」  
       </p>
       <h4>張貼廣告規定</h4>
-      <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-42">安全規則42條3項</a>：<br>
+      <p><a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-42">安全規則42條3項</a>：<br>
         「計程車應於兩側後門或後葉子板標示牌照號碼及公司行號、運輸合作社或個人名稱，後窗玻璃標示牌照號碼。但多元化計程車不在此限。計程車車身兩側及多元化計程車車身範圍(均不含車窗)於不影響辨識及視線安全下，得以平面漆繪或穩固黏貼方式張貼廣告，並應符合各目的事業主管機關及地方政府相關廣告物管理之法令規定辦理。」
       </p>
       <p>交通部公路總局98年公路監理車輛管理工作圈第5次會議討論提綱第3案：<br>

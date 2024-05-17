@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns:1fr;
 }
-@media (min-width:768px){
+/* @media (min-width:768px){
     #mainContent{
         grid-template-columns:1fr 1fr;
     }
@@ -12,10 +12,10 @@
     #mainContent{
         grid-template-columns:1fr 1fr 1fr;
     }
-}
+} */
 
 /* 次排版 */
-#bk_left{
+/* #bk_left{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
@@ -26,7 +26,7 @@
 #bk_right{
     display: grid;
     grid-template-rows: 1;
-}
+} */
 
 /* 字型個別設定 */
 #updata_text{

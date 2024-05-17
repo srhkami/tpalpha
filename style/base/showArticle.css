@@ -1,0 +1,43 @@
+/* 法條內文排版 */
+#shwoArticle_text{
+  padding-left: 1.75em;
+  padding-right: 0.5em;
+  counter-reset: num 0;
+  position: relative;
+}
+#shwoArticle_text .line-0004{
+  margin-left: 2em;
+  text-indent: -2em;
+}
+#shwoArticle_text .line-0006{
+  margin-left: 3em;
+  text-indent: -3em;
+}
+#shwoArticle_text .line-0008{
+  margin-left: 3em;
+  text-indent: -4em;
+}
+#shwoArticle_text .line-0602{
+  margin-left: 3em;
+  text-indent: -1em;
+}
+#shwoArticle_text .line-0505{
+  margin-left: 5em;
+  text-indent: -2.5em;
+}
+#shwoArticle_text .line-0400{
+  margin-left: 2em;
+}
+#shwoArticle_text .show-number::before{
+  content: counter(num) '';
+  counter-increment: num 1; 
+  display: inline-block;
+  position: absolute;
+  left: -2em;
+  text-align: right;
+  width: 3em;
+  font-size: 1em;
+  color: rgb(50, 120, 250);
+  font-style: italic;
+  font-weight: 600    ;
+}

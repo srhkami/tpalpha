@@ -17,9 +17,11 @@
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/keyPoint.css">
+  <link rel="stylesheet" href="../style/base/showArticle.css">
   <script type='module' src="../script/base/header.js"></script>
   <script type='module' src="../script/base/searchArea.js"></script>
   <script type='module' src="../script/page/keyPoint.js"></script>
+  <script type='module' src="../script/base/showArticle.js"></script>
 </head>
 
 <body>
@@ -27,24 +29,11 @@
   <!-- 彈出視窗 -->
   <div id="popUp">
     <!-- 搜尋 -->
-    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
-    <!-- 法規彈出視窗 -->
-    <div class="modal fade" id="tipArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title fs-5 text-primary fw-semibold" id="exampleModalLabel">條目</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            內文
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-          </div>
-        </div>
-      </div>
-    </div>  
+    <div id="searchArea" class="modal fade" tabindex="-1"></div>
+    <!-- 通用彈出視窗 -->
+    <div id="popUpArea" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable"></div>
+    </div>
   </div>
   <main>
     <div id="mainContent" class="container-sm py-3">
@@ -90,7 +79,6 @@
                     <p class="card-text placeholder-glow">
                       資料來源：「鴿來告訴你交通怎麼做」群組
                     </p>
-                    <button class="btn btn-primary disabled placeholder">加入書籤</button>
                   </div>
                 </div>
               </div>

@@ -70,16 +70,21 @@ function search_again(keyWord, old_list) {
 function refresh_list(list_output) {
   let html = '';
   list_output.forEach((value) => {
-    html += `
-    <a class="list-group-item list-group-item-action border-start-0 border-end-0" href="#article-${value.code}-${value.article}">
-      <div class="list-article-no">
-        ${value.index} 
-      </div>
-      <div class="list-article-title text-secondary-emphasis">
-        ${value.title}
-      </div>
-    </a>
-    `;
+    if (value.article == '-1'){
+      //pass
+    }
+    else{
+      html += `
+      <a class="list-group-item list-group-item-action border-start-0 border-end-0" href="#article-${value.code}-${value.article}">
+        <div class="list-article-no">
+          ${value.index} 
+        </div>
+        <div class="list-article-title text-secondary-emphasis">
+          ${value.title}
+        </div>
+      </a>
+      `;
+    }
   });
   $('#list_article').html(html);
 }
@@ -119,7 +124,11 @@ function refresh_text(list_output, keyWord) {
     </div>
     `;
   list_output.forEach((value, index) => {
-    html += `
+    if (value.article == '-1'){
+      //pass
+    }
+    else{
+      html += `
       <div id="article-${value.code}-${value.article}" class="article">
         <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
             <h4 class="d-inline me-auto" data-rg="${value.rg}">${value.index}</h4>
@@ -132,6 +141,7 @@ function refresh_text(list_output, keyWord) {
         </div>
       </div>
       `;
+    }
   });
   return html;
 }

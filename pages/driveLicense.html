@@ -17,9 +17,11 @@
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/license.css" />
+  <link rel="stylesheet" href="../style/base/showArticle.css" />
   <script type='module' src='../script/base/header.js'></script>
   <script type='module' src='../script/base/searchArea.js'></script>
   <script type='module' src='../script/page/dl.js'></script>
+  <script type='module' src="../script/base/showArticle.js"></script>
 </head>
 
 <body>
@@ -28,6 +30,10 @@
   <div id="popUp">
     <!-- 搜尋 -->
     <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <!-- 通用彈出視窗 -->
+    <div id="popUpArea" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable"></div>
+    </div>
   </div>
   <main class="container-xl">
     <div id="mainContent" class="px-3 py-3">
@@ -119,14 +125,14 @@
             <h5 class="text-primary fw-semibold mb-3">※ 註釋：</h5>
             <p class="comment_text text-body-secondary">
               ◎ 一、處罰對象<br>
-              (1) 21條處罰駕駛人，另舉發21條6項處罰所有人並吊扣牌照。<br>
-              (2) 21-1條處罰駕駛人及所有人，另舉發21-1.5吊扣牌照。<br>
-              (3) 22條處罰駕駛人。
+              (1) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-21">21條</a>處罰駕駛人，另舉發21條6項處罰所有人並吊扣牌照。<br>
+              (2) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-21-1">21-1條</a>處罰駕駛人及所有人，另舉發21-1.5吊扣牌照。<br>
+              (3) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-22">22條</a>處罰駕駛人。
             </p>
-            <p class="comment_text text-body-secondary">◎ 二、違反35條吊扣期間、吊銷後未再考領，另舉發21條3項或21-1條3項。</p>
-            <p class="comment_text text-body-secondary">◎ 三、不聽制止或不服稽查，另舉發60條3項。</p>
+            <p class="comment_text text-body-secondary">◎ 二、違反<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-35">35條</a>吊扣期間、吊銷後未再考領，另舉發21條3項或21-1條3項。</p>
+            <p class="comment_text text-body-secondary">◎ 三、不聽制止或不服稽查，另舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-60">60條3項</a>。</p>
             <p class="comment_text text-body-secondary">◎ 四、職業駕照經註銷未換領普通駕照，不得駕駛汽車。 </p>
-            <p class="comment_text text-body-secondary">◎ 五、21條1項9款所稱持照條件，請參照安全規則61條及61-1條。 </p>
+            <p class="comment_text text-body-secondary">◎ 五、21條1項9款所稱持照條件，請參照<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-61">安全規則61條</a>及<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-61-1">61-1條</a>。 </p>
           </div>
           <div class="col-12 col-xl-6">
             <h5 class="text-primary fw-semibold mb-3">※ 參考資料：</h5>

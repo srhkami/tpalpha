@@ -98,7 +98,7 @@ export const pages = {
     'RG',
     'PW',
     '警械使用條例',
-    '《警械使用條例》',
+    '警械使用條例',
     '民國 111 年 10 月 19 日',
     '/icons/icon_gun.png',
     '/pages/regulations.html?rg=PW',
@@ -106,7 +106,7 @@ export const pages = {
   ),
 
   DL: new Page(
-    'RG',
+    'PAGE',
     'DL',
     '駕照違規速查',
     '駕照違規速查',
@@ -116,7 +116,7 @@ export const pages = {
     ''
   ),
   CL: new Page(
-    'RG',
+    'PAGE',
     'CL',
     '牌照違規速查',
     '牌照違規速查',
@@ -125,8 +125,18 @@ export const pages = {
     '/pages/carLicense.html',
     ''
   ),
+  overload: new Page(
+    'PAGE',
+    'overload',
+    '超載計算機',
+    '超載計算機',
+    '',
+    '/icons/icon_cargo2.png',
+    '/pages/overload.html',
+    ''
+  ),
   keyPoint: new Page(
-    'UNKNOW',
+    'PAGE',
     'keyPoint',
     '違規舉發要點',
     '違規舉發要點',

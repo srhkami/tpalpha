@@ -38,7 +38,6 @@ function refresh_text(r_list, r_object) {
                           來源：全國法規資料庫<br>
                           備註：部分條目附圖仍有缺漏，敬請見諒
                         </p>
-                        <button href="#" class="btn btn-primary" disabled>加入最愛</button>
                     </div>
                 </div>
             </div>
@@ -74,7 +73,7 @@ function refresh_text(r_list, r_object) {
                       <div class="card-body">
                           <h2 class="card-title">${r_object.name}</h2>
                           <p class="card-text text-secondary-emphasis">修訂日期：${r_object.revision}<br>來源：全國法規資料庫</p>
-                          <button href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#popUpArea">附件</button>
+                          <button href="#" class="btn btn-warning ms-2" data-bs-toggle="modal" data-bs-target="#popUpArea">查看附件</button>
                       </div>
                   </div>
               </div>
@@ -138,7 +137,7 @@ function refresh_text(r_list, r_object) {
                       <div class="card-body">
                           <h2 class="card-title">${r_object.name}</h2>
                           <p class="card-text text-secondary-emphasis">修訂日期：${r_object.revision}<br>來源：全國法規資料庫</p>
-                          <button href="#" class="btn btn-primary" disabled>加入最愛</button>
+                          <!--<button href="#" class="btn btn-primary" disabled>加入最愛</button>--!>
                       </div>
                   </div>
               </div>

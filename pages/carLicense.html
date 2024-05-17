@@ -17,9 +17,11 @@
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/license.css" />
+  <link rel="stylesheet" href="../style/base/showArticle.css" />
   <script type='module' src='../script/base/header.js'></script>
   <script type='module' src='../script/base/searchArea.js'></script>
   <script type='module' src='../script/page/cl.js'></script>
+  <script type='module' src="../script/base/showArticle.js"></script>
 </head>
 
 <body class="h-100">
@@ -28,6 +30,10 @@
   <div id="popUp">
     <!-- 搜尋 -->
     <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <!-- 通用彈出視窗 -->
+    <div id="popUpArea" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable"></div>
+    </div>
   </div>
   <main class="container-xl">
     <div id="mainContent" class="px-3 py-3">
@@ -125,7 +131,7 @@
             <h5 class="text-primary fw-semibold mb-3">※ 註釋：</h5>
             <p class="comment_text text-body-secondary">
               ◎ 一、處罰對象<br>
-              (1) 12條原則處罰所有人。<br>
+              (1) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-12">處罰條例12條</a>原則處罰所有人。<br>
               (2) 車主死亡、主體不存在、死亡逕註、無車籍等，歸責駕駛人/繼承人/實際所有人。<br>
               (3) 拒不過戶註銷，函詢監理站查應歸責人。
             </p>
