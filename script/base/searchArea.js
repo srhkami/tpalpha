@@ -182,7 +182,7 @@ function search_go(){
       }
       localStorage.setItem('searchOptionGo', JSON.stringify(searchOptionGo));
       if(location.pathname =='/index.html'){
-        location.href =`/pages/search.html?keyword=${keyWord}`;
+        location.href =`./pages/search.html?keyword=${keyWord}`;
       }
       else{
         location.href =`../pages/search.html?keyword=${keyWord}`;   
