@@ -181,13 +181,11 @@ function search_go(){
         }
       }
       localStorage.setItem('searchOptionGo', JSON.stringify(searchOptionGo));
-      if(location.pathname =='/index.html'){
-        console.log('這裡是首頁');
-        // location.href =`./pages/search.html?keyword=${keyWord}`;
+      if($('title').html() == '首頁 - 交通鴿手'){
+        location.href =`/pages/search.html?keyword=${keyWord}`;
       }
       else{
-        console.log('這裡不是首頁');
-        // location.href =`../pages/search.html?keyword=${keyWord}`;   
+        location.href =`../pages/search.html?keyword=${keyWord}`;   
       }
   })
   $('#btn_advanceSearch').click(()=>{
