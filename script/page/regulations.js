@@ -9,9 +9,11 @@ function refresh_list(r_list) {
     }
     else {
       html += `
-      <a class="list-group-item list-group-item-action d-flex border-start-0 border-end-0" href="#article-${value.article}">
+      <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#article-${value.article}">
+        <div class="d-flex px-3 py-2">
           <div class="list-article-no">第 ${value.article} 條</div>
           <div class="list-article-title text-secondary-emphasis">${value.title}</div>
+        </div>  
       </a>
       `;
     }
@@ -73,7 +75,7 @@ function refresh_text(r_list, r_object) {
                       <div class="card-body">
                           <h2 class="card-title">${r_object.name}</h2>
                           <p class="card-text text-secondary-emphasis">修訂日期：${r_object.revision}<br>來源：全國法規資料庫</p>
-                          <button href="#" class="btn btn-warning ms-2" data-bs-toggle="modal" data-bs-target="#popUpArea">查看附件</button>
+                          <button href="#" class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#popUpArea">查看附件</button>
                       </div>
                   </div>
               </div>

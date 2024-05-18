@@ -75,12 +75,14 @@ function refresh_list(list_output) {
     }
     else{
       html += `
-      <a class="list-group-item list-group-item-action border-start-0 border-end-0" href="#article-${value.code}-${value.article}">
-        <div class="list-article-no">
-          ${value.index} 
-        </div>
-        <div class="list-article-title text-secondary-emphasis">
-          ${value.title}
+      <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#article-${value.code}-${value.article}">
+        <div class="px-3 py-2">
+          <div class="list-article-no">
+            ${value.index} 
+          </div>
+          <div class="list-article-title text-secondary-emphasis">
+            ${value.title}
+          </div>
         </div>
       </a>
       `;

@@ -1,23 +1,19 @@
 import { pages } from './pages.js';
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.12.1723`;
+const app_ver = `1.12.1810`;
 
 // 公告
 const notice = `
-  v1.12更新內容(113/05/18)：
+  v1.12 主要更新內容(113/05/18)：
   <br>
   <br>　◎ 加入「超載計算機」頁面
   <br>　◎ 部分法規新增附件或附圖
-  <br>　◎ 部分法規新增了附件連結
-  <br>　◎ 「設置規則」增加了大部分條目的附圖
   <br>　<button type="button" class="btn btn-outline-secondary mt-3" data-bs-toggle="modal"
-  data-bs-target="#popUpArea">點此查看更新日誌</button>
+  data-bs-target="#popUpArea">查看更新日誌</button>
   <br>
   <br>已知問題：
-  <br>　◎ 附件連結在第一次點擊時總會失效
-  <br>　　（未來會將所有檔案整合到網頁中以避免此問題）
-  <br>　◎ 部分按鈕尚未加入功能
+  <br>　◎ 附件連結至全國法規資料庫，在首次點擊時總會失效
   
 `;
 
@@ -29,7 +25,7 @@ const future = `
   <br>成為各位學長姐工作上的最佳幫手。
   <br>
   <br>如果剛好幫助到你，
-  <br>歡迎向更多人分享推廣；
+  <br>歡迎向更多人分享推廣！
   <br>如果你也是在交通路上默默耕耘的鬥士，
   <br>也請不吝賜教，幫助這裡變得更好！
   <br>
@@ -45,7 +41,9 @@ const updata_text = `
     <br>　部分法規新增了附件連結（連結至全國法規資料庫）。
     <br>　「設置規則」增加了大部分條目的附圖（少部分仍有缺漏）。
     <br>　追加蒐錄「車輛審驗辦法」法規。
-    <br>　修正在首頁搜尋功能失效的問題。
+    <br>　「違規取締」下各頁面法條皆加入快速預覽功能。
+    <br>　修復搜尋功能在首頁失效的問題。
+    <br>　修復法規條目清單部分區域無法觸發點擊的問題。
   </p>
   <p>
     ※　1.11：
@@ -93,7 +91,6 @@ $(document).ready(() => {
   $('#notice').html(notice);
   $('#future').html(future);
   $('#app_ver').html(app_ver);
-  // $('#updata_text').html(updata_text);
   $('#popUpArea').html(`
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
@@ -110,8 +107,5 @@ $(document).ready(() => {
       </div>
     </div>
   `)
-  
-
-
   collection();
 })

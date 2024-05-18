@@ -187,6 +187,7 @@ function search_go(){
       else{
         location.href =`../pages/search.html?keyword=${keyWord}`;   
       }
+       
   })
   $('#btn_advanceSearch').click(()=>{
     const keyWord = $('#keyWord').val()
