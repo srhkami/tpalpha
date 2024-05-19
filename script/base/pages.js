@@ -150,7 +150,7 @@ export const pages = {
     'about',
     '關於',
     '關於「交通鴿手」',
-    '民國 113 年 04 月 08 日',
+    '',
     '/icons/icon_about.png',
     '/pages/about.html',
     ''
@@ -160,7 +160,7 @@ export const pages = {
     'feedback',
     '意見回饋',
     '意見回饋',
-    '民國 113 年 04 月 08 日',
+    '',
     '/icons/icon_message.png',
     'https://forms.gle/egpyVq19MYJAydS28',
     ''
@@ -170,7 +170,7 @@ export const pages = {
     'search',
     '搜尋',
     '搜尋',
-    '民國 113 年 04 月 08 日',
+    '',
     '/icons/icon_search_2.png',
     '/pages/search.html',
     ''
@@ -180,7 +180,7 @@ export const pages = {
     'index',
     '首頁',
     '首頁',
-    '民國 113 年 04 月 08 日',
+    '',
     '/icons/icon_home.png',
     '/index.html',
     ''

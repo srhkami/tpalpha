@@ -28,10 +28,14 @@
   <div id="popUp">
     <!-- 搜尋 -->
     <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <!-- 通用彈出視窗 -->
+    <div id="popUpArea" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable"></div>
+    </div>
   </div>
   <main class="container">
     <div id="mainContent" class="px-3 py-3">
-      <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
+      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
         <div class="col mb-3">
           <div class="card border border-3 mb-3 h-100">
             <div class="card-header text-primary">開發者</div>
@@ -46,7 +50,8 @@
             <div class="card-header text-primary">程式版本</div>
             <div class="card-body">
               <h5 id="app_ver" class="card-title"></h5>
-              <p class="card-text">（beta）</p>
+              <button type="button" id="showUpdate" class="btn btn-outline-primary" data-bs-toggle="modal"
+                data-bs-target="#popUpArea">更新日誌</button>
             </div>
           </div>
         </div>
@@ -70,47 +75,48 @@
           </div>
         </div>
       </div>
-      
-      
-      <div id="bk_left">
-        
-        
-       
-
-        
-        <!-- <div class="border border-3 mx-3 my-2 rounded-3">
-          <h4 class="text-center my-2 text-primary fw-bolder">開發者</h4>
-          <hr class="border-2">
-          <p class="text-body text-center fs-5 fw-semibold mx-4">蔡智楷 C.K.SAI</p>
-        </div> -->
-        <!-- <div class="border border-3 mx-3 my-2 rounded-3">
-          <h4 class="text-center my-2 text-primary fw-bolder">程式版本</h4>
-          <hr class="border-2">
-          <p class="text-body text-center fs-5 fw-semibold mx-4" id="app_ver"></p>
-        </div> -->
-        <!-- <div class="border border-3 mx-3 my-2 rounded-3">
-          <h4 class="text-center my-2 text-primary fw-bolder">圖標來源</h4>
-          <hr class="border-2">
-          <a class="text-body text-center fs-5 fw-semibold mx-4 d-block text-decoration-none" href="https://icons8.com/"
-            role="button">Icons8</a>
-        </div> -->
-      </div>
-      <!-- <div id="bk_center">
-        <div class="border border-3 mx-3 my-2 rounded-3">
-          <h4 class="text-center my-2 text-primary fw-bolder">更新日誌：</h4>
-          <hr class="border-2">
-          <div id="updata_text" class="text-body fw-semibold"></div>
-        </div>
-      </div>
-      <div id="bk_right">
-        <div class="border border-3 mx-3 my-2 rounded-3">
-          <h4 class="text-center my-2 text-primary fw-bolder">收錄法規：</h4>
-          <hr class="border-2">
-          <div id="collection" class="text-body fw-semibold">
-            <p class="collection_text">空</p>
+      <div class="row">
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card border border-3 mb-3 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-4 d-flex ">
+                <img src="../icons/icon_smartphone.png" class="img-fluid rounded-start m-auto" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title text-primary mb-3">手機版下載</h5>
+                  <p class="card-text ">此功能測試中，可能會遇到非預期的錯誤。目前暫時只提供Android版的APK檔下載，下載前請先確定會安裝非PLAY商店APP，此步驟可能需要更改手機設定。</p>
+                  <p class="card-text">如同意以上注意事項，<a href="https://drive.google.com/drive/folders/1pmV6WZVdZ0RyfL8TvVDh9OI5Kc2OwkBO?usp=drive_link">點擊此處下載</a>。</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div> -->
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card border border-3 mb-3 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-4 d-flex ">
+                <img src="../icons/icon_file.png" class="img-fluid rounded-start m-auto" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title text-primary mb-3">相關文件</h5>
+                  <p class="card-text ">這裡列出了本網頁收錄的所有法規及文章，如發現法規版本過舊、或建議收錄其他法規，都可以
+                    <a href="https://forms.gle/egpyVq19MYJAydS28">聯繫作者</a>。
+                  </p>
+                  <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" id="showRG" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    data-bs-target="#popUpArea">法規版本</button>
+                    <button type="button" id="showEssay" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    data-bs-target="#popUpArea">文章列表</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 </body>

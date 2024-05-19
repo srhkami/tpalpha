@@ -10,7 +10,7 @@ function refresh_page(){
 		if (value.code == item_code){
 			$('title').html(`${value.title} - 交通鴿手`)
 			$('.card-title').html(value.title);
-			$('.card-text').html(`作者：<span class="text-info mx-1 fw-semibold">${value.author} </span><br>更新日期：${value.update}`);
+			$('.card-text').html(`作者：<span class="text-info mx-1 fw-semibold">${value.author} </span><br>編輯日期：${value.update}`);
 			$('#item_text').html(value.text);
 			html += `
 				<a href="../pages/keypoint.html?item=${value.code}" type="button" class="list-group-item list-group-item-action active">

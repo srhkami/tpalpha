@@ -8,7 +8,7 @@ function ok_click() {
     const x = Number($('#approvedWeight').val());
     const y = Number($('#realWeight').val());
     if (!x || !y) {
-      alert('選項請勿留空！');
+      alert('輸入欄位請勿留空！');
     }
     else {
       calculate(x, y);
@@ -62,12 +62,6 @@ function calculate(x, y) {
   }
 }
 
-
-
 // 主程式開始
-//鎖定判斷
-$('#a_type').on('change', () => a_type_judge());
-$('#is_same').on('change', () => is_same_judge());
-//查詢按鈕判斷
 ok_click();
 

@@ -1,7 +1,8 @@
 import { pages } from './pages.js';
+import { list_kp } from '../list/kp_list.js'
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.12.1810`;
+const app_ver = `1.13.1916`;
 
 // 公告
 const notice = `
@@ -9,12 +10,11 @@ const notice = `
   <br>
   <br>　◎ 加入「超載計算機」頁面
   <br>　◎ 部分法規新增附件或附圖
-  <br>　<button type="button" class="btn btn-outline-secondary mt-3" data-bs-toggle="modal"
+  <br>　<button type="button" id="showUpdate" class="btn btn-outline-secondary mt-3" data-bs-toggle="modal"
   data-bs-target="#popUpArea">查看更新日誌</button>
   <br>
   <br>已知問題：
   <br>　◎ 附件連結至全國法規資料庫，在首次點擊時總會失效
-  
 `;
 
 //尚未實現
@@ -73,17 +73,53 @@ const updata_text = `
 `;
 
 // 收錄法規
-function collection() {
+function collectionRG() {
   let html = '';
   Object.values(pages).forEach((value) => {
     if (value.type == 'RG') {
       html += `
         <p class="collection_text">◎　${value.name}
-        <br>　　修訂日期：${value.revision}
+          <br>　　修訂日期：${value.revision}
+        </p>
       `
     }
   })
-  $('#collection').html(html);
+  return html;
+}
+// 收錄文章
+function collectionEssay() {
+  let html = '';
+  list_kp.forEach((value) => {
+    html += `
+      <p class="collection_text">◎　${value.title}
+        <br>　　作者：${value.author}
+        <br>　　編輯日期：${value.update}
+      </p>
+    `
+  })
+  return html;
+}
+
+
+// 函式：彈出視窗的HTML
+function popUpHTML(title, text){
+  let html=`
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title fs-5 text-primary fw-semibold" id="exampleModalLabel">${title}</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ${text}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+  `;
+  $('#popUpArea').html(html);
 }
 
 // 刷新首頁
@@ -91,21 +127,8 @@ $(document).ready(() => {
   $('#notice').html(notice);
   $('#future').html(future);
   $('#app_ver').html(app_ver);
-  $('#popUpArea').html(`
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title fs-5 text-primary fw-semibold" id="exampleModalLabel">更新日誌</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ${updata_text}
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-        </div>
-      </div>
-    </div>
-  `)
-  collection();
+  $('#showUpdate').click(()=>{popUpHTML('更新日誌', updata_text)});
+  $('#showRG').click(()=>{popUpHTML('收錄法規', collectionRG())});
+  $('#showEssay').click(()=>{popUpHTML('收錄文章', collectionEssay())});
+  
 })

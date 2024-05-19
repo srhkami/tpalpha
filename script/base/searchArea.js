@@ -159,6 +159,15 @@ function load_options(){
   })
 }
 
+// 函式：前往搜尋結果頁面
+function output(keyWord){
+  if($('title').html() == '首頁 - 交通鴿手'){
+    location.href =`./pages/search.html?keyword=${keyWord}`;
+  }
+  else{
+    location.href =`../pages/search.html?keyword=${keyWord}`;   
+  }
+}
 
 // 函式：偵測搜尋按鈕
 function search_go(){
@@ -181,13 +190,7 @@ function search_go(){
         }
       }
       localStorage.setItem('searchOptionGo', JSON.stringify(searchOptionGo));
-      if($('title').html() == '首頁 - 交通鴿手'){
-        location.href =`./pages/search.html?keyword=${keyWord}`;
-      }
-      else{
-        location.href =`../pages/search.html?keyword=${keyWord}`;   
-      }
-       
+      output(keyWord);    
   })
   $('#btn_advanceSearch').click(()=>{
     const keyWord = $('#keyWord').val()
@@ -197,7 +200,7 @@ function search_go(){
     else{
       let searchOptionGo = JSON.parse(localStorage.getItem('searchOption'));
       localStorage.setItem('searchOptionGo', JSON.stringify(searchOptionGo));
-      location.href =`../pages/search.html?keyword=${keyWord}`;
+      output(keyWord); 
     }
   })
 }

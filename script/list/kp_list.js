@@ -172,6 +172,124 @@ export const list_kp = [
     `
   ),
   new KeyPoint(
+    'rulingTerm',
+    '裁決與申訴時限',
+    '無奈 學長',
+    '112 年 09 月 01 日',
+    `
+      <h4 class="mt-4 mb-3">申訴時限</h4>
+      <p>為什麼偶爾會遇到處罰機關來文，要求員警就N月、甚至N年前的交通違規舉發案件進行答辯？</p>
+      <p>有關民眾申訴（法定用語為「受處分人」、「違規行為人」、「陳述意見」），法條上有兩個時間點限制。一是「接獲通知單後三十日內」，二是「未經裁決自行繳納罰緩後三十日內」。條文雖有明訂時限，但並沒有說超過時限，民眾就不能申訴。</p>
+      <p>※請注意！申訴的時限跟應到案期限，無直接關係。</p>
+      <p>再來，民眾如果到案（不論是否逾到案日期）不服舉發、提出申訴，處罰機關要作成裁決前，一定會發函來詢問舉發員警的意見。</p>
+      <p>假如民眾一直沒繳、也沒到案，處罰機關自行作成裁決，民眾在收到裁決書後（三十日內）提起訴訟，處罰機關為重新審查或繕造答辯狀，仍會發函詢問舉發員警的意見。</p>
+      <h4 class="mt-4 mb-3">裁決時限</h4>
+      <p>如果民眾沒繳、沒到案、也沒申訴，處罰機關幾時才會自行作為裁決？難道沒有時限嗎？</p>
+      <p>有的，條文是這麼寫的「通知單送達且逾應到期限六十日之三個月內，逕行裁決之。但警察機關……通知單送達且逾應到期限之三個月內，逕行裁決之。」很饒舌對吧？條列式呈現如下：</p>
+      <h5>汽車（公路主管機關）</h5>
+      <p>① 受處罰人在場且當場簽收或拒絕簽收但完成視同已收受程序，自填單日起算，90日後起至90日+3個月止，應逕行裁決。</p>
+      <p>② 受處罰人在場但未完成舉發程序而離去，或受處罰人非在場，進而另行送達，自填單日起算，105日後起至105日+3個月止，應逕行裁決。</p>
+      <h5>慢車、行人、道路障礙、應廢止或吊扣執登案件（警察機關）</h5>
+      <p>① 受處罰人在場且當場簽收或拒絕簽收但完成視同已收受程序，自填單日起算，30日後起至30日+3個月止，應逕行裁決。</p>
+      <p>② 受處罰人在場但未完成舉發程序而離去，或受處罰人非在場，因而另行送達，自填單日起算，45日後起至45日+3個月止，應逕行裁決。</p>
+      <h4 class="mt-4 mb-3">小結</h4>
+      <p>雖然有明訂處罰機關應逕予裁決的時限，但並沒有說超過時限就不能裁決。除非是超過行政罰法所訂的三年裁處權時校，那就真的不能裁決了。而只要裁決，就需要詢問舉發人員的意見。</p>
+      <p>因此，若是收到來函說要寫答辯，只要是三年左右以內的違規，都不必大驚小怪。</p>
+      <h4 class="mt-4 mb-3">參考條文</h4>
+      <p>
+      處罰條例
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-8">
+      8條2項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-9">
+      9條1項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-37">
+      37條6項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-87">
+      87條
+      </a>；
+      <p>處理細則
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-37">
+      37條
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-40">
+      40條
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-41">
+      41條4項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-43">
+      43條1項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-44">
+      44條1項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-45">
+      45條1項.2項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-48">
+      48條1項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-59">
+      59條2項
+      </a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-65">
+      65條1項.2項
+      </a>；
+      </p>
+      <p>行政罰法 27條1項</p>
+    `
+  ),
+  new KeyPoint(
+    'parking',
+    '紅黃白線停車規定',
+    '無奈 學長',
+    '不詳',
+    `
+      <h4 class="mt-4 mb-3">標線定義</h4>
+      <p>小弟綜整多年來對紅黃白線停車問題，提出個人意見。</p>
+      <p>首先！也是最重要的！路面邊線（15cm寬之白線）的定義本身，跟臨時停車、停車，毫無關係！</p>
+      <p>白線跟停車，沒有關係！這條線只是告訴用路人，線的一邊「<span class="text-danger">是</span>車道」路面範圍，另一邊「<span class="text-danger">不是</span>車道」路面範圍（如：路肩）。</p>
+      <p>如果路面邊線外，沒有其他可作為定義路面邊緣的法定要件（如道路緣石、紅線、黃線），那路面邊線就是理所當然的路面邊緣！</p>
+      <br>
+      <p>好的，接下來先忘了白線，來談談紅線、黃線，在定義上真正告訴你能不能臨時停車、停車的標線。</p>
+      <p>在劃設紅線、黃線的部分，倘若紅線、黃線沒有劃設在道路緣石上，那就應該要劃設在距離「道路」路面邊緣30cm的位置為宜。這邊正確的邏輯是，先確定出「道路」路面邊緣，再量30cm，才劃設紅線、黃線！</p>
+      <p>不過，以前劃線沒這麼嚴謹，才會發現紅線、黃線距路面邊緣不止或不足30cm。而執法實務或法院審判時，就變成先看紅線、黃線在哪，再去量出路面邊緣何在。</p>
+      <p>講完標線的定義後，就來看看標線與停車的關係。</p>
+      
+      <h4 class="mt-4 mb-3">標線與停車的關係</h4>
+      <p>在只有路面邊線（15cm寬之白線）而「<span class="text-danger">無紅線、黃線、緣石</span>」的路段，那車輛停在白線外側，自然沒有問題。因為白線本身已是路面邊緣，車停於白線外側，自屬已緊靠道路右側，甚或路肩夠寬，亦不能論併排停車（視狀況論妨礙其他人車出入）。</p>
+      <p>而如果在只有路面邊線（15cm寬之白線）的路段，雖「<span class="text-danger">無紅線、黃線，但有緣石</span>」，則此時的路面邊緣，是以緣石起算。</p>
+      <p>在繪設有紅線、黃線路段而「<span class="text-danger">無緣石</span>」的路段，那紅線、黃線外的30cm處，便是「道路」路面邊緣。在這 路面邊緣 以外，「原則上」不屬道路範圍，自然其停車就不適用道路交通規則了。</p>
+      <p>這裡所謂的原則上，就是標線在劃設之初，先確定好路面邊緣、量出30cm後才劃設。現在養護道路後在繪設紅線、黃線，都是距離瀝青（柏油）舖面邊緣30cm處來繪設，比較沒有問題了。</p>
+      <h4 class="mt-4 mb-3">道路側溝</h4>
+      <p>至於道路側溝，即有加蓋之水溝，算不算道路範圍，應依前述規定來論是否在道路範圍內，即依「緣石、紅(黃)線外30cm、路面邊線之優先順序」，來看加蓋水溝有沒有在道路範圍內。如果依標線規則無法判斷，則由當地道路主管機關來認定。</p>
+      <p>認定時，交通局通常會函詢工務局，工務局應該會回覆「道路側溝依市區道路條例第3條屬本局養護範圍，惟是否屬道路交通管理處罰條例之道路範圍，宜由貴局自行認定」，再來就看各地交通局怎麼說了。</p>
+      
+      <h4 class="mt-4 mb-3">參考條文及函釋</h4>
+      <p>處罰條例
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-3">3條</a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-55">55條</a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-56">56條</a>；
+      </p>
+      <p>安全規則
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-111">111條</a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-112">112條</a>；
+      </p>
+      <p>設置規則
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-168">168條</a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-169">169條</a>、
+      <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-183">183條</a>；
+      </p>
+      <p><a href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SoID=15309">交通部90.08.13.交路九十字第008745號函</a>：紅線、黃線外側停車疑義</p>
+      <p><a href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SOID=15207">交通部路政司94.08.23.路臺營字第0940401267號函</a>：路面邊線外側停車疑義</p>
+      <p><a href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SOID=15325">交通部96.10.15.路臺監字第0960414227號函</a>：路面邊緣起算是否包含水溝疑義</p>
+      <p><a href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SoID=16195">交通部108.06.26交路字第1085007741號函</a>：併排停車、併排臨時停車定義</p>    
+    `
+  ),
+  new KeyPoint(
     'taxi',
     '計程車常見違規項目',
     '黃家進 學長',

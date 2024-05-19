@@ -36,7 +36,7 @@
 /* #item_text p{
   text-indent: 2em;
 } */
-#item_text h4{
+#item_text h4,h5,h6{
   color: rgb(50, 120, 250);
 }
 

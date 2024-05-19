@@ -3,30 +3,6 @@
     display: grid;
     grid-template-columns:1fr;
 }
-/* @media (min-width:768px){
-    #mainContent{
-        grid-template-columns:1fr 1fr;
-    }
-}
-@media (min-width:992px){
-    #mainContent{
-        grid-template-columns:1fr 1fr 1fr;
-    }
-} */
-
-/* 次排版 */
-/* #bk_left{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-#bk_center{
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-}
-#bk_right{
-    display: grid;
-    grid-template-rows: 1;
-} */
 
 /* 字型個別設定 */
 #updata_text{
@@ -41,7 +17,6 @@
 .collection_text{
     text-align: left;
     font-size: 14px;
-    font-weight: 800;
     margin-left: 1em;
     text-indent: 0em;
     overflow: auto;
