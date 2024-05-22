@@ -162,7 +162,7 @@ export const pages = {
     '意見回饋',
     '',
     '/icons/icon_message.png',
-    'https://forms.gle/egpyVq19MYJAydS28',
+    '/pages/feedback.html',
     ''
   ),
   search: new Page(

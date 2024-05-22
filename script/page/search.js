@@ -29,7 +29,7 @@ function search_every(keyWord, r_object) {
         article: value.article,
         index: `《${r_object.title}》第 ${value.article} 條`,
         title: value.title,
-        text: value.text.replaceAll(keyWord, `<i class="highlight">${keyWord}</i>`)
+        text: value.text.replaceAll(keyWord, `<mark>${keyWord}</mark>`)
       };
       new_list.push(netItem);
     }

@@ -16,13 +16,13 @@
     crossorigin="anonymous"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
-  <link rel="stylesheet" href="../style/page/about.css" />
   <script type='module' src='../script/base/header.js'></script>
   <script type='module' src='../script/base/searchArea.js'></script>
   <script type='module' src="../script/base/info.js"></script>
 </head>
 
 <body>
+  <!-- <svg href="../icons/bootstrap-icons-1.11.3/bootstrap-icons.svg" class="d-none"></svg> -->
   <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
   <!-- 彈出視窗 -->
   <div id="popUp">
@@ -35,8 +35,8 @@
   </div>
   <main class="container">
     <div id="mainContent" class="px-3 py-3">
-      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
-        <div class="col mb-3">
+      <div class="row">
+        <div class="col-6 col-xl-3 mb-3">
           <div class="card border border-3 mb-3 h-100">
             <div class="card-header text-primary">開發者</div>
             <div class="card-body">
@@ -45,8 +45,8 @@
             </div>
           </div>
         </div>
-        <div class="col mb-3">
-          <div class="card border border-3 mb-3 h-100"">
+        <div class="col-6 col-xl-3 mb-3">
+          <div class="card border border-3 mb-3 h-100">
             <div class="card-header text-primary">程式版本</div>
             <div class="card-body">
               <h5 id="app_ver" class="card-title"></h5>
@@ -55,16 +55,19 @@
             </div>
           </div>
         </div>
-        <div class="col mb-3">
+        <div class="col-12 col-md-12 col-xl-3 mb-3">
           <div class="card border border-3 mb-3 h-100">
             <div class="card-header text-primary">圖標來源</div>
-            <div class="card-body">
-              <a class="text-body fs-5 fw-semibold d-block text-decoration-none" href="https://icons8.com/"
-              role="button"><img src="../icons/icons_icons8.png" alt="" width="30px">Icons8</a>
+            <div class="card-body row">
+              <div class="col-4 col-xl-6 col-xxl-5"><img src="../icons/icons_icons8.png" alt=""></div>
+              <div class="col-8 col-xl-6 col-xxl-7">
+                <h5>Icons8</h5>          
+                <a href="https://icons8.com/" class="btn btn-outline-primary">造訪網站</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col mb-3">
+        <div class="col-12 col-md-12 col-xl-3 mb-3">
           <div class="card border border-3 mb-3 h-100">
             <div class="card-header text-primary">特別銘謝 / 資料參考：</div>
             <div class="card-body">
@@ -85,8 +88,8 @@
               <div class="col-8">
                 <div class="card-body">
                   <h5 class="card-title text-primary mb-3">手機版下載</h5>
-                  <p class="card-text ">此功能測試中，可能會遇到非預期的錯誤。目前暫時只提供Android版的APK檔下載，下載前請先確定會安裝非PLAY商店APP，此步驟可能需要更改手機設定。</p>
-                  <p class="card-text">如同意以上注意事項，<a href="https://drive.google.com/drive/folders/1pmV6WZVdZ0RyfL8TvVDh9OI5Kc2OwkBO?usp=drive_link">點擊此處下載</a>。</p>
+                  <p class="card-text ">此功能測試中，可能會遇到非預期的錯誤。<br>目前暫時只提供Android版的APK檔下載，下載前請先確定會安裝非PLAY商店APP。</p>
+                  <a href="https://drive.google.com/drive/folders/1pmV6WZVdZ0RyfL8TvVDh9OI5Kc2OwkBO?usp=drive_link" class="btn btn-outline-primary">下載APK檔</a>
                 </div>
               </div>
             </div>
@@ -106,7 +109,7 @@
                   </p>
                   <div class="btn-group" role="group" aria-label="Basic outlined example">
                     <button type="button" id="showRG" class="btn btn-outline-primary" data-bs-toggle="modal"
-                    data-bs-target="#popUpArea">法規版本</button>
+                    data-bs-target="#popUpArea">法規列表</button>
                     <button type="button" id="showEssay" class="btn btn-outline-primary" data-bs-toggle="modal"
                     data-bs-target="#popUpArea">文章列表</button>
                   </div>
@@ -116,9 +119,28 @@
           </div>
         </div>
       </div>
-
+      <div class="row">
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card border border-3 mb-3 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-4 d-flex ">
+                <img src="../icons/icon_smartphone.png" class="img-fluid rounded-start m-auto" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title text-primary mb-3">測試用</h5>
+                  <p class="card-text ">此功能測試中，可能會遇到非預期的錯誤。<br>目前暫時只提供Android版的APK檔下載，下載前請先確定會安裝非PLAY商店APP。</p>
+                  <a href="https://drive.google.com/drive/folders/1pmV6WZVdZ0RyfL8TvVDh9OI5Kc2OwkBO?usp=drive_link" class="btn btn-outline-primary">下載APK檔</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
+  <!-- 底部聲明 -->
+  <div id="websiteLicense" class="d-flex"></div>
 </body>
 
 </html>

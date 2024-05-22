@@ -2,7 +2,7 @@ import { pages } from './pages.js';
 import { list_kp } from '../list/kp_list.js'
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.13.1916`;
+const app_ver = `1.13.2221`;
 
 // 公告
 const notice = `
@@ -34,42 +34,55 @@ const future = `
 `;
 
 // 更新日誌
+  // 新功能用info
+  // 更新功能用success
+  // 修復用danger
+  // <li class="text-info"></li>
 const updata_text = `
-  <p>
-    ※　1.12：
-    <br>　加入「超載計算機」頁面。
-    <br>　部分法規新增了附件連結（連結至全國法規資料庫）。
-    <br>　「設置規則」增加了大部分條目的附圖（少部分仍有缺漏）。
-    <br>　追加蒐錄「車輛審驗辦法」法規。
-    <br>　「違規取締」下各頁面法條皆加入快速預覽功能。
-    <br>　修復搜尋功能在首頁失效的問題。
-    <br>　修復法規條目清單部分區域無法觸發點擊的問題。
-  </p>
-  <p>
-    ※　1.11：
-    <br>　改進搜尋功能，增加「快速搜尋」及「再檢索」功能。
-    <br>　修復手機版容易誤觸下滑重新整理的問題。
-    <br>　修復頁面高度過窄時跑版問題。
-  </p>
-  <p>
-    ※　1.10：
-    <br>　啟用Bootstrap5.3新介面。
-    <br>　增加淺/深色模式切換功能，可以透過選單列按鈕切換。
-    <br>　加入「違規舉發要點」頁面。
-    <br>　追加蒐錄「事故處理辦法」、「警職法」、「警械使用條例」、「刑法」、「刑事訴訟法」、「社維法」等法規。
-  </p>
-  <p>
-    ※　1.02：
-    <br>　使用Bootstrap5逐步汰換原始介面。
-    <br>　首頁的快速導航加入自訂功能。
-  </p>
-  <p>
-    ※　1.0：
-    <br>　建立程式基礎功能及介面。
-    <br>　加入「法規」頁面及「搜尋」功能。
-    <br>　蒐錄「處理條例」、「安全規則」、 「處理細則」、「設置規則」等法規。
-    <br>　加入「駕照違規速查」及「牌照違規速查」功能。
-  </p>
+  <h5 class="text-primary">※ 1.13：</h5>
+  <ul>
+    <li class="text-info">加入「意見回饋」頁面。</li>
+    <li class="text-info">所有頁面底端增加了版權及免責聲明。</li>
+    <li class="text-success">更新了「關於」頁面的顯示佈局。</li>
+    <li class="text-success">改善主題切換的機制。</li>
+    <li class="text-success">修改了「牌照違規」註釋第三點內容。</li>
+    <li class="text-success">修改了「駕照違規」參考資料佈局。</li>
+  </ul>
+  <h5 class="text-primary">※ 1.12：</h5>
+  <ul>
+    <li class="text-info">加入「超載計算機」頁面。</li>
+    <li class="text-success">部分法規新增了附件連結（連結至全國法規資料庫）。</li>
+    <li class="text-success">「設置規則」增加了大部分條目的附圖（少數仍有缺漏）。</li>
+    <li class="text-success">追加收錄「車輛審驗辦法」法規。</li>
+    <li class="text-success">「違規取締」下各頁面法條皆加入快速預覽功能。</li>
+    <li class="text-danger">修復搜尋功能在首頁失效的問題。</li>
+    <li class="text-danger">修復法規條目清單部分區域無法觸發點擊的問題。</li>
+  </ul>
+  <h5 class="text-primary">※ 1.11：</h5>
+  <ul>
+    <li class="text-success">改進搜尋功能，增加「快速搜尋」及「再檢索」功能。</li>
+    <li class="text-danger">修復手機版容易誤觸下滑重新整理的問題。</li>
+    <li class="text-danger">修復頁面高度過窄時跑版問題。</li>
+  </ul>
+  <h5 class="text-primary">※ 1.10：</h5>
+  <ul>
+   <li class="text-info">全面啟用Bootstrap5.3新介面。</li>
+   <li class="text-info">增加主題切換功能，可以透過選單列按鈕切換。</li>
+  <li class="text-info">加入「違規舉發要點」頁面。</li>
+   <li class="text-success">追加收錄「事故處理辦法」、「警職法」、「警械使用條例」、「刑法」、「刑事訴訟法」、「社維法」等法規。</li>
+  </ul>
+  <h5 class="text-primary">※ 1.02：</h5>
+  <ul>
+   <li class="text-info">使用Bootstrap5逐步汰換原始介面。</li>
+   <li class="text-info">首頁的快速導航加入自訂功能。</li>
+  </ul>
+  <h5 class="text-primary">※ 1.00：</h5>
+  <ul>
+   <li class="text-info">建立程式基礎功能及介面。</li>
+   <li class="text-info">加入「法規」頁面及「搜尋」功能。</li>
+   <li class="text-info">收錄「處理條例」、「安全規則」、 「處理細則」、「設置規則」等法規。</li>
+   <li class="text-info">加入「駕照違規速查」及「牌照違規速查」功能。</li>
+  </ul>
 `;
 
 // 收錄法規
@@ -78,9 +91,8 @@ function collectionRG() {
   Object.values(pages).forEach((value) => {
     if (value.type == 'RG') {
       html += `
-        <p class="collection_text">◎　${value.name}
-          <br>　　修訂日期：${value.revision}
-        </p>
+        <h6 class="text-primary">◎ ${value.name}</h6>
+        <p class="">　修訂日期：${value.revision}</p>
       `
     }
   })
@@ -91,10 +103,11 @@ function collectionEssay() {
   let html = '';
   list_kp.forEach((value) => {
     html += `
-      <p class="collection_text">◎　${value.title}
-        <br>　　作者：${value.author}
-        <br>　　編輯日期：${value.update}
-      </p>
+      <h6 class="text-primary">◎ ${value.title}</h6>
+      <ul>
+        <li>作者：${value.author}</li>
+        <li>編輯日期：${value.update}</li>
+      </ul>
     `
   })
   return html;

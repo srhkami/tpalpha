@@ -26,3 +26,17 @@ nav{
     z-index: 10;
     
 }
+
+/* 圖標大小 */
+.i-10{
+    height: 1em;
+    width: 1em;
+}
+.i-12{
+    height: 1.25em;
+    width: 1.25em;
+}
+.i-15{
+    height: 1.5em;
+    width: 1.5em;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+
+<head>
+  <script src="../script/base/jquery-3.7.1.min.js"></script>
+  <script src='../script/base/theme.js'></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>關於 - 交通鴿手</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link href="../style/base/bootstrap.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- 設定檔 -->
+  <link rel="stylesheet" href="../style/base/general.css" />
+  <link rel="stylesheet" href="../style/page/feedback.css" />
+  <script type='module' src='../script/base/header.js'></script>
+  <script type='module' src='../script/base/searchArea.js'></script>
+  <script type='module' src="../script/base/info.js"></script>
+</head>
+
+<body>
+  <!-- <svg href="../icons/bootstrap-icons-1.11.3/bootstrap-icons.svg" class="d-none"></svg> -->
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <!-- 彈出視窗 -->
+  <div id="popUp">
+    <!-- 搜尋 -->
+    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <!-- 通用彈出視窗 -->
+    <div id="popUpArea" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">我想加入「鴿來教你交通怎麼做」</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>入群須知</h5>
+            <ul>
+              <li>群組每年3、6、9、12月徵人。</li>
+              <li>群組踩實名認證，須提供人證合一之照片。</li>
+              <li>入群前有非常長的版規須遵守。</li>
+              <li>群組每季度會審查發言次數，參與度不足者將予以請退。</li>
+            </ul>
+            <h5 class="text-danger fw-bolder">現在非屬徵人期間</h5>
+            <p>可先填寫下列表單，開始徵人時，會第一時間通知您！</p>
+          </div>
+          <div class="modal-footer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZgAxNzwEf9TlxQ8zPuPR52xlEAhsG80jHpA9aqgitYFuTUA/viewform?usp=sf_link" class="btn btn-primary">填寫表單</a>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+  <main class="container">
+    <div id="mainContent" class="px-3 py-3">
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="card border-0 mb-3 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-4 d-flex">
+                <img src="../icons/icon_message.png" class="img-fluid rounded-start m-auto d-none d-lg-inline-block" alt="...">
+                <div class="m-auto d-block d-lg-none">
+                  <img src="../icons/icon_message.png" class="img-fluid mb-4" alt="...">
+                  <h3 class="text-primary">意見回饋</h3>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title text-primary mb-3 d-none d-lg-inline-block">意見回饋</h3>
+                  <p class="card-text text-secondary-emphasis">
+                    本網站目前僅由單人維護開發，更新進度較慢、功能尚未完善。
+                    <br>若有遇上任何問題，或有任何寶貴建議，歡迎透過以下表單向網站作者回饋！
+                    <br>如果您有意願共同參與開發此網站，亦歡迎您的加入！
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card border border-3 mb-3 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-4 d-flex ">
+                <img src="../icons/icon_question.png" class="img-fluid rounded-start m-auto" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body h-100">
+                  <h5 class="card-title text-primary mb-3">聯繫作者</h5>
+                  <p class="card-text mb-4">舉凡遇到網頁BUG、法條/文章錯誤或過舊，以及任何想留言給作者的話，請填寫此表單：</p>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZgAxNzwEf9TlxQ8zPuPR52xlEAhsG80jHpA9aqgitYFuTUA/viewform?usp=sf_link" class="btn btn-primary">我要回報</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card border border-3 mb-3 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-4 d-flex ">
+                <img src="../icons/icon_create-document.png" class="img-fluid rounded-start m-auto" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body h-100">
+                  <h5 class="card-title text-primary mb-3">函釋與判決投稿</h5>
+                  <p class="card-text mb-4">
+                    違規樣態百百種，函釋及判決往往關係著執法的標準，若您有發現值得分享的內容，歡迎透過此表單回報作者，加入「交通鴿手」中！
+                  </p>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDdE5wt_LC-oMOLBE-x4UZjp3GEaswgD0mCmv7w7_rv7TEzw/viewform?usp=sf_link" class="btn btn-primary">我要投稿</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card border border-3 mb-3 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-4 d-flex ">
+                <img src="../icons/icon_article.png" class="img-fluid rounded-start m-auto" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body h-100">
+                  <h5 class="card-title text-primary mb-3">文章投稿</h5>
+                  <p class="card-text mb-4">如果您煞費苦心，整理、撰寫了有關交通的圖文，卻找不到機會分享您的成果嗎？歡迎將文章投稿本網站「舉發違規要點」中，讓更多人受用！</p>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7juF6yOmvXqFx2Z8v4s_fEXL2pwUQ6eB3STJdGpgcD9caYg/viewform?usp=sf_link" class="btn btn-primary">我要投稿</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card border border-3 mb-3 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-4 d-flex ">
+                <img src="../icons/icon_enter.png" class="img-fluid rounded-start m-auto" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body h-100">
+                  <h5 class="card-title text-primary mb-3">群友招募</h5>
+                  <p class="card-text mb-4">
+                    您是否友很多交通疑難雜症，卻沒人可以解答？歡迎加入「鴿來教你交通怎麼做」群組，百位學長姐隨時在線協助！
+                  </p>
+                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#popUpArea">我想加入</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+  <!-- 底部聲明 -->
+  <div id="websiteLicense" class="d-flex"></div>
+</body>
+
+</html>
+
+
+

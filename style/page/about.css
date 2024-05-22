@@ -1,23 +1,5 @@
 /* 主排版 */
-#mainContent{
+/* #mainContent{
     display: grid;
     grid-template-columns:1fr;
-}
-
-/* 字型個別設定 */
-#updata_text{
-    margin-left: 3em;
-    text-indent: -2em;
-}
-#updata_text, .about_text p{
-    text-align: left;
-    font-size: 14px;
-}
-
-.collection_text{
-    text-align: left;
-    font-size: 14px;
-    margin-left: 1em;
-    text-indent: 0em;
-    overflow: auto;
-}
+} */

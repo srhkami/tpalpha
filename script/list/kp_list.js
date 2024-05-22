@@ -243,7 +243,7 @@ export const list_kp = [
     `
   ),
   new KeyPoint(
-    'parking',
+    'lineParking',
     '紅黃白線停車規定',
     '無奈 學長',
     '不詳',
