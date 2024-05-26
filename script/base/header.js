@@ -112,7 +112,7 @@ export const html_header = `
             更多
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="${pages.feedback.href}">
+            <li><a class="dropdown-item" href="..${pages.feedback.href}">
                 <img class="i-15 me-1" src="..${pages.feedback.icon}" alt="">
                 ${pages.feedback.title}
             </a></li>
