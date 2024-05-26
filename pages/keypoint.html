@@ -11,16 +11,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <link href="../style/base/bootstrap.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <script src="../script/base/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
-  <link rel="stylesheet" href="../style/page/keyPoint.css">
+  <link rel="stylesheet" href="../style/page/keypoint.css">
   <link rel="stylesheet" href="../style/base/showArticle.css">
   <script type='module' src="../script/base/header.js"></script>
   <script type='module' src="../script/base/searchArea.js"></script>
-  <script type='module' src="../script/page/keyPoint.js"></script>
+  <script type='module' src="../script/page/keypoint.js"></script>
   <script type='module' src="../script/base/showArticle.js"></script>
 </head>
 
@@ -45,13 +43,13 @@
         </aside>
         <div class="col px-3">
           <!-- 手機模式顯示之伸縮清單 -->
-          <div class="accordion d-lg-none mb-3" id="accordionPanelsStayOpenExample">
+          <div class="accordion d-lg-none mb-3 sticky-top" id="accordionEssay" style="top:70px">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
                   <img class="me-2" src="../icons/icon_menu_2.png" alt="" width="25">
-                  瀏覽所有項目
+                  瀏覽所有文章
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -77,14 +75,14 @@
                       違規舉發要點
                     </h2>
                     <p class="card-text placeholder-glow">
-                      資料來源：「鴿來告訴你交通怎麼做」群組
+                      資料來源：「鴿來告訴你交通怎麼做」群組及各位學長姐
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <!-- 主文 -->
-            <div id="item_text" class="my-3 px-3 border-start border-primary border-3">
+            <div id="mainText" class="my-3 px-3 border-start border-primary border-3">
               <h4 class="mt-4 mb-3">這裡有什麼？</h4>
               <p>
                 這裡統整了群組內各方大神，取締交通違規所積累之經驗、要點、心得，感謝諸位學長姐不吝分享！<br>
@@ -95,7 +93,6 @@
                 ※ 請點擊上(左)方清單瀏覽文章 ※
               </p>
             </div>
-       
           </div>
         </div>
       </div>

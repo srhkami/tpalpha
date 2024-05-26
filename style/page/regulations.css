@@ -13,7 +13,11 @@
 }
 
 /* 法條清單排版 */
-#list_article::-webkit-scrollbar{
+#list-article{
+    /* list-groud因不明原因導致下方被遮擋，暫時透過此設定解決 */
+    padding-bottom: 55px;
+}
+#list-article::-webkit-scrollbar{
     display: none;
 }
 .list-article-no{
@@ -30,6 +34,7 @@
 .div_icon_page{
     width: 120px;
 }
+
 
 /* 法規標題排版 */
 .article-title h4{

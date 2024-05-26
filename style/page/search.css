@@ -1,4 +1,8 @@
 /* 法條清單排版 */
+#list-article{
+    /* list-groud因不明原因導致下方被遮擋，暫時透過此設定解決 */
+    padding-bottom: 55px;
+}
 .list-article-no{
     width: 100%;
     padding-left: 0.25em;
