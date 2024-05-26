@@ -5,7 +5,7 @@ export const html_header = `
   <div class="container-fluid">
     <a class="navbar-brand d-flex fw-bolder" href="../index.html">
       <img src="../icons/icon_trafficpigeon_2.png" alt="Logo" width="30" height="30" class="my-auto me-2">
-      交通鴿手
+      <span id="pageTitle">交通鴿手</span>
     </a>
     <div class="collapse navbar-collapse align-items-center" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -160,11 +160,9 @@ export const html_header = `
     </div>
     <!-- 搜尋按鈕 -->
     <button class="btn btn-outline-secondary ms-auto me-2" data-bs-toggle="modal" data-bs-target="#searchArea">
-      <svg class="i-12 me-2 theme-icon-active" fill="#5A96FA"><use xlink:href="../icons/bootstrap-icons/bootstrap-icons.svg#search"/></use></svg> 
+    <img class="i-15" src="../icons/icon_search.png" width="24px" walt=""> 
       <p class="d-none d-lg-inline">搜尋</p>
     </button>
-    <!-- 搜尋之彈出視窗 -->
-
     <!-- 展開頂端欄按鈕 -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -173,17 +171,17 @@ export const html_header = `
   </div>
 `;
 
-const html_license =`
-  <div class="mx-auto">
-  <p class="text-secondary text-center">
-    <small>Copyright © 2023 C.K.SAI All Rights Reserved</small>
-  </p>
-  <p class="text-secondary text-center">
-    <small>免責聲明
-      <br>「交通鴿手」(下稱本網站)之內容僅供參考，所有小程式、文章均非保證百分之百正確無誤。
-      <br>在參照本網站內容作為執勤用途前(如舉發違規、回覆申訴)，務必再次確認是否符合法規要件。
-    </small>
-  </p>
+// 版權及免責聲明
+const html_license =` 
+  <div id="webLicense" class="mx-auto">
+    <p class="text-secondary text-center" style="font-size:12px;">
+      Copyright © 2023 C.K.SAI All Rights Reserved
+      <br>
+      免責聲明：
+      <br>
+      「交通鴿手」之內容無法保證完全無誤，在參照本網站內容作為執勤用途前(如舉發違規、回覆申訴)，務必再次確認是否符合要件，或先洽詢該管交通組、監理裁決單位。
+    </p>
+    
   </div>
 `
 

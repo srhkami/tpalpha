@@ -4,12 +4,21 @@ import { pages } from '../base/pages.js';
 function refresh_list(r_list) {
   let html = '';
   r_list.forEach((value, index) => {
-    if (value.article == '-1') {
+    if (value.article == '-1') { //排除附件
       //pass
     }
-    else {
+    else if (value.article=='0'){ //章節特例
+      html +=`
+      <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#chapter-${value.text}">
+        <div class="d-flex px-3 py-2">
+          <h6 class="text-info mx-3 my-1">${value.title}</h6>
+        </div>  
+      </a>
+      `
+    }
+    else { //一般
       html += `
-      <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#article-${value.article}">
+      <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#article-${value.article}" >
         <div class="d-flex px-3 py-2">
           <div class="list-article-no">第 ${value.article} 條</div>
           <div class="list-article-title text-secondary-emphasis">${value.title}</div>
@@ -18,92 +27,104 @@ function refresh_list(r_list) {
       `;
     }
   });
-  $('#list_article').html(html);
+  $('#list-article').html(html);
+}
+
+// 函式：標題卡片的特例
+function titleHTML(r_object){
+  let code = r_object.code;
+  let html = '';
+  if(code=='ML'){
+    html=`
+    <h2 class="card-title">${r_object.name}</h2>
+      <p class="card-text text-secondary-emphasis">
+        修訂日期：${r_object.revision}
+        <br>來源：全國法規資料庫
+        <br>備註：部分條目附圖仍有缺漏，敬請見諒'</p>
+        <!--<button href="#" class="btn btn-primary" disabled>加入最愛</button>--!>
+    `;
+  }
+  else if(code=='SR' || code=='VS' || code=='DR'){
+    html=`
+      <h2 class="card-title">${r_object.name}</h2>
+      <p class="card-text text-secondary-emphasis">修訂日期：${r_object.revision}<br>來源：全國法規資料庫</p>
+      <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#popUpArea">查看附件</button>
+    `;
+  }
+  else(
+    html=`
+      <h2 class="card-title">${r_object.name}</h2>
+      <p class="card-text text-secondary-emphasis">
+        修訂日期：${r_object.revision}
+        <br>來源：全國法規資料庫
+      </p>
+      <!--<button href="#" class="btn btn-primary" disabled>加入最愛</button>--!>
+    `
+  )
+  return html;
+}
+
+// 函式：內文的特例
+function textHTML(code, article){
+  let html = '';
+  if(code=='ML'){
+    html=`
+      <button type="button" class="bth_attachment btn btn-primary btn-sm me-2 h-75" data-bs-toggle="modal" data-bs-target="#popUpArea" data-article="${article}">附圖</button>
+    `;
+  }
+  return html;
 }
 
 // 函式：刷新所有條文
 function refresh_text(r_list, r_object) {
-  let html;
-  if (r_object.code == 'ML') {
-    // 標題卡片
-    html = `
-        <div class="card rounded-3">
-            <div class="row mx-0">
-                <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
-                    <img src="..${r_object.icon}" class="card-img-right ps-3" alt="...">
-                </div>
-                <div class="col p-0">
-                    <div class="card-body">
-                        <h2 class="card-title">${r_object.name}</h2>
-                        <p class="card-text text-secondary-emphasis">
-                          修訂日期：${r_object.revision}<br>
-                          來源：全國法規資料庫<br>
-                          備註：部分條目附圖仍有缺漏，敬請見諒
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-    //主文
-    r_list.forEach((value, index) => {
-      html += `
-        <div id="article-${value.article}" class="article">
-          <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
-            <h4  class="d-inline me-auto" >第 ${value.article} 條</h4>
-            <a class="anchor-link" href="#article-${value.article}"></a>
-            <button type="button" class="bth_attachment btn btn-primary btn-sm me-2 h-75" data-bs-toggle="modal" data-bs-target="#popUpArea" data-article="${value.article}">附圖</button>
+  let mainHtml;
+  // 標題卡片
+  mainHtml = `
+    <div class="card rounded-3">
+      <div class="row mx-0">
+          <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
+              <img src="..${r_object.icon}" class="card-img-right ps-3" alt="...">
           </div>
-          <div class="col-data">
-            <div class="law-article">
-                ${value.text}
-            </div>
-          </div>
-        </div>
-        `
-    });
-  }
-  else if (r_object.code == 'SR' || r_object.code == 'VS' || r_object.code == 'DR') {
-    // 標題卡片
-    html = `
-          <div class="card rounded-3">
-              <div class="row mx-0">
-                  <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
-                      <img src="..${r_object.icon}" class="card-img-right ps-3" alt="...">
-                  </div>
-                  <div class="col p-0">
-                      <div class="card-body">
-                          <h2 class="card-title">${r_object.name}</h2>
-                          <p class="card-text text-secondary-emphasis">修訂日期：${r_object.revision}<br>來源：全國法規資料庫</p>
-                          <button href="#" class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#popUpArea">查看附件</button>
-                      </div>
-                  </div>
+          <div class="col p-0">
+              <div class="card-body">
+                ${titleHTML(r_object)}
+                <!--<button href="#" class="btn btn-primary" disabled>加入最愛</button>--!>
               </div>
           </div>
+      </div>
+    </div>
+  `
+  // 主文
+  r_list.forEach((value, index) => {
+    if (value.article == '-1') {
+      //pass
+    }
+    else if (value.article=='0'){ //章節的特例
+      mainHtml += `
+        <div id="chapter-${value.text}" class="my-3">
+          <h3 class="text-info">${value.title}</h3>
+        </div>
       `;
-    //主文
-    r_list.forEach((value, index) => {
-      if (index == 0) {
-        //pass
-      }
-      else {
-        html += `
-        <div id="article-${value.article}" class="article">
-          <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
-            <h4  class="d-inline me-auto" >第 ${value.article} 條</h4>
-            <a class="anchor-link" href="#article-${value.article}"></a>
-          </div>
-          <div class="col-data">
-            <div class="law-article">
-                ${value.text}
-            </div>
+    }
+    else { //一般
+      mainHtml +=`
+      <div id="article-${value.article}" class="article">
+        <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
+          <h4  class="d-inline me-auto" >第 ${value.article} 條</h4>
+          <a class="anchor-link" href="#article-${value.article}"></a>
+          ${textHTML(r_object.code, value.article)}
+        </div>
+        <div class="col-data">
+          <div class="law-article">
+              ${value.text}
           </div>
         </div>
-        `
-      }
-    });
-    // 附件
-    let attachmentHtml = `
+      </div>
+      `
+    }
+  })
+  // 附件
+  let attachmentHtml = `
     <div class="modal-dialog" >
       <div class="modal-content" >
         <div class="modal-header">
@@ -122,51 +143,10 @@ function refresh_text(r_list, r_object) {
         <p class="me-auto text-secondary"></p>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
       </div>
-    </div>
-  </div>    
-    `;
-    $('#popUpArea').html(attachmentHtml);
-  }
-  else {
-    // 標題卡片
-    html = `
-          <div class="card rounded-3">
-              <div class="row mx-0">
-                  <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
-                      <img src="..${r_object.icon}" class="card-img-right ps-3" alt="...">
-                  </div>
-                  <div class="col p-0">
-                      <div class="card-body">
-                          <h2 class="card-title">${r_object.name}</h2>
-                          <p class="card-text text-secondary-emphasis">修訂日期：${r_object.revision}<br>來源：全國法規資料庫</p>
-                          <!--<button href="#" class="btn btn-primary" disabled>加入最愛</button>--!>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      `;
-    //主文
-    r_list.forEach((value, index) => {
-      html += `
-        <div id="article-${value.article}" class="article">
-          <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
-            <h4  class="d-inline me-auto" >第 ${value.article} 條</h4>
-            <a class="anchor-link" href="#article-${value.article}"></a>
-            <!--<button type="button" class="btn btn-primary btn-sm me-2 h-75" data-bs-toggle="modal" data-bs-target="#popUpArea">函釋<span class="badge text-bg-info">0</span></button>
-            <button type="button" class="bth_share btn btn-outline-primary btn-sm me-2 h-75" data-article="${value.article}">
-              <img class="btn-img" src="../icons/icon_share.png" alt="分享" data-article="${value.article}">
-            </button>--!>
-          </div>
-          <div class="col-data">
-            <div class="law-article">
-                ${value.text}
-            </div>
-          </div>
-        </div>
-        `
-    });
-  }
-  return html
+    </div>   
+  `;
+      $('#popUpArea').html(attachmentHtml);
+  return mainHtml
 }
 
 // 函式：顯示設置規則附件
@@ -238,8 +218,11 @@ let r_list = r_object.list;
 // 刷新主頁面
 refresh_list(r_list);
 $('title').html(`${r_object.title} - 交通鴿手`);
-$('#article_text').html(refresh_text(r_list, r_object));
+$('#article-text').html(refresh_text(r_list, r_object));
 $(document).ready(() => {
+  // $('#pageTitle').html(r_object.title);
+  $('.rg-title').html(r_object.title);
+  $('.rg-image').attr('src',`..${r_object.icon}`);
   //偵測側邊欄點擊
   $("#sidebar a,.btn-close").click(() => {
     setTimeout(() => $('.offcanvas-lg').offcanvas('hide'), 50)

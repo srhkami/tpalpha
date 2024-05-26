@@ -21,7 +21,6 @@ const html_searchArea =`
               </form>
               <p class="text-secondary">* 如果在法規頁面，預設會搜尋當前法規</p>
             </div> 
-
             <div class="col-7 d-flex my-3">
               <h5 class="my-auto">◎ 自訂範圍搜尋：</h5>
             </div>

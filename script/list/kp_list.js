@@ -1,4 +1,4 @@
-class KeyPoint {
+class Essay {
   constructor(code, title, author, update, text) {
     this.code = code;
     this.title = title;
@@ -9,7 +9,7 @@ class KeyPoint {
 }
 
 export const list_kp = [
-    new KeyPoint(
+    new Essay(
     'licenseState',
     '駕照、牌照異常狀態一覽',
     '無奈 學長',
@@ -33,7 +33,7 @@ export const list_kp = [
       <p>顯示為【吊扣】，就是有效之牌照、駕照於一定期間不得使用。駕籍會顯示吊扣期間之起迄日期，車籍則只會顯示「執行條例處分吊扣」(有顯示即為吊扣狀態)。</p>
     `
   ),
-  new KeyPoint(
+  new Essay(
     'fakeCarLicense',
     '偽造號牌之舉發及偵辦',
     '無奈 學長',
@@ -56,7 +56,7 @@ export const list_kp = [
       <p>※ 亦歡迎使用「<a href="../pages/carLicense.html" >牌照違規速查</a>」功能一鍵查詢違反法條 ※</p>
     `
   ),
-  new KeyPoint(
+  new Essay(
     'noCarLicense',
     '未懸掛號牌之舉發',
     '無奈 學長',
@@ -94,16 +94,16 @@ export const list_kp = [
       <p>※ 亦歡迎使用「<a href="../pages/carLicense.html" >牌照違規速查</a>」功能一鍵查詢違反法條 ※</p>
     `
   ),
-  new KeyPoint(
+  new Essay(
     'otherCarLicense',
     '懸掛他車號牌之舉發',
     '無奈 學長',
     '112 年 05 月 16 日',
     `
     <h4 class="mt-4 mb-3">行駛狀態</h4>
-    <p>①	車體部分，比照「<a href="../pages/keypoint.html?item=noCarLicense">未懸掛號牌之舉發</a>」一文程序辦理，另舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-12">舉罰條例12條</a>1項5款「使用他車牌照」。</p>
+    <p>①	車體部分，比照「<a href="../pages/Essay.html?item=noCarLicense">未懸掛號牌之舉發</a>」一文程序辦理，另舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-12">舉罰條例12條</a>1項5款「使用他車牌照」。</p>
     <p>②	他車牌不論車籍如何，舉發「牌照借供他車使用」、暫代保管汽牌○面(機牌1面)。惟他車牌如為失竊狀態，原則上不舉發他車牌之所有人。但經查明報案時間比對懸掛時間，而有積極事證得證明他車牌之所有人將車牌借供他人使用，仍應舉發12.1.5「牌照借供他車使用」。</p>
-    <p>③	他車牌如為偽造車牌，舉發車體所有人12.1.3，違反刑法部分請參閱「<a href="../pages/keypoint.html?item=fakeCarLicense">偽造號牌之舉發及偵辦</a>」一文第二段</a>。</p>
+    <p>③	他車牌如為偽造車牌，舉發車體所有人12.1.3，違反刑法部分請參閱「<a href="../pages/Essay.html?item=fakeCarLicense">偽造號牌之舉發及偵辦</a>」一文第二段</a>。</p>
     <p>④	他車牌如為變造車牌：</p>
     <p>❶ 變造之車牌，如為他人所有，舉發車體所有人12.1.3。
     <br>→變造車牌還原後車號，如非失竊狀態，則舉發12.1.5「牌照借供他人使用」。
@@ -125,7 +125,7 @@ export const list_kp = [
     <p>※ 亦歡迎使用「<a href="../pages/carLicense.html" >牌照違規速查</a>」功能一鍵查詢違反法條 ※</p>
     `
   ),
-  new KeyPoint(
+  new Essay(
     'bikeMirror',
     '機車照後鏡大小之取締',
     '無奈 學長',
@@ -146,7 +146,7 @@ export const list_kp = [
     <p >以上個人整理分享，也有實際就改裝之鏡面太小予以製單舉發。取締時需備尺測量，舉發處罰條例16條1項2款：變更原有設備(致影響行車安全)，加註①「量測圓形鏡僅直徑xx公釐，影響行車安全」或②「非圓形鏡無法鑲入78公釐圓，影響行車安全」，責令改正、「限於○月○日○時前辦理」(依<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="DR-13">處理細則13條2項</a>所訂，期間得酌定於四日以內)。</p></p>
     `
   ),
-  new KeyPoint(
+  new Essay(
     'visionSystem',
     '行車視野輔助系統裝設規定',
     '無奈 學長',
@@ -171,7 +171,7 @@ export const list_kp = [
       <p>② 總重（車重+載重）逾3500kg至5000kg。</p>
     `
   ),
-  new KeyPoint(
+  new Essay(
     'rulingTerm',
     '裁決與申訴時限',
     '無奈 學長',
@@ -242,7 +242,7 @@ export const list_kp = [
       <p>行政罰法 27條1項</p>
     `
   ),
-  new KeyPoint(
+  new Essay(
     'lineParking',
     '紅黃白線停車規定',
     '無奈 學長',
@@ -289,7 +289,7 @@ export const list_kp = [
       <p><a href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SoID=16195">交通部108.06.26交路字第1085007741號函</a>：併排停車、併排臨時停車定義</p>    
     `
   ),
-  new KeyPoint(
+  new Essay(
     'taxi',
     '計程車常見違規項目',
     '黃家進 學長',
@@ -692,7 +692,187 @@ export const list_kp = [
       </p>
     `
   ),
-
-
-
+  new Essay(
+    'unknownName',
+    '舉發交通違規拒絕告知身分處理程序',
+    '黃文章 學長',
+    '113 年 05 月 15 日',
+    `
+    <h4 class="mt-4 mb-3">前言</h4>
+    <p>
+      本文會先詳列各法條內容、規定、作業程序等相關規定，再以步驟一至七帶領各位了解取締違規遇違規人拒絕告知身分等案件應注意事項。
+    </p>
+    <h4 class="mt-4 mb-3">相關條文及規定</h4>
+    <div class="accordion" id="collapse-unknownName">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            行政罰法第34條
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            行政機關對現行違反行政法上義務之行為人，得為下列之處置：
+            <br>一、即時制止其行為。
+            <br>二、製作書面紀錄。
+            <br>三、為保全證據之措施。遇有抗拒保全證據之行為且情況急迫者，得使用強制力排除其抗拒。
+            <br>四、<span class="text-danger">確認其身分</span>。
+            <br>其拒絕或規避身分之查證，經勸導無效，致確實無法辨認其身分且情況急迫者，得令其隨同到指定處所查證身分；其不隨同到指定處所接受身分查證者，得會同警察人員強制為之。
+            <br>
+            前項強制，不得逾越保全證據或確認身分目的之必要程度。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            社會秩序維護法第67條1項2款
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            於警察人員依法調查或查察時，就其<span class="text-danger">姓名、住所或居所</span>為不實之陳述或拒絕陳述者，處三日以下拘留或新臺幣一萬二千元以下罰鍰。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            社會秩序維護法第42條
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            對於現行違反本法之行為人，警察人員得即時制止其行為，並得逕行通知到場；其不服通知者，得<span class="text-danger">強制其到場</span>。但確悉其姓名、住所或居所而無逃亡之虞者，得依前條規定辦理。  
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+            違反社會秩序維護法案件處理辦法第22條
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            警察人員因發現、受理民眾舉報、行為人自首或其他情形知有違反本法之嫌疑者，除應經必要調查外，應即填具違反本法案件報告單，報請有管轄權之警察機關依法處理。
+            <br>
+            前項違反本法之行為人應隨案送交者，以其現行違反本法行為經逕行通知到場或強制到場，<span class="text-danger">且</span>其姓名、住所或居所不明，或有逃亡之虞者為限。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+            警察機關辦理社會秩序維護法案件應注意事項第4點
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            違反本法行為在實施中或實施後即時為警察人員發覺者，先制止其行為或防止其再發生。必要時得逕行通知行為人到場接受詢問；其不服通知者，得強制其到場。但確悉其姓名、住所或居所而無逃亡之虞者，不在此限。
+            <br>
+            對前項行為人執行強制到場時，應依<span class="text-danger">提審法</span>第二條規定以書面通知書告知本人及其指定之親友，得依法聲請提審之意旨。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+            警察機關辦理社會秩序維護法案件應注意事項第7點
+          </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            強制行為人到場者，以腕力或其他方法為之；並視現場客觀具體情形，依據執法知識經驗，必要時得依法使用<span class="text-danger">警銬、警繩</span>。但應注意其身體及名譽，並不得逾越保全行為人之必要程度。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+            警察機關辦理社會秩序維護法案件應注意事項第34點
+          </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            自行處分以外之案件，分局依下列處理程序，移送該管簡易庭裁定：
+            <br>
+            行為人或嫌疑人已隨案送交到場者，於詢問後，除其姓名、住所或居所不明，或有逃亡之虞，仍應隨案移送者外，<span class="text-danger">應即囑其返回</span>，僅將案件移送。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+            取締一般交通違規作業程序
+          </button>
+        </h2>
+        <div id="collapse8" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <a href="../file/pdf/kp-unknownName-1.pdf" class="btn btn-outline-primary">
+              <img src="../icons/icon_pdf.png" class="i-15">
+              開啟PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 class="mt-4 mb-3">處理程序</h4>
+    <h5>步驟一：</h5>
+    <p>
+      攔停交通違規首先須依取締一般交通違規作業程序，告知稽查(違規)事由，請其出示證照或身分資料，此時引用之法源依據為行政罰法第34條1項4款確認其身分。
+    </p>
+    <h5>步驟二</h5>
+    <p>
+      遇違規人有拒絕出示身分證件時，警方須先告知如拒絕陳述身分或陳述不實姓名居所等將會違反社會秩序維護法第67條相關規定，請配合出示相關證件及資料。
+    </p>
+    <p><small>
+        ※註(1)：步驟二程序建議多次告知違規人，確保違規人有聽見警方之告誡。
+        <br>
+        ※註(2)：社維法第67條處罰的是<span class="text-danger">姓名、住所或居所</span>為不實之陳述或拒絕陳述，並非<span class="text-danger">身分證號</span>，因此如決定要依社維法處理，須告知違規人提供<span class="text-danger">姓名、住所或居所</span>，始符合要件。
+    </small></p>
+    <h5>步驟三</h5>
+    <p>
+      如警方已依步驟二程序告知，並請違規人出示身分資料，違規人仍拒絕出示身分資料，則向違規人告知因你交通違規遭警方攔停，警方多次命你出示相關身分資料，你仍拒絕出示，渠行為已違反社會秩序維護法第67條等相關規定，請配合警方返回勤務處所製作違反社會秩序維護法相關程序(社維法第42條前段，<span class="text-danger">逕行通知</span>到場)。
+    </p>
+    <p><small>
+        ※註(1)：此時為口頭命其配合返所製作相關流程，如未遭遇反抗或願意配合，不得使用強制力(如上銬等)。
+        <br>
+        ※註(2)：步驟三程序建議多次告知違規人，確保違規人有聽見警方之通知到場命令。
+    </small></p>
+    <h5>步驟四</h5>
+    <p>
+      如依步驟三程序告知請違規人配合，而違規人仍不配合時，則告知違規人再不配合將對你使用強制力，警方不希望這件事情有任何人可能因此受傷，因此請你配合警方返回駐地處理後續流程。
+    </p>
+    <p><small>
+        ※註：步驟四程序旨在踐行比例原則，警方依違規人舉動不同而對應相關強制力層級，並希望案件能停留在口頭命令階段即可達成目的。
+        <br>
+        <img src="../file/img/kp-unknownName-2.jpg" class="img-fluid" alt="">
+        <br>
+        （圖片來源：警光雜誌第733期-警察如何運用強制力層級。）
+    </small></p>
+    <h5>步驟五</h5>
+    <p>
+      如警方已依步驟三、步驟四程序告知，違規人仍拒絕配合返回駐地，則依社維法第42條後段規定不服通知者，<span class="text-danger">強制其到場</span>，強制到場過程中，警方視現場情形及執法經驗，必要時得依法使用警銬、警繩（可參考警察人員使用警銬規範）。
+    </p>
+    <p><small>
+        ※註：警察機關辦理社會秩序維護法案件應注意事項第7點強制行為人到場者，以腕力或其他方法為之；並視現場客觀具體情形，依據執法知識經驗，<span class="text-danger">必要時得依法使用警銬、警繩</span>。但應注意其身體及名譽，並不得逾越保全行為人之必要程度。
+    </small></p>
+    <h5>步驟六</h5>
+    <p>
+      執行社會秩序維護法第42條強制到場後，應依<span class="text-danger">提審法</span>第二條規定以書面通知書告知本人及其指定之親友，得依法聲請提審之意旨(違反社會秩序維護法案件處理辦法第22 條、警察機關辦理社會秩序維護法應注意事項第4點)。
+    </p>
+    <h5>步驟七</h5>
+    <p>
+      製作警詢筆錄後，除其姓名、住所或居所不明，或有逃亡之虞，仍應隨案移送者外，<span class="text-danger">應即囑其返回</span>(警察機關辦理社會秩序維護法案件應注意事項第34點)。
+    </p>
+    <p><small>
+      ※註：步驟七囑其返回部分，違序人釋放地點為派出所或是須帶至偵查隊後釋放，各地規定可能不一，請先致電各分局偵查隊詢問。
+    </small></p>
+    <h5>如果做足上列程序仍拒絕告知身分應如何處理？</h5>
+    <p>
+      違序人強制到場後如仍未告知身分資料，可將違序人帶往偵查隊人臉辨識、指紋辨識，如有車籍資料亦可透過罰單系統查詢違規資料、車主資料全戶比對，若仍無法得知違序人身分，筆錄內個資部分則空白(或顯示拒答)，卷證製作完畢後，<span class="text-danger">隨案送交簡易庭</span>(警察機關辦理社會秩序維護法案件應注意事項第34點)。
+    </p>
+    `
+  )
 ]

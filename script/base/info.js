@@ -2,35 +2,20 @@ import { pages } from './pages.js';
 import { list_kp } from '../list/kp_list.js'
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.13.2221`;
+const app_ver = `1.13.2612`;
 
 // 公告
 const notice = `
-  v1.12 主要更新內容(113/05/18)：
+  v1.13 主要更新內容(113/05/26)：
   <br>
-  <br>　◎ 加入「超載計算機」頁面
-  <br>　◎ 部分法規新增附件或附圖
+  <br>　◎ 加入「意見回饋」頁面，<span class="text-danger">歡迎各位學長姐踴躍投稿文章！</span>
+  <br>　◎ 「法規」增加了章節顯示。
+  <br>　◎ 「關於」增加了Android手機版下載功能。
   <br>　<button type="button" id="showUpdate" class="btn btn-outline-secondary mt-3" data-bs-toggle="modal"
   data-bs-target="#popUpArea">查看更新日誌</button>
   <br>
   <br>已知問題：
-  <br>　◎ 附件連結至全國法規資料庫，在首次點擊時總會失效
-`;
-
-//尚未實現
-const future = `
-  這是一個，以交通為志趣的小小警員，
-  <br>所架設的簡易網站，  
-  <br>目標是整理所有與交通執法、交通安全有關的資訊，
-  <br>成為各位學長姐工作上的最佳幫手。
-  <br>
-  <br>如果剛好幫助到你，
-  <br>歡迎向更多人分享推廣！
-  <br>如果你也是在交通路上默默耕耘的鬥士，
-  <br>也請不吝賜教，幫助這裡變得更好！
-  <br>
-  <br>若有任何問題或寶貴意見，
-  <br>歡迎使用選單中「更多→意見回饋」讓我知道。 
+  <br>　◎ 附件連結至全國法規資料庫，在首次點擊時總會失效。
 `;
 
 // 更新日誌
@@ -38,15 +23,16 @@ const future = `
   // 更新功能用success
   // 修復用danger
   // <li class="text-info"></li>
-const updata_text = `
+const updataText = `
   <h5 class="text-primary">※ 1.13：</h5>
   <ul>
     <li class="text-info">加入「意見回饋」頁面。</li>
     <li class="text-info">所有頁面底端增加了版權及免責聲明。</li>
-    <li class="text-success">更新了「關於」頁面的顯示佈局。</li>
+    <li class="text-info">「法規」增加了章節顯示（陸續更新）。</li>
     <li class="text-success">改善主題切換的機制。</li>
-    <li class="text-success">修改了「牌照違規」註釋第三點內容。</li>
-    <li class="text-success">修改了「駕照違規」參考資料佈局。</li>
+    <li class="text-success">更新了「關於」頁面顯示佈局，增加「手機版下載」及「收錄法規」。</li>
+    <li class="text-success">「速查功能」增加查看源文件按鈕、修正內容與佈局。</li>
+    <li class="text-danger">修復「法規」及「搜尋」頁面，清單動態高亮失效、最底部條目被遮掩問題。</li>
   </ul>
   <h5 class="text-primary">※ 1.12：</h5>
   <ul>
@@ -57,6 +43,7 @@ const updata_text = `
     <li class="text-success">「違規取締」下各頁面法條皆加入快速預覽功能。</li>
     <li class="text-danger">修復搜尋功能在首頁失效的問題。</li>
     <li class="text-danger">修復法規條目清單部分區域無法觸發點擊的問題。</li>
+    <li class="text-danger">修正「駕照違規」再犯的說明錯誤。</li>
   </ul>
   <h5 class="text-primary">※ 1.11：</h5>
   <ul>
@@ -85,6 +72,21 @@ const updata_text = `
   </ul>
 `;
 
+// 關於此網站
+const aboutThisWeb = `
+  這是一個，以交通為志趣的小小警員，
+  <br>所架設的簡易網站，  
+  <br>目標是整理所有與交通執法、交通安全有關的資訊，
+  <br>成為各位學長姐工作上的最佳幫手。
+  <br>
+  <br>如果剛好幫助到你，
+  <br>歡迎向更多人分享推廣！
+  <br>如果你也是在交通路上默默耕耘的鬥士，
+  <br>也請不吝賜教，幫助這裡變得更好！
+  <br>
+  <br>若有任何問題或寶貴意見，
+  <br>歡迎使用選單中「更多→意見回饋」讓我知道。 
+`;
 // 收錄法規
 function collectionRG() {
   let html = '';
@@ -138,10 +140,8 @@ function popUpHTML(title, text){
 // 刷新首頁
 $(document).ready(() => {
   $('#notice').html(notice);
-  $('#future').html(future);
+  $('#future').html(aboutThisWeb);
   $('#app_ver').html(app_ver);
-  $('#showUpdate').click(()=>{popUpHTML('更新日誌', updata_text)});
+  $('#showUpdate').click(()=>{popUpHTML('更新日誌', updataText)});
   $('#showRG').click(()=>{popUpHTML('收錄法規', collectionRG())});
-  $('#showEssay').click(()=>{popUpHTML('收錄文章', collectionEssay())});
-  
 })
