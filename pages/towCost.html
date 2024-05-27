@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+
+<head>
+  <script src="../script/base/jquery-3.7.1.min.js"></script>
+  <script src='../script/base/theme.js'></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>移置保管費 - 交通鴿手</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link href="../style/base/bootstrap.css" rel="stylesheet">
+  <script src="../script/base/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
+  <!-- 設定檔 -->
+  <link rel="stylesheet" href="../style/base/general.css" />
+  <link rel="stylesheet" href="../style/page/license.css" />
+  <link rel="stylesheet" href="../style/base/showArticle.css" />
+  <script type='module' src='../script/base/header.js'></script>
+  <script type='module' src='../script/base/searchArea.js'></script>
+  <script type='module' src='../script/page/towCost.js'></script>
+  <script type='module' src="../script/base/showArticle.js"></script>
+</head>
+
+<body>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <!-- 彈出視窗 -->
+  <div id="popUp">
+    <!-- 搜尋 -->
+    <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <!-- 通用彈出視窗 -->
+    <div id="popUpArea" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable"></div>
+    </div>
+  </div>
+  <main class="container-lg">
+    <div id="mainContent" class="px-3 py-3">
+      <div id="bk_left" class="container px-0">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <img src="../icons/icon_estimate.png" alt="" width="50" class="me-3">
+            <h3 class="d-inline my-auto">移置保管費計算機
+            </h3>
+          </div>
+        </div>
+        <div class="row align-items-center g-3 m-0">
+          <div class="col-12">
+            <div class="form-floating">
+              <input type="datetime-local" class="form-control" id="inTime" placeholder="核定總重">
+              <label for="approvedWeight">入場時間</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-floating">
+              <input type="datetime-local" class="form-control" id="outTime" placeholder="裝載總重">
+              <label for="realWeight">領回時間</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <select class="form-select" name="carType" id="carType">
+              <option value="none">車種</option>
+              <option value="bike">機車(含微電車)</option>
+              <option value="smallCar">小型車</option>
+              <option value="bigCar">大型車</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <select class="form-select" name="isTow" id="isTow">
+              <option value="none">是否拖吊</option>
+              <option value="y">拖吊</option>
+              <option value="n">未拖吊</option>
+            </select>
+          </div>
+        </div>
+        <div class="row g-3 m-0">
+          <div class="col-12">
+            <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+          </div>
+        </div>
+
+      </div>
+      <div id="bk_right" class="d-flex flex-column rounded-3 m-2 p-3 border border-3">
+        <div class="row">
+          <div class="col-12">
+            <h4 id="output" class="text-primary fw-semibold mb-3">
+              共　日
+              <br>
+              移置費　元
+              <br>
+              保管費　元
+              <br>
+              共計　元
+            </h4>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-12">
+            <h5 class="text-primary fw-semibold mb-3">
+              ※ 收費依據：
+              <a href="https://www.rootlaw.com.tw/LawArticle.aspx?LawID=B140140000000400-0900307"> 嘉義縣處理妨害交通車輛自治條例</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- 底部聲明 -->
+  <div id="websiteLicense" class="d-flex"></div>
+</body>
+
+</html>
