@@ -11,7 +11,7 @@ function refresh_list(r_list) {
       html +=`
       <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#chapter-${value.text}">
         <div class="d-flex px-3 py-2">
-          <h6 class="text-info mx-3 my-1">${value.title}</h6>
+          <h6 class="text-primary-emphasis mx-3 my-1">${value.title}</h6>
         </div>  
       </a>
       `
@@ -40,7 +40,7 @@ function titleHTML(r_object){
       <p class="card-text text-secondary-emphasis">
         修訂日期：${r_object.revision}
         <br>來源：全國法規資料庫
-        <br>備註：部分條目附圖仍有缺漏，敬請見諒'</p>
+        <br>備註：部分條目附圖仍有缺漏，敬請見諒</p>
         <!--<button href="#" class="btn btn-primary" disabled>加入最愛</button>--!>
     `;
   }
@@ -80,7 +80,7 @@ function refresh_text(r_list, r_object) {
   let mainHtml;
   // 標題卡片
   mainHtml = `
-    <div class="card rounded-3">
+    <div class="card rounded-3 shadow">
       <div class="row mx-0">
           <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
               <img src="..${r_object.icon}" class="card-img-right ps-3" alt="...">
@@ -102,7 +102,7 @@ function refresh_text(r_list, r_object) {
     else if (value.article=='0'){ //章節的特例
       mainHtml += `
         <div id="chapter-${value.text}" class="my-3">
-          <h3 class="text-info">${value.title}</h3>
+          <h3 class="text-primary-emphasis">${value.title}</h3>
         </div>
       `;
     }
@@ -224,8 +224,8 @@ $(document).ready(() => {
   $('.rg-title').html(r_object.title);
   $('.rg-image').attr('src',`..${r_object.icon}`);
   //偵測側邊欄點擊
-  $("#sidebar a,.btn-close").click(() => {
-    setTimeout(() => $('.offcanvas-lg').offcanvas('hide'), 50)
+  $("#itemMenu a,.btn-close").click(() => {
+    setTimeout(() => $('.offcanvas-top').offcanvas('hide'), 50)
   });
   showAttachment(r_list);
 })

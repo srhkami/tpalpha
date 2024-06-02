@@ -2,20 +2,22 @@ import { pages } from './pages.js';
 import { list_kp } from '../list/kp_list.js'
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.13.2612`;
+const app_ver = `1.14.0305`;
 
 // 公告
 const notice = `
-  v1.13 主要更新內容(113/05/26)：
+  113/06/01：
   <br>
-  <br>　◎ 加入「意見回饋」頁面，<span class="text-danger">歡迎各位學長姐踴躍投稿文章！</span>
-  <br>　◎ 「法規」增加了章節顯示。
-  <br>　◎ 「關於」增加了Android手機版下載功能。
-  <br>　<button type="button" id="showUpdate" class="btn btn-outline-secondary mt-3" data-bs-toggle="modal"
-  data-bs-target="#popUpArea">查看更新日誌</button>
+  <span class="text-danger">「鴿來教你交通怎麼做」群組六月徵員開始！！</span>
+  <br>有意加入的學長姐，請至<a href="../pages/feedback.html">意見回饋</a>→群友招募填寫表單！
+  <!--<button type="button" id="showUpdate" class="btn btn-outline-secondary ms-3 mb-3" data-bs-toggle="modal"
+  data-bs-target="#popUpArea">查看更新日誌</button>--!>
   <br>
   <br>已知問題：
-  <br>　◎ 附件連結至全國法規資料庫，在首次點擊時總會失效。
+  <ul>
+  <li>附件連結至全國法規資料庫，在首次點擊時總會失效。</li>
+  <li>使用內網瀏覽設置規則圖片可能無法顯示。</li>
+  </ul>
 `;
 
 // 更新日誌
@@ -24,6 +26,10 @@ const notice = `
   // 修復用danger
   // <li class="text-info"></li>
 const updataText = `
+  <h5 class="text-primary">※ 1.14：</h5>
+  <ul>
+    <li class="text-success">更新了整體顯示佈局。</li>
+  </ul>
   <h5 class="text-primary">※ 1.13：</h5>
   <ul>
     <li class="text-info">加入「意見回饋」頁面。</li>

@@ -163,7 +163,6 @@ const html_quickArea = [`
   </div>
 `];
 
-
 function load_quick() {
   let quick_options = ['PH', 'SR', 'DL', 'CL'];
   if (localStorage.getItem('qk_options')) {

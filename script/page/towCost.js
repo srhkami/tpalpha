@@ -3,11 +3,12 @@ $('#btn_ok').click(()=>{
   let inTime = $('#inTime').val();
   let outTime = $('#outTime').val();
   let carType = $('#carType').val(); //車輛種類
-  let isTow = $('#isTow').val(); //是否拖吊
+  let isTow = $('#isTow').is(':checked'); //是否拖吊
+  console.log(isTow);
   
   let costA = 0; //移置費
   let costB = 0; //保管費
-  if(carType=='none'||isTow=='none'||!inTime||!outTime){
+  if(carType=='none'||!inTime||!outTime){
     alert('選項請勿留空！');
   }
   else{
@@ -24,16 +25,22 @@ $('#btn_ok').click(()=>{
       else if(carType=='bike'){
        costA+=200;
       }
-     if(carType=='bigCar'){
-       costB+=500*days;
-      }
-      else if(carType=='smallCar'){
-       costB+=200*days;
-      }
-      else if(carType=='bike'){
-       costB+=50*days;
-     }
-     $('#output').html(`共 ${days} 日；<br>移置費 ${costA} 元，<br>保管費 ${costB} 元，<br>共計 ${costA+costB} 元`);
     }
+    if(carType=='bigCar'){
+      costB+=500*days;
+    }
+    else if(carType=='smallCar'){
+      costB+=200*days;
+    }
+    else if(carType=='bike'){
+      costB+=50*days;
+    }
+    $('#output').html(`
+    共 <span class="text-danger">${days}</span> 日；
+    <br>移置費 <span class="text-danger">${costA}</span> 元，
+    <br>保管費 <span class="text-danger">${costB}</span> 元，
+    <br>共計 <span class="text-danger">${costA+costB}</span> 元。
+    `);
+    
   }
 })

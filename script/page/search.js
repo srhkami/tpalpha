@@ -167,8 +167,8 @@ $('#article-text').html(refresh_text(list_output, keyWord));
 
 $(document).ready(() => {
   //偵測側邊欄點擊
-  $("#sidebar a,.btn-close").click(() => {
-    setTimeout(() => $('.offcanvas-lg').offcanvas('hide'), 50)
+  $("#itemMenu a,.btn-close").click(() => {
+    setTimeout(() => $('.offcanvas-top').offcanvas('hide'), 50)
   });
   //再檢索搜尋
   $('#btn_searchAgainGo').click(()=>{

@@ -135,9 +135,9 @@ export const pages = {
     '/pages/overload.html',
     ''
   ),
-  keyPoint: new Page(
+  keypoint: new Page(
     'PAGE',
-    'keyPoint',
+    'keypoint',
     '違規舉發要點',
     '違規舉發要點',
     '',

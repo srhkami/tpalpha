@@ -65,8 +65,8 @@ const html_searchArea =`
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.keyPoint.code}" value="${pages.keyPoint.code}">
-                  <label class="form-check-label" for="switch_${pages.keyPoint.code}">${pages.keyPoint.title}</label>
+                  <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_${pages.keypoint.code}" value="${pages.keypoint.code}">
+                  <label class="form-check-label" for="switch_${pages.keypoint.code}">${pages.keypoint.title}</label>
               </div>
             </div>
             <div class="col-12">
