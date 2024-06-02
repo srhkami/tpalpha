@@ -16,14 +16,14 @@
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/keypoint.css">
   <link rel="stylesheet" href="../style/base/showArticle.css">
-  <script type='module' src="../script/base/header.js"></script>
+  <script type='module' src="../script/base/nav.js"></script>
   <script type='module' src="../script/base/searchArea.js"></script>
   <script type='module' src="../script/page/keypoint.js"></script>
   <script type='module' src="../script/base/showArticle.js"></script>
 </head>
 
 <body>
-  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-lg bg-body"></nav>
   <!-- 彈出視窗 -->
   <div id="popUp">
     <!-- 搜尋 -->
@@ -33,23 +33,29 @@
       <div class="modal-dialog modal-dialog-scrollable"></div>
     </div>
   </div>
-  <main>
+  <main class="container-xl d-flex">
+    <!-- 側邊選單 -->
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <!-- 主選單清單 -->
+      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
+      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
+    </aside>
     <div id="mainContent" class="container-sm py-3">
-      <div id="layout" class="row" >
-        <!-- 項目清單 -->
-        <aside class="col-list d-none d-lg-block overflow-hidden px-0 me-3 rounded-3 border">
-          <div class="list-group rounded-0">
-          </div>
-        </aside>
+      <!-- <div id="layout" class="row"> -->
+
         <div class="col px-3">
           <!-- 手機模式顯示之伸縮清單 -->
-          <div class="accordion d-lg-none mb-3 sticky-top" id="accordionEssay" style="top:70px">
+          <div class="accordion d-md-none mb-3" id="accordionEssay">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <img class="me-2" src="../icons/icon_menu_2.png" alt="" width="25">
-                  瀏覽所有文章
+                  文章列表
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -60,11 +66,11 @@
               </div>
             </div>
           </div>
-           <!-- 項目內文 -->
+          <!-- 項目內文 -->
           <div id="item_output" data-bs-spy="scroll" data-bs-target="#list_article" data-bs-smooth-scroll="true"
             class="scrollspy-example" tabindex="0">
             <!-- 標題卡片 -->
-            <div class="card rounded-3" aria-hidden="true">
+            <div class="card rounded-3 shadow" aria-hidden="true">
               <div class="row mx-0">
                 <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
                   <img src="../icons/icon_policeFine.png" class="card-img-right ps-3 " alt="..." width="90">
@@ -75,7 +81,7 @@
                       違規舉發要點
                     </h2>
                     <p class="card-text placeholder-glow">
-                      資料來源：「鴿來告訴你交通怎麼做」群組及各位學長姐
+                      資料來源：「鴿來告訴你交通怎麼做」群組
                     </p>
                   </div>
                 </div>
@@ -85,17 +91,30 @@
             <div id="mainText" class="my-3 px-3 border-start border-primary border-3">
               <h4 class="mt-4 mb-3">這裡有什麼？</h4>
               <p>
-                這裡統整了群組內各方大神，取締交通違規所積累之經驗、要點、心得，感謝諸位學長姐不吝分享！<br>
-                要感謝的人太多，不如<a href="https://forms.gle/egpyVq19MYJAydS28">加入</a>「鴿來告訴你交通怎麼做」吧！
+                這裡是群組內各方大神，整理相關法規函式，並結合自身取締違規之經驗，所整理出來的要點、心得。
+                <br>
+                若發現文章內容有任何錯誤，或有意加入群組，
+                請至<a href="../pages/feedback.html">意見回饋</a>。
               </p>
               <p>
                 <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-38"></a>
-                ※ 請點擊上(左)方清單瀏覽文章 ※
+                ※ 請點擊文章列表開始瀏覽 ※
               </p>
             </div>
           </div>
         </div>
-      </div>
+        <!-- 項目清單 -->
+        <aside class="col-list d-none d-md-block overflow-hidden pe-5">
+          <div class="d-none d-md-flex ">
+            <svg class="anime-icon i-12 ms-2 my-auto" fill="#5A96FA">
+              <use xlink:href="../icons/bootstrap-icons.svg#list-ul"></use>
+            </svg>
+            <h5 class="my-3 ms-2">文章列表</h5>
+          </div>
+          <div class="list-group rounded-0">
+          </div>
+        </aside>
+      <!-- </div> -->
 
       <!-- 手機板顯示底欄 -->
       <!-- <div class="row d-lg-none position-absolute bottom-0 mb-2 px-4 w-100 ">

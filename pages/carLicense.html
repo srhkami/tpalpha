@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html class="h-100" data-bs-theme="light">
+<html data-bs-theme="light">
 
 <head>
   <script src="../script/base/jquery-3.7.1.min.js"></script>
   <script src='../script/base/theme.js'></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>牌照違規 - 交通鴿手</title>
+  <title>牌照違規速查 - 交通鴿手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
@@ -16,14 +16,14 @@
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/license.css" />
   <link rel="stylesheet" href="../style/base/showArticle.css" />
-  <script type='module' src='../script/base/header.js'></script>
+  <script type='module' src='../script/base/nav.js'></script>
   <script type='module' src='../script/base/searchArea.js'></script>
   <script type='module' src='../script/page/carLicense.js'></script>
   <script type='module' src="../script/base/showArticle.js"></script>
 </head>
 
-<body class="h-100">
-  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+<body>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-lg bg-body"></nav>
   <!-- 彈出視窗 -->
   <div id="popUp">
     <!-- 搜尋 -->
@@ -33,80 +33,95 @@
       <div class="modal-dialog modal-dialog-scrollable"></div>
     </div>
   </div>
-  <main class="container-xl">
+  <main class="container-xl d-flex">
+    <!-- 側邊選單 -->
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <!-- 主選單清單 -->
+      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
+      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
+    </aside>
     <div id="mainContent" class="px-3 py-3">
-      <div id="bk_left" class="container px-0">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <img src="../icons/icon_CL.png" alt="" width="50" class="me-3">
-            <h3 class="d-inline my-auto">牌照違規速查</h3>
+      <div class="card bg-light-subtle shadow-lg">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <img src="../icons/icon_CL.png" alt="" width="50" class="me-3">
+              <h3 class="d-inline my-auto">牌照違規速查</h3>
+            </div>
           </div>
         </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-6">
-            <p class="my-auto fw-semibold">◎ 號牌（A）狀態：</p>
+        <div class="card-body">
+          <div class="row align-items-center g-3 m-0">
+            <div class="col-6">
+              <p class="my-auto fw-semibold">◎ 號牌（A）狀態：</p>
+            </div>
+            <div class="col-6">
+              <select class="form-select" name="a_type" id="a_type">
+                <option value="0">請選擇</option>
+                <option value="1">掛 正常 號牌</option>
+                <option value="2">掛 吊/註銷 號牌</option>
+                <option value="3">掛 偽造 號牌</option>
+                <option value="4">掛 變造 號牌</option>
+                <option value="5">掛 報廢/回收 號牌</option>
+                <option value="6">掛 遺失竊 號牌</option>
+                <option value="7">無掛牌</option>
+                <!-- <option value="8">掛 第二類試車牌</option> -->
+              </select>
+            </div>
           </div>
-          <div class="col-6">
-            <select class="form-select" name="a_type" id="a_type">
-              <option value="0">請選擇</option>
-              <option value="1">掛 正常 號牌</option>
-              <option value="2">掛 吊/註銷 號牌</option>
-              <option value="3">掛 偽造 號牌</option>
-              <option value="4">掛 變造 號牌</option>
-              <option value="5">掛 報廢/回收 號牌</option>
-              <option value="6">掛 遺失竊 號牌</option>
-              <option value="7">無掛牌</option>
-              <!-- <option value="8">掛 第二類試車牌</option> -->
-            </select>
+          <div class="row align-items-center g-3 m-0">
+            <div class="col-6">
+              <p class="my-auto fw-semibold">◎ 車體（B）狀態：</p>
+            </div>
+            <div class="col-6">
+              <select class="form-select" name="b_type" id="b_type">
+                <option value="0">請選擇</option>
+                <option value="1">車籍正常</option>
+                <option value="2">吊扣期間</option>
+                <option value="3">吊/註/繳銷、報停</option>
+                <option value="4">報廢、環保回收</option>
+                <option value="5">號牌報遺失竊</option>
+                <option value="6">失竊車輛</option>
+                <option value="7">未領牌</option>
+                <option value="8">拼裝車</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-6">
-            <p class="my-auto fw-semibold">◎ 車體（B）狀態：</p>
+          <div class="row align-items-center g-3 m-0">
+            <div class="col-6">
+              <p class="my-auto fw-semibold">◎ 比對A/B車籍：</p>
+            </div>
+            <div class="col-6">
+              <select class="form-select" name="is_same" id="is_same">
+                <option value="0">相符</option>
+                <option value="1" selected="selected">不相符</option>
+              </select>
+            </div>
           </div>
-          <div class="col-6">
-            <select class="form-select" name="b_type" id="b_type">
-              <option value="0">請選擇</option>
-              <option value="1">車籍正常</option>
-              <option value="2">吊扣期間</option>
-              <option value="3">吊/註/繳銷、報停</option>
-              <option value="4">報廢、環保回收</option>
-              <option value="5">號牌報遺失竊</option>
-              <option value="6">失竊車輛</option>
-              <option value="7">未領牌</option>
-              <option value="8">拼裝車</option>
-            </select>
+          <div class="row align-items-center g-3 m-0">
+            <div class="col-6">
+              <p class="my-auto fw-semibold">◎ 行駛 / 停車：</p>
+            </div>
+            <div class="col-6">
+              <select class="form-select" name="is_stop" id="is_stop">
+                <option value="0">行駛</option>
+                <option value="1">停車</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-6">
-            <p class="my-auto fw-semibold">◎ 比對A/B車籍：</p>
-          </div>
-          <div class="col-6">
-            <select class="form-select" name="is_same" id="is_same">
-              <option value="0">相符</option>
-              <option value="1" selected="selected">不相符</option>
-            </select>
-          </div>
-        </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-6">
-            <p class="my-auto fw-semibold">◎ 行駛 / 停車：</p>
-          </div>
-          <div class="col-6">
-            <select class="form-select" name="is_stop" id="is_stop">
-              <option value="0">行駛</option>
-              <option value="1">停車</option>
-            </select>
-          </div>
-        </div>
-        <div class="row g-3 m-0">
-          <div class="col-12">
-            <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+          <div class="row g-3 m-0">
+            <div class="col-12">
+              <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+            </div>
           </div>
         </div>
       </div>
-      <div id="bk_right" class="container-fluid rounded-3 m-0 p-3 border border-3">
+      
+      <div id="output" class="d-flex flex-column rounded-3 m-2 p-3">
         <div class="row">
           <div class="col-12 col-xl-5">
             <div>
@@ -120,24 +135,30 @@
               <p id="cl_ot_b2" class="fs-6 text text-danger-emphasis fw-semibold">　</p>
             </div>
             <div>
-              <h5 class="text-primary fw-semibold mb-3">◎ 車體（B）違規項目二 :</h5>
+              <h5 class="text-primary fw-semibold mb-3">◎ 車體（B）違規項目二：</h5>
               <p id="cl_ot_c1" class="fs-5 text text-danger fw-bolder">　</p>
               <p id="cl_ot_c2" class="fs-6 text text-danger-emphasis fw-semibold">　</p>
             </div>
           </div>
+          <hr class="d-inline d-xl-none">
           <div class="col-12 col-xl-7">
             <h5 class="text-primary fw-semibold mb-3">※ 註釋：</h5>
             <p class="comment_text text-body-secondary">
               ◎ 一、處罰對象<br>
-              (1) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-12">處罰條例12條</a>原則處罰所有人。<br>
+              (1) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea"
+                data-rg="PH-12">處罰條例12條</a>原則處罰所有人。<br>
               (2) 車主死亡、主體不存在、死亡逕註、無車籍等，歸責駕駛人/繼承人/實際所有人。<br>
               (3) 拒不過戶註銷，函詢監理站查應歸責人。
             </p>
-            <p class="comment_text text-body-secondary">◎ 二、有關「停車」狀態各樣態適用之違規項目，請參考<a href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SOID=16136">交通部 108.09.18. 交路字第1080017922號函</a>。</p>
-            <p class="comment_text text-body-secondary">◎ 三、若發現懸掛「吊扣期間」之號牌，請詳查是否為偽/變造；處置方式請參考「<a href="./keypoint.html?item=fakeCarLicense">偽造號牌之舉發及偵辦</a>」一文</p>
+            <p class="comment_text text-body-secondary">◎ 二、有關「停車」狀態各樣態適用之違規項目，請參考<a
+                href="https://www.mvdis.gov.tw/webMvdisLaw/SorderContent.aspx?SOID=16136">交通部 108.09.18.
+                交路字第1080017922號函</a>。</p>
+            <p class="comment_text text-body-secondary">◎ 三、若發現懸掛「吊扣期間」之號牌，請詳查是否為偽/變造；處置方式請參考「<a
+                href="./keypoint.html?item=fakeCarLicense">偽造號牌之舉發及偵辦</a>」一文</p>
             <p class="comment_text text-body-secondary">
               ◎ 四、拼裝車及未審驗合格認定，請參考「<a href="./keypoint.html?item=noCarLicense">未懸掛號牌之舉發</a>」一文前段。</p>
-            <a href="https://docs.google.com/spreadsheets/d/1qIbPHMCzhAXwm-kzR9jr3P8CyVKijCX_rekrPXmuuto/edit?usp=sharing" class="btn btn-outline-secondary">查看源文件</a>
+            <a href="https://docs.google.com/spreadsheets/d/1qIbPHMCzhAXwm-kzR9jr3P8CyVKijCX_rekrPXmuuto/edit?usp=sharing"
+              class="btn btn-outline-secondary">查看源文件</a>
           </div>
         </div>
       </div>

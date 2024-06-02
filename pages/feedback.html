@@ -15,14 +15,13 @@
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/feedback.css" />
-  <script type='module' src='../script/base/header.js'></script>
+  <script type='module' src='../script/base/nav.js'></script>
   <script type='module' src='../script/base/searchArea.js'></script>
   <script type='module' src="../script/base/info.js"></script>
 </head>
 
 <body>
-  <!-- <svg href="../icons/bootstrap-icons-1.11.3/bootstrap-icons.svg" class="d-none"></svg> -->
-  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-lg bg-body"></nav>
   <!-- 彈出視窗 -->
   <div id="popUp">
     <!-- 搜尋 -->
@@ -44,8 +43,14 @@
               <li>要帶著問題，入群後立即提問。</li>
               <li>按季會審查請退參與度較低人員。</li>
             </ul>
-            <h5 class="text-danger fw-bolder">現在非屬徵員期間</h5>
-            <p>可先填寫下列表單，開始徵人時，會第一時間通知您！</p>
+            <!-- <h5 class="text-danger fw-bolder">現在非屬徵員期間</h5> -->
+            <!-- <p>可先填寫下列表單，開始徵人時，會第一時間通知您！</p> -->
+            <h5 class="text-danger fw-bolder">6/1~6/20徵員期間</h5>
+            <p>
+              請填寫下列表單，會有專人與您聯絡！
+              <br>※請先詳閱上述須知。
+              <br>※務必留下Line ID，及設定ID可供加入好友。
+            </p>
           </div>
           <div class="modal-footer">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZgAxNzwEf9TlxQ8zPuPR52xlEAhsG80jHpA9aqgitYFuTUA/viewform?usp=sf_link" class="btn btn-primary">填寫表單</a>
@@ -54,7 +59,16 @@
       </div>
     </div>
   </div>
-  <main class="container">
+  <main class="container-xl d-flex">
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <!-- 主選單清單 -->
+      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
+      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
+    </aside>
     <div id="mainContent" class="px-3 py-3">
       <div class="row">
         <div class="col-12 mb-3">
@@ -83,7 +97,7 @@
       </div>
       <div class="row">
         <div class="col-12 col-lg-6 mb-3">
-          <div class="card border border-3 mb-3 h-100">
+          <div class="card shadow-lg mb-3 h-100">
             <div class="row g-0 h-100">
               <div class="col-4 d-flex ">
                 <img src="../icons/icon_question.png" class="img-fluid rounded-start m-auto" alt="...">
@@ -99,7 +113,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-6 mb-3">
-          <div class="card border border-3 mb-3 h-100">
+          <div class="card shadow-lg mb-3 h-100">
             <div class="row g-0 h-100">
               <div class="col-4 d-flex ">
                 <img src="../icons/icon_create-document.png" class="img-fluid rounded-start m-auto" alt="...">
@@ -117,7 +131,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6 mb-3">
-          <div class="card border border-3 mb-3 h-100">
+          <div class="card shadow-lg mb-3 h-100">
             <div class="row g-0 h-100">
               <div class="col-4 d-flex ">
                 <img src="../icons/icon_article.png" class="img-fluid rounded-start m-auto" alt="...">
@@ -133,7 +147,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-6 mb-3">
-          <div class="card border border-3 mb-3 h-100">
+          <div class="card shadow-lg mb-3 h-100">
             <div class="row g-0 h-100">
               <div class="col-4 d-flex ">
                 <img src="../icons/icon_enter.png" class="img-fluid rounded-start m-auto" alt="...">

@@ -13,10 +13,10 @@
   <link href="../style/base/bootstrap.css" rel="stylesheet">
   <script src="../script/base/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
-  <link rel="stylesheet" href="../style/base/general.css"/>
-  <link rel="stylesheet" href="../style/page/regulations.css"/>
-  <link rel="stylesheet" href="../style/page/search.css"/>
-  <script type='module' src="../script/base/header.js"></script>
+  <link rel="stylesheet" href="../style/base/general.css" />
+  <link rel="stylesheet" href="../style/page/regulations.css" />
+  <link rel="stylesheet" href="../style/page/search.css" />
+  <script type='module' src="../script/base/nav.js"></script>
   <script type='module' src="../script/base/searchArea.js"></script>
   <script type='module' src='../script/page/search.js'> </script>
 </head>
@@ -38,7 +38,8 @@
           <div class="modal-body">
             <div class="container">
               <div class="input-group">
-                <input type="text" id="keyWord2" class="form-control" name="keyword" placeholder="請輸入關鍵字" required="required">
+                <input type="text" id="keyWord2" class="form-control" name="keyword" placeholder="請輸入關鍵字"
+                  required="required">
                 <button class="btn btn-outline-secondary" id="btn_search_reset" type="reset">清除</button>
                 <button id="btn_searchAgainGo" class="btn btn-primary" type="button">開始搜尋</button>
               </div>
@@ -49,74 +50,83 @@
       </div>
     </div>
   </div>
-  <main>
-    <div id="mainContent" class="container-sm py-3">
-      <div id="layout" class="row">
-        <!-- 法規條目清單/側邊欄 -->
-        <aside class="col-list overflow-hidden px-0 offcanvas-lg offcanvas-start border" tabindex="-1" id="sidebar">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">所有項目</h5>
-            <button type="button" class="btn-close" aria-label="關閉"></button>
-          </div>
-          <!-- 主清單 -->
-          <div>
-            <h5 class="d-none d-lg-block m-3">所有項目</h5>
-          </div>
-          <div id="list-article" class="list-group h-100 overflow-auto px-0 rounded-0 ">
-            <a class="list-group-item list-group-item-action" href="#article-1">
-              <label class="d-flex" for="check_right">
-                <div class="list-article-no">第 0 條</div>
-                <div class="list-article-ttitle">　　　　　　　　</div>
-              </label>
-            </a>
-          </div>
-        </aside>
-        <!-- 法條內文 -->
-        <div class="col px-3">
-          <div id="article-text" data-bs-spy="scroll" data-bs-target="#list-article" data-bs-smooth-scroll="true"
-            class="scrollspy-example h-100 pb-5" tabindex="0">
-            <!-- 標題卡片(佔位符)-->
-            <div class="card rounded-3" aria-hidden="true">
-              <div class="row mx-0">
-                <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
-                  <img src="../icons/icon_trafficpigeon.png" class="card-img-right ps-3 " alt="..." width="90">
-                </div>
-                <div class="col p-0">
-                  <div class="card-body">
-                    <h2 class="card-title placeholder-glow" id="article-0">
-                      <span class="placeholder col-9"></span>
-                    </h2>
-                    <p class="card-text placeholder-glow">
-                      <span class="placeholder col-5"></span>
-                      <span class="placeholder col-7"></span>
-                    </p>
-                    <button href="#" class="btn btn-primary disabled placeholder col-3"></button>
-                  </div>
+  <!-- 主區域 -->
+  <main class="container-lg d-flex">
+    <!-- 側邊選單 -->
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <!-- 主選單清單 -->
+      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
+      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
+    </aside>
+    <div id="mainContent" class="py-3">
+      <!-- 法條內文 -->
+      <div class="col px-3">
+        <div id="article-text" data-bs-spy="scroll" data-bs-target="#list-article" data-bs-smooth-scroll="true"
+          class="scrollspy-example h-100 pb-5" tabindex="0">
+          <!-- 標題卡片(佔位符)-->
+          <div class="card rounded-3" aria-hidden="true">
+            <div class="row mx-0">
+              <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
+                <img src="../icons/icon_trafficpigeon.png" class="card-img-right ps-3 " alt="..." width="90">
+              </div>
+              <div class="col p-0">
+                <div class="card-body">
+                  <h2 class="card-title placeholder-glow" id="article-0">
+                    <span class="placeholder col-9"></span>
+                  </h2>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-5"></span>
+                    <span class="placeholder col-7"></span>
+                  </p>
+                  <button href="#" class="btn btn-primary disabled placeholder col-3"></button>
                 </div>
               </div>
             </div>
-            <!-- 內文(佔位符) -->
-            <div class="article" id="article-1">
-              <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
-                <h4 class="d-inline">第 0 條</h4>
-                <button type="button" class="btn btn-primary ms-auto disabled">
-                  函釋 <span class="badge text-bg-info">0</span>
-                </button>
-                <button type="button" class="btn btn-primary ms-2 disabled">書籤</button>
-                <button type="button" class="btn btn-primary ms-2 disabled">分享</button>
-              </div>
-              <div class="col-data">
-                <div class="law-article">
-                  <div class="line-0000 placeholder-glow">
-                    <span class="placeholder col-12"></span>
-                    <span class="placeholder col-9"></span>
-                  </div>
+          </div>
+          <!-- 內文(佔位符) -->
+          <div class="article" id="article-1">
+            <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
+              <h4 class="d-inline">第 0 條</h4>
+              <button type="button" class="btn btn-primary ms-auto disabled">
+                函釋 <span class="badge text-bg-info">0</span>
+              </button>
+              <button type="button" class="btn btn-primary ms-2 disabled">書籤</button>
+              <button type="button" class="btn btn-primary ms-2 disabled">分享</button>
+            </div>
+            <div class="col-data">
+              <div class="law-article">
+                <div class="line-0000 placeholder-glow">
+                  <span class="placeholder col-12"></span>
+                  <span class="placeholder col-9"></span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- 法規條目清單/側邊欄 -->
+      <aside class="col-list overflow-hidden px-0 offcanvas-md offcanvas-top" tabindex="-1" id="itemMenu">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">目錄</h5>
+          <button type="button" class="btn-close"></button>
+        </div>
+        <!-- 主清單 -->
+        <div>
+          <h5 class="d-none d-lg-block m-3">目錄</h5>
+        </div>
+        <div id="list-article" class="list-group h-100 overflow-auto px-0 rounded-0 ">
+          <a class="list-group-item list-group-item-action" href="#article-1">
+            <label class="d-flex" for="check_right">
+              <div class="list-article-no">第 0 條</div>
+              <div class="list-article-ttitle">　　　　　　　　</div>
+            </label>
+          </a>
+        </div>
+      </aside>
     </div>
 
   </main>
@@ -125,11 +135,11 @@
   <!-- 手機板顯示底欄 -->
   <div class="sticky-bottom row d-lg-none ps-4 w-100" style="bottom: 0.75rem;">
     <label id="label_switch" for="switch-sidebar" class="d-flex bg-contrast rounded-3 align-items-center ">
-      <button id="switch-sidebar" class="btn" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#sidebar" aria-controls="offcanvasExample">
+      <button id="switch-sidebar" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#itemMenu"
+        aria-controls="offcanvasExample">
         <img src="../icons/icon_menu_2.png" alt="" width="25">
       </button>
-      <h5 class="d-inline text-primary mb-0 ms-1">瀏覽所有項目</h5>
+      <h5 class="d-inline text-primary mb-0 ms-1">顯示目錄</h5>
     </label>
   </div>
 </body>

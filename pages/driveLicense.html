@@ -16,14 +16,14 @@
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/license.css" />
   <link rel="stylesheet" href="../style/base/showArticle.css" />
-  <script type='module' src='../script/base/header.js'></script>
+  <script type='module' src='../script/base/nav.js'></script>
   <script type='module' src='../script/base/searchArea.js'></script>
   <script type='module' src='../script/page/driveLicense.js'></script>
   <script type='module' src="../script/base/showArticle.js"></script>
 </head>
 
 <body>
-  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-lg bg-body"></nav>
   <!-- 彈出視窗 -->
   <div id="popUp">
     <!-- 搜尋 -->
@@ -33,84 +33,98 @@
       <div class="modal-dialog modal-dialog-scrollable"></div>
     </div>
   </div>
-  <main class="container-xl">
+  <main class="container-xl d-flex">
+    <!-- 側邊選單 -->
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <!-- 主選單清單 -->
+      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
+      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
+    </aside>
     <div id="mainContent" class="px-3 py-3">
-      <div id="bk_left" class="container px-0">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <img src="../icons/icon_DL.png" alt="" width="50" class="me-3">
-            <h3 class="d-inline my-auto">駕照違規速查</h3>
+      <div class="card bg-light-subtle shadow-lg">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <img src="../icons/icon_DL.png" alt="" width="50" class="me-3">
+              <h3 class="d-inline my-auto">駕照違規速查</h3>
+            </div>
           </div>
         </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-6">
-            <p class="my-auto fw-semibold">◎ 駕駛車種：</p>
+        <div class="card-body">
+          <div class="row align-items-center g-3 m-0">
+            <div class="col-6">
+              <p class="my-auto fw-semibold">◎ 駕駛車種：</p>
+            </div>
+            <div class="col-6">
+              <select class="form-select" name="drive_type" id="drive_type">
+                <option value="0">請選擇</option>
+                <option value="1">輕型機車</option>
+                <option value="2">普通重型機車</option>
+                <option value="3">大型重型機車</option>
+                <option value="4">小型車</option>
+                <option value="5">大貨車</option>
+                <option value="6">大客車</option>
+                <option value="7">聯結車</option>
+                <option value="8">曳引車</option>
+              </select>
+            </div>
           </div>
-          <div class="col-6">
-            <select class="form-select" name="drive_type" id="drive_type">
-              <option value="0">請選擇</option>
-              <option value="1">輕型機車</option>
-              <option value="2">普通重型機車</option>
-              <option value="3">大型重型機車</option>
-              <option value="4">小型車</option>
-              <option value="5">大貨車</option>
-              <option value="6">大客車</option>
-              <option value="7">聯結車</option>
-              <option value="8">曳引車</option>
-            </select>
+          <div class="row align-items-center g-3 m-0">
+            <div class="col-6">
+              <p class="my-auto fw-semibold">◎ 汽車駕照狀態：</p>
+            </div>
+            <div class="col-6">
+              <select class="form-select" name="car_type" id="car_type">
+                <option value="0">請選擇</option>
+                <option value="1">未曾考領汽車駕照</option>
+                <option value="2">汽車駕照吊扣</option>
+                <option value="3">汽車駕照吊/註銷</option>
+                <option value="4">小型車駕照</option>
+                <option value="5">大貨車駕照</option>
+                <option value="6">大客車駕照</option>
+                <option value="7">聯結車駕照</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-6">
-            <p class="my-auto fw-semibold">◎ 汽車駕照狀態：</p>
+          <div class="row align-items-center g-3 m-0">
+            <div class="col-6">
+              <p class="my-auto fw-semibold">◎ 機車駕照狀態：</p>
+            </div>
+            <div class="col-6">
+              <select class="form-select" name="bike_type" id="bike_type">
+                <option value="0">請選擇</option>
+                <option value="1">未曾考領機車駕照</option>
+                <option value="2">機車駕照吊扣</option>
+                <option value="3">機車駕照吊/註銷</option>
+                <option value="4">輕型機車</option>
+                <option value="5">普通重型機車</option>
+                <option value="6">大型重型機車</option>
+              </select>
+            </div>
           </div>
-          <div class="col-6">
-            <select class="form-select" name="car_type" id="car_type">
-              <option value="0">請選擇</option>
-              <option value="1">未曾考領汽車駕照</option>
-              <option value="2">汽車駕照吊扣</option>
-              <option value="3">汽車駕照吊/註銷</option>
-              <option value="4">小型車駕照</option>
-              <option value="5">大貨車駕照</option>
-              <option value="6">大客車駕照</option>
-              <option value="7">聯結車駕照</option>
-            </select>
+          <div class="row align-items-center g-3 m-0">
+            <div class="col-6">
+              <p class="my-auto fw-semibold">◎ 五年內再犯：</p>
+            </div>
+            <div class="col-6">
+              <select class="form-select" name="more_type" id="more_type">
+                <option value="0">無</option>
+                <option value="1">有</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-6">
-            <p class="my-auto fw-semibold">◎ 機車駕照狀態：</p>
-          </div>
-          <div class="col-6">
-            <select class="form-select" name="bike_type" id="bike_type">
-              <option value="0">請選擇</option>
-              <option value="1">未曾考領機車駕照</option>
-              <option value="2">機車駕照吊扣</option>
-              <option value="3">機車駕照吊/註銷</option>
-              <option value="4">輕型機車</option>
-              <option value="5">普通重型機車</option>
-              <option value="6">大型重型機車</option>
-            </select>
-          </div>
-        </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-6">
-            <p class="my-auto fw-semibold">◎ 五年內再犯：</p>
-          </div>
-          <div class="col-6">
-            <select class="form-select" name="more_type" id="more_type">
-              <option value="0">無</option>
-              <option value="1">有</option>
-            </select>
-          </div>
-        </div>
-        <div class="row g-3 m-0">
-          <div class="col-12">
-            <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+          <div class="row g-3 m-0">
+            <div class="col-12">
+              <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+            </div>
           </div>
         </div>
       </div>
-      <div id="bk_right" class="d-flex flex-column rounded-3 m-2 p-3 border border-3">
+      <div id="output" class="d-flex flex-column rounded-3 m-2 p-3 border border-3">
         <div class="div_output">
           <h4 class="text-primary fw-semibold mb-3">◎ 違規項目：</h4>
           <p id="output_title" class="fs-5 text text-danger fw-bolder">　</p>
@@ -123,21 +137,29 @@
             <h5 class="text-primary fw-semibold mb-3">※ 註釋：</h5>
             <p class="comment_text text-body-secondary">
               ◎ 一、處罰對象<br>
-              (1) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-21">21條</a>處罰駕駛人，另舉發21條6項處罰所有人並吊扣牌照。<br>
-              (2) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-21-1">21-1條</a>處罰駕駛人及所有人，另舉發21-1.5吊扣牌照。<br>
-              (3) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-22">22條</a>處罰駕駛人。
+              (1) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea"
+                data-rg="PH-21">21條</a>處罰駕駛人，另舉發21條6項處罰所有人並吊扣牌照（<a
+                href="../file/pdf/pdf_dl_04.pdf">所有人與駕駛人分屬二人為前提</a>）。<br>
+              (2) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea"
+                data-rg="PH-21-1">21-1條</a>處罰駕駛人及所有人，另舉發21-1.5吊扣牌照。<br>
+              (3) <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea"
+                data-rg="PH-22">22條</a>處罰駕駛人。
             </p>
-            <p class="comment_text text-body-secondary">◎ 二、違反<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-35">35條</a>吊扣期間、吊銷後未再考領，另舉發21條3項或21-1條3項。</p>
-            <p class="comment_text text-body-secondary">◎ 三、不聽制止或不服稽查，另舉發<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-60">60條3項</a>。</p>
+            <p class="comment_text text-body-secondary">◎ 二、違反<a href="#" class="showArticle" data-bs-toggle="modal"
+                data-bs-target="#popUpArea" data-rg="PH-35">35條</a>吊扣期間、吊銷後未再考領，另舉發21條3項或21-1條3項。</p>
+            <p class="comment_text text-body-secondary">◎ 三、不聽制止或不服稽查，另舉發<a href="#" class="showArticle"
+                data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="PH-60">60條3項</a>。</p>
             <p class="comment_text text-body-secondary">◎ 四、職業駕照經註銷未換領普通駕照，不得駕駛汽車。 </p>
-            <p class="comment_text text-body-secondary">◎ 五、21條1項9款所稱持照條件，請參照<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-61">安全規則61條</a>及<a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-61-1">61-1條</a>。 </p>
+            <p class="comment_text text-body-secondary">◎ 五、21條1項9款所稱持照條件，請參照<a href="#" class="showArticle"
+                data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-61">安全規則61條</a>及<a href="#"
+                class="showArticle" data-bs-toggle="modal" data-bs-target="#popUpArea" data-rg="SR-61-1">61-1條</a>。 </p>
           </div>
           <div class="col-12 col-xl-6">
-            <h5 class="text-primary fw-semibold mb-3">※ 參考資料：</h5>
+            <h5 class="text-primary fw-semibold mb-3">※ 資料資料：</h5>
             <ul>
               <li class="mb-3">
                 <a class="fw-bolder" href="../file/pdf/pdf_dl_01.pdf">
-                 <small>交通部113年1月10日交路字第1105015347號函</small>
+                  <small>交通部113年1月10日交路字第1105015347號函</small>
                 </a>
               </li>
               <li class="mb-3">
@@ -151,7 +173,8 @@
                 </a>
               </li>
             </ul>
-            <a href="https://docs.google.com/spreadsheets/d/1tOYdeoeO4zaypOvUAL_tYMLKbSJxmAAYkpFjT7UlvsI/edit?usp=sharing" class="btn btn-outline-secondary">查看源文件</a>
+            <a href="https://docs.google.com/spreadsheets/d/1tOYdeoeO4zaypOvUAL_tYMLKbSJxmAAYkpFjT7UlvsI/edit?usp=sharing"
+              class="btn btn-outline-secondary">查看源文件</a>
           </div>
         </div>
       </div>
