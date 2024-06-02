@@ -8,15 +8,15 @@
     font-size: 12px;
   }
 }
-@media (min-width:992px){
-  #layout{
+@media (min-width:768px){
+  #mainContent{
       display: grid;
-      grid-template-columns:320px 1fr;
+      grid-template-columns:1fr 250px;
       gap: 1.5rem;
   }
   .col-list{
       position: sticky;
-      height: calc(100vh - 6rem);
+      height: calc(100vh - 10rem);
       top: 5rem;
   }
 }

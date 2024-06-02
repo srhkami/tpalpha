@@ -54,14 +54,16 @@
   --bs-danger-text-emphasis: #58151c;
   --bs-light-text-emphasis: #495057;
   --bs-dark-text-emphasis: #495057;
+  /* ↓背景-不顯眼的 */
   --bs-primary-bg-subtle: #d6e4fe;
   --bs-secondary-bg-subtle: #e2e3e5;
   --bs-success-bg-subtle: #d2eede;
-  --bs-info-bg-subtle: #d8f4fc;
+  --bs-info-bg-subtle: #88c7fce0; /* 用在選單上 */
   --bs-warning-bg-subtle: #fff9d0;
   --bs-danger-bg-subtle: #f8d7da;
-  --bs-light-bg-subtle: #fcfcfd;
+  --bs-light-bg-subtle: #fcfcfd; /* 用在卡片上 */
   --bs-dark-bg-subtle: #ced4da;
+  /* ↑ */
   --bs-primary-border-subtle: #adc9fd;
   --bs-secondary-border-subtle: #c4c8cb;
   --bs-success-border-subtle: #a5dcbd;
@@ -81,8 +83,9 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: #F5F5F5;
-  --bs-body-bg-rgb: 245, 245, 245;
+  /* 亮色主題底色 */
+  --bs-body-bg: rgb(225, 240, 255);
+  --bs-body-bg-rgb: 225, 240, 255;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-secondary-color: rgba(33, 37, 41, 0.75);
@@ -130,8 +133,9 @@
   color-scheme: dark;
   --bs-body-color: #dee2e6;
   --bs-body-color-rgb: 222, 226, 230;
-  --bs-body-bg: #212529;
-  --bs-body-bg-rgb: 33, 37, 41;
+  /* 暗色主題底色 */
+  --bs-body-bg: rgb(50, 50, 55);
+  --bs-body-bg-rgb: 50, 50, 55;
   --bs-emphasis-color: #fff;
   --bs-emphasis-color-rgb: 255, 255, 255;
   --bs-secondary-color: rgba(222, 226, 230, 0.75);
@@ -150,14 +154,16 @@
   --bs-danger-text-emphasis: #ea868f;
   --bs-light-text-emphasis: #f8f9fa;
   --bs-dark-text-emphasis: #dee2e6;
-  --bs-primary-bg-subtle: #0a1832;
-  --bs-secondary-bg-subtle: #161719;
+  /* ↓背景-不顯眼的 */
+  --bs-primary-bg-subtle: #03235f60; 
+  --bs-secondary-bg-subtle: #202028; 
   --bs-success-bg-subtle: #062212;
-  --bs-info-bg-subtle: #0c2830;
+  --bs-info-bg-subtle: #464646; /* 用在主選單上 */
   --bs-warning-bg-subtle: #332d04;
   --bs-danger-bg-subtle: #2c0b0e;
-  --bs-light-bg-subtle: #343a40;
+  --bs-light-bg-subtle: #29333d; /* 用在卡片上 */
   --bs-dark-bg-subtle: #1a1d20;
+  /* ↑ */
   --bs-primary-border-subtle: #1e4896;
   --bs-secondary-border-subtle: #41464b;
   --bs-success-border-subtle: #136536;
@@ -6247,7 +6253,7 @@ textarea.form-control-lg {
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
   --bs-offcanvas-zindex: 1045;
   --bs-offcanvas-width: 300px;
-  --bs-offcanvas-height: 30vh;
+  --bs-offcanvas-height: 80vh;
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: 1rem;
   --bs-offcanvas-color: var(--bs-body-color);

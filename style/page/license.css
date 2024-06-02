@@ -12,10 +12,10 @@ a,a:link, a:visited,a:hover{
 /* #bk_right::-webkit-scrollbar{
     display: none;
 } */
-@media (min-width:992px){
+@media (min-width:768px){
     #mainContent{
         display: grid;
-        grid-template-columns: 400px 1fr;
+        grid-template-columns: 380px 1fr;
         grid-template-rows:  99% 1%;
         grid-column-gap: 16px;
     }

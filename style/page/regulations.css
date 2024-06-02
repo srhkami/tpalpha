@@ -1,14 +1,13 @@
-@media (min-width:992px){
-    #layout{
+@media (min-width:768px){
+    #mainContent{
         display: grid;
-        grid-template-columns:320px 1fr;
+        grid-template-columns:1fr 250px;
         gap: 1.5rem;
     }
     .col-list{
         position: sticky;
-        height: calc(100vh - 6rem);
+        height: calc(100vh - 10rem);
         top: 5rem;
-        border-radius: 10px;
     }
 }
 
@@ -17,9 +16,9 @@
     /* list-groud因不明原因導致下方被遮擋，暫時透過此設定解決 */
     padding-bottom: 55px;
 }
-#list-article::-webkit-scrollbar{
+/* #list-article::-webkit-scrollbar{
     display: none;
-}
+} */
 .list-article-no{
     width: 6em;
     padding-left: 0.25em;
@@ -29,10 +28,18 @@
 }
 .list-article-title{
     width: 15em;
-    font-size: 13px;
+    font-size: 12px;
 }
 .div_icon_page{
     width: 120px;
+}
+@media (min-width:768px){
+    .list-article-no{
+        font-size: 12px;
+    }
+    .list-article-title{
+        font-size: 10px;
+    }
 }
 
 
