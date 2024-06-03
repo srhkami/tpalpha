@@ -59,37 +59,85 @@ const headerHtml = `
   </div>
 `;
 
+// 函式：讀取側邊欄設定
+function loadSidebar(no){
+  let sidebarOption = [0,1,1,0]
+  if (localStorage.getItem('sidebar')) {
+    sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
+  }
+  else{
+    localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
+  }
+  if (sidebarOption[no] == 1){
+    return(['','show'])
+  }
+  else{
+    return(['collapsed',''])
+  }
+}
+// 函式：儲存側邊欄設定
+function saveSidebar(){
+  $('.menu-item').click((e)=>{
+    let sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
+    console.log(e.target.className);
+    console.log(e.target.dataset.menuNo);
+    if (e.target.className.includes('collapsed')){
+      sidebarOption[e.target.dataset.menuNo] = 0;
+    }
+    else{
+      sidebarOption[e.target.dataset.menuNo] = 1;
+    }
+    console.log(sidebarOption);
+    localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
+  })
+}
+
+// 函式：讀取書籤
+function loadBookmark(){
+  let bookmarkOption;
+  let bookmarkHtml;
+  if (localStorage.getItem('bookmark')) {
+    bookmarkOption = JSON.parse(localStorage.getItem('bookmark'));
+  }
+  else{
+    bookmarkHtml =`
+    <li>
+      <a class="list-group-item py-1" href="#">
+        <img class="i-15 me-1" src="../icons/icon_setting.png" alt="">
+        設定書籤
+      </a>
+    </li>
+    `;
+  }
+  return bookmarkHtml
+}
+
 // 側邊欄
   // 預設關閉的在a加上.collapsed，預設打開的在div加上.show
 const asideHtml = `
   <div id="menuBookmark" class="p-1 mb-2 border-start border-3 border-primary">
-    <a class="menu-item dropdown-item d-flex mb-1 collapsed" data-menu="menuBookmark" data-bs-toggle="collapse" href="#collapseExample" role="button">
+    <a class="menu-item dropdown-item d-flex mb-1 ${loadSidebar(0)[0]}" data-menu-no="0" data-bs-toggle="collapse" href="#collapseExample" role="button">
       <img class="i-15 me-1" src="../icons/icon_bookmark.png" alt="">
       <span>書籤</span>
       <svg class="anime-icon i-10 ms-auto my-auto" fill="#5A96FA">
         <use xlink:href="../icons/bootstrap-icons.svg#chevron-right"></use>
       </svg>
     </a>
-    <div class="collapse" id="collapseExample">
+    <div class="collapse ${loadSidebar(0)[1]}" id="collapseExample">
       <ul class="m-0" style="list-style-type:none">
-        <li>
-          <a class="list-group-item py-1" href="#">
-            <img class="i-15 me-1" src="../icons/icon_setting.png" alt="">
-            設定書籤
-          </a>
-        </li>
+        ${loadBookmark()}
       </ul>
     </div>
   </div>
   <div id="menu1" class="p-1 my-2 border-start border-3 border-primary">
-    <a class="menu-item dropdown-item d-flex mb-1 collapsed" data-menu="menu1" data-bs-toggle="collapse" href="#collapseExample1" role="button">
+    <a class="menu-item dropdown-item d-flex mb-1 ${loadSidebar(1)[0]}" data-menu-no="1"  data-bs-toggle="collapse" href="#collapseExample1" role="button">
       <img class="i-15 me-1" src="../icons/icon_highWay.png" alt="">
       <span>交通法規</span>
       <svg class="anime-icon i-10 ms-auto my-auto" fill="#5A96FA">
         <use xlink:href="../icons/bootstrap-icons.svg#chevron-right"></use>
       </svg>
     </a>
-    <div class="collapse" id="collapseExample1">
+    <div class="collapse ${loadSidebar(1)[1]}" id="collapseExample1">
       <ul class="m-0" style="list-style-type:none">
         <li>
           <a class="list-group-item py-1" href="..${pages.PH.href}">
@@ -105,13 +153,13 @@ const asideHtml = `
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.DR.href}">
-            <img class="i-15 me-1" src="${pages.DR.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.DR.icon}" alt="">
             ${pages.DR.title}
           </a>
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.ML.href}">
-            <img class="i-15 me-1" src="${pages.ML.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.ML.icon}" alt="">
             ${pages.ML.title}
           </a>
         </li>
@@ -120,13 +168,13 @@ const asideHtml = `
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.TA.href}">
-            <img class="i-15 me-1" src="${pages.TA.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.TA.icon}" alt="">
             ${pages.TA.title}
           </a>
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.VS.href}">
-            <img class="i-15 me-1" src="${pages.VS.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.VS.icon}" alt="">
             ${pages.VS.title}
           </a>
         </li>
@@ -134,7 +182,7 @@ const asideHtml = `
     </div>
   </div>
   <div id="menu2" class="p-1 my-2 border-start border-3 border-primary">
-    <a class="menu-item dropdown-item d-flex mb-1 collapsed" data-menu="menu2" data-bs-toggle="collapse" href="#collapseExample2"
+    <a class="menu-item dropdown-item d-flex mb-1 ${loadSidebar(2)[0]}" data-menu-no="2" data-bs-toggle="collapse" href="#collapseExample2"
     role="button">
       <img class="i-15 me-1" src="../icons/icon_quickSearch.png" alt="">
       <span>違規取締</span>
@@ -142,23 +190,23 @@ const asideHtml = `
         <use xlink:href="../icons/bootstrap-icons.svg#chevron-right"></use>
       </svg>
     </a>
-    <div class="collapse mt-1" id="collapseExample2">
+    <div class="collapse ${loadSidebar(2)[1]}" id="collapseExample2">
       <ul class="m-0" style="list-style-type:none">
         <li>
           <a class="list-group-item py-1" href="..${pages.DL.href}">
-            <img class="i-15 me-1" src="${pages.DL.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.DL.icon}" alt="">
             ${pages.DL.title}
           </a>
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.CL.href}">
-            <img class="i-15 me-1" src="${pages.CL.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.CL.icon}" alt="">
             ${pages.CL.title}
           </a>
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.overload.href}">
-            <img class="i-15 me-1" src="${pages.overload.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.overload.icon}" alt="">
             ${pages.overload.title}
           </a>
         </li>
@@ -167,7 +215,7 @@ const asideHtml = `
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.keypoint.href}">
-            <img class="i-15 me-1" src="${pages.keypoint.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.keypoint.icon}" alt="">
             ${pages.keypoint.title}
           </a>
         </li>
@@ -175,24 +223,24 @@ const asideHtml = `
     </div>
   </div>
   <div id="menu3" class="p-1 my-2 border-start border-3 border-primary">
-    <a class="menu-item dropdown-item d-flex mb-1 collapsed" data-menu="menu3" data-bs-toggle="collapse" href="#collapseExample3" role="button">
+    <a class="menu-item dropdown-item d-flex mb-1 ${loadSidebar(3)[0]}" data-menu-no="3" data-bs-toggle="collapse" href="#collapseExample3" role="button">
       <img class="i-15 me-1" src="../icons/icon_law_2.png" alt="">
       <span>警察法規</span>
       <svg class="anime-icon i-10 ms-auto my-auto" fill="#5A96FA">
         <use xlink:href="../icons/bootstrap-icons.svg#chevron-right"></use>
       </svg>
     </a>
-    <div class="collapse" id="collapseExample3">
+    <div class="collapse ${loadSidebar(3)[1]}" id="collapseExample3">
       <ul class="m-0" style="list-style-type:none">
         <li>
           <a class="list-group-item py-1" href="..${pages.PA.href}">
-            <img class="i-15 me-1" src="${pages.PA.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.PA.icon}" alt="">
             ${pages.PA.title}
           </a>
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.PW.href}">
-            <img class="i-15 me-1" src="${pages.PW.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.PW.icon}" alt="">
             ${pages.PW.title}
           </a>
         </li>
@@ -201,19 +249,19 @@ const asideHtml = `
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.CC.href}">
-            <img class="i-15 me-1" src="${pages.CC.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.CC.icon}" alt="">
             ${pages.CC.title}
           </a>
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.CP.href}">
-            <img class="i-15 me-1" src="${pages.CP.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.CP.icon}" alt="">
             ${pages.CP.title}
           </a>
         </li>
         <li>
           <a class="list-group-item py-1" href="..${pages.SO.href}">
-            <img class="i-15 me-1" src="${pages.SO.icon}" alt="">
+            <img class="i-15 me-1" src="..${pages.SO.icon}" alt="">
             ${pages.SO.title}
           </a>
         </li>
@@ -222,13 +270,13 @@ const asideHtml = `
   </div>
   <div class="p-1 my-2 border-start border-3 border-primary">
     <a class="menu-item dropdown-item d-flex mb-1" href="..${pages.feedback.href}">
-      <img class="i-15 me-1" src="${pages.feedback.icon}" alt="">
+      <img class="i-15 me-1" src="..${pages.feedback.icon}" alt="">
       <span>${pages.feedback.title}</span>
     </a>
   </div>
   <div class="p-1 my-1 border-start border-3 border-primary">
     <a class="dropdown-item d-flex mb-1" href="..${pages.about.href}">
-      <img class="i-15 me-1" src="${pages.about.icon}" alt="">
+      <img class="i-15 me-1" src="..${pages.about.icon}" alt="">
       <span>${pages.about.title}</span>
     </a>
     </div>
@@ -252,22 +300,8 @@ const licenseHtml =`
   </div>
 `
 
-// 函式：讀取側邊欄設定
-function sidebarLoad(){
-  if (localStorage.getItem('sidebar')) {
-    let sidebarOption = JSON.parse(localStorage.getItem('qk_options'));
-  }
-}
-// 函式：儲存側邊欄設定
-function sidebarSave(){
-  $('.menu-item').click((e)=>{
-    console.log(e.target.className);
-    console.log(e.target.dataset.menu);
-    // if (!e.target.className.includes('collapsed')){
-    //   console.log('無')
-    // }
-  })
-}
+
+
 
 
 // 函示：日期個位數加上0
@@ -311,7 +345,7 @@ else{
 $('#websiteLicense').html(licenseHtml);
 $(document).ready(()=>{
   date_calculate();
-  sidebarSave();
+  saveSidebar();
   //偵測側邊欄點擊
   $("#sidebar .btn-close").click(() => {
     setTimeout(() => $('.offcanvas-start').offcanvas('hide'), 50)
