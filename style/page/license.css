@@ -1,24 +1,16 @@
-a,a:link, a:visited,a:hover{
-    text-decoration: none;
-}
-
-#mainContent{
-    display: flex;
-    flex-direction: column;
-}
-#bk_left{
-    max-width: 400px;
-}
-/* #bk_right::-webkit-scrollbar{
-    display: none;
-} */
 @media (min-width:768px){
-    #mainContent{
+    #licenseLayout{
         display: grid;
         grid-template-columns: 380px 1fr;
-        grid-template-rows:  99% 1%;
         grid-column-gap: 16px;
     }
+    #licenseLayout .card{
+        height: 75vh;
+    }
+}
+
+a,a:link, a:visited,a:hover{
+    text-decoration: none;
 }
 
 .comment_text{
@@ -27,11 +19,6 @@ a,a:link, a:visited,a:hover{
     line-height: 1.5;
     text-indent: -2rem;
     margin-left: 3rem;
-}
-
-.icon_text{
-    width: 24px;
-    vertical-align: middle;
 }
 
 

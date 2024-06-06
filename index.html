@@ -11,13 +11,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <link href="./style/base/bootstrap.css" rel="stylesheet">
-  <script src="./script/base/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
+  <script src="./script/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="./style/base/general.css" />
   <link rel="stylesheet" href="./style/page/index.css" />
   <script type='module' src='./script/base/nav.js'></script>
   <script type='module' src='./script/base/searchArea.js'></script>
-  <!-- <script type='module' src="./script/base/info.js"></script> -->
+  <script type='module' src="./script/base/info.js"></script>
 </head>
 
 <body>
@@ -35,15 +35,7 @@
   <!-- 主區域 -->
   <main class="container-xl d-flex">
     <!-- 側邊選單 -->
-    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <!-- 主選單清單 -->
-      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
-      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
-    </aside>
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2"></aside>
     <div id="mainContent">
       <div class="row g-3">
         <div class="col-12">
@@ -83,21 +75,7 @@
           <div class="card bg-light-subtle shadow-lg rounded-3">
             <h4 class="card-header text-center text-primary fw-bolder">最新消息</h4>
             <div class="card-body">
-              <p class="text-body fs-6 fw-semibold mx-4" id="notice">
-                v1.13 更新重點：
-              <ul>
-                <li>加入「意見回饋」頁面，<span class="text-danger">歡迎各位學長姐踴躍投稿文章！</span></li>
-                <li>「法規」增加了章節顯示。</li>
-                <li>「關於」增加了Android手機版下載功能。</li>
-              </ul>
-              <button type="button" id="showUpdate" class="btn btn-outline-secondary ms-3 mb-3" data-bs-toggle="modal"
-                data-bs-target="#popUpArea">查看更新日誌</button>
-              <br>已知問題：
-              <ul>
-                <li>附件連結至全國法規資料庫，在首次點擊時總會失效。</li>
-                <li>使用內網瀏覽設置規則圖片可能無法顯示。</li>
-              </ul>
-              </p>
+              <p class="text-body fs-6 fw-semibold mx-4" id="notice"></p>
             </div>
           </div>
         </div>
@@ -105,39 +83,13 @@
           <div class="card bg-light-subtle shadow-lg rounded-3">
             <h4 class="card-header text-center text-primary fw-bolder">推廣訊息</h4>
             <div class="card-body">
-              <p class="text-body fs-6 fw-semibold mx-4" id="future">
-                這是一個，以交通為志趣的小小警員，
-                <br>所架設的簡易網站，
-                <br>目標是整理所有與交通執法、交通安全有關的資訊，
-                <br>成為各位學長姐工作上的最佳幫手。
-                <br>
-                <br>如果剛好幫助到你，
-                <br>歡迎向更多人分享推廣！
-                <br>如果你也是在交通路上默默耕耘的鬥士，
-                <br>也請不吝賜教，幫助這裡變得更好！
-                <br>
-                <br>若有任何問題或寶貴意見，
-                <br>歡迎使用選單中「更多→意見回饋」讓我知道。
-              </p>
+              <p class="text-body fs-6 fw-semibold mx-4" id="future"></p>
             </div>
           </div>
         </div>
       </div>
-
-
       <!-- 底部聲明 -->
-      <div id="websiteLicense" class="col-12 d-flex">
-        <div id="webLicense" class="mx-auto">
-          <p class="text-secondary text-center" style="font-size:12px;">
-            Copyright © 2023 C.K.SAI All Rights Reserved
-            <br>
-            免責聲明：
-            <br>
-            「交通鴿手」之內容無法保證完全無誤，在參照本網站內容作為執勤用途前(如舉發違規、回覆申訴)，務必再次確認是否符合要件，或先洽詢該管交通組、監理裁決單位。
-          </p>
-
-        </div>
-      </div>
+      <div id="websiteLicense" class="d-flex"></div>
     </div>
   </main>
 </body>

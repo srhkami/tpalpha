@@ -93,6 +93,6 @@ nav {
   }
 }
 
-#menuList::-webkit-scrollbar {
+#pageMenu::-webkit-scrollbar {
   display: none;
 }
