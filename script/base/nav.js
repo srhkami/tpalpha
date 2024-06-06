@@ -205,6 +205,12 @@ const asideHtml = `
       <div class="collapse ${loadSidebar(2)[1]}" id="collapseExample2">
         <ul class="m-0" style="list-style-type:none">
           <li>
+            <a class="list-group-item py-1" href="..${pages.codeSearch.href}">
+              <img class="i-15 me-1" src="..${pages.codeSearch.icon}" alt="">
+              ${pages.codeSearch.title}
+            </a>
+          </li>
+          <li>
             <a class="list-group-item py-1" href="..${pages.DL.href}">
               <img class="i-15 me-1" src="..${pages.DL.icon}" alt="">
               ${pages.DL.title}

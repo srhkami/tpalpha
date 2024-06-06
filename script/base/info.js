@@ -28,7 +28,8 @@ const notice = `
 const updataText = `
   <h5 class="text-primary">※ 1.14：</h5>
   <ul>
-    <li class="text-success">更新了整體顯示佈局。</li>
+    <li class="text-info">更新了整體顯示佈局，選單列移至側邊。</li>
+    <li class="text-info">增加「書籤」功能，取代原本「快速導航」功能。</li>
   </ul>
   <h5 class="text-primary">※ 1.13：</h5>
   <ul>
