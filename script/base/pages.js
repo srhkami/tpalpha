@@ -104,13 +104,22 @@ export const pages = {
     '/pages/regulations.html?rg=PW',
     list_PW
   ),
-
+  codeSearch: new Page(
+    'PAGE',
+    'codeSearch',
+    '違規代碼查詢',
+    '違規代碼查詢',
+    '',
+    '/icons/icon_windowSearch.png',
+    '/pages/codeSearch.html',
+    ''
+  ),
   DL: new Page(
     'PAGE',
     'DL',
     '駕照違規速查',
     '駕照違規速查',
-    '民國 113 年 04 月 08 日',
+    '',
     '/icons/icon_DL.png',
     '/pages/driveLicense.html',
     ''
@@ -120,7 +129,7 @@ export const pages = {
     'CL',
     '牌照違規速查',
     '牌照違規速查',
-    '民國 113 年 04 月 08 日',
+    '',
     '/icons/icon_CL.png',
     '/pages/carLicense.html',
     ''
