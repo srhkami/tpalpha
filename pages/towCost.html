@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <link href="../style/base/bootstrap.css" rel="stylesheet">
-  <script src="../script/base/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
+  <script src="../script/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/license.css" />
@@ -35,94 +35,88 @@
   </div>
   <main class="container-xl d-flex">
     <!-- 側邊選單 -->
-    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <!-- 主選單清單 -->
-      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
-      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
-    </aside>
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2"></aside>
     <div id="mainContent" class="px-3 py-3">
-      <div class="card bg-light-subtle shadow-lg">
-        <div class="card-header">
+      <div id="licenseLayout">
+        <div class="card bg-light-subtle shadow-lg">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                <img src="../icons/icon_estimate.png" alt="" width="50" class="me-3">
+                <h3 class="d-inline my-auto">移置保管費計算機</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row align-items-center g-3 m-0">
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="datetime-local" class="form-control" id="inTime" placeholder="核定總重">
+                  <label for="approvedWeight">入場時間</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="datetime-local" class="form-control" id="outTime" placeholder="裝載總重">
+                  <label for="realWeight">領回時間</label>
+                </div>
+              </div>
+              <div class="col-8">
+                <select class="form-select form-select-lg" name="carType" id="carType">
+                  <option value="none">請選擇車種</option>
+                  <option value="bike">機車(含微電車)</option>
+                  <option value="smallCar">小型車</option>
+                  <option value="bigCar">大型車</option>
+                </select>
+              </div>
+              <div class="col-4 d-flex">
+                <div class="form-check m-auto">
+                  <input class="form-check-input i-15 me-2" type="checkbox" value="" id="isTow" checked>
+                  <label class="form-check-label fs-4" for="isTow">
+                    拖吊
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3 m-0">
+              <div class="col-12">
+                <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="output" class="d-flex flex-column m-2 p-3">
           <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-              <img src="../icons/icon_estimate.png" alt="" width="50" class="me-3">
-              <h3 class="d-inline my-auto">移置保管費計算機</h3>
+            <div class="col-12">
+              <h4 id="output" class="text-primary fw-semibold mb-3">
+                共　日；
+                <br>
+                移置費　元，
+                <br>
+                保管費　元，
+                <br>
+                共計　元。
+              </h4>
             </div>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="row align-items-center g-3 m-0">
+          <hr>
+          <div class="row">
             <div class="col-12">
-              <div class="form-floating">
-                <input type="datetime-local" class="form-control" id="inTime" placeholder="核定總重">
-                <label for="approvedWeight">入場時間</label>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-floating">
-                <input type="datetime-local" class="form-control" id="outTime" placeholder="裝載總重">
-                <label for="realWeight">領回時間</label>
-              </div>
-            </div>
-            <div class="col-8">
-              <select class="form-select form-select-lg" name="carType" id="carType">
-                <option value="none">請選擇車種</option>
-                <option value="bike">機車(含微電車)</option>
-                <option value="smallCar">小型車</option>
-                <option value="bigCar">大型車</option>
-              </select>
-            </div>
-            <div class="col-4 d-flex">
-              <div class="form-check m-auto">
-                <input class="form-check-input i-15 me-2" type="checkbox" value="" id="isTow" checked>
-                <label class="form-check-label fs-4" for="isTow">
-                  拖吊
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row g-3 m-0">
-            <div class="col-12">
-              <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+              <h5 class="text-primary fw-semibold mb-3">※ 備註： </h5>
+              <p>一、依據：<a
+                  href="https://www.rootlaw.com.tw/LawArticle.aspx?LawID=B140140000000400-0900307">嘉義縣處理妨害交通車輛自治條例</a>。
+              </p>
+              <p>二、拖離後一小時內領車者，不予計收。</p>
+              <p>三、保管費之計算，未滿一日者，以一日計算。</p>
+              <p>四、大寫數字：壹、貳、參、肆、伍、陸、柒、捌、玖、零。</p>
             </div>
           </div>
         </div>
       </div>
-      <div id="outpt" class="d-flex flex-column rounded-3 m-2 p-3 border border-3">
-        <div class="row">
-          <div class="col-12">
-            <h4 id="output" class="text-primary fw-semibold mb-3">
-              共　日；
-              <br>
-              移置費　元，
-              <br>
-              保管費　元，
-              <br>
-              共計　元。
-            </h4>
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-12">
-            <h5 class="text-primary fw-semibold mb-3">※ 備註： </h5>
-            <p>一、依據：<a
-                href="https://www.rootlaw.com.tw/LawArticle.aspx?LawID=B140140000000400-0900307">嘉義縣處理妨害交通車輛自治條例</a>。
-            </p>
-            <p>二、拖離後一小時內領車者，不予計收。</p>
-            <p>三、保管費之計算，未滿一日者，以一日計算。</p>
-            <p>四、大寫數字：壹、貳、參、肆、伍、陸、柒、捌、玖、零。</p>
-          </div>
-        </div>
-      </div>
+      <!-- 底部聲明 -->
+      <div id="websiteLicense" class="d-flex"></div>
     </div>
   </main>
-  <!-- 底部聲明 -->
-  <div id="websiteLicense" class="d-flex"></div>
 </body>
 
 </html>

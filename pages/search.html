@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <link href="../style/base/bootstrap.css" rel="stylesheet">
-  <script src="../script/base/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
+  <script src="../script/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/regulations.css" />
@@ -53,15 +53,7 @@
   <!-- 主區域 -->
   <main class="container-lg d-flex">
     <!-- 側邊選單 -->
-    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <!-- 主選單清單 -->
-      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
-      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
-    </aside>
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2"></aside>
     <div id="mainContent" class="py-3">
       <!-- 法條內文 -->
       <div class="col px-1">
@@ -130,11 +122,10 @@
           </a>
         </div>
       </aside>
+      <!-- 底部聲明 -->
+      <div id="websiteLicense" class="d-flex"></div>
     </div>
-
   </main>
-  <!-- 底部聲明 -->
-  <div id="websiteLicense" class="d-flex"></div>
   <!-- 手機板顯示底欄 -->
   <div class="sticky-bottom row d-lg-none ps-4 w-100" style="bottom: 0.75rem;">
     <label id="label_switch" for="switch-sidebar" class="d-flex bg-contrast rounded-3 align-items-center ">

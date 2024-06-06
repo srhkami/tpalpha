@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <link href="../style/base/bootstrap.css" rel="stylesheet">
-  <script src="../script/base/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
+  <script src="../script/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/keypoint.css">
@@ -35,101 +35,79 @@
   </div>
   <main class="container-xl d-flex">
     <!-- 側邊選單 -->
-    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">選單</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <!-- 主選單清單 -->
-      <!-- 預設關閉的在a加上.collapsed，預設打開的在div加上.show -->
-      <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto"></div>
-    </aside>
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2"></aside>
     <div id="mainContent" class="container-sm py-3">
-      <!-- <div id="layout" class="row"> -->
-
-        <div class="col px-3">
-          <!-- 手機模式顯示之伸縮清單 -->
-          <div class="accordion d-md-none mb-3" id="accordionEssay">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <img class="me-2" src="../icons/icon_menu_2.png" alt="" width="25">
-                  文章列表
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body col-list w-100 p-0 h-100">
-                  <div class="list-group rounded-0 ">
-                  </div>
+      <div class="col px-3">
+        <!-- 手機模式顯示之伸縮清單 -->
+        <div class="accordion d-md-none mb-3" id="accordionEssay">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <img class="me-2" src="../icons/icon_menu_2.png" alt="" width="25">
+                文章列表
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body col-list w-100 p-0 h-100">
+                <div class="list-group rounded-0 ">
                 </div>
               </div>
-            </div>
-          </div>
-          <!-- 項目內文 -->
-          <div id="item_output" data-bs-spy="scroll" data-bs-target="#list_article" data-bs-smooth-scroll="true"
-            class="scrollspy-example" tabindex="0">
-            <!-- 標題卡片 -->
-            <div class="card rounded-3 shadow" aria-hidden="true">
-              <div class="row mx-0">
-                <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
-                  <img src="../icons/icon_policeFine.png" class="card-img-right ps-3 " alt="..." width="90">
-                </div>
-                <div class="col p-0">
-                  <div class="card-body">
-                    <h2 class="card-title placeholder-glow">
-                      違規舉發要點
-                    </h2>
-                    <p class="card-text placeholder-glow">
-                      資料來源：「鴿來告訴你交通怎麼做」群組
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 主文 -->
-            <div id="mainText" class="my-3 px-3 border-start border-primary border-3">
-              <h4 class="mt-4 mb-3">這裡有什麼？</h4>
-              <p>
-                這裡是群組內各方大神，整理相關法規函式，並結合自身取締違規之經驗，所整理出來的要點、心得。
-                <br>
-                若發現文章內容有任何錯誤，或有意加入群組，
-                請至<a href="../pages/feedback.html">意見回饋</a>。
-              </p>
-              <p>
-                <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-38"></a>
-                ※ 請點擊文章列表開始瀏覽 ※
-              </p>
             </div>
           </div>
         </div>
-        <!-- 項目清單 -->
-        <aside class="col-list d-none d-md-block overflow-hidden pe-5">
-          <div class="d-none d-md-flex ">
-            <svg class="anime-icon i-12 ms-2 my-auto" fill="#5A96FA">
-              <use xlink:href="../icons/bootstrap-icons.svg#list-ul"></use>
-            </svg>
-            <h5 class="my-3 ms-2">文章列表</h5>
+        <!-- 項目內文 -->
+        <div id="item_output" data-bs-spy="scroll" data-bs-target="#list_article" data-bs-smooth-scroll="true"
+          class="scrollspy-example" tabindex="0">
+          <!-- 標題卡片 -->
+          <div class="card rounded-3 shadow" aria-hidden="true">
+            <div class="row mx-0">
+              <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
+                <img src="../icons/icon_policeFine.png" class="card-img-right ps-3 " alt="..." width="90">
+              </div>
+              <div class="col p-0">
+                <div class="card-body">
+                  <h2 class="card-title placeholder-glow">
+                    違規舉發要點
+                  </h2>
+                  <p class="card-text placeholder-glow">
+                    資料來源：「鴿來告訴你交通怎麼做」群組
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="list-group rounded-0">
+          <!-- 主文 -->
+          <div id="mainText" class="my-3 px-3 border-start border-primary border-3">
+            <h4 class="mt-4 mb-3">這裡有什麼？</h4>
+            <p>
+              這裡是群組內各方大神，整理相關法規函式，並結合自身取締違規之經驗，所整理出來的要點、心得。
+              <br>
+              若發現文章內容有任何錯誤，或有意加入群組，
+              請至<a href="../pages/feedback.html">意見回饋</a>。
+            </p>
+            <p>
+              <a href="#" class="showArticle" data-bs-toggle="modal" data-bs-target="#tipArea" data-rg="SR-38"></a>
+              ※ 請點擊文章列表開始瀏覽 ※
+            </p>
           </div>
-        </aside>
-      <!-- </div> -->
-
-      <!-- 手機板顯示底欄 -->
-      <!-- <div class="row d-lg-none position-absolute bottom-0 mb-2 px-4 w-100 ">
-        <label id="label_switch" for="switch-sidebar" class="d-flex bg-contrast rounded-3 align-items-center ">
-          <button id="switch-sidebar" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-            aria-controls="offcanvasExample">
-            <img src="../icons/icon_menu_2.png" alt="" width="25">
-          </button>
-          <h5 class="d-inline text-primary mb-0 ms-1">瀏覽所有條目</h5>
-        </label>
-      </div> -->
+        </div>
+      </div>
+      <!-- 項目清單 -->
+      <aside class="col-list d-none d-md-block overflow-hidden pe-5">
+        <div class="d-none d-md-flex ">
+          <svg class="anime-icon i-12 ms-2 my-auto" fill="#5A96FA">
+            <use xlink:href="../icons/bootstrap-icons.svg#list-ul"></use>
+          </svg>
+          <h5 class="my-3 ms-2">文章列表</h5>
+        </div>
+        <div class="list-group rounded-0">
+        </div>
+      </aside>
+      <!-- 底部聲明 -->
+      <div id="websiteLicense" class="d-flex"></div>
     </div>
   </main>
-  <!-- 底部聲明 -->
-  <div id="websiteLicense" class="d-flex"></div>
 </body>
 
 </html>
