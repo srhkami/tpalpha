@@ -6,24 +6,23 @@
   <script src='../script/base/theme.js'></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>駕照違規速查 - 交通鴿手</title>
+  <title>違規代碼查詢 - 交通鴿手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <link href="../style/base/bootstrap.css" rel="stylesheet">
-  <script src="../script/base/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
+  <script src="../script/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
-  <link rel="stylesheet" href="../style/page/license.css" />
+  <link rel="stylesheet" href="../style/page/codeSearch.css" />
   <link rel="stylesheet" href="../style/base/showArticle.css" />
-  <script type='module' src='../script/base/header.js'></script>
+  <script type='module' src='../script/base/nav.js'></script>
   <script type='module' src='../script/base/searchArea.js'></script>
-  <script type='module' src='../script/page/driveLicense.js'></script>
-  <script type='module' src="../script/base/showArticle.js"></script>
+  <script type='module' src="../script/page/codeSearch.js"></script>
 </head>
 
 <body>
-  <nav id="pageHeader" class="sticky-top navbar navbar-expand-md bg-body-tertiary"></nav>
+  <nav id="pageHeader" class="sticky-top navbar navbar-expand-lg bg-body"></nav>
   <!-- 彈出視窗 -->
   <div id="popUp">
     <!-- 搜尋 -->
@@ -33,70 +32,115 @@
       <div class="modal-dialog modal-dialog-scrollable"></div>
     </div>
   </div>
-  <main class="container-xl">
-    <div id="mainContent" class="px-3 py-3">
-      <div id="bk_left" class="container px-0">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <img src="../icons/icon_DL.png" alt="" width="50" class="me-3">
-            <h3 class="d-inline my-auto">違規代碼速查</h3>
-          </div>
-        </div>
-        <div class="row align-items-center g-3 m-0">
-          <div class="col-12">
-            <div class="form-floating">
-              <input type="text" class="form-control" id="keywordCode" placeholder="核定總重">
-              <label for="keywordCode">請輸入代碼或條目
-              </label>
+  <!-- 主區域 -->
+  <main class="container-xl d-flex">
+    <!-- 側邊選單 -->
+    <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2"></aside>
+    <div id="mainContent" class="py-3">
+      <div class="px-1">
+        <div id="article-text" data-bs-spy="scroll" data-bs-target="#list-article" data-bs-smooth-scroll="true"
+          class="scrollspy-example pb-2" tabindex="0">
+          <!-- 標題卡片-->
+          <div class="card rounded-3 shadow">
+            <div class="row mx-0">
+              <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
+                <img src="../icons/icon_windowSearch.png" class="card-img-right ps-3 " alt="..." width="90">
+              </div>
+              <div class="col p-0">
+                <div class="card-body">
+                  <h2 class="card-title placeholder-glow">
+                    違規代碼查詢
+                  </h2>
+                  <p class="card-text placeholder-glow">
+                    這裡可以查詢到違規代碼的罰鍰、特殊處罰及是否應到案。
+                    <br>※ 點擊搜尋結果顯示完整內容。
+                    <br>
+                      <svg class="col-2 i-12 p-0 my-auto" fill="#5A96FA">
+                        <use xlink:href="../icons/bootstrap-icons.svg#send-check-fill"></use>
+                      </svg>
+                      得郵繳　/　
+                      <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
+                        <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
+                      </svg>
+                      應到案
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row g-3 m-0">
-          <div class="col-12">
-            <button id="btn_ok" class="btn btn-primary w-100 mt-2 mb-3">查詢</button>
+          <!--主清單-->
+          <div id="itemList">
+            <a href="#output" data-bs-toggle="offcanvas">
+              <div class="card mt-2">
+                <div class="card-header d-flex">
+                  <h4 class="text-primary">1210101</h4>
+                  <span class="codeInfo ms-auto my-auto row">
+                    <span class="col-5 p-0 text-center">不分車種</span>
+                    <span class="col-5 p-0 text-center text-danger">$3600</span>
+                    <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
+                      <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
+                    </svg>
+                  </span>
+                  
+                </div>
+                <div class="card-body p-2">
+                  <h6 class="card-title">
+                    未領用牌照行駛
+                  </h6>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-      <div id="bk_right" class="d-flex flex-column rounded-3 m-2 p-3 border border-3">
-        <div class="accordion accordion-flush" id="code-30101005">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
-                <div class="col-6">30101005</div>
-                <div class="col-4 text-end">不分車種</div>
-                <div class="col-10">裝載整體物品有超重情形而未依規定路線行駛</div>
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Accordion Item #2
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Accordion Item #3
-              </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-            </div>
-          </div>
+      <div id="secondContent">
+        <div class="form-floating mb-4">
+          <input id="keyCode" class="form-control shadow-lg border-2" type="text" name="keyCode"placeholder="代碼搜尋">
+          <label for="floatingInput">代碼搜尋</label>
         </div>
+        <aside class="col-list overflow-hidden px-0 offcanvas-md offcanvas-top" tabindex="-1" id="output">
+          <div class="offcanvas-header">
+            <svg class="i-12 ms-2 my-auto" fill="#5A96FA">
+              <use xlink:href="../icons/bootstrap-icons.svg#layout-text-window-reverse"></use>
+            </svg>
+            <h4 class="my-auto ms-2 text-primary">1210101</h4>
+            <button type="button" class="btn-close"></button>
+          </div>
+          <div class="d-none d-md-flex">
+            <svg class="i-12 ms-2 my-auto" fill="#5A96FA">
+              <use xlink:href="../icons/bootstrap-icons.svg#layout-text-window-reverse"></use>
+            </svg>
+            <h4 class="my-3 ms-2 text-primary">1210101</h4>
+          </div>
+          <div>
+            <table class="table">
+              <tr>
+                <td colspan="2"><h5>未領用牌照行駛</h5></td>
+              </tr>
+              <tr>
+                <td>最低罰鍰</td>
+                <td>
+                  不分車種：3600
+                  <br>機車：2400
+                </td>
+              </tr>
+              <tr>
+                <td>到案</td>
+                <td>應到案</td>
+              </tr>
+              <tr>
+                <td>特殊處置</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </aside>
       </div>
+      <!-- 底部聲明 -->
+      <div id="websiteLicense" class="d-flex"></div>
     </div>
   </main>
-  <!-- 底部聲明 -->
-  <div id="websiteLicense" class="d-flex"></div>
+
 
 </body>
 
