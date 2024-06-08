@@ -92,15 +92,12 @@ function loadSidebar(no){
 function saveSidebar(){
   $('.menu-item').click((e)=>{
     let sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
-    console.log(e.target.className);
-    console.log(e.target.dataset.menuNo);
     if (e.target.className.includes('collapsed')){
       sidebarOption[e.target.dataset.menuNo] = 0;
     }
     else{
       sidebarOption[e.target.dataset.menuNo] = 1;
     }
-    console.log(sidebarOption);
     localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
   })
 }
@@ -130,7 +127,7 @@ function loadBookmark(){
 const asideHtml = `
   <div class="offcanvas-header ps-2 mb-2">
   <a class="navbar-brand d-flex fw-bolder" href="../index.html">
-    <img src="../icons/icon_trafficpigeon_2.png" alt="Logo" width="30" height="30" class="my-auto me-2">
+    <img src="../icons/icon_trafficpigeon.png" alt="Logo" width="30" height="30" class="my-auto me-2">
     <h4 class="offcanvas-title ms-1" id="offcanvasNavbarLabel">交通鴿手</h4>
   </a>
   <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>

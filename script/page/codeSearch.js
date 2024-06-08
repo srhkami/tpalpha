@@ -58,25 +58,9 @@ function searchStart(){
   })
 }
 
-// 函式：刷新輸出結果
-function showOutput(){
-  $('.showItem').click((e)=>{
-    e.preventDefault()
-    console.log(e);
-    // console.log(e.target.dataset.itemNo);
-    // let item = list_code[e.target.dataset.itemNo];
-    // console.log(item)
-    // $('#outputCode').html(item.code);
-    // $('#outputTitle').html(item.text);
-    // $('#outputText').html(item.checkExtra());
-  })
-}
-
-
 // 主程式
 refreshList(list_code);
 $(document).ready(() => {
   $('#keyCode-reset').click(()=>$('#keyCode').val(''))
   searchStart();
-  // showOutput();
 })

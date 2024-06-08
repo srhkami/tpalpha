@@ -29,7 +29,6 @@ class Item {
       let extra = this.extra;
       let html = '';
       let list = extra.split(',');
-      console.log(list)
       list.forEach((value) => {
         html += `${extraPinich[value]}`
       })
