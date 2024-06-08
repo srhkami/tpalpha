@@ -37,6 +37,7 @@
     <!-- 側邊選單 -->
     <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2"></aside>
     <div id="mainContent" class="py-3">
+      <!-- 主要內容 -->
       <div class="px-1">
         <div id="article-text" data-bs-spy="scroll" data-bs-target="#list-article" data-bs-smooth-scroll="true"
           class="scrollspy-example pb-2" tabindex="0">
@@ -52,94 +53,107 @@
                     違規代碼查詢
                   </h2>
                   <p class="card-text placeholder-glow">
-                    這裡可以查詢到違規代碼的罰鍰、特殊處罰及是否應到案。
-                    <br>※ 點擊搜尋結果顯示完整內容。
-                    <br>
-                      <svg class="col-2 i-12 p-0 my-auto" fill="#5A96FA">
-                        <use xlink:href="../icons/bootstrap-icons.svg#send-check-fill"></use>
-                      </svg>
-                      得郵繳　/　
-                      <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
-                        <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
-                      </svg>
-                      應到案
+                    這裡可以查詢到違規代碼、罰鍰、是否應到案以及特殊處罰。
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          <div class="card mt-2 d-md-none">
+            <div class="card-header">
+              圖例
+            </div>
+            <div class="card-body">
+              <div class="mb-2 ">
+                <span class="text-danger">$100</span> 表示該車種最低罰鍰
+              </div>
+              <div class="mb-2">
+                <svg class="col-2 i-12 p-0 my-auto me-2" fill="#5A96FA">
+                  <use xlink:href="../icons/bootstrap-icons.svg#send-check-fill"></use>
+                </svg>
+                表示得郵繳
+              </div>
+              <div class="mb-2">
+                <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
+                  <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
+                </svg>
+                表示應到案
+              </div>
+              <div>
+                <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
+                  <use xlink:href="../icons/bootstrap-icons.svg#exclamation-triangle"></use>
+                </svg>
+                表示特殊處罰
+              </div>
+            </div>
+          </div>
           <!--主清單-->
           <div id="itemList">
-            <a href="#output" data-bs-toggle="offcanvas">
-              <div class="card mt-2">
-                <div class="card-header d-flex">
-                  <h4 class="text-primary">1210101</h4>
-                  <span class="codeInfo ms-auto my-auto row">
-                    <span class="col-5 p-0 text-center">不分車種</span>
-                    <span class="col-5 p-0 text-center text-danger">$3600</span>
-                    <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
-                      <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
-                    </svg>
-                  </span>
-                </div>
-                <div class="card-body p-2">
-                  <h6 class="card-title">
-                    未領用牌照行駛
-                  </h6>
-                </div>
+            <div class="card mt-2">
+              <div class="card-header d-flex">
+                <h4 class="text-primary">1210101</h4>
+                <span class="codeInfo ms-auto my-auto row">
+                  <span class="col-5 p-0 text-center">不分車種</span>
+                  <span class="col-5 p-0 text-center text-danger">$3600</span>
+                  <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
+                    <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
+                  </svg>
+                </span>
               </div>
-            </a>
+              <div class="card-body p-2">
+                <h6 class="card-title">
+                  未領用牌照行駛
+                </h6>
+                <span class="d-flex">
+                  <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
+                    <use xlink:href="../icons/bootstrap-icons.svg#exclamation-lg"></use>
+                  </svg>
+                  <small>施以道安講習;行為人未滿18歲，監護人需同時參加</small>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div id="secondContent">
-        <div class="form-floating mb-4">
-          <input id="keyCode" class="form-control shadow-lg border-2" type="text" name="keyCode"placeholder="代碼搜尋">
-          <label for="floatingInput">代碼搜尋</label>
+      <div id="secondary">
+        <div id="searchInput" class="form-floating my-2 ">
+          <input id="keyCode" class="form-control shadow-lg border-2 bg-light-subtle" type="text" name="keyCode" placeholder="代碼搜尋">
+          <label for="keyCode">代碼搜尋</label>
         </div>
-        <aside class="overflow-hidden px-0 offcanvas-md offcanvas-top" tabindex="-1" id="output">
-          <div class="offcanvas-header">
-            <svg class="i-12 ms-2 my-auto" fill="#5A96FA">
-              <use xlink:href="../icons/bootstrap-icons.svg#layout-text-window-reverse"></use>
-            </svg>
-            <h4 class="my-auto ms-2 text-primary">1210101</h4>
-            <button type="button" class="btn-close"></button>
+        <div class="card d-none d-md-flex">
+          <div class="card-header">
+            圖例
           </div>
-          <div class="d-none d-md-flex">
-            <svg class="i-12 ms-2 my-auto" fill="#5A96FA">
-              <use xlink:href="../icons/bootstrap-icons.svg#layout-text-window-reverse"></use>
-            </svg>
-            <h4 class="my-3 ms-2 text-primary">1210101</h4>
+          <div class="card-body">
+            <div class="mb-2 ">
+              <span class="text-danger">$100</span> 表示該車種最低罰鍰
+            </div>
+            <div class="mb-2">
+              <svg class="col-2 i-12 p-0 my-auto me-2" fill="#5A96FA">
+                <use xlink:href="../icons/bootstrap-icons.svg#send-check-fill"></use>
+              </svg>
+              表示得郵繳
+            </div>
+            <div class="mb-2">
+              <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
+                <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
+              </svg>
+              表示應到案
+            </div>
+            <div>
+              <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
+                <use xlink:href="../icons/bootstrap-icons.svg#exclamation-triangle"></use>
+              </svg>
+              表示特殊處罰
+            </div>
           </div>
-          <div>
-            <table class="table">
-              <tr>
-                <td colspan="2"><h5>未領用牌照行駛</h5></td>
-              </tr>
-              <tr>
-                <td>最低罰鍰</td>
-                <td>
-                  不分車種：3600
-                  <br>機車：2400
-                </td>
-              </tr>
-              <tr>
-                <td>到案</td>
-                <td>應到案</td>
-              </tr>
-              <tr>
-                <td>特殊處置</td>
-                <td></td>
-              </tr>
-            </table>
-          </div>
-        </aside>
+        </div>
       </div>
+
       <!-- 底部聲明 -->
       <div id="websiteLicense" class="d-flex"></div>
     </div>
   </main>
-
 
 </body>
 
