@@ -2,7 +2,7 @@ import { pages } from './pages.js';
 import { list_kp } from '../list/kp_list.js'
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.14.0305`;
+const app_ver = `1.14.0812`;
 
 // 公告
 const notice = `
@@ -30,6 +30,7 @@ const updataText = `
   <ul>
     <li class="text-info">更新了整體顯示佈局，選單列移至側邊。</li>
     <li class="text-info">增加「書籤」功能，取代原本「快速導航」功能。</li>
+    <li class="text-info">加入「違規代碼查詢」頁面。</li>
   </ul>
   <h5 class="text-primary">※ 1.13：</h5>
   <ul>
@@ -96,15 +97,18 @@ const aboutThisWeb = `
 `;
 // 收錄法規
 function collectionRG() {
-  let html = '';
+  let html = '<ul class="ps-3">';
   Object.values(pages).forEach((value) => {
-    if (value.type == 'RG') {
+    if (value.type == '法規') {
       html += `
-        <h6 class="text-primary">◎ ${value.name}</h6>
-        <p class="">　修訂日期：${value.revision}</p>
+        <li>
+        <h6 class="text-primary">${value.name}</h6>
+        <p>修訂日期：${value.revision}</p>
+        </li>
       `
     }
   })
+  html += '</ul>'
   return html;
 }
 // 收錄文章

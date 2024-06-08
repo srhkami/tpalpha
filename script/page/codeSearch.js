@@ -5,7 +5,6 @@ function refreshList(list){
   let html = '';
   list.forEach((item)=>{
     html+=`
-      <a href="#output" data-bs-toggle="offcanvas">
         <div class="card mt-2">
           <div class="card-header d-flex">
             <h4 class="text-primary">${item.code}</h4>
@@ -19,9 +18,9 @@ function refreshList(list){
             <h6 class="card-title">
               ${item.text}
             </h6>
+            ${item.showExtra()}
           </div>
         </div>
-      </a>
     `
   });
   $('#itemList').html(html);
@@ -49,9 +48,9 @@ function svg(arrive){
 // 函式：搜尋
 function searchStart(){
   $('#keyCode').bind('input porpertychange',()=>{
-    let keyCode =  $('#keyCode').val();
+    let key =  $('#keyCode').val();
     let newList = list_code.filter((item)=>{
-      if(item.check(keyCode)==true){
+      if(item.hasKeyword(key)==true){
         return item;
       }
     });
@@ -59,9 +58,25 @@ function searchStart(){
   })
 }
 
+// 函式：刷新輸出結果
+function showOutput(){
+  $('.showItem').click((e)=>{
+    e.preventDefault()
+    console.log(e);
+    // console.log(e.target.dataset.itemNo);
+    // let item = list_code[e.target.dataset.itemNo];
+    // console.log(item)
+    // $('#outputCode').html(item.code);
+    // $('#outputTitle').html(item.text);
+    // $('#outputText').html(item.checkExtra());
+  })
+}
+
+
 // 主程式
 refreshList(list_code);
 $(document).ready(() => {
   $('#keyCode-reset').click(()=>$('#keyCode').val(''))
   searchStart();
+  // showOutput();
 })

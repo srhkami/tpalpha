@@ -4,17 +4,18 @@ import { pages } from "./pages.js";
 const headerHtml = `
   <div class="container-xl px-0">
     <!-- 展開側邊欄按鈕 -->
-    <button class="btn d-inline d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+    <button class="btn d-inline d-lg-none p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
       aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
+      <svg class="i-15" fill="#5A96FA">
+        <use xlink:href="../icons/bootstrap-icons.svg#list"></use>
+      </svg>
     </button>
     <a class="navbar-brand d-none d-lg-flex fw-bolder ms-3" href="../index.html">
-      <img src="../icons/icon_trafficpigeon_2.png" alt="Logo" width="30" height="30" class="my-auto me-2">
-      <span id="pageTitle">交通鴿手</span>
+      <img src="../icons/icon_trafficpigeon-Alpha.png" alt="Logo" width="30" height="30" class="my-auto me-2">
     </a>
-    <a class="navbar-brand fw-bolder ms-3" href="#">
-      處罰條例
-    </a>
+    <span class="h-100 d-flex">
+      <h4 id="pageTitle" class="my-auto fw-bolder">交通鴿手</h4>
+    </span>
     <!-- 主題切換按鈕 -->
     <div class="dropdown ms-auto">
       <button class="btn dropdown-toggle" id="bd-theme" type="button" aria-expanded="true" data-bs-toggle="dropdown"
@@ -62,6 +63,15 @@ const headerHtml = `
   </div>
 `;
 
+// 函式：取得頁面標題
+function getTitle(){
+  let title = $('title').html();
+  if (title.length >7){
+    title = title.substr(0, title.length-7);
+    $('#pageTitle').html(title);
+  }
+}
+
 // 函式：讀取側邊欄設定
 function loadSidebar(no){
   let sidebarOption = [0,1,1,0]
@@ -107,7 +117,7 @@ function loadBookmark(){
     <li>
       <a class="list-group-item py-1" href="#">
         <img class="i-15 me-1" src="../icons/icon_setting.png" alt="">
-        設定書籤
+        管理書籤
       </a>
     </li>
     `;
@@ -353,7 +363,7 @@ function date_calculate(){
 }
 
 // 主程式
-if ($('title').html() == '首頁 - 交通鴿手'){
+if ($('title').html() == '交通鴿手'){
   $('#pageHeader').html(headerHtml.replaceAll('..','.'));
   $('#sidebar').html(asideHtml.replaceAll('..','.'));
 }
@@ -363,6 +373,7 @@ else{
 }
 $('#websiteLicense').html(licenseHtml);
 $(document).ready(()=>{
+  getTitle();
   date_calculate();
   saveSidebar();
   //偵測側邊欄點擊
