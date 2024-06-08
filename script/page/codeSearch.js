@@ -9,8 +9,8 @@ function refreshList(list){
           <div class="card-header d-flex">
             <h4 class="text-primary">${item.code}</h4>
             <span class="codeInfo ms-auto my-auto row">
-              <span class="col-5 p-0 text-end">${carType[item.type]}</span>
-              <span class="col-5 p-0 text-center text-danger">$${item.fine}</span>
+              <span class="col-6 p-0 text-end">${carType[item.type]}</span>
+              <span class="col-4 p-0 text-center text-danger">$${item.fine}</span>
               ${svg(item.arrive)}
             </span>
           </div>
