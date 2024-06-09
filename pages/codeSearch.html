@@ -48,82 +48,49 @@
                 <img src="../icons/icon_windowSearch.png" class="card-img-right ps-3 " alt="..." width="90">
               </div>
               <div class="col p-0">
-                <div class="card-body">
+                <div class="card-body pb-1">
                   <h2 class="card-title placeholder-glow">
                     違規代碼查詢
                   </h2>
-                  <p class="card-text placeholder-glow">
-                    這裡可以查詢到違規代碼、罰鍰、是否應到案以及特殊處罰。
+                  <p class="card-text placeholder-glow mb-0">
+                    代碼表版本：1120628
                     <br>
                     協作者：<span class="text-info">張耀東 學長</span>
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card mt-2 d-md-none">
-            <div class="card-header">
-              <h5 class="text-primary m-0">圖例</h5>
-            </div>
-            <div class="card-body p-1">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item p-2 fs-6 m-0">
-                  <span class="text-danger">$100</span> 表示該車種最低罰鍰
-                </li>
-                <li class="list-group-item p-2 fs-6 m-0">
-                  <svg class="col-2 i-12 p-0 my-auto me-2" fill="#5A96FA">
-                    <use xlink:href="../icons/bootstrap-icons.svg#send-check-fill"></use>
-                  </svg>
-                  表示得郵繳
-                </li>
-                <li class="list-group-item p-2 fs-6 m-">
-                  <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
-                    <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
-                  </svg>
-                  表示應到案
-                </li>
-                <li class="list-group-item p-2 fs-6 m-">
-                  <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
-                    <use xlink:href="../icons/bootstrap-icons.svg#exclamation-triangle"></use>
-                  </svg>
-                  表示特殊處罰
-                </li>
-              </ul>
+            <hr class="m-1 d-md-none">
+            <div class="row px-3 mb-2 d-md-none">
+              <div class="col-6"><span class="text-danger">$100</span> ：最低罰鍰</div>
+              <div class="col-6"> <svg class="col-2 i-12 p-0 my-auto me-2" fill="#5A96FA">
+                  <use xlink:href="../icons/bootstrap-icons.svg#send-check-fill"></use>
+                </svg>
+                ：得郵繳</div>
+              <div class="col-6">
+                <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
+                  <use xlink:href="../icons/bootstrap-icons.svg#exclamation-triangle"></use>
+                </svg>
+                ：特殊處罰
+              </div>
+              <div class="col-6">
+                <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
+                  <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
+                </svg>
+                ：應到案
+              </div>
             </div>
           </div>
+
           <!--主清單-->
-          <div id="itemList">
-            <div class="card mt-2">
-              <div class="card-header d-flex">
-                <h4 class="text-primary">1210101</h4>
-                <span class="codeInfo ms-auto my-auto row">
-                  <span class="col-5 p-0 text-center">不分車種</span>
-                  <span class="col-5 p-0 text-center text-danger">$3600</span>
-                  <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
-                    <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
-                  </svg>
-                </span>
-              </div>
-              <div class="card-body p-2">
-                <h6 class="card-title">
-                  未領用牌照行駛
-                </h6>
-                <span class="d-flex">
-                  <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
-                    <use xlink:href="../icons/bootstrap-icons.svg#exclamation-lg"></use>
-                  </svg>
-                  <small>施以道安講習;行為人未滿18歲，監護人需同時參加</small>
-                </span>
-              </div>
-            </div>
-          </div>
+          <div id="itemList"></div>
         </div>
       </div>
       <div id="secondary">
         <div id="searchInput" class="form-floating my-2 ">
           <input id="keyCode" class="form-control shadow-lg border-2 bg-light-subtle" type="text" name="keyCode"
             placeholder="代碼搜尋">
-          <label for="keyCode">代碼搜尋</label>
+          <label for="keyCode">搜尋代碼或關鍵字</label>
         </div>
         <div class="card d-none d-md-flex">
           <div class="card-header">

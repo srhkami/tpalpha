@@ -6,7 +6,7 @@
   <script src='../script/base/theme.js'></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>關於 - 交通鴿手</title>
+  <title>設定及關於 - 交通鴿手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
@@ -14,9 +14,11 @@
   <script src="../script/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
+  <link rel="stylesheet" href="../style/page/regulations.css">
   <script type='module' src='../script/base/nav.js'></script>
   <script type='module' src='../script/base/searchArea.js'></script>
-  <script type='module' src="../script/base/info.js"></script>
+  <script type='module' src='../script/page/about.js'></script>
+  <script type='module' src='../script/base/info.js'></script>
 </head>
 
 <body>
@@ -27,103 +29,272 @@
     <div class="modal fade" id="searchArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
     <!-- 通用彈出視窗 -->
     <div id="popUpArea" class="modal fade" tabindex="-1">
-      <div class="modal-dialog modal-dialog-scrollable"></div>
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">我想加入「鴿來教你交通怎麼做」</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>入群須知</h5>
+            <ul>
+              <li>群組會在每年3、6、9、12月徵員。</li>
+              <li>群組採實名審查，要提供「人證合一」的自拍照！</li>
+              <li>要簽署規範，而且規範多達十幾點！</li>
+              <li>要帶著問題，入群後立即提問。</li>
+              <li>按季會審查請退參與度較低人員。</li>
+            </ul>
+            <!-- <h5 class="text-danger fw-bolder">現在非屬徵員期間</h5> -->
+            <!-- <p>可先填寫下列表單，開始徵人時，會第一時間通知您！</p> -->
+            <h5 class="text-danger fw-bolder">6/1~6/20徵員期間</h5>
+            <p>
+              請填寫下列表單，會有專人與您聯絡！
+              <br>※請先詳閱上述須知。
+              <br>※務必留下Line ID，及設定ID可供加入好友。
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZgAxNzwEf9TlxQ8zPuPR52xlEAhsG80jHpA9aqgitYFuTUA/viewform?usp=sf_link"
+              class="btn btn-primary">填寫表單</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <main class="container-xl d-flex">
     <!-- 側邊選單 -->
     <aside id="sidebar" class="offcanvas-lg offcanvas-start overflow-hidden me-2"></aside>
-    <div id="mainContent">
-      <div class="row">
-        <div class="col-6 col-xl-3 mb-3">
-          <div class="card border border-3 mb-3 h-100">
-            <div class="card-header text-primary fw-bolder">開發者</div>
-            <div class="card-body">
-              <h5 class="card-title">蔡智楷 </h5>
-              <p class="card-text">C.K.SAI</p>
+    <div id="mainContent" class="py-3">
+      <!-- 主要內容 -->
+      <div class="scrollspy-example px-3 pb-2 row" data-bs-spy="scroll" data-bs-target="#list-article"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <!-- 「設定」標題卡片 -->
+        <div class="card border-0 mb-3" id="chapter-1">
+          <div class="row mx-0">
+            <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
+              <img src="../icons/icon_setting.png" class="card-img-right ps-3 " alt="..." width="90">
             </div>
-          </div>
-        </div>
-        <div class="col-6 col-xl-3 mb-3">
-          <div class="card border border-3 mb-3 h-100">
-            <div class="card-header text-primary fw-bolder">程式版本</div>
-            <div class="card-body">
-              <h5 id="app_ver" class="card-title"></h5>
-              <button type="button" id="showUpdate" class="btn btn-outline-primary" data-bs-toggle="modal"
-                data-bs-target="#popUpArea">更新日誌</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-12 col-xl-3 mb-3">
-          <div class="card border border-3 mb-3 h-100">
-            <div class="card-header text-primary fw-bolder">圖標來源</div>
-            <div class="card-body row">
-              <div class="col-4 col-xl-6 col-xxl-5"><img src="../icons/icons_icons8.png" alt=""></div>
-              <div class="col-8 col-xl-6 col-xxl-7">
-                <h5>Icons8</h5>          
-                <a href="https://icons8.com/" class="btn btn-outline-primary">造訪網站</a>
+            <div class="col p-0">
+              <div class="card-body">
+                <h2 class="card-title placeholder-glow">
+                  設定
+                </h2>
+                <p class="card-text placeholder-glow">
+                  設定會儲存在當前的瀏覽器
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-12 col-xl-3 mb-3">
-          <div class="card border border-3 mb-3 h-100">
-            <div class="card-header text-primary fw-bolder">特別銘謝 / 資料參考：</div>
-            <div class="card-body">
-              <h5 id="app_ver" class="card-title">「鴿來告訴你交通怎麼做」</h5>
-              <p class="card-text">群組及各位學長姐
-              </p>
+        <!-- 介面設定 -->
+        <div class="card shadow mb-3 px-0" id="setting-1">
+          <div class="card-header text-primary fw-bolder">
+            介面設定
+          </div>
+          <div class="card-body">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="check-1" checked>
+              <label class="form-check-label" for="check-1">
+                在「首頁」顯示快速入口 
+                <br>
+                <small class="text-secondary">（手機版建議開啟，會顯示前四筆書籤）</small>
+              </label>
+            </div>
+            <hr class="m-2">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="check-2" checked>
+              <label class="form-check-label" for="check-2">在「首頁」顯示到案日期</label>
+            </div>
+            <hr class="m-2">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="check-3" checked>
+              <label class="form-check-label" for="check-3">在「側邊攔」顯示到案日期</label>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-6 mb-3">
-          <div class="card border border-3 mb-3 h-100">
-            <div class="row g-0 h-100">
-              <div class="col-4 d-flex ">
-                <img src="../icons/icon_smartphone.png" class="img-fluid rounded-start m-auto" alt="...">
+        <!-- 書籤設定 -->
+        <div class="card shadow mb-3 px-0" id="setting-2">
+          <div class="card-header text-primary fw-bolder">
+            書籤管理
+          </div>
+          <div id="bookmarkSetting" class="card-body row">
+            <div class="col-6 col-md-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <img src="../icons/icon_policeman.png" class="i-15" alt="">
+                  處罰條例
+                  <span class="badge text-bg-warning">0</span>
+                </label>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <img src="../icons/icon_stop.png" class="i-15" alt="">
+                  安全規則
+                  <span class="badge text-bg-warning">1</span>
+                </label>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <img src="../icons/icon_stop.png" class="i-15" alt="">
+                  駕照違規速查
+                  <span class="badge text-bg-warning">1</span>
+                </label>
+              </div>
+            </div>
+            <div class="col-6 col-md-4"></div>
+          </div>
+        </div>
+        <!-- 「關於」標題卡片 -->
+        <div class="card border-0 mb-3" id="chapter-2">
+          <div class="row mx-0">
+            <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
+              <img src="../icons/icon_about.png" class="card-img-right ps-3 " alt="..." width="90">
+            </div>
+            <div class="col p-0">
+              <div class="card-body">
+                <h2 class="card-title placeholder-glow">
+                  關於本網站
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 版本 -->
+        <div class="card shadow mb-3 px-0" id="about-1">
+          <div class="card-header text-primary d-flex fw-bolder">
+            版本
+            <button type="button" id="showUpdate" class="btn btn-sm btn-outline-primary ms-auto" data-bs-toggle="modal"
+              data-bs-target="#popUpArea">更新日誌
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 id="app_ver" class="card-title"></h5>
+          </div>
+        </div>
+        <!-- 開發者 -->
+        <div class="card shadow mb-3 px-0" id="about-2">
+          <div class="card-header text-primary fw-bolder">
+            開發人員
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">開發者：蔡智楷 C.K.SAI</h5>
+            <p class="card-text fw-semibold mb-0">協作者：</p>
+            <p class="card-text fw-semibold">文章作者：</p>
+          </div>
+        </div>
+        <!-- 特別銘謝 -->
+        <div class="card shadow mb-3 px-0" id="about-3">
+          <div class="card-header text-primary fw-bolder">
+            特別銘謝 / 資料參考：
+          </div>
+          <div class="card-body">
+            <h5 id="app_ver" class="card-title">「鴿來告訴你交通怎麼做」</h5>
+            <p class="card-text fw-semibold">群組及各位學長姐</p>
+          </div>
+        </div>
+        <!-- 開發工具 -->
+        <div class="card shadow mb-3 px-0" id="about-4">
+          <div class="card-header text-primary fw-bolder">開發工具</div>
+          <div class="card-body row">
+            <div class="col-12 col-md-6 col-lg-12 col-xl-6 row">
+              <div class="col-4 d-flex">
+                <a href="https://getbootstrap.com/" class="mx-auto">
+                  <img src="../icons/bootstrap-logo.svg" alt="" width="80px">
+                </a>
               </div>
               <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title text-primary mb-3">手機版下載（beta）</h5>
-                  <p class="card-text "><span class="text-danger">此功能測試中，可能會遇到非預期的錯誤。</span><br>目前只提供Android版的APK檔下載，版本更新可能稍慢於網頁版，下載前請先確定會安裝非PLAY商店APP。</p>
-                  <a href="https://drive.google.com/drive/folders/1pmV6WZVdZ0RyfL8TvVDh9OI5Kc2OwkBO?usp=drive_link" class="btn btn-outline-primary">下載APK檔</a>
+                <h5 class="card-title">Bootstrap</h5>
+                <p class="card-text">快速建立響應式網站</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-12 col-xl-6 row">
+              <div class="col-4 d-flex">
+                <a href="https://icons8.com/" class="mx-auto">
+                  <img src="../icons/icons8-logo.svg" alt="" width="80px">
+                </a>
+              </div>
+              <div class="col-8">
+                <h5 class="card-title">Icons8</h5>
+                <p class="card-text">免費圖標來源</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- 手機版下載 -->
+        <div class="card shadow mb-3 px-0" id="about-5">
+          <div class="row g-0 h-100">
+            <div class="col-4 d-flex ">
+              <img src="../icons/icon_smartphone.png" class="img-fluid rounded-start m-auto" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title text-primary mb-3">手機版下載（beta）</h5>
+                <p class="card-text "><span class="text-danger">此功能測試中，可能會遇到非預期的錯誤。</span><br>目前只提供Android版的APK檔下載，版本更新可能稍慢於網頁版，下載前請先確定會安裝非PLAY商店APP。</p>
+                <a href="https://drive.google.com/drive/folders/1pmV6WZVdZ0RyfL8TvVDh9OI5Kc2OwkBO?usp=drive_link" class="btn btn-outline-primary">下載APK檔</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 收錄法規 -->
+        <div class="card shadow mb-3 px-0" id="about-6">
+          <div class="row g-0 h-100">
+            <div class="col-4 d-flex ">
+              <img src="../icons/icon_file.png" class="img-fluid rounded-start m-auto" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title text-primary mb-3">收錄法規</h5>
+                <p class="card-text ">這裡列出了本網頁收錄的所有法規修訂日期及源文件，如發現法規版本過舊、內容有誤，或建議收錄其他法規，請在「<a href="../pages/feedback.html">意見回饋</a>」頁面 聯繫作者。
+                </p>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                  <button type="button" id="showRG" class="btn btn-outline-primary" data-bs-toggle="modal"
+                  data-bs-target="#popUpArea">法規列表</button>
+                  <a href="https://docs.google.com/spreadsheets/d/1e0Qo742OBVeU0VnlTh-XDSMeh0HQZXEAWeUW9Pnf7RM/edit?usp=sharing" class="btn btn-outline-primary">源文件</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-6 mb-3">
-          <div class="card border border-3 mb-3 h-100">
-            <div class="row g-0 h-100">
-              <div class="col-4 d-flex ">
-                <img src="../icons/icon_file.png" class="img-fluid rounded-start m-auto" alt="...">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title text-primary mb-3">收錄法規</h5>
-                  <p class="card-text ">這裡列出了本網頁收錄的所有法規修訂日期及源文件，如發現法規版本過舊、內容有誤，或建議收錄其他法規，請在「<a href="../pages/feedback.html">意見回饋</a>」頁面 聯繫作者。
-                  </p>
-                  <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <button type="button" id="showRG" class="btn btn-outline-primary" data-bs-toggle="modal"
-                    data-bs-target="#popUpArea">法規列表</button>
-                    <a href="https://docs.google.com/spreadsheets/d/1e0Qo742OBVeU0VnlTh-XDSMeh0HQZXEAWeUW9Pnf7RM/edit?usp=sharing" class="btn btn-outline-primary">源文件</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+      <!-- 法規目錄/側邊欄 -->
+      <aside class="col-list overflow-hidden px-0 offcanvas-md offcanvas-top" tabindex="-1" id="itemMenu">
+        <div class="offcanvas-header">
+          <svg class="i-12 ms-2 my-auto" fill="#5A96FA">
+            <use xlink:href="../icons/bootstrap-icons.svg#list-ul"></use>
+          </svg>
+          <h5 class="my-auto ms-2">導覽</h5>
+          <button type="button" class="btn-close"></button>
+        </div>
+        <!-- 主清單 -->
+        <div class="d-none d-md-flex ">
+          <svg class="i-12 ms-2 my-auto" fill="#5A96FA">
+            <use xlink:href="../icons/bootstrap-icons.svg#list-ul"></use>
+          </svg>
+          <h5 class="my-3 ms-2">導覽</h5>
+        </div>
+        <div id="list-article"
+          class="list-group h-100 overflow-auto px-0 rounded-0 border-start border-primary border-2">
+          <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#chapter-1">
+            設定
+          </a>
+          <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#chapter-2">
+            關於
+          </a>
+        </div>
+      </aside>
       <!-- 底部聲明 -->
       <div id="websiteLicense" class="d-flex"></div>
     </div>
   </main>
-
 </body>
 
 </html>
-
-
-
