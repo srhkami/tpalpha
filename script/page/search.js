@@ -7,8 +7,8 @@ function search_start(keyWord, options) {
   Object.values(pages).forEach((value)=>{
     if(options[value.code]){
       let new_list;
-      if(value.code == 'keyPoint'){
-        new_list = search_keyPoint(keyWord)
+      if(value.code == 'keypoint'){
+        new_list = search_keypoint(keyWord)
       }
       else{
         new_list = search_every(keyWord, value);
@@ -38,12 +38,12 @@ function search_every(keyWord, r_object) {
 }
 
 // 函式：依關鍵字搜尋符合的「要點」
-function search_keyPoint(keyWord) {
+function search_keypoint(keyWord) {
   let new_list = [];
   list_kp.forEach((value) => {
     if (value.text.includes(keyWord)) {
       let netItem = {
-        code: 'keyPoint',
+        code: 'keypoint',
         article: value.code,
         index: value.title,
         title: value.title,

@@ -62,7 +62,6 @@ const headerHtml = `
     </button>
   </div>
 `;
-
 // 函式：取得頁面標題
 function getTitle(){
   let title = $('title').html();
@@ -70,56 +69,6 @@ function getTitle(){
     title = title.substr(0, title.length-7);
     $('#pageTitle').html(title);
   }
-}
-
-// 函式：讀取側邊欄設定
-function loadSidebar(no){
-  let sidebarOption = [0,1,1,0]
-  if (localStorage.getItem('sidebar')) {
-    sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
-  }
-  else{
-    localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
-  }
-  if (sidebarOption[no] == 1){
-    return(['','show'])
-  }
-  else{
-    return(['collapsed',''])
-  }
-}
-// 函式：儲存側邊欄設定
-function saveSidebar(){
-  $('.menu-item').click((e)=>{
-    let sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
-    if (e.target.className.includes('collapsed')){
-      sidebarOption[e.target.dataset.menuNo] = 0;
-    }
-    else{
-      sidebarOption[e.target.dataset.menuNo] = 1;
-    }
-    localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
-  })
-}
-
-// 函式：讀取書籤
-function loadBookmark(){
-  let bookmarkOption;
-  let bookmarkHtml;
-  if (localStorage.getItem('bookmark')) {
-    bookmarkOption = JSON.parse(localStorage.getItem('bookmark'));
-  }
-  else{
-    bookmarkHtml =`
-    <li>
-      <a class="list-group-item py-1" href="#">
-        <img class="i-15 me-1" src="../icons/icon_setting.png" alt="">
-        管理書籤
-      </a>
-    </li>
-    `;
-  }
-  return bookmarkHtml
 }
 
 // 側邊欄
@@ -311,6 +260,64 @@ const asideHtml = `
     </div>
   </div>
 `;
+// 函式：讀取側邊欄設定
+function loadSidebar(no){
+  let sidebarOption = [0,1,1,0]
+  if (localStorage.getItem('sidebar')) {
+    sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
+  }
+  else{
+    localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
+  }
+  if (sidebarOption[no] == 1){
+    return(['','show'])
+  }
+  else{
+    return(['collapsed',''])
+  }
+}
+// 函式：儲存側邊欄設定
+function saveSidebar(){
+  $('.menu-item').click((e)=>{
+    let sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
+    if (e.target.className.includes('collapsed')){
+      sidebarOption[e.target.dataset.menuNo] = 0;
+    }
+    else{
+      sidebarOption[e.target.dataset.menuNo] = 1;
+    }
+    localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
+  })
+}
+// 函式：讀取書籤
+function loadBookmark(){
+  let bookmarkOption;
+  let bookmarkHtml='';
+  if (localStorage.getItem('bookmark')) {
+    bookmarkOption = JSON.parse(localStorage.getItem('bookmark'));
+    bookmarkOption.forEach((i)=>{
+      bookmarkHtml+=`
+      <a class="list-group-item py-1" href="..${pages[i].href}">
+        <img class="i-15 me-1" src="..${pages[i].icon}" alt="">
+        ${pages[i].title}
+      </a>
+      `
+    })
+  }
+  else{
+    bookmarkHtml =`
+    <li>
+      <a class="list-group-item py-1" href="../pages/about.html">
+        <img class="i-15 me-1" src="../icons/icon_setting.png" alt="">
+        添加書籤
+      </a>
+    </li>
+    `;
+    // bookmarkOption = ['PH','keypoint'];
+    // localStorage.setItem('bookmark',JSON.stringify(bookmarkOption));
+  }
+  return bookmarkHtml
+}
 
 // 底部版權聲明
 const licenseHtml =` 

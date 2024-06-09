@@ -45,8 +45,8 @@ function svg(arrive){
   return html;
 }
 
-// 函式：搜尋
-function searchStart(){
+// 函式：偵測搜尋框
+function searchInput(){
   $('#keyCode').bind('input porpertychange',()=>{
     let key =  $('#keyCode').val();
     let newList = list_code.filter((item)=>{
@@ -58,9 +58,11 @@ function searchStart(){
   })
 }
 
+
+
+
 // 主程式
 refreshList(list_code);
 $(document).ready(() => {
-  $('#keyCode-reset').click(()=>$('#keyCode').val(''))
-  searchStart();
+  searchInput();
 })

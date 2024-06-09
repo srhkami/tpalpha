@@ -157,10 +157,10 @@ export const pages = {
   about: new Page(
     '頁面',
     'about',
-    '關於',
-    '關於「交通鴿手」',
+    '設定及關於',
+    '設定及關於',
     '',
-    '/icons/icon_about.png',
+    '/icons/icon_setting.png',
     '/pages/about.html',
     ''
   ),
@@ -180,7 +180,7 @@ export const pages = {
     '搜尋',
     '搜尋',
     '',
-    '/icons/icon_search_2.png',
+    '/icons/icon_search.png',
     '/pages/search.html',
     ''
   ),

@@ -2,7 +2,7 @@ import { pages } from './pages.js';
 import { list_kp } from '../list/kp_list.js'
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.14.0812`;
+const app_ver = `1.20.0913`;
 
 // 公告
 const notice = `
@@ -26,11 +26,13 @@ const notice = `
   // 修復用danger
   // <li class="text-info"></li>
 const updataText = `
-  <h5 class="text-primary">※ 1.14：</h5>
+  <h5 class="text-primary">※ 1.20：</h5>
   <ul>
-    <li class="text-info">更新了整體顯示佈局，選單列移至側邊。</li>
-    <li class="text-info">增加「書籤」功能，取代原本「快速導航」功能。</li>
+    <li class="text-info">更新了整體介面，將選單列移至側邊。</li>
+    <li class="text-info">加入「書籤」功能。</li>
+    <li class="text-info">「關於」頁面加入「設定」功能，用以設定書籤和介面</li>
     <li class="text-info">加入「違規代碼查詢」頁面。</li>
+    <li class="text-success">改善了快速搜尋的預設內容</li>
   </ul>
   <h5 class="text-primary">※ 1.13：</h5>
   <ul>

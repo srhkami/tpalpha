@@ -19,13 +19,13 @@ const html_searchArea =`
                     <button class="btn btn-primary" type="submit">快速搜尋</button>
                 </div>
               </form>
-              <p class="text-secondary">* 如果在法規頁面，預設會搜尋當前法規</p>
+              <p class="text-secondary"><small>※ 如果在法規頁面，預設會搜尋當前法規，否則會全域搜尋</small></p>
             </div> 
             <div class="col-7 d-flex my-3">
-              <h5 class="my-auto">◎ 自訂範圍搜尋：</h5>
+              <h5 class="my-auto">◎ 指定範圍搜尋：</h5>
             </div>
             <div class="col-5 d-flex justify-content-end">
-              <button id="btn_advanceSearch" class="btn btn-primary my-auto" type="button">進階搜尋</button>
+              <button id="btn_advanceSearch" class="btn btn-primary my-auto" type="button">自訂搜尋</button>
             </div>
             <div class="col-6">
               <div class="form-check form-switch">
@@ -102,7 +102,6 @@ const html_searchArea =`
                   <label class="form-check-label" for="switch_${pages.SO.code}">${pages.SO.title}</label>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -130,20 +129,21 @@ function save_options(){
   });;
 }
   // 函式：讀取瀏覽器儲存之設定；若沒有設定，則儲存預設值
+    // 預設值！！重要！！有新法規要更改
 function load_options(){
-  // 預設值！！重要！！有新法規要更改
   let searchOption = {
     "PH":true,
     "SR":true,
     "DR":true,
     "ML":true,
     "TA":true,
-    "keyPoint":true,
+    "VS":true,
+    "keypoint":true,
     "PA":false,
     "PW":false,
     "CC":false,
     "CP":false,
-    "SO":false,
+    "SO":false
   };
   if(localStorage.getItem('searchOption')){
     searchOption = JSON.parse(localStorage.getItem('searchOption'));
@@ -185,7 +185,14 @@ function search_go(){
           "SR":true,
           "DR":true,
           "ML":true,
-          "keyPoint":true,
+          "TA":true,
+          "VS":true,
+          "keypoint":true,
+          "PA":true,
+          "PW":true,
+          "CC":true,
+          "CP":true,
+          "SO":true
         }
       }
       localStorage.setItem('searchOptionGo', JSON.stringify(searchOptionGo));
