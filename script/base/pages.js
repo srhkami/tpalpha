@@ -104,6 +104,36 @@ export const pages = {
     '/pages/regulations.html?rg=PW',
     list_PW
   ),
+  CC: new Page(
+    '法規',
+    'CC',
+    '刑法',
+    '刑法',
+    '民國 112 年 12 月 27 日',
+    '/icons/icon_detain.png',
+    '/pages/regulations.html?rg=CC',
+    list_CC
+  ),
+  CP: new Page(
+    '法規',
+    'CP',
+    '刑事訴訟法',
+    '刑事訴訟法',
+    '民國 112 年 12 月 27 日',
+    '/icons/icon_handcuffs.png',
+    '/pages/regulations.html?rg=CP',
+    list_CP
+  ),
+  SO: new Page(
+    '法規',
+    'SO',
+    '社維法',
+    '社會秩序維護法',
+    '民國 110 年 05 月 26 日',
+    '/icons/icon_chase.png',
+    '/pages/regulations.html?rg=SO',
+    list_SO
+  ),
   codeSearch: new Page(
     '速查',
     'codeSearch',
@@ -157,8 +187,8 @@ export const pages = {
   about: new Page(
     '頁面',
     'about',
-    '設定及關於',
-    '設定及關於',
+    '關於',
+    '關於',
     '',
     '/icons/icon_setting.png',
     '/pages/about.html',
@@ -193,35 +223,5 @@ export const pages = {
     '/icons/icon_home.png',
     '/index.html',
     ''
-  ),
-  CC: new Page(
-    '法規',
-    'CC',
-    '刑法',
-    '刑法',
-    '民國 112 年 12 月 27 日',
-    '/icons/icon_detain.png',
-    '/pages/regulations.html?rg=CC',
-    list_CC
-  ),
-  CP: new Page(
-    '法規',
-    'CP',
-    '刑事訴訟法',
-    '刑事訴訟法',
-    '民國 112 年 12 月 27 日',
-    '/icons/icon_handcuffs.png',
-    '/pages/regulations.html?rg=CP',
-    list_CP
-  ),
-  SO: new Page(
-    '法規',
-    'SO',
-    '社維法',
-    '社會秩序維護法',
-    '民國 110 年 05 月 26 日',
-    '/icons/icon_chase.png',
-    '/pages/regulations.html?rg=SO',
-    list_SO
-  ),
+  )
 }

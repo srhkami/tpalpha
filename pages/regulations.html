@@ -51,12 +51,12 @@
     <div id="mainContent" class="py-3">
       <!-- 法條內文 -->
       <div class="col px-1">
-        <div id="article-text" data-bs-spy="scroll" data-bs-target="#list-article" data-bs-smooth-scroll="true"
+        <div id="article-text" data-bs-spy="scroll" data-bs-target="#pageMenu" data-bs-smooth-scroll="true"
           class="scrollspy-example pb-2" tabindex="0">
           <!-- 標題卡片(佔位符)-->
-          <div class="card rounded-3" aria-hidden="true">
+          <div class="card rounded-3">
             <div class="row mx-0">
-              <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
+              <div class="p-0 d-flex align-items-center justify-content-center" style="width: 120px;">
                 <img src="../icons/icon_trafficpigeon.png" class="card-img-right ps-3 " alt="..." width="90">
               </div>
               <div class="col p-0">
@@ -110,9 +110,8 @@
           </svg>
           <h5 class="my-3 ms-2">目錄</h5>
         </div>
-        <div id="list-article"
-          class="list-group h-100 overflow-auto px-0 rounded-0 border-start border-primary border-2">
-          <a class="list-group-item list-group-item-action p-0 border-start-0 border-end-0" href="#article-1">
+        <div id="pageMenu" class="list-group list-group-flush h-100 overflow-auto px-0 rounded-0 border-start border-primary border-2">
+          <a class="list-group-item list-group-item-action p-0" href="#article-1">
             <div class="d-flex px-3 py-2">
               <div class="list-article-no">第 一 條</div>
               <div class="list-article-title text-secondary-emphasis">立法目的</div>

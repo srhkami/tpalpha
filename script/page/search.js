@@ -103,7 +103,7 @@ function refresh_text(list_output, keyWord) {
   let html = `
     <div class="card rounded-3">
       <div class="row mx-0">
-        <div class="p-0 d-flex align-items-center justify-content-center div_icon_page">
+        <div class="p-0 d-flex align-items-center justify-content-center" style="width: 120px;">
           <img src="../icons/icon_search.png" class="card-img-right ps-3" alt="...">
         </div>
         <div class="col p-0">

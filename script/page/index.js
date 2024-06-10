@@ -1,17 +1,34 @@
+import { indexImage } from '../base/info.js'
 
-//刷新到案日期
-function date_calculate(){
-    const date = new Date();
-    date.setDate(date.getDate()+30);
-    $('#day_30').html(`30日到案：<br>${date.getFullYear()-1911}年${date.getMonth()+1}月${date.getDate()}日`); 
-    date.setDate(date.getDate()+15);
-    $('#day_45').html(`45日到案：<br>${date.getFullYear()-1911}年${date.getMonth()+1}月${date.getDate()}日`);
-    console.log(typeof(date.getMonth()))
+// 函式：是否顯示小工具
+function toolsSet(){
+  let toolsOption = JSON.parse(localStorage.getItem('toolsOption'));
+  console.log(toolsOption);
+  if (toolsOption[0]==0){
+    $('#quickArea').addClass('d-none');
+  }
+  if (toolsOption[1]==0){
+    $('#arriveDate').addClass('d-none');
+  }
+}
+
+//函式：刷新圖片
+function refleshImage(){
+  let html='';
+  indexImage.forEach(i=>{
+    html+=`
+    <div class="carousel-item active">
+      ${i}
+    </div>
+    `
+  });
+  $('.carousel-inner').html(html);
 }
 
 // 主程式
+refleshImage();
 $(document).ready(()=>{
-  date_calculate();
+  toolsSet();
 });
 
 

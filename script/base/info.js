@@ -2,16 +2,22 @@ import { pages } from './pages.js';
 import { list_kp } from '../list/kp_list.js'
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.20.0913`;
+const app_ver = `1.20.1019`;
+
+// 首頁圖片
+export const indexImage = [
+  '<a href="#"><img src="./file/index/群組招募圖.png" class="d-block w-100" alt="..."></a>',
+  '<a id="showUpdate" data-bs-toggle="modal" data-bs-target="#popUpArea"><img src="./file/index/版本更新.png" class="d-block w-100" alt="..."></a>'
+]
 
 // 公告
 const notice = `
-  113/06/01：
+  113/06/11 「交通鴿手」v1.20更新重點：
   <br>
-  <span class="text-danger">「鴿來教你交通怎麼做」群組六月徵員開始！！</span>
-  <br>有意加入的學長姐，請至<a href="../pages/feedback.html">意見回饋</a>→群友招募填寫表單！
-  <!--<button type="button" id="showUpdate" class="btn btn-outline-secondary ms-3 mb-3" data-bs-toggle="modal"
-  data-bs-target="#popUpArea">查看更新日誌</button>--!>
+  ◎ 整體介面更新，增加書籤及自訂部分介面功能。
+  <br>
+  ◎ 加入「違規代碼查詢」頁面。
+
   <br>
   <br>已知問題：
   <ul>

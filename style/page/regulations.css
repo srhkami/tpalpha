@@ -12,11 +12,11 @@
 }
 
 /* 法條清單排版 */
-#list-article{
+#pageMenu{
     /* list-groud因不明原因導致下方被遮擋，暫時透過此設定解決 */
     padding-bottom: 55px;
 }
-/* #list-article::-webkit-scrollbar{
+/* #pageMenu::-webkit-scrollbar{
     display: none;
 } */
 .list-article-no{
@@ -29,9 +29,6 @@
 .list-article-title{
     width: 15em;
     font-size: 12px;
-}
-.div_icon_page{
-    width: 120px;
 }
 @media (min-width:768px){
     .list-article-no{

@@ -1,6 +1,6 @@
 import { pages } from "./pages.js";
 
-// 頂端欄
+// 頂端欄HTMl
 const headerHtml = `
   <div class="container-xl px-0">
     <!-- 展開側邊欄按鈕 -->
@@ -71,7 +71,7 @@ function getTitle(){
   }
 }
 
-// 側邊欄
+// 側邊欄HTML
   // 預設關閉的在a加上.collapsed，預設打開的在div加上.show
 const asideHtml = `
   <div class="offcanvas-header ps-2 mb-2">
@@ -82,7 +82,7 @@ const asideHtml = `
   <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <!-- 主選單清單 -->
-  <div id="pageMenu" class="rounded-3 px-2 h-100 overflow-auto">  
+  <div id="wMenu" class="rounded-3 px-2 h-100 overflow-auto">  
     <div id="menuBookmark" class="p-1 mb-2 border-start border-3 border-primary">
       <a class="menu-item dropdown-item d-flex mb-1 ${loadSidebar(0)[0]}" data-menu-no="0" data-bs-toggle="collapse" href="#collapseExample" role="button">
         <img class="i-15 me-1" src="../icons/icon_bookmark.png" alt="">
@@ -254,9 +254,13 @@ const asideHtml = `
         <span>${pages.about.title}</span>
       </a>
       </div>
-    <div id="arriveTerm" class="card bg-primary-subtle border-2 my-3">
+    <div class="arriveTerm card bg-primary-subtle border-2 my-3 ${showArriveTerm(toolsSet()[2])}">
       <h6 class="card-header text-center text-primary fw-bolder">到案日期</h6>
-      <div class="card-body p-2 text-center"></div>
+      <div class="card-body p-2 text-center fw-bolder">
+        <span class="day-30"></span>
+        <br>
+        <span class="day-45"></span>
+      </div>
     </div>
   </div>
 `;
@@ -291,20 +295,12 @@ function saveSidebar(){
 }
 // 函式：讀取書籤
 function loadBookmark(){
-  let bookmarkOption;
+  let bookmarkOption = [];
   let bookmarkHtml='';
-  if (localStorage.getItem('bookmark')) {
+  if (localStorage.getItem('bookmark')){
     bookmarkOption = JSON.parse(localStorage.getItem('bookmark'));
-    bookmarkOption.forEach((i)=>{
-      bookmarkHtml+=`
-      <a class="list-group-item py-1" href="..${pages[i].href}">
-        <img class="i-15 me-1" src="..${pages[i].icon}" alt="">
-        ${pages[i].title}
-      </a>
-      `
-    })
   }
-  else{
+  if (bookmarkOption.length == 0){
     bookmarkHtml =`
     <li>
       <a class="list-group-item py-1" href="../pages/about.html">
@@ -313,12 +309,41 @@ function loadBookmark(){
       </a>
     </li>
     `;
-    // bookmarkOption = ['PH','keypoint'];
-    // localStorage.setItem('bookmark',JSON.stringify(bookmarkOption));
+  }
+  else{
+    bookmarkOption.forEach((i)=>{
+      bookmarkHtml+=`
+      <li>
+        <a class="list-group-item py-1" href="..${pages[i].href}">
+          <img class="i-15 me-1" src="..${pages[i].icon}" alt="">
+          ${pages[i].title}
+        </a>
+      </li>
+      ` 
+    });
   }
   return bookmarkHtml
 }
-
+// 函式：存取小工具設定
+function toolsSet(){
+  let toolsOption = [1,1,1];
+  if (localStorage.getItem('toolsOption')) {
+    toolsOption = JSON.parse(localStorage.getItem('toolsOption'));
+  }
+  else{
+    localStorage.setItem('toolsOption',JSON.stringify(toolsOption));
+  }
+  return toolsOption;
+}
+// 函式：側邊欄到案日期
+function showArriveTerm(i){
+  if (i==0){
+    return 'd-none';
+  }
+  else{
+    return '';
+  }
+}
 // 底部版權聲明
 const licenseHtml =` 
   <div id="webLicense" class="mx-auto">
@@ -333,10 +358,16 @@ const licenseHtml =`
   </div>
 `
 
-
-
-
-
+// 函式：到案日期
+function dateCalculate(){
+  const date = new Date();
+  date.setDate(date.getDate()+30);
+  let day30 = `${date.getFullYear()-1911}/${addZero(date.getMonth()+1)}/${addZero(date.getDate())}` 
+  date.setDate(date.getDate()+15);
+  let day45 = `${date.getFullYear()-1911}/${addZero(date.getMonth()+1)}/${addZero(date.getDate())}`
+  $('.day-30').html(day30);
+  $('.day-45').html(day45);
+}
 // 函示：日期個位數加上0
 function addZero(num){
   let text;
@@ -348,25 +379,9 @@ function addZero(num){
   }
   return text;
 }
-// 函式：刷新到案日期
-function date_calculate(){
-  const date = new Date();
-  // let day30 = date.getDate(date.getDate()+30);
-  // let day45 = date.getDate(date.getDate()+15);
-  date.setDate(date.getDate()+30);
-  let day30 = `${date.getFullYear()-1911}/${addZero(date.getMonth()+1)}/${addZero(date.getDate())}` 
-  date.setDate(date.getDate()+15);
-  let day45 = `${date.getFullYear()-1911}/${addZero(date.getMonth()+1)}/${addZero(date.getDate())}`
-  $('#arriveTerm .card-body').html(`
-    <small>
-      30日：${day30}
-      <br>
-      45日：${day45}
-    </small>  
-  `)
-}
 
 // 主程式
+toolsSet();
 if ($('title').html() == '交通鴿手'){
   $('#pageHeader').html(headerHtml.replaceAll('..','.'));
   $('#sidebar').html(asideHtml.replaceAll('..','.'));
@@ -378,7 +393,7 @@ else{
 $('#websiteLicense').html(licenseHtml);
 $(document).ready(()=>{
   getTitle();
-  date_calculate();
+  dateCalculate();
   saveSidebar();
   //偵測側邊欄點擊
   $("#sidebar .btn-close").click(() => {
