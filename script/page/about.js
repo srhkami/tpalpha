@@ -23,7 +23,7 @@ function refleshSetArea() {
     <div id="item-${pages[i].code}" class="border border-2 rounded my-1 row align-items-center">
       <div class="col-2">
         <button class="btn btn-delete" data-page="${pages[i].code}">
-          <svg class="i-12 ms-2 my-auto" fill="#FF8C00" data-page="${pages[i].code}">
+          <svg class="i-12 my-auto" fill="#FF8C00" data-page="${pages[i].code}">
             <use xlink:href="../icons/bootstrap-icons.svg#dash-circle-fill" data-page="${pages[i].code}"></use>
           </svg>
         </button>
@@ -32,16 +32,16 @@ function refleshSetArea() {
         <img src="..${pages[i].icon}" class="i-15" alt="">
         ${pages[i].title}
       </div>
-      <div class="col-1">
-        <button class="btn btn-up" data-page="${pages[i].code}">
-          <svg class="i-12 ms-2 my-auto" fill="#1E90FF" data-page="${pages[i].code}">
+      <div class="col-2">
+        <button class="btn btn-sm btn-up" data-page="${pages[i].code}">
+          <svg class="i-12 my-auto" fill="#1E90FF" data-page="${pages[i].code}">
             <use xlink:href="../icons/bootstrap-icons.svg#caret-up-square-fill" data-page="${pages[i].code}"></use>
           </svg>
         </button>
       </div>
-      <div class="col-1 ms-3">
-        <button class="btn btn-down" data-page="${pages[i].code}">
-          <svg class="i-12 ms-2 my-auto" fill="#1E90FF" data-page="${pages[i].code}">
+      <div class="col-2">
+        <button class="btn btn-sm btn-down" data-page="${pages[i].code}">
+          <svg class="i-12 my-auto" fill="#1E90FF" data-page="${pages[i].code}">
             <use xlink:href="../icons/bootstrap-icons.svg#caret-down-square-fill" data-page="${pages[i].code}"></use>
           </svg>
         </button>
@@ -56,7 +56,7 @@ function refleshSetArea() {
     <div id="item-${pages[i].code}" class="border border-2 rounded my-1 row align-items-center">
       <div class="col-2">
         <button class="btn btn-add" data-page="${pages[i].code}">
-          <svg class="i-12 ms-2 my-auto" fill="#1E90FF 	" data-page="${pages[i].code}">
+          <svg class="i-12 my-auto" fill="#1E90FF 	" data-page="${pages[i].code}">
             <use xlink:href="../icons/bootstrap-icons.svg#plus-circle-fill" data-page="${pages[i].code}"></use>
           </svg>
         </button>

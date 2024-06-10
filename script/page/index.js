@@ -1,4 +1,3 @@
-import { indexImage } from '../base/info.js'
 
 // 函式：是否顯示小工具
 function toolsSet(){
@@ -12,21 +11,8 @@ function toolsSet(){
   }
 }
 
-//函式：刷新圖片
-function refleshImage(){
-  let html='';
-  indexImage.forEach(i=>{
-    html+=`
-    <div class="carousel-item active">
-      ${i}
-    </div>
-    `
-  });
-  $('.carousel-inner').html(html);
-}
 
 // 主程式
-refleshImage();
 $(document).ready(()=>{
   toolsSet();
 });

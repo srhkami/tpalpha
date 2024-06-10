@@ -2,25 +2,18 @@ import { pages } from './pages.js';
 import { list_kp } from '../list/kp_list.js'
 
 // 版本號(大版本.小版本.日+時)
-const app_ver = `1.20.1019`;
-
-// 首頁圖片
-export const indexImage = [
-  '<a href="#"><img src="./file/index/群組招募圖.png" class="d-block w-100" alt="..."></a>',
-  '<a id="showUpdate" data-bs-toggle="modal" data-bs-target="#popUpArea"><img src="./file/index/版本更新.png" class="d-block w-100" alt="..."></a>'
-]
+const app_ver = `1.20.1022`;
 
 // 公告
 const notice = `
-  113/06/11 「交通鴿手」v1.20更新重點：
-  <br>
-  ◎ 整體介面更新，增加書籤及自訂部分介面功能。
-  <br>
-  ◎ 加入「違規代碼查詢」頁面。
-
-  <br>
+  「交通鴿手」v1.20更新重點：
+  <ul>
+  <li>整體介面更新、排版 ，增加書籤及自訂介面功能。</li>
+  <li>加入「違規代碼查詢」頁面。</li>
+  </ul>
   <br>已知問題：
   <ul>
+  <li>違規代碼查詢為即時運算，輸入會較為延遲敬請見諒。</li>
   <li>附件連結至全國法規資料庫，在首次點擊時總會失效。</li>
   <li>使用內網瀏覽設置規則圖片可能無法顯示。</li>
   </ul>
@@ -34,11 +27,13 @@ const notice = `
 const updataText = `
   <h5 class="text-primary">※ 1.20：</h5>
   <ul>
-    <li class="text-info">更新了整體介面，將選單列移至側邊。</li>
-    <li class="text-info">加入「書籤」功能。</li>
-    <li class="text-info">「關於」頁面加入「設定」功能，用以設定書籤和介面</li>
+    <li class="text-info">更新了整體介面、排版，將選單列移至側邊。</li>
     <li class="text-info">加入「違規代碼查詢」頁面。</li>
-    <li class="text-success">改善了快速搜尋的預設內容</li>
+    <li class="text-info">加入「書籤」功能。</li>
+    <li class="text-info">「關於」頁面加入「介面設定」功能。</li>
+    <li class="text-success">首頁「快速導航」及「到案日期」功能改版，現在可自訂是否顯示。</li>
+    <li class="text-success">調整了意見回饋的內容，「文章投稿」替換為「網站投稿」。</li>
+    <li class="text-success">改善了快速搜尋的預設內容，在非法規頁面為全域搜尋 。</li>
   </ul>
   <h5 class="text-primary">※ 1.13：</h5>
   <ul>
