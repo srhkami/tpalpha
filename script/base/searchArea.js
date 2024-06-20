@@ -12,7 +12,7 @@ const html_searchArea =`
         <div class="container mt-4">
           <div class="row">
             <div class="col-12">
-              <form action="../pages/search.html" method="get">
+              <form action="${isIndex()}" method="get">
                 <div class="input-group">
                     <input type="text" id="keyWord" class="form-control" name="keyword" placeholder="請輸入搜尋關鍵字" required="required">
                     <button class="btn btn-outline-secondary" id="btn_search_reset" type="reset" aria-label="Close">清除</button>
@@ -108,16 +108,16 @@ const html_searchArea =`
     </div>
   </div>
   `;
-
-  //讀取瀏覽器設定，刷新搜尋區域
-function load_searchBar(html_searchArea) {
-  if ($('title').html() == '首頁 - 交通鴿手'){
-    $('#searchArea').html(html_searchArea.replaceAll('..','.'));
+// 函式：判斷是否為首頁
+function isIndex(){
+  if ($('title').html() == '交通鴿手'){
+    return './pages/search.html'
   }
   else{
-    $('#searchArea').html(html_searchArea);
+    return '../pages/search.html'
   }
 }
+
 
   //函式：點擊選項開關，儲存搜尋設定進瀏覽器
 function save_options(){
@@ -212,7 +212,7 @@ function search_go(){
 }
 
 // 主程式
-load_searchBar(html_searchArea);
+$('#searchArea').html(html_searchArea);
 $(document).ready(()=>{
   load_options();
   save_options();
