@@ -1,5 +1,6 @@
 import { pages } from "../base/pages.js";
-import {appVer, popUpHTML, collectionRG, checkMobileVer} from '../base/info.js'
+import { updateData } from "../data/database.js";
+import { checkLocalData } from "../data/database.js"
 
 // 函式：讀取書籤
 function loadBookmark() {
@@ -154,6 +155,11 @@ function toolsSet(){
   })
 }
 
+// 資料庫更新
+function btnUpdateData(){
+  $('#dataVer-check').click(()=> updateData())
+}
+
 // 主程式
 let pageList = [];
 Object.values(pages).forEach((i) => {
@@ -162,13 +168,6 @@ Object.values(pages).forEach((i) => {
   }
 });
 refleshSetArea();
-toolsSet()
-$(document).ready(() => {
-  // APP版本
-  $('#appVer').html(appVer);
-  // 資料庫版本
-  localforage.getItem('dataVer', (err, localDataVer) => {$('#dataVer').html(localDataVer)});
-  // 收錄法規
-  $('#showRG').click(()=>{popUpHTML('收錄法規', collectionRG())});
-  checkMobileVer();
-})
+toolsSet();
+btnUpdateData();
+checkLocalData();

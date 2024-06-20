@@ -2,16 +2,16 @@
 <html data-bs-theme="dark">
 
 <head>
-  <script src="../script/base/jquery-3.7.1.min.js"></script>
+  <title>關於 - 交通鴿手</title>
+  <script src="../script/module/jquery-3.7.1/jquery-3.7.1.min.js"></script>
   <script src='../script/base/theme.js'></script>
+  <script src="../script/module/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>關於 - 交通鴿手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <link href="../style/base/bootstrap.css" rel="stylesheet">
-  <script src="../script/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <!-- 設定檔 -->
   <link rel="stylesheet" href="../style/base/general.css" />
   <link rel="stylesheet" href="../style/page/about.css">
@@ -36,7 +36,7 @@
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">管裡書籤</h5>
+            <h5 class="modal-title">管理書籤</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -121,13 +121,13 @@
               <label class="form-check-label" for="check-0">
                 在手機版「首頁」顯示快速入口
                 <br>
-                <small class="text-secondary">（推薦開啟，會顯示前四筆書籤）</small>
+                <small class="text-secondary">（推薦開啟，會在首頁顯示前四筆書籤）</small>
               </label>
             </div>
             <div class="form-check form-switch ms-4">
               <input class="form-check-input" type="checkbox" role="switch" id="check-1">
               <label class="form-check-label" for="check-1">一併顯示到案日期</label>
-            </div>            
+            </div>
             <hr class="m-2">
             <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" role="switch" id="check-2" checked>
@@ -141,11 +141,12 @@
           <div class="card-header text-primary d-flex fw-bolder">
             版本
             <button type="button" id="showUpdate" class="btn btn-sm btn-outline-primary ms-auto" data-bs-toggle="modal"
-              data-bs-target="#popUpArea">更新日誌
+              data-bs-target="#popUpArea">
+              更新日誌
             </button>
           </div>
           <div class="card-body">
-            <h5 id="app_ver" class="card-title"></h5>
+            <h5 id="appVer" class="card-title"></h5>
           </div>
         </div>
         <!-- 開發者 -->
@@ -207,7 +208,7 @@
               <div class="card-body">
                 <h5 class="card-title text-primary mb-3">手機版下載（beta）</h5>
                 <p class="card-text "><span
-                    class="text-danger">此功能測試中，可能會遇到非預期的錯誤。</span><br>目前只提供Android版的APK檔下載，版本更新可能稍慢於網頁版，下載前請先確定會安裝非PLAY商店APP。
+                    class="text-danger">測試中，可能會遇到非預期的錯誤。</span><br>目前只提供Android版的APK檔下載，請確定會安裝非PLAY商店APP。因APP是離線版，不會自動更新內容，請定時查看是否有新版。
                 </p>
                 <a href="https://drive.google.com/drive/folders/1pmV6WZVdZ0RyfL8TvVDh9OI5Kc2OwkBO?usp=drive_link"
                   class="btn btn-outline-primary">下載APK檔</a>

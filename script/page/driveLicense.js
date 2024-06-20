@@ -1,4 +1,4 @@
-import {violation_list, violation_again_list, violation_text, violation_code} from '../list/dl_list.js'
+import {violation_list, violation_again_list, violation_text, violation_code} from '../data/dl_list.js'
 
 // 函式：判斷開始
 function search_start(drive_type, car_type, bike_type, more_type){

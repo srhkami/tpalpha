@@ -2,24 +2,23 @@
 <html data-bs-theme="light">
 
 <head>
-  <script src="./script/base/jquery-3.7.1.min.js"></script>
+  <title>交通鴿手</title>
+  <script src="./script/module/jquery-3.7.1/jquery-3.7.1.min.js"></script>
   <script src='./script/base/theme.js'></script>
+  <script src="./script/module/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>交通鴿手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <link href="./style/base/bootstrap.css" rel="stylesheet">
-  <script src="./script/bootstrap-5.3.3/bootstrap.bundle.min.js"></script>
-  <!-- 設定檔 -->
+  <!-- 個別設定檔 -->
   <link rel="stylesheet" href="./style/base/general.css" />
   <link rel="stylesheet" href="./style/page/index.css" />
   <script type='module' src='./script/base/nav.js'></script>
-  <script type='module' src='./script/base/searchArea2.js'></script>
+  <!-- <script type='module' src='./script/base/searchArea.js'></script> -->
   <script type='module' src="./script/page/index.js"></script>
   <script type='module' src="./script/base/quickEnter.js"></script>
-  <script type='module' src="./script/base/info.js"></script>
 </head>
 
 <body>
@@ -28,6 +27,125 @@
   <div id="popUp">
     <!-- 搜尋 -->
     <div id="searchArea" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">搜尋</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-3">
+            <div class="container mt-4">
+              <div class="row">
+                <div class="col-12">
+                  <form action="./pages/search.html" method="get">
+                    <div class="input-group">
+                      <input type="text" id="keyWord" class="form-control" name="keyword" placeholder="請輸入搜尋關鍵字"
+                        required="required">
+                      <button class="btn btn-outline-secondary" id="btn_search_reset" type="reset"
+                        aria-label="Close">清除</button>
+                      <button class="btn btn-primary" type="submit">快速搜尋</button>
+                    </div>
+                  </form>
+                  <p class="text-secondary"><small>※ 如果在法規頁面，預設會搜尋當前法規，否則會全域搜尋</small></p>
+                </div>
+                <div class="col-7 d-flex my-3">
+                  <h5 class="my-auto">◎ 指定範圍搜尋：</h5>
+                </div>
+                <div class="col-5 d-flex justify-content-end">
+                  <button id="btn_advanceSearch" class="btn btn-primary my-auto" type="button">自訂搜尋</button>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_PH"
+                      value="PH">
+                    <label class="form-check-label" for="switch_PH">處罰條例</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_SR"
+                      value="SR">
+                    <label class="form-check-label" for="switch_SR">安全規則</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_DR"
+                      value="DR">
+                    <label class="form-check-label" for="switch_DR">處理細則</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_ML"
+                      value="ML">
+                    <label class="form-check-label" for="switch_ML">設置規則</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_TA"
+                      value="TA">
+                    <label class="form-check-label" for="switch_TA">事故處理辦法</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_VS"
+                      value="VS">
+                    <label class="form-check-label" for="switch_VS">車輛審驗辦法</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch"
+                      id="switch_keypoint" value="keypoint">
+                    <label class="form-check-label" for="switch_keypoint">違規舉發要點</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <hr>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_PA"
+                      value="PA">
+                    <label class="form-check-label" for="switch_PA">警職法</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_PW"
+                      value="PW">
+                    <label class="form-check-label" for="switch_PW">警械使用條例</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_CC"
+                      value="CC">
+                    <label class="form-check-label" for="switch_CC">刑法</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_CP"
+                      value="CP">
+                    <label class="form-check-label" for="switch_CP">刑事訴訟法</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" name="searchSwitch" id="switch_SO"
+                      value="SO">
+                    <label class="form-check-label" for="switch_SO">社維法</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- 通用彈出視窗 -->
     <div id="popUpArea" class="modal fade" tabindex="-1">
@@ -43,24 +161,19 @@
         <div class="col-12 col-lg-10 mx-auto">
           <div id="carouselExample" class="carousel slide shadow-lg" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-            </div>          
+            </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <a href="#">
-                  <img src="./file/index/群組招募圖.png" class="d-block w-100" alt="...">
+                <a href="./file/index/1130514_處罰條例修正案條文對照.pdf">
+                  <img src="./file/index/修正案.png" class="d-block w-100" alt="...">
                 </a>
               </div>
               <div class="carousel-item">
                 <a id="showUpdate" data-bs-toggle="modal" data-bs-target="#popUpArea">
                   <img src="./file/index/版本更新.png" class="d-block w-100" alt="...">
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="./pages/feedback.html">
-                  <img src="./file/index/網站投稿.png" class="d-block w-100" alt="...">
                 </a>
               </div>
             </div>
@@ -90,7 +203,7 @@
                 <p class="text-center mb-0">45日到案</p>
                 <p class="day-45 text-center fw-bolder mb-0"></p>
               </div>
-            </div>          
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-6">
@@ -110,7 +223,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- 底部聲明 -->
       <div id="websiteLicense" class="d-flex"></div>
     </div>

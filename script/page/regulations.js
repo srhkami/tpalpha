@@ -7,8 +7,8 @@ function refresh_list(r_list) {
     if (value.article == '-1') { //排除附件
       //pass
     }
-    else if (value.article=='0'){ //章節特例
-      html +=`
+    else if (value.article == '0') { //章節特例
+      html += `
       <a class="list-group-item list-group-item-action p-0" href="#chapter-${value.text}">
         <div class="d-flex px-3 py-2">
           <h6 class="text-primary-emphasis mx-3 my-1">${value.title}</h6>
@@ -31,11 +31,11 @@ function refresh_list(r_list) {
 }
 
 // 函式：標題卡片的特例
-function titleHTML(r_object){
+function titleHTML(r_object) {
   let code = r_object.code;
   let html = '';
-  if(code=='ML'){
-    html=`
+  if (code == 'ML') {
+    html = `
     <h2 class="card-title">${r_object.name}</h2>
       <p class="card-text text-secondary-emphasis">
         修訂日期：${r_object.revision}
@@ -44,15 +44,15 @@ function titleHTML(r_object){
         <!--<button href="#" class="btn btn-primary" disabled>加入最愛</button>--!>
     `;
   }
-  else if(code=='SR' || code=='VS' || code=='DR'){
-    html=`
+  else if (code == 'SR' || code == 'VS' || code == 'DR') {
+    html = `
       <h2 class="card-title">${r_object.name}</h2>
       <p class="card-text text-secondary-emphasis">修訂日期：${r_object.revision}<br>來源：全國法規資料庫</p>
       <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#popUpArea">查看附件</button>
     `;
   }
-  else(
-    html=`
+  else (
+    html = `
       <h2 class="card-title">${r_object.name}</h2>
       <p class="card-text text-secondary-emphasis">
         修訂日期：${r_object.revision}
@@ -64,11 +64,11 @@ function titleHTML(r_object){
   return html;
 }
 
-// 函式：內文的特例
-function textHTML(code, article){
+// 函式：內文顯示按鈕的特例
+function btnHTML(code, article) {
   let html = '';
-  if(code=='ML'){
-    html=`
+  if (code == 'ML') { //設置規則附圖的按鈕
+    html = `
       <button type="button" class="bth_attachment btn btn-primary btn-sm me-2 h-75" data-bs-toggle="modal" data-bs-target="#popUpArea" data-article="${article}">附圖</button>
     `;
   }
@@ -99,7 +99,7 @@ function refresh_text(r_list, r_object) {
     if (value.article == '-1') {
       //pass
     }
-    else if (value.article=='0'){ //章節的特例
+    else if (value.article == '0') { //章節的特例
       mainHtml += `
         <div id="chapter-${value.text}" class="my-3">
           <h3 class="text-primary-emphasis">${value.title}</h3>
@@ -107,12 +107,11 @@ function refresh_text(r_list, r_object) {
       `;
     }
     else { //一般
-      mainHtml +=`
+      mainHtml += `
       <div id="article-${value.article}" class="article">
         <div class="article-title d-flex mt-4 mb-2 pb-1 border-bottom border-primary-subtle">
           <h4  class="d-inline me-auto" >第 ${value.article} 條</h4>
-          <a class="anchor-link" href="#article-${value.article}"></a>
-          ${textHTML(r_object.code, value.article)}
+          ${btnHTML(r_object.code, value.article)}
         </div>
         <div class="col-data">
           <div class="law-article">
@@ -145,12 +144,12 @@ function refresh_text(r_list, r_object) {
       </div>
     </div>   
   `;
-      $('#popUpArea').html(attachmentHtml);
+  $('#popUpArea').html(attachmentHtml);
   return mainHtml
 }
 
 // 函式：顯示設置規則附件
-function showAttachment(r_list) {
+export function showAttachment(r_list) {
   $('.bth_attachment').click((e) => {
     let article = e.target.dataset.article
     r_list.forEach((value) => {
@@ -214,18 +213,27 @@ function showAttachment(r_list) {
 const getData = new URLSearchParams(location.search);
 let r_name = getData.get('rg');
 let r_object = pages[r_name];
-let r_list = r_object.list;
-// 刷新主頁面
-refresh_list(r_list);
-$('title').html(`${r_object.title} - 交通鴿手`);
-$('#article-text').html(refresh_text(r_list, r_object));
-$(document).ready(() => {
-  // $('#pageTitle').html(r_object.title);
-  $('.rg-title').html(r_object.title);
-  $('.rg-image').attr('src',`..${r_object.icon}`);
-  //偵測側邊欄點擊
-  $("#itemMenu a,.btn-close").click(() => {
-    setTimeout(() => $('.offcanvas-top').offcanvas('hide'), 50)
-  });
-  showAttachment(r_list);
+// let r_list = r_object.list;
+let r_list = [];
+// 讀取儲存資料庫，刷新主頁面
+localforage.getItem(r_name, (err, value) => {
+  r_list = value;
+  refresh_list(r_list);
+  $('title').html(`${r_object.title} - 交通鴿手`);
+  $('#article-text').html(refresh_text(r_list, r_object));
+  $(document).ready(() => {
+    // $('#pageTitle').html(r_object.title);
+    $('.rg-title').html(r_object.title);
+    $('.rg-image').attr('src', `..${r_object.icon}`);
+    //偵測側邊欄點擊
+    $("#itemMenu a,.btn-close").click(() => {
+      setTimeout(() => $('.offcanvas-top').offcanvas('hide'), 50)
+    });
+    showAttachment(r_list);
+  })
 })
+
+
+
+
+

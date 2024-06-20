@@ -1,4 +1,4 @@
-import { violation_list, dispose_list, violation_code_a, violation_code_b, violation_code_c } from '../list/cl_list.js';
+import { violation_list, dispose_list, violation_code_a, violation_code_b, violation_code_c } from '../data/cl_list.js';
 
 
 

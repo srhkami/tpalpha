@@ -7,12 +7,12 @@ function load_quick() {
   if (localStorage.getItem('bookmark')) {
     bookmarkOption = JSON.parse(localStorage.getItem('bookmark'));
   }
-  let quickOption = bookmarkOption.slice(0, 5)
+  let quickOption = bookmarkOption.slice(0, 4)
   let html = '';
   if (quickOption.length == 0){
     html =`
     <div class="col-12 d-flex">
-      <a href="../pages/about.html" class="btn btn-outline-secondary mx-auto">
+      <a href="./pages/about.html" class="btn btn-outline-secondary mx-auto">
           <img class="i-15 mx-auto" src="./icons/icon_setting.png" alt="">
           點此前往設定
       </a>

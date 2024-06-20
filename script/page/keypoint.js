@@ -1,4 +1,4 @@
-import { list_kp } from '../list/kp_list.js'
+import { list_kp } from '../data/kp_list.js'
 
 // 刷新頁面
 function refresh_page(){

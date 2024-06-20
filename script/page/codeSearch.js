@@ -1,4 +1,4 @@
-import {carType, extraPinich, list_code} from '../list/code_list.js'
+import {carType, extraPinich, list_code} from '../data/code_list.js'
 
 // 函式：刷新清單
 function refreshList(list){

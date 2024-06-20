@@ -1,6 +1,7 @@
 import { pages } from "./pages.js";
 
-//函式：搜尋視窗預設HTML
+// ！！注意！！首頁必須是靜態的，./pages
+// 函式：搜尋視窗預設HTML
 const html_searchArea =`
   <div class="modal-dialog">
     <div class="modal-content">
@@ -12,7 +13,7 @@ const html_searchArea =`
         <div class="container mt-4">
           <div class="row">
             <div class="col-12">
-              <form action="${isIndex()}" method="get">
+              <form action="../pages/search.html" method="get">
                 <div class="input-group">
                     <input type="text" id="keyWord" class="form-control" name="keyword" placeholder="請輸入搜尋關鍵字" required="required">
                     <button class="btn btn-outline-secondary" id="btn_search_reset" type="reset" aria-label="Close">清除</button>
@@ -108,18 +109,8 @@ const html_searchArea =`
     </div>
   </div>
   `;
-// 函式：判斷是否為首頁
-function isIndex(){
-  if ($('title').html() == '交通鴿手'){
-    return './pages/search.html'
-  }
-  else{
-    return '../pages/search.html'
-  }
-}
 
-
-  //函式：點擊選項開關，儲存搜尋設定進瀏覽器
+  // 函式：點擊選項開關，儲存搜尋設定進瀏覽器
 function save_options(){
   $('input[name="searchSwitch"]').on('change',(e)=>{
       const code = e.target.value;

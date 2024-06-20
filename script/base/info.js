@@ -1,15 +1,20 @@
 import { pages } from './pages.js';
-import { list_kp } from '../list/kp_list.js'
+import { list_kp } from '../data/kp_list.js';
+import {WebData} from '../data/database.js';
 
-// 版本號(大版本.小版本.日+時)
-const app_ver = `1.20.1022`;
+// 版本
+export const appVer = `1.21.0`;
+// 組建：用以判斷版本前後
+export const buildNumber = 1130613;
+// 資料庫版本
+export const defaultDataVer = 1130613;
 
 // 公告
-const notice = `
-  「交通鴿手」v1.20更新重點：
+export const notice = `
+  <span id="newVerNotice"></span>
+  「交通鴿手」v1.21更新重點：
   <ul>
-  <li>整體介面更新、排版 ，增加書籤及自訂介面功能。</li>
-  <li>加入「違規代碼查詢」頁面。</li>
+  <li>「違規代碼查詢」已更新到最新代碼表，重新上線</li>
   </ul>
   <br>已知問題：
   <ul>
@@ -19,12 +24,46 @@ const notice = `
   </ul>
 `;
 
+// 手機版檢查新版本及刷新圖片
+export function checkMobileVer(){
+  let sheet = new WebData('15WEuG9RoXWdaGws3yhIgYj_0G0Q7ukmMwKe5CXNZZfs', 'info', 'AIzaSyAHvCcIcGd3RaTSi5VhW0AsQos-7qIPH4g');
+  $.get(sheet.url, (json) => {
+    let lastBuildNumber = json.values[2][2];
+    if (lastBuildNumber > buildNumber) {
+      $('#newVerNotice').html(`
+        <big class="text-danger">APP有新版本，請立即至「關於」更新！！</big><hr>
+        `)
+    }
+    let indexImageLinks = JSON.parse(json.values[4][2]);
+    console.log(indexImageLinks);
+    let html1 = '';
+    let html2 = '';
+    indexImageLinks.forEach((link, index) => {
+      if(index == 0){
+        html1 += `<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" class="active"></button>`
+        html2 += `<div class="carousel-item active">${link}</div>`
+      }
+      else{
+        html1 += `<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}"></button>`
+        html2 += `<div class="carousel-item">${link}</div>`
+      }
+    })
+    $('.carousel-indicators').html(html1);
+    $('.carousel-inner').html(html2);
+  })
+}
+
 // 更新日誌
   // 新功能用info
   // 更新功能用success
   // 修復用danger
   // <li class="text-info"></li>
-const updataText = `
+  export const updataText = `
+<h5 class="text-primary">※ 1.21：</h5>
+  <ul>
+    <li class="text-success">「搜尋」現在也可查看設置規則附圖。</li>
+    <li class="text-danger">「違規代碼查詢」已更新到最新代碼表，重新上線。</li>
+    </ul>
   <h5 class="text-primary">※ 1.20：</h5>
   <ul>
     <li class="text-info">更新了整體介面、排版，將選單列移至側邊。</li>
@@ -84,7 +123,7 @@ const updataText = `
 `;
 
 // 關於此網站
-const aboutThisWeb = `
+export const aboutThisWeb = `
   這是一個，以交通為志趣的小小警員，
   <br>所架設的簡易網站，  
   <br>目標是整理所有與交通執法、交通安全有關的資訊，
@@ -99,7 +138,7 @@ const aboutThisWeb = `
   <br>歡迎使用選單中「更多→意見回饋」讓我知道。 
 `;
 // 收錄法規
-function collectionRG() {
+export function collectionRG() {
   let html = '<ul class="ps-3">';
   Object.values(pages).forEach((value) => {
     if (value.type == '法規') {
@@ -115,7 +154,7 @@ function collectionRG() {
   return html;
 }
 // 收錄文章
-function collectionEssay() {
+export function collectionEssay() {
   let html = '';
   list_kp.forEach((value) => {
     html += `
@@ -129,9 +168,8 @@ function collectionEssay() {
   return html;
 }
 
-
 // 函式：彈出視窗的HTML
-function popUpHTML(title, text){
+export function popUpHTML(title, text){
   let html=`
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
@@ -150,12 +188,3 @@ function popUpHTML(title, text){
   `;
   $('#popUpArea').html(html);
 }
-
-// 刷新首頁
-$(document).ready(() => {
-  $('#notice').html(notice);
-  $('#future').html(aboutThisWeb);
-  $('#app_ver').html(app_ver);
-  $('#showUpdate').click(()=>{popUpHTML('更新日誌', updataText)});
-  $('#showRG').click(()=>{popUpHTML('收錄法規', collectionRG())});
-})
