@@ -52,13 +52,12 @@ nav {
   width: 2em;
 }
 
-/* 測試中 */
 #pageHeader {
   --bs-bg-opacity: .95;
 }
 #sidebar{
-  min-width: 200px; 
-  max-width: 250px;
+  min-width: 220px; 
+  max-width: 220px;
 }
 .menu-item.collapsed .anime-icon {
   transition: all 0.1s ease-in-out;
@@ -74,7 +73,6 @@ nav {
   main {
     display: grid;
     grid-template-columns: 200px 1fr;
-    /* gap: 1.5rem; */
   }
 
   #sidebar {
@@ -88,7 +86,7 @@ nav {
     font-size: 14px;
   }
 
-  .list-group-item {
+  .menu-item-secend {
     font-size: 12px;
   }
 }

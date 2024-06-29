@@ -54,6 +54,7 @@ export function checkMobileVer(){
     <li class="text-info">側邊欄新增「歲數查詢」小工具。</li>
     <li class="text-success">「搜尋結果」現在也可查看設置規則附圖。</li>
     <li class="text-danger">修復首頁無法使用自訂搜尋的問題。</li>
+    <li class="text-danger">修復側邊欄在不同頁面寬度及文字大小不一的問題。</li>
   </ul>
   <h5 class="text-primary">※ 1.20：</h5>
   <ul>

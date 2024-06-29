@@ -85,7 +85,7 @@ const asideHtml = `
   <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <!-- 主選單清單 -->
-  <div id="wMenu" class="rounded-3 px-2 h-100 overflow-auto">  
+  <div id="webMenu" class="rounded-3 px-2 h-100 overflow-auto">  
     <div id="menuBookmark" class="p-1 mb-2 border-start border-3 border-primary">
       <a class="menu-item dropdown-item d-flex mb-1 ${loadSidebar(0)[0]}" data-menu-no="0" data-bs-toggle="collapse" href="#collapseExample" role="button">
         <img class="i-15 me-1" src="../icons/icon_bookmark.png" alt="">
@@ -111,25 +111,25 @@ const asideHtml = `
       <div class="collapse ${loadSidebar(1)[1]}" id="collapseExample1">
         <ul class="m-0" style="list-style-type:none">
           <li>
-            <a class="list-group-item py-1" href="..${pages.PH.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.PH.href}">
               <img class="i-15 me-1" src="..${pages.PH.icon}" alt="">
               ${pages.PH.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.SR.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.SR.href}">
               <img class="i-15 me-1" src="..${pages.SR.icon}" alt="">
               ${pages.SR.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.DR.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.DR.href}">
               <img class="i-15 me-1" src="..${pages.DR.icon}" alt="">
               ${pages.DR.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.ML.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.ML.href}">
               <img class="i-15 me-1" src="..${pages.ML.icon}" alt="">
               ${pages.ML.title}
             </a>
@@ -138,13 +138,13 @@ const asideHtml = `
             <hr class="m-1">
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.TA.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.TA.href}">
               <img class="i-15 me-1" src="..${pages.TA.icon}" alt="">
               ${pages.TA.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.VS.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.VS.href}">
               <img class="i-15 me-1" src="..${pages.VS.icon}" alt="">
               ${pages.VS.title}
             </a>
@@ -164,25 +164,25 @@ const asideHtml = `
       <div class="collapse ${loadSidebar(2)[1]}" id="collapseExample2">
         <ul class="m-0" style="list-style-type:none">
           <li>
-            <a class="list-group-item py-1" href="..${pages.codeSearch.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.codeSearch.href}">
               <img class="i-15 me-1" src="..${pages.codeSearch.icon}" alt="">
               ${pages.codeSearch.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.DL.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.DL.href}">
               <img class="i-15 me-1" src="..${pages.DL.icon}" alt="">
               ${pages.DL.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.CL.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.CL.href}">
               <img class="i-15 me-1" src="..${pages.CL.icon}" alt="">
               ${pages.CL.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.overload.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.overload.href}">
               <img class="i-15 me-1" src="..${pages.overload.icon}" alt="">
               ${pages.overload.title}
             </a>
@@ -191,7 +191,7 @@ const asideHtml = `
             <hr class="m-1">
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.keypoint.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.keypoint.href}">
               <img class="i-15 me-1" src="..${pages.keypoint.icon}" alt="">
               ${pages.keypoint.title}
             </a>
@@ -210,13 +210,13 @@ const asideHtml = `
       <div class="collapse ${loadSidebar(3)[1]}" id="collapseExample3">
         <ul class="m-0" style="list-style-type:none">
           <li>
-            <a class="list-group-item py-1" href="..${pages.PA.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.PA.href}">
               <img class="i-15 me-1" src="..${pages.PA.icon}" alt="">
               ${pages.PA.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.PW.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.PW.href}">
               <img class="i-15 me-1" src="..${pages.PW.icon}" alt="">
               ${pages.PW.title}
             </a>
@@ -225,19 +225,19 @@ const asideHtml = `
             <hr class="m-1">
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.CC.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.CC.href}">
               <img class="i-15 me-1" src="..${pages.CC.icon}" alt="">
               ${pages.CC.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.CP.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.CP.href}">
               <img class="i-15 me-1" src="..${pages.CP.icon}" alt="">
               ${pages.CP.title}
             </a>
           </li>
           <li>
-            <a class="list-group-item py-1" href="..${pages.SO.href}">
+            <a class="list-group-item menu-item-secend py-1" href="..${pages.SO.href}">
               <img class="i-15 me-1" src="..${pages.SO.icon}" alt="">
               ${pages.SO.title}
             </a>
@@ -260,13 +260,13 @@ const asideHtml = `
     <div class="arriveTerm card bg-primary-subtle border-2 mt-2 ${showTools(toolsSet()[2])}">
       <h6 class="card-header text-center text-primary fw-bolder">到案日期</h6>
       <div class="card-body p-2 text-center fw-bolder">
-        <span class="day-30"></span>
+        30日：<span class="day-30"></span>
         <br>
-        <span class="day-45"></span>
+        45日：<span class="day-45"></span>
       </div>
     </div>
     <div class="arriveTerm card bg-primary-subtle border-2 mt-2 ${showTools(toolsSet()[3])}">
-      <h6 class="card-header text-center text-primary fw-bolder">歲數查詢</h6>
+      <h6 class="card-header text-center text-primary fw-bolder">年齡查詢</h6>
       <div class="card-body p-2 text-center fw-bolder">
         <span class="age-18"></span>
         <br>
@@ -319,7 +319,7 @@ function loadBookmark() {
   if (bookmarkOption.length == 0) {
     bookmarkHtml = `
     <li>
-      <a class="list-group-item py-1" href="../pages/about.html">
+      <a class="menu-item-secend list-group-item py-1" href="../pages/about.html">
         <img class="i-15 me-1" src="../icons/icon_setting.png" alt="">
         添加書籤
       </a>
@@ -330,7 +330,7 @@ function loadBookmark() {
     bookmarkOption.forEach((i) => {
       bookmarkHtml += `
       <li>
-        <a class="list-group-item py-1" href="..${pages[i].href}">
+        <a class="menu-item-secend list-group-item py-1" href="..${pages[i].href}">
           <img class="i-15 me-1" src="..${pages[i].icon}" alt="">
           ${pages[i].title}
         </a>
@@ -383,8 +383,8 @@ function dateCalculate() {
   let day30 = `${date.getFullYear() - 1911}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}`
   date.setDate(date.getDate() + 15);
   let day45 = `${date.getFullYear() - 1911}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}`
-  $('.day-30').html(`30日：${day30}`);
-  $('.day-45').html(`30日：${day45}`);
+  $('.day-30').html(day30);
+  $('.day-45').html(day45);
   $('.age-18').html(`滿18：${age18}`);
   $('.age-14').html(`滿14：${age14}`);
 }
@@ -407,7 +407,7 @@ function ageCalculate(){
       const date = new Date();
       const age = date.getFullYear() - 1911 - birthYear;
       alert(
-        `生日在${birthYear}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}以前：滿 ${age} 歲\n生日逾${birthYear}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}之後：滿 ${age-1} 歲`
+        `生日在${birthYear}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}以前：滿 ${age} 歲\n生日逾${birthYear}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate() +1 )}之後：滿 ${age-1} 歲`
       );
     }
   })

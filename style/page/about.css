@@ -13,13 +13,10 @@
 
 
 /* 目錄排版 */
-.list-group-item{
-    font-size: 14px;
-}
 .item-second{
+    font-size: 14px;
     padding-left: 2em;
 }
-
 
 .article-title h4{
     color: rgb(50, 120, 250);
