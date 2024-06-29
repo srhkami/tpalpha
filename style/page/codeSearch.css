@@ -21,9 +21,13 @@ a,a:link, a:visited,a:hover{
     }
 }
 
+#searchInput{
+    height: 45px;
+}
 
 .codeInfo{
-    width: 200px;
+    width: 160px;
+    font-size: 12px;
 }
 
 .div_icon_page{

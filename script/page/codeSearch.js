@@ -1,4 +1,4 @@
-import {carType, extraPinich, list_code} from '../data/code_list.js'
+import { list_code } from '../data/code_list.js'
 
 // 函式：刷新清單
 function refreshList(list){
@@ -6,58 +6,52 @@ function refreshList(list){
   list.forEach((item)=>{
     html+=`
         <div class="card mt-2">
-          <div class="card-header d-flex">
-            <h4 class="text-primary">${item.code}</h4>
-            <span class="codeInfo ms-auto my-auto row">
-              <span class="col-6 p-0 text-end">${carType[item.type]}</span>
-              <span class="col-4 p-0 text-center text-danger">$${item.fine}</span>
-              ${svg(item.arrive)}
+          <div class="card-header row m-0">
+            <h4 class="text-primary m-0 ps-1 col">${item.code}</h4>
+            <span class="codeInfo row">
+              <span class="col-8 p-0">${item.type}</span>
+              <span class="col-4 p-0 text-end text-danger">記 ${item.point} 點</span>
+              <span class="col-9 p-0 text-danger">$${item.fine}(${item.blame})</span>
+              <span class="col-3 p-0 pe-1 text-end">${item.isArrive()}</span>
+
             </span>
           </div>
           <div class="card-body p-2">
             <h6 class="card-title">
               ${item.text}
             </h6>
-            ${item.showExtra()}
+            ${item.showMore()}
           </div>
         </div>
     `
   });
   $('#itemList').html(html);
 }
-// 判斷SVG
-function svg(arrive){
-  let html='';
-  if(arrive == '0'){
-    html=`
-      <svg class="col-2 i-12 p-0 my-auto" fill="#5A96FA">
-      <use xlink:href="../icons/bootstrap-icons.svg#send-check-fill"></use>
-      </svg>
-    `;
-  }
-  else{
-    html=`
-      <svg class="col-2 i-12 p-0 my-auto" fill="#FF8C00">
-      <use xlink:href="../icons/bootstrap-icons.svg#person-video3"></use>
-      </svg>
-    `;
-  }
-  return html;
-}
 
 // 函式：偵測搜尋框
 function searchInput(){
-  $('#keyCode').bind('input porpertychange',()=>{
-    let key =  $('#keyCode').val();
-    let newList = list_code.filter((item)=>{
-      if(item.hasKeyword(key)==true){
-        return item;
-      }
-    });
-    refreshList(newList);
+  $('#keyCode').keypress((e)=>{
+    if(e.which == 13){
+      searchStart();
+    }
+  })
+  $('#codeSearch-start').click(()=>{
+    searchStart();
+  })
+  $('#codeSearch-clear').click(()=>{
+    $('#keyCode').val('');
   })
 }
 
+function searchStart(){
+  let key =  $('#keyCode').val();
+  let newList = list_code.filter((item)=>{
+    if(item.hasKeyword(key)==true){
+      return item;
+    }
+  });
+  refreshList(newList);
+}
 
 
 

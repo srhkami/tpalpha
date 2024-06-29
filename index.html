@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./style/base/general.css" />
   <link rel="stylesheet" href="./style/page/index.css" />
   <script type='module' src='./script/base/nav.js'></script>
-  <!-- <script type='module' src='./script/base/searchArea.js'></script> -->
+  <script type='module' src='./script/base/searchArea.js'></script>
   <script type='module' src="./script/page/index.js"></script>
   <script type='module' src="./script/base/quickEnter.js"></script>
 </head>
@@ -25,7 +25,7 @@
   <nav id="pageHeader" class="sticky-top navbar navbar-expand-lg bg-body"></nav>
   <!-- 彈出視窗 -->
   <div id="popUp">
-    <!-- 搜尋 -->
+    <!-- 搜尋 上線時要是靜態HTML-->
     <div id="searchArea" class="modal fade" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -167,13 +167,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <a href="./file/index/1130514_處罰條例修正案條文對照.pdf">
-                  <img src="./file/index/修正案.png" class="d-block w-100" alt="...">
+                <a id="showUpdate" data-bs-toggle="modal" data-bs-target="#popUpArea">
+                  <img src="./file/index/版本更新1.21.png" class="d-block w-100" alt="...">
                 </a>
               </div>
               <div class="carousel-item">
-                <a id="showUpdate" data-bs-toggle="modal" data-bs-target="#popUpArea">
-                  <img src="./file/index/版本更新.png" class="d-block w-100" alt="...">
+                <a href="./file/index/1130514_處罰條例修正案條文對照.pdf">
+                  <img src="./file/index/修正案.png" class="d-block w-100" alt="...">
                 </a>
               </div>
             </div>

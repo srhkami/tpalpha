@@ -29,7 +29,7 @@ export const pages = {
     'PH',
     '處罰條例',
     '道路交通管理處罰條例',
-    '民國 112 年 05 月 03 日',
+    '民國 113 年 05 月 29 日',
     '/icons/icon_policeman.png',
     '/pages/regulations.html?rg=PH',
     list_PH,

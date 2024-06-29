@@ -53,7 +53,7 @@
                     違規代碼查詢
                   </h2>
                   <p class="card-text placeholder-glow mb-0">
-                    代碼表版本：1120628
+                    代碼表版本：1130630
                     <br>
                     協作者：<span class="text-info">張耀東 學長</span>
                   </p>
@@ -71,7 +71,7 @@
                 <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
                   <use xlink:href="../icons/bootstrap-icons.svg#exclamation-triangle"></use>
                 </svg>
-                ：特殊處罰
+                ：附帶處罰
               </div>
               <div class="col-6">
                 <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
@@ -87,10 +87,31 @@
         </div>
       </div>
       <div id="secondary">
-        <div id="searchInput" class="form-floating my-2 ">
-          <input id="keyCode" class="form-control shadow-lg border-2 bg-light-subtle" type="text" name="keyCode"
+        <div id="searchInput" class="input-group bg-light-subtle my-2 shadow-lg border border-2 rounded-2 d-flex">
+            <input id="keyCode" type="text" class="form-control bg-light-subtle border-0 " placeholder="搜尋代碼或關鍵字">
+            <button id="codeSearch-clear" class="btn pb-2" type="button">
+              <svg class="i-12 my-auto me-2" fill="#5A96FA">
+                <use xlink:href="../icons/bootstrap-icons.svg#backspace"></use>
+              </svg>
+            </button>
+            <button id="codeSearch-start" class="btn pb-2" type="button">
+              <svg class="i-12 p-0 my-auto me-2" fill="#5A96FA">
+                <use xlink:href="../icons/bootstrap-icons.svg#search"></use>
+              </svg>
+            </button>
+          <!-- <input id="keyCode" class="form-control shadow-lg border-2 bg-light-subtle" type="text" name="keyCode"
             placeholder="代碼搜尋">
           <label for="keyCode">搜尋代碼或關鍵字</label>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button class="btn-close"></button>
+            <button type="button" class="btn">
+              <svg class="col-2 i-12 p-0 my-auto me-2" fill="#5A96FA">
+                <use xlink:href="../icons/bootstrap-icons.svg#search"></use>
+              </svg>
+            </button> -->
+
+          <!-- </div> -->
+
         </div>
         <div class="card d-none d-md-flex">
           <div class="card-header">
@@ -117,7 +138,7 @@
                 <svg class="col-2 i-12 p-0 my-auto me-2" fill="#FF8C00">
                   <use xlink:href="../icons/bootstrap-icons.svg#exclamation-triangle"></use>
                 </svg>
-                表示特殊處罰
+                表示附帶處罰
               </li>
             </ul>
           </div>

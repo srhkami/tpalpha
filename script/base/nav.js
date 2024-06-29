@@ -66,16 +66,16 @@ const headerHtml = `
   </div>
 `;
 // 函式：取得頁面標題
-function getTitle(){
+function getTitle() {
   let title = $('title').html();
-  if (title.length >7){
-    title = title.substr(0, title.length-7);
+  if (title.length > 7) {
+    title = title.substr(0, title.length - 7);
     $('#pageTitle').html(title);
   }
 }
 
 // 側邊欄HTML
-  // 預設關閉的在a加上.collapsed，預設打開的在div加上.show
+// 預設關閉的在a加上.collapsed，預設打開的在div加上.show
 const asideHtml = `
   <div class="offcanvas-header ps-2 mb-2">
   <a class="navbar-brand d-flex fw-bolder" href="../index.html">
@@ -268,46 +268,46 @@ const asideHtml = `
   </div>
 `;
 // 函式：讀取側邊欄設定
-function loadSidebar(no){
-  let sidebarOption = [0,1,1,0]
+function loadSidebar(no) {
+  let sidebarOption = [0, 1, 1, 0]
   if (localStorage.getItem('sidebar')) {
     sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
   }
-  else{
-    localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
+  else {
+    localStorage.setItem('sidebar', JSON.stringify(sidebarOption));
   }
-  if (sidebarOption[no] == 1){
-    return(['','show'])
+  if (sidebarOption[no] == 1) {
+    return (['', 'show'])
   }
-  else{
-    return(['collapsed',''])
+  else {
+    return (['collapsed', ''])
   }
 }
 // 函式：儲存側邊欄設定
-function saveSidebar(){
-  $('.menu-item').click(()=>{
+function saveSidebar() {
+  $('.menu-item').click(() => {
     let sidebarOption = JSON.parse(localStorage.getItem('sidebar'));
-    $('.menu-item').each((index, value) =>{
-      if($(value).hasClass('collapsed')){
+    $('.menu-item').each((index, value) => {
+      if ($(value).hasClass('collapsed')) {
         sidebarOption[index] = 0;
       }
-      else{
+      else {
         sidebarOption[index] = 1;
       }
-      
+
     });
-    localStorage.setItem('sidebar',JSON.stringify(sidebarOption));
+    localStorage.setItem('sidebar', JSON.stringify(sidebarOption));
   })
 }
 // 函式：讀取書籤
-function loadBookmark(){
+function loadBookmark() {
   let bookmarkOption = [];
-  let bookmarkHtml='';
-  if (localStorage.getItem('bookmark')){
+  let bookmarkHtml = '';
+  if (localStorage.getItem('bookmark')) {
     bookmarkOption = JSON.parse(localStorage.getItem('bookmark'));
   }
-  if (bookmarkOption.length == 0){
-    bookmarkHtml =`
+  if (bookmarkOption.length == 0) {
+    bookmarkHtml = `
     <li>
       <a class="list-group-item py-1" href="../pages/about.html">
         <img class="i-15 me-1" src="../icons/icon_setting.png" alt="">
@@ -316,42 +316,42 @@ function loadBookmark(){
     </li>
     `;
   }
-  else{
-    bookmarkOption.forEach((i)=>{
-      bookmarkHtml+=`
+  else {
+    bookmarkOption.forEach((i) => {
+      bookmarkHtml += `
       <li>
         <a class="list-group-item py-1" href="..${pages[i].href}">
           <img class="i-15 me-1" src="..${pages[i].icon}" alt="">
           ${pages[i].title}
         </a>
       </li>
-      ` 
+      `
     });
   }
   return bookmarkHtml
 }
 // 函式：存取小工具設定
-function toolsSet(){
-  let toolsOption = [1,1,1];
+function toolsSet() {
+  let toolsOption = [1, 1, 1];
   if (localStorage.getItem('toolsOption')) {
     toolsOption = JSON.parse(localStorage.getItem('toolsOption'));
   }
-  else{
-    localStorage.setItem('toolsOption',JSON.stringify(toolsOption));
+  else {
+    localStorage.setItem('toolsOption', JSON.stringify(toolsOption));
   }
   return toolsOption;
 }
 // 函式：側邊欄到案日期
-function showArriveTerm(i){
-  if (i==0){
+function showArriveTerm(i) {
+  if (i == 0) {
     return 'd-none';
   }
-  else{
+  else {
     return '';
   }
 }
 // 底部版權聲明
-const licenseHtml =` 
+const licenseHtml = ` 
   <div id="webLicense" class="mx-auto">
     <p class="text-secondary text-center" style="font-size:12px;">
       Copyright © 2023 C.K.SAI All Rights Reserved
@@ -365,22 +365,22 @@ const licenseHtml =`
 `
 
 // 函式：到案日期
-function dateCalculate(){
+function dateCalculate() {
   const date = new Date();
-  date.setDate(date.getDate()+30);
-  let day30 = `${date.getFullYear()-1911}/${addZero(date.getMonth()+1)}/${addZero(date.getDate())}` 
-  date.setDate(date.getDate()+15);
-  let day45 = `${date.getFullYear()-1911}/${addZero(date.getMonth()+1)}/${addZero(date.getDate())}`
+  date.setDate(date.getDate() + 30);
+  let day30 = `${date.getFullYear() - 1911}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}`
+  date.setDate(date.getDate() + 15);
+  let day45 = `${date.getFullYear() - 1911}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}`
   $('.day-30').html(day30);
   $('.day-45').html(day45);
 }
 // 函示：日期個位數加上0
-function addZero(num){
+function addZero(num) {
   let text;
-  if (num < 10){
+  if (num < 10) {
     text = `0${num}`
   }
-  else{
+  else {
     text = `${num}`
   }
   return text;
@@ -388,16 +388,16 @@ function addZero(num){
 
 // 主程式
 toolsSet();
-if ($('title').html() == '交通鴿手'){
-  $('#pageHeader').html(headerHtml.replaceAll('..','.'));
-  $('#sidebar').html(asideHtml.replaceAll('..','.'));
+if ($('title').html() == '交通鴿手') {
+  $('#pageHeader').html(headerHtml.replaceAll('..', '.'));
+  $('#sidebar').html(asideHtml.replaceAll('..', '.'));
 }
-else{
+else {
   $('#pageHeader').html(headerHtml);
   $('#sidebar').html(asideHtml);
 }
 $('#websiteLicense').html(licenseHtml);
-$(document).ready(()=>{
+$(document).ready(() => {
   getTitle();
   dateCalculate();
   saveSidebar();

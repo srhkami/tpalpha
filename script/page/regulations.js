@@ -213,25 +213,21 @@ export function showAttachment(r_list) {
 const getData = new URLSearchParams(location.search);
 let r_name = getData.get('rg');
 let r_object = pages[r_name];
-// let r_list = r_object.list;
-let r_list = [];
-// 讀取儲存資料庫，刷新主頁面
-localforage.getItem(r_name, (err, value) => {
-  r_list = value;
-  refresh_list(r_list);
-  $('title').html(`${r_object.title} - 交通鴿手`);
-  $('#article-text').html(refresh_text(r_list, r_object));
-  $(document).ready(() => {
-    // $('#pageTitle').html(r_object.title);
-    $('.rg-title').html(r_object.title);
-    $('.rg-image').attr('src', `..${r_object.icon}`);
-    //偵測側邊欄點擊
-    $("#itemMenu a,.btn-close").click(() => {
-      setTimeout(() => $('.offcanvas-top').offcanvas('hide'), 50)
-    });
-    showAttachment(r_list);
-  })
+let r_list = r_object.list;
+refresh_list(r_list);
+$('title').html(`${r_object.title} - 交通鴿手`);
+$('#article-text').html(refresh_text(r_list, r_object));
+$(document).ready(() => {
+  // $('#pageTitle').html(r_object.title);
+  $('.rg-title').html(r_object.title);
+  $('.rg-image').attr('src', `..${r_object.icon}`);
+  //偵測側邊欄點擊
+  $("#itemMenu a,.btn-close").click(() => {
+    setTimeout(() => $('.offcanvas-top').offcanvas('hide'), 50)
+  });
+  showAttachment(r_list);
 })
+
 
 
 

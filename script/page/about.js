@@ -1,5 +1,5 @@
 import { pages } from "../base/pages.js";
-import {appVer, popUpHTML, collectionRG, checkMobileVer} from '../base/info.js'
+import {appVer, buildNumber, popUpHTML, collectionRG, checkMobileVer} from '../base/info.js'
 
 // 函式：讀取書籤
 function loadBookmark() {
@@ -166,8 +166,9 @@ toolsSet()
 $(document).ready(() => {
   // APP版本
   $('#appVer').html(appVer);
+  $('#buildNumber').html(`更新日期：${buildNumber}`);
   // 資料庫版本
-  localforage.getItem('dataVer', (err, localDataVer) => {$('#dataVer').html(localDataVer)});
+  // localforage.getItem('dataVer', (err, localDataVer) => {$('#dataVer').html(localDataVer)});
   // 收錄法規
   $('#showRG').click(()=>{popUpHTML('收錄法規', collectionRG())});
   checkMobileVer();

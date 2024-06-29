@@ -696,7 +696,7 @@ export const list_kp = [
     'unknownName',
     '舉發交通違規拒絕告知身分處理程序',
     '黃文章 學長',
-    '113 年 05 月 15 日',
+    '113 年 06 月 23 日',
     `
     <h4 class="mt-4 mb-3">前言</h4>
     <p>
@@ -706,20 +706,63 @@ export const list_kp = [
     <div class="accordion" id="collapse-unknownName">
       <div class="accordion-item">
         <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-            行政罰法第34條
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-1">
+            道路交通管理處罰條例第7條
           </button>
         </h2>
-        <div id="collapse1" class="accordion-collapse collapse">
+        <div id="collapse1-1" class="accordion-collapse collapse">
           <div class="accordion-body">
-            行政機關對現行違反行政法上義務之行為人，得為下列之處置：
-            <br>一、即時制止其行為。
-            <br>二、製作書面紀錄。
-            <br>三、為保全證據之措施。遇有抗拒保全證據之行為且情況急迫者，得使用強制力排除其抗拒。
-            <br>四、<span class="text-danger">確認其身分</span>。
-            <br>其拒絕或規避身分之查證，經勸導無效，致確實無法辨認其身分且情況急迫者，得令其隨同到指定處所查證身分；其不隨同到指定處所接受身分查證者，得會同警察人員強制為之。
+            道路交通管理之稽查，違規紀錄，由交通勤務警察或依法令執行交通稽查任務人員執行之。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-2">
+            道路交通管理處罰條例第14條1項
+          </button>
+        </h2>
+        <div id="collapse1-2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            汽車行駛應隨車攜帶行車執照、拖車使用證、或預備引擎使用證。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-3">
+            道路交通管理處罰條例第25條1項
+          </button>
+        </h2>
+        <div id="collapse1-3" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            駕駛汽車應隨身攜帶駕駛執照。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-4">
+             違反道路交通管理事件統一裁罰基準及處理細則第6條
+          </button>
+        </h2>
+        <div id="collapse1-4" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            道路交通管理之稽查，違規紀錄，由交通勤務警察或依法令執行交通稽查任務人員執行之。
             <br>
-            前項強制，不得逾越保全證據或確認身分目的之必要程度。
+            公路主管及警察機關就其主管業務，查獲違反道路交通管理之行為者，應本於職權舉發或處理之。
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-5">
+             違反道路交通管理事件統一裁罰基準及處理細則第11條
+          </button>
+        </h2>
+        <div id="collapse1-5" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            當場舉發者，應填記駕駛人或行為人姓名、性別、出生年月日、地址、身分證統一編號及車主姓名、地址、車牌號碼、車輛種類。。
           </div>
         </div>
       </div>
@@ -820,7 +863,7 @@ export const list_kp = [
     <h4 class="mt-4 mb-3">處理程序</h4>
     <h5>步驟一：</h5>
     <p>
-      攔停交通違規首先須依取締一般交通違規作業程序，告知稽查(違規)事由，請其出示證照或身分資料，此時引用之法源依據為行政罰法第34條1項4款確認其身分。
+      攔停交通違規首先須依取締一般交通違規作業程序，告知稽查(違規)事由，請其出示證照或身分資料，此時引用之法源依據為道交條例第7條、裁罰基準及處理細則第6條、裁罰基準及處理細則第11條。
     </p>
     <h5>步驟二</h5>
     <p>

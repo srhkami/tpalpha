@@ -5,22 +5,24 @@ import {WebData} from '../data/database.js';
 // 版本
 export const appVer = `1.21.0`;
 // 組建：用以判斷版本前後
-export const buildNumber = 1130613;
+export const buildNumber = 1130629;
 // 資料庫版本
-export const defaultDataVer = 1130613;
+// export const defaultDataVer = 1130613;
 
 // 公告
 export const notice = `
   <span id="newVerNotice"></span>
   「交通鴿手」v1.21更新重點：
   <ul>
-  <li>「違規代碼查詢」已更新到最新代碼表，重新上線</li>
+    <li>「違規代碼查詢」重新上線，已更新到1130630版代碼。</li>
+    <li>「處罰條例」更新至1130529修訂版本。</li>
+    <li>手機版會自動偵測有無新版本。</li>
   </ul>
   <br>已知問題：
   <ul>
-  <li>違規代碼查詢為即時運算，輸入會較為延遲敬請見諒。</li>
-  <li>附件連結至全國法規資料庫，在首次點擊時總會失效。</li>
-  <li>使用內網瀏覽設置規則圖片可能無法顯示。</li>
+    <li>違規代碼查詢為即時運算，輸入會較為延遲敬請見諒。</li>
+    <li>附件連結至全國法規資料庫，在首次點擊時總會失效。</li>
+    <li>使用內網瀏覽設置規則圖片可能無法顯示。</li>
   </ul>
 `;
 
@@ -31,25 +33,11 @@ export function checkMobileVer(){
     let lastBuildNumber = json.values[2][2];
     if (lastBuildNumber > buildNumber) {
       $('#newVerNotice').html(`
-        <big class="text-danger">APP有新版本，請立即至「關於」更新！！</big><hr>
+        <big class="text-danger">APP有新版本！</big>
+        <a class="btn btn-sm btn-outline-danger ms-2" href="https://drive.google.com/drive/folders/1pmV6WZVdZ0RyfL8TvVDh9OI5Kc2OwkBO?usp=drive_link">下載更新<a/>
+        <hr>
         `)
     }
-    let indexImageLinks = JSON.parse(json.values[4][2]);
-    console.log(indexImageLinks);
-    let html1 = '';
-    let html2 = '';
-    indexImageLinks.forEach((link, index) => {
-      if(index == 0){
-        html1 += `<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" class="active"></button>`
-        html2 += `<div class="carousel-item active">${link}</div>`
-      }
-      else{
-        html1 += `<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}"></button>`
-        html2 += `<div class="carousel-item">${link}</div>`
-      }
-    })
-    $('.carousel-indicators').html(html1);
-    $('.carousel-inner').html(html2);
   })
 }
 
@@ -59,11 +47,14 @@ export function checkMobileVer(){
   // 修復用danger
   // <li class="text-info"></li>
   export const updataText = `
-<h5 class="text-primary">※ 1.21：</h5>
+  <h5 class="text-primary">※ 1.21：</h5>
   <ul>
-    <li class="text-success">「搜尋」現在也可查看設置規則附圖。</li>
-    <li class="text-danger">「違規代碼查詢」已更新到最新代碼表，重新上線。</li>
-    </ul>
+    <li class="text-info">加入「違規代碼查詢」頁面，代碼表版本1130630。</li>
+    <li class="text-info">手機版現在可以自動偵測有無新版本。</li>
+    <li class="text-info">側邊欄新增「滿18/14歲年份」</li>
+    <li class="text-success">「搜尋結果」現在也可查看設置規則附圖。</li>
+    <li class="text-danger">修復首頁無法使用自訂搜尋的問題。</li>
+  </ul>
   <h5 class="text-primary">※ 1.20：</h5>
   <ul>
     <li class="text-info">更新了整體介面、排版，將選單列移至側邊。</li>

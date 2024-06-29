@@ -151,7 +151,7 @@ function load_options(){
 
 // 函式：前往搜尋結果頁面
 function output(keyWord){
-  if($('title').html() == '首頁 - 交通鴿手'){
+  if($('title').html() == '交通鴿手'){
     location.href =`./pages/search.html?keyword=${keyWord}`;
   }
   else{
@@ -203,7 +203,10 @@ function search_go(){
 }
 
 // 主程式
-$('#searchArea').html(html_searchArea);
+
+if($('title').html() != '交通鴿手'){
+  $('#searchArea').html(html_searchArea);
+}
 $(document).ready(()=>{
   load_options();
   save_options();
