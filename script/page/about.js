@@ -131,7 +131,10 @@ function toolsSet(){
   if (toolsOption[2]==0){
     $('#check-2').attr('checked',false)
   }
-  $('#check-0,#check-1,#check-2').change(()=>{
+  if (toolsOption[3]==0){
+    $('#check-3').attr('checked',false)
+  }
+  $('#check-0,#check-1,#check-2,#check-3').change(()=>{
     if($('#check-0').is(':checked')){
       toolsOption[0] = 1;
     }
@@ -149,6 +152,12 @@ function toolsSet(){
     }
     else{
       toolsOption[2] = 0;
+    }
+    if($('#check-3').is(':checked')){
+      toolsOption[3] = 1;
+    }
+    else{
+      toolsOption[3] = 0;
     }
     localStorage.setItem('toolsOption',JSON.stringify(toolsOption));
   })

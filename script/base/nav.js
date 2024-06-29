@@ -257,12 +257,22 @@ const asideHtml = `
         <span>${pages.about.title}</span>
       </a>
     </div>
-    <div class="arriveTerm card bg-primary-subtle border-2 my-3 ${showArriveTerm(toolsSet()[2])}">
+    <div class="arriveTerm card bg-primary-subtle border-2 mt-2 ${showTools(toolsSet()[2])}">
       <h6 class="card-header text-center text-primary fw-bolder">到案日期</h6>
       <div class="card-body p-2 text-center fw-bolder">
         <span class="day-30"></span>
         <br>
         <span class="day-45"></span>
+      </div>
+    </div>
+    <div class="arriveTerm card bg-primary-subtle border-2 mt-2 ${showTools(toolsSet()[3])}">
+      <h6 class="card-header text-center text-primary fw-bolder">歲數查詢</h6>
+      <div class="card-body p-2 text-center fw-bolder">
+        <span class="age-18"></span>
+        <br>
+        <span class="age-14"></span>
+        <br>
+        <input id="ageSearch" type="number" class="form-control mt-1 bg-light-subtle" placeholder="請輸入年次">
       </div>
     </div>
   </div>
@@ -332,7 +342,7 @@ function loadBookmark() {
 }
 // 函式：存取小工具設定
 function toolsSet() {
-  let toolsOption = [1, 1, 1];
+  let toolsOption = [1, 1, 1, 1];
   if (localStorage.getItem('toolsOption')) {
     toolsOption = JSON.parse(localStorage.getItem('toolsOption'));
   }
@@ -342,7 +352,7 @@ function toolsSet() {
   return toolsOption;
 }
 // 函式：側邊欄到案日期
-function showArriveTerm(i) {
+function showTools(i) {
   if (i == 0) {
     return 'd-none';
   }
@@ -364,15 +374,19 @@ const licenseHtml = `
   </div>
 `
 
-// 函式：到案日期
+// 函式：到案日期及未成年
 function dateCalculate() {
   const date = new Date();
+  let age18 = `${date.getFullYear() - 1911 - 18}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}`;
+  let age14 = `${date.getFullYear() - 1911 - 14}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}`;
   date.setDate(date.getDate() + 30);
   let day30 = `${date.getFullYear() - 1911}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}`
   date.setDate(date.getDate() + 15);
   let day45 = `${date.getFullYear() - 1911}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}`
-  $('.day-30').html(day30);
-  $('.day-45').html(day45);
+  $('.day-30').html(`30日：${day30}`);
+  $('.day-45').html(`30日：${day45}`);
+  $('.age-18').html(`滿18：${age18}`);
+  $('.age-14').html(`滿14：${age14}`);
 }
 // 函示：日期個位數加上0
 function addZero(num) {
@@ -384,6 +398,20 @@ function addZero(num) {
     text = `${num}`
   }
   return text;
+}
+// 函式：年齡查詢
+function ageCalculate(){
+  $('#ageSearch').keypress((e)=>{
+    if(e.which == 13){
+      const birthYear = $('#ageSearch').val();
+      const date = new Date();
+      const age = date.getFullYear() - 1911 - birthYear;
+      alert(
+        `生日在${birthYear}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}以前：滿 ${age} 歲\n生日逾${birthYear}/${addZero(date.getMonth() + 1)}/${addZero(date.getDate())}之後：滿 ${age-1} 歲`
+      );
+    }
+  })
+  
 }
 
 // 主程式
@@ -400,6 +428,7 @@ $('#websiteLicense').html(licenseHtml);
 $(document).ready(() => {
   getTitle();
   dateCalculate();
+  ageCalculate();
   saveSidebar();
   //偵測側邊欄點擊
   $("#sidebar .btn-close").click(() => {

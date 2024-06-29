@@ -51,7 +51,7 @@ export function checkMobileVer(){
   <ul>
     <li class="text-info">加入「違規代碼查詢」頁面，代碼表版本1130630。</li>
     <li class="text-info">手機版現在可以自動偵測有無新版本。</li>
-    <li class="text-info">側邊欄新增「滿18/14歲年份」</li>
+    <li class="text-info">側邊欄新增「歲數查詢」小工具。</li>
     <li class="text-success">「搜尋結果」現在也可查看設置規則附圖。</li>
     <li class="text-danger">修復首頁無法使用自訂搜尋的問題。</li>
   </ul>
